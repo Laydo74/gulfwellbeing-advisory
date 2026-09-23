@@ -1,13 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpLeft, LockKeyhole } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import hero from "@/assets/gulfالرفاه-hero.jpg";
+import hero from "@/assets/gulfwellbeing-hero.jpg";
 import woman from "@/assets/woman-editorial.jpg";
 import executive from "@/assets/executive-editorial.jpg";
 import stillLife from "@/assets/private-still-life.jpg";
 
 type Kind =
-  | "الرفاه"
+  | "wellbeing"
   | "women"
   | "men"
   | "business"
@@ -27,7 +27,7 @@ type PageData = {
 };
 
 const data: Record<Kind, PageData> = {
-  الرفاه: {
+  wellbeing: {
     eyebrow: "الرفاه والعافية الخاصة",
     title: "مساحة هادئة تعود فيها إلى نفسك.",
     intro:
@@ -61,7 +61,7 @@ const data: Record<Kind, PageData> = {
     ],
   },
   women: {
-    eyebrow: "عافية المرأة",
+    eyebrow: "رفاه المرأة",
     title: "مساحة للمرأة خلف كل الأدوار التي تحملها.",
     intro:
       "مساحة خاصة للمرأة التي تعطي كثيراً للآخرين، وتحتاج هي أيضاً إلى وقت هادئ تسمع فيه نفسها وتعيد ترتيب ما يهمها.",
@@ -94,7 +94,7 @@ const data: Record<Kind, PageData> = {
     ],
   },
   men: {
-    eyebrow: "عافية الرجل",
+    eyebrow: "رفاه الرجل",
     title: "مساحة للرجل بعيداً عن صورة الرجل الذي يجب أن يتحمل كل شيء.",
     intro:
       "استشارات خاصة للرجل الذي يعيش تحت ضغط المسؤولية، ويحتاج إلى مكان هادئ للتفكير والتعبير وإعادة ترتيب الداخل والخارج.",
@@ -125,7 +125,7 @@ const data: Record<Kind, PageData> = {
     eyebrow: "الأعمال والقيادات",
     title: "عندما تكون مسؤولاً عن الكثير، تحتاج إلى مساحة لك أنت.",
     intro:
-      "استشارات الرفاه خاصة للمؤسسين والمديرين والمهنيين الذين يعيشون تحت ضغط القرارات، التوقعات والمسؤولية المستمرة.",
+      "استشارات خاصة في الرفاه للمؤسسين والمديرين والمهنيين الذين يعيشون تحت ضغط القرارات، التوقعات والمسؤولية المستمرة.",
     sections: [
       {
         title: "خلف المنصب",
@@ -168,7 +168,7 @@ const data: Record<Kind, PageData> = {
       {
         title: "للشخص والعائلة والقيادة",
         body:
-          "يمكن أن تمتد المقاربة إلى العافية الشخصية، الحياة العائلية، الضغوط التنفيذية والتحولات التي تتطلب مستوى أعلى من الخصوصية.",
+          "يمكن أن تمتد المقاربة إلى الرفاه الشخصي، الحياة العائلية، الضغوط التنفيذية والتحولات التي تتطلب مستوى أعلى من الخصوصية.",
       },
       {
         title: "بناءً على طلب خاص",
@@ -181,10 +181,10 @@ const data: Record<Kind, PageData> = {
     eyebrow: "عن GULFWELLBEING",
     title: "العافية تبدأ من علاقة إنسانية حقيقية.",
     intro:
-      "تقود GULFWELLBEING سورور تاركان، الرفاه Advisor & Coach وReiki Master، من خلال مقاربة خاصة تجمع الإصغاء، الوعي وممارسات العافية الشمولية بحسب احتياج كل شخص.",
+      "تقود GULFWELLBEING سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master، من خلال مقاربة خاصة تجمع الإصغاء، الوعي وممارسات الرفاه الشمولي بحسب احتياج كل شخص.",
     sections: [
       {
-        title: "سورور تاركان",
+        title: "سرور طركان",
         body:
           "تبدأ العلاقة بالاستماع إلى الشخص كما هو، مع حياته ومسؤولياته وسياقه الخاص. لا يوجد قالب واحد يُفرض على الجميع، ولا حاجة إلى اختزال التجربة الإنسانية في عنوان واحد.",
       },
@@ -194,9 +194,9 @@ const data: Record<Kind, PageData> = {
           "يمكن أن تركز الجلسات على الضغط، العلاقات، الأسرة، الثقة، التحولات، القيادة أو الحاجة إلى استعادة قدر أكبر من الاتزان. تُبنى الأولويات وفق ما يهم العميل فعلاً.",
       },
       {
-        title: "العافية الشمولية وReiki",
+        title: "الرفاه الشمولي وReiki",
         body:
-          "عندما يكون ذلك مناسباً ومطلوباً من العميل، يمكن أن تدخل ممارسات العافية الشمولية وReiki ضمن التجربة. سورور تاركان هي Reiki Master.",
+          "عندما يكون ذلك مناسباً ومطلوباً من العميل، يمكن أن تدخل ممارسات الرفاه الشمولي وReiki ضمن التجربة. سرور طركان هي Reiki Master.",
       },
       {
         title: "مساحة بلا أحكام",
@@ -265,7 +265,7 @@ const data: Record<Kind, PageData> = {
       {
         title: "طبيعة الخدمة",
         body:
-          "تقدم GULFWELLBEING خدمات الرفاه Advisory وCoaching وممارسات عافية شمولية. هذه الخدمات ليست بديلاً عن الطوارئ أو التشخيص أو العلاج الطبي أو النفسي المنظم.",
+          "تقدم GULFWELLBEING خدمات استشارات الرفاه وCoaching وممارسات عافية شمولية. هذه الخدمات ليست بديلاً عن الطوارئ أو التشخيص أو العلاج الطبي أو النفسي المنظم.",
       },
       {
         title: "طلب الجلسة",
@@ -345,21 +345,21 @@ export function ArabicHome() {
         <div className="absolute inset-0 bg-linear-to-l from-primary via-primary/72 to-transparent" />
         <div className="relative mx-auto flex min-h-[calc(100svh-5rem)] max-w-[1500px] items-end px-6 pb-16 lg:px-12 lg:pb-24">
           <div className="max-w-4xl">
-            <p className="eyebrow text-gold">استشارات الرفاه خاصة · الخليج ودولياً</p>
+            <p className="eyebrow text-gold">استشارات خاصة في الرفاه · الخليج ودولياً</p>
             <h1 className="mt-6 font-serif text-6xl leading-[1.02] sm:text-8xl">
               مساحة خاصة
               <br />
               <em className="font-normal">تعود فيها إلى نفسك.</em>
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-9 text-primary-foreground/75">
-              مع سورور تاركان، مساحة هادئة وسرية للتعامل مع الضغوط، العلاقات، المسؤوليات والتحولات الشخصية بوضوح واتزان أكبر.
+              مع سرور طركان، مساحة هادئة وسرية للتعامل مع الضغوط، العلاقات، المسؤوليات والتحولات الشخصية بوضوح واتزان أكبر.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link to="/ar/book" className="button-gold">
                 طلب استشارة خاصة <ArrowUpLeft className="size-4" />
               </Link>
-              <Link to="/ar/الرفاه" className="button-on-dark">
-                اكتشف العافية
+              <Link to="/ar/wellbeing" className="button-on-dark">
+                اكتشف الرفاه
               </Link>
             </div>
           </div>
@@ -387,9 +387,9 @@ export function ArabicHome() {
           <p className="eyebrow">مسارات خاصة</p>
           <h2 className="mt-4 font-serif text-5xl sm:text-7xl">اختر المساحة الأقرب إليك.</h2>
           <div className="mt-12 grid gap-px bg-border md:grid-cols-3">
-            <Area title="العافية الشخصية" text="للضغط، التوازن، العلاقات والتحولات التي تحتاج إلى مساحة." image={stillLife} href="/ar/الرفاه" />
-            <Area title="عافية المرأة" text="مساحة للمرأة خلف أدوارها ومسؤولياتها اليومية." image={woman} href="/ar/women" />
-            <Area title="عافية الرجل" text="للرجل الذي يحمل مسؤوليات كثيرة ويحتاج إلى مساحة له." image={executive} href="/ar/men" />
+            <Area title="الرفاه الشخصي" text="للضغط، التوازن، العلاقات والتحولات التي تحتاج إلى مساحة." image={stillLife} href="/ar/wellbeing" />
+            <Area title="رفاه المرأة" text="مساحة للمرأة خلف أدوارها ومسؤولياتها اليومية." image={woman} href="/ar/women" />
+            <Area title="رفاه الرجل" text="للرجل الذي يحمل مسؤوليات كثيرة ويحتاج إلى مساحة له." image={executive} href="/ar/men" />
           </div>
         </div>
       </section>
@@ -427,7 +427,7 @@ export function ArabicHome() {
             <p className="mt-7 max-w-lg text-base leading-9 text-muted-foreground">
               تجربة مصممة حول الجداول المكثفة، الحياة الدولية والحاجة إلى مستوى أعلى من الخصوصية والمرونة.
             </p>
-            <Link to="/ar/business/vip-concierge-الرفاه" className="button-primary mt-9">
+            <Link to="/ar/business/vip-concierge-wellbeing" className="button-primary mt-9">
               اكتشف الخدمة الخاصة
             </Link>
           </div>
@@ -438,7 +438,7 @@ export function ArabicHome() {
       <section className="bg-secondary px-5 py-20 lg:px-10 lg:py-28">
         <div className="mx-auto grid max-w-[1350px] gap-16 lg:grid-cols-2">
           <div>
-            <p className="eyebrow">مقاربة سورور تاركان</p>
+            <p className="eyebrow">مقاربة سرور طركان</p>
             <h2 className="mt-5 font-serif text-5xl leading-[1.08] sm:text-7xl">
               الإنسان أولاً.
               <br />
@@ -450,13 +450,13 @@ export function ArabicHome() {
               تبدأ العلاقة بالاستماع وفهم واقع الشخص، لا بتطبيق برنامج جاهز. هناك مساحة للتعقيد، ولما لا يمكن اختزاله في عنوان واحد.
             </p>
             <p>
-              يمكن أن يركز الدعم على العافية الشخصية، العلاقات، الأسرة، الانتقال من مرحلة إلى أخرى، القيادة أو الضغوط التي يصعب الحديث عنها في أماكن أخرى.
+              يمكن أن يركز الدعم على الرفاه الشخصي، العلاقات، الأسرة، الانتقال من مرحلة إلى أخرى، القيادة أو الضغوط التي يصعب الحديث عنها في أماكن أخرى.
             </p>
             <p>
-              وعندما يكون ذلك مناسباً ومطلوباً، يمكن أن تدخل ممارسات العافية الشمولية وReiki ضمن العمل. سورور تاركان هي Reiki Master.
+              وعندما يكون ذلك مناسباً ومطلوباً، يمكن أن تدخل ممارسات الرفاه الشمولي وReiki ضمن العمل. سرور طركان هي Reiki Master.
             </p>
             <Link to="/ar/about" className="inline-flex items-center gap-2 border-b border-foreground pb-2 text-xs font-semibold tracking-[.12em]">
-              تعرّف على سورور تاركان <ArrowUpLeft className="size-4" />
+              تعرّف على سرور طركان <ArrowUpLeft className="size-4" />
             </Link>
           </div>
         </div>
