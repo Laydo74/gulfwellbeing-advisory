@@ -270,7 +270,7 @@ const data: Record<Kind, PageData> = {
 export function ArabicPage({ kind }: { kind: Kind }) {
   const d = data[kind];
   const image =
-    kind === "women" ? woman : kind === "men" || kind === "business" ? executive : stillLife;
+    kind === "about" ? "/images/sourour-tarkan-about.jpg" : kind === "women" ? woman : kind === "men" || kind === "business" ? executive : stillLife;
   const isLegal = kind === "privacy" || kind === "terms";
 
   return (
@@ -419,6 +419,16 @@ export function ArabicHome() {
           </div>
         </div>
         <img src={stillLife} alt="مساحة خاصة وهادئة" className="order-1 h-full min-h-[30rem] w-full object-cover lg:order-2" />
+      </section>
+
+      <section className="grid bg-primary text-primary-foreground lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="min-h-[34rem]"><img src="/images/sourour-tarkan-home.jpg" width={240} height={300} loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="h-full w-full object-cover object-center" /></div>
+        <div className="flex items-center px-6 py-20 lg:px-20"><div className="max-w-xl">
+          <p className="eyebrow text-gold">تعرّف على سرور طركان</p>
+          <h2 className="mt-5 font-serif text-5xl leading-[1.08] sm:text-7xl">علاقة خاصة<br/>مع إنسانة حقيقية.</h2>
+          <p className="mt-7 text-base leading-9 text-primary-foreground/70">تقود GULFWELLBEING سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master. تبدأ المقاربة بالاستماع وفهم واقع الشخص، لا بتطبيق قالب جاهز.</p>
+          <Link to="/ar/about" className="button-gold mt-9">تعرّف على سرور طركان <ArrowUpLeft className="size-4" /></Link>
+        </div></div>
       </section>
 
       <section className="bg-secondary px-5 py-20 lg:px-10 lg:py-28">
