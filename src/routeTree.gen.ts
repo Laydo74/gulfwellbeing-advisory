@@ -14,6 +14,12 @@ import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as LifeTransitionsWellbeingRouteImport } from './routes/blog/life-transitions-wellbeing'
+import { Route as RelationshipsFamilyWellbeingRouteImport } from './routes/blog/relationships-family-wellbeing'
+import { Route as MensWellbeingPressureRouteImport } from './routes/blog/mens-wellbeing-pressure'
+import { Route as WomensWellbeingGulfRouteImport } from './routes/blog/womens-wellbeing-gulf'
+import { Route as StressBurnoutExecutivesRouteImport } from './routes/blog/stress-burnout-executives'
+import { Route as PrivateWellbeingAdvisoryGulfRouteImport } from './routes/blog/private-wellbeing-advisory-gulf'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as BusinessRouteImport } from './routes/business'
 import { Route as MenRouteImport } from './routes/men'
@@ -88,6 +94,12 @@ const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
   path: '/admin',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const PrivateWellbeingAdvisoryGulfRoute = PrivateWellbeingAdvisoryGulfRouteImport.update({ id: '/private-wellbeing-advisory-gulf', path: '/private-wellbeing-advisory-gulf', getParentRoute: () => BlogRoute } as any)
+const StressBurnoutExecutivesRoute = StressBurnoutExecutivesRouteImport.update({ id: '/stress-burnout-executives', path: '/stress-burnout-executives', getParentRoute: () => BlogRoute } as any)
+const WomensWellbeingGulfRoute = WomensWellbeingGulfRouteImport.update({ id: '/womens-wellbeing-gulf', path: '/womens-wellbeing-gulf', getParentRoute: () => BlogRoute } as any)
+const MensWellbeingPressureRoute = MensWellbeingPressureRouteImport.update({ id: '/mens-wellbeing-pressure', path: '/mens-wellbeing-pressure', getParentRoute: () => BlogRoute } as any)
+const RelationshipsFamilyWellbeingRoute = RelationshipsFamilyWellbeingRouteImport.update({ id: '/relationships-family-wellbeing', path: '/relationships-family-wellbeing', getParentRoute: () => BlogRoute } as any)
+const LifeTransitionsWellbeingRoute = LifeTransitionsWellbeingRouteImport.update({ id: '/life-transitions-wellbeing', path: '/life-transitions-wellbeing', getParentRoute: () => BlogRoute } as any)
 const BusinessExecutiveWellbeingRoute = BusinessExecutiveWellbeingRouteImport.update({
   id: '/executive-wellbeing', path: '/executive-wellbeing', getParentRoute: () => BusinessRoute,
 } as any)
@@ -122,6 +134,12 @@ export interface FileRoutesByFullPath {
   '/business/burnout-prevention': typeof BurnoutPreventionRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/blog/private-wellbeing-advisory-gulf': typeof PrivateWellbeingAdvisoryGulfRoute
+  '/blog/stress-burnout-executives': typeof StressBurnoutExecutivesRoute
+  '/blog/womens-wellbeing-gulf': typeof WomensWellbeingGulfRoute
+  '/blog/mens-wellbeing-pressure': typeof MensWellbeingPressureRoute
+  '/blog/relationships-family-wellbeing': typeof RelationshipsFamilyWellbeingRoute
+  '/blog/life-transitions-wellbeing': typeof LifeTransitionsWellbeingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -201,6 +219,12 @@ export interface FileRouteTypes {
     | '/business/burnout-prevention'
     | '/privacy'
     | '/terms'
+    | '/blog/private-wellbeing-advisory-gulf'
+    | '/blog/stress-burnout-executives'
+    | '/blog/womens-wellbeing-gulf'
+    | '/blog/mens-wellbeing-pressure'
+    | '/blog/relationships-family-wellbeing'
+    | '/blog/life-transitions-wellbeing'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -251,7 +275,7 @@ export interface RootRouteChildren {
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
   AuthRoute: typeof AuthRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   BookRoute: typeof BookRoute
   BusinessRoute: typeof BusinessRouteWithChildren
   MenRoute: typeof MenRoute
@@ -359,6 +383,12 @@ declare module '@tanstack/react-router' {
     '/business/burnout-prevention': { id: '/business/burnout-prevention', path: '/burnout-prevention', fullPath: '/business/burnout-prevention', preLoaderRoute: typeof BurnoutPreventionRouteImport, parentRoute: typeof BusinessRoute }
     '/privacy': { id: '/privacy', path: '/privacy', fullPath: '/privacy', preLoaderRoute: typeof PrivacyRouteImport, parentRoute: typeof rootRouteImport }
     '/terms': { id: '/terms', path: '/terms', fullPath: '/terms', preLoaderRoute: typeof TermsRouteImport, parentRoute: typeof rootRouteImport }
+    '/blog/private-wellbeing-advisory-gulf': { id: '/blog/private-wellbeing-advisory-gulf', path: '/private-wellbeing-advisory-gulf', fullPath: '/blog/private-wellbeing-advisory-gulf', preLoaderRoute: typeof PrivateWellbeingAdvisoryGulfRouteImport, parentRoute: typeof BlogRoute }
+    '/blog/stress-burnout-executives': { id: '/blog/stress-burnout-executives', path: '/stress-burnout-executives', fullPath: '/blog/stress-burnout-executives', preLoaderRoute: typeof StressBurnoutExecutivesRouteImport, parentRoute: typeof BlogRoute }
+    '/blog/womens-wellbeing-gulf': { id: '/blog/womens-wellbeing-gulf', path: '/womens-wellbeing-gulf', fullPath: '/blog/womens-wellbeing-gulf', preLoaderRoute: typeof WomensWellbeingGulfRouteImport, parentRoute: typeof BlogRoute }
+    '/blog/mens-wellbeing-pressure': { id: '/blog/mens-wellbeing-pressure', path: '/mens-wellbeing-pressure', fullPath: '/blog/mens-wellbeing-pressure', preLoaderRoute: typeof MensWellbeingPressureRouteImport, parentRoute: typeof BlogRoute }
+    '/blog/relationships-family-wellbeing': { id: '/blog/relationships-family-wellbeing', path: '/relationships-family-wellbeing', fullPath: '/blog/relationships-family-wellbeing', preLoaderRoute: typeof RelationshipsFamilyWellbeingRouteImport, parentRoute: typeof BlogRoute }
+    '/blog/life-transitions-wellbeing': { id: '/blog/life-transitions-wellbeing', path: '/life-transitions-wellbeing', fullPath: '/blog/life-transitions-wellbeing', preLoaderRoute: typeof LifeTransitionsWellbeingRouteImport, parentRoute: typeof BlogRoute }
   }
 }
 
@@ -372,6 +402,26 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
 
 const AuthenticatedRouteRouteWithChildren =
   AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
+interface BlogRouteChildren {
+  PrivateWellbeingAdvisoryGulfRoute: typeof PrivateWellbeingAdvisoryGulfRoute
+  StressBurnoutExecutivesRoute: typeof StressBurnoutExecutivesRoute
+  WomensWellbeingGulfRoute: typeof WomensWellbeingGulfRoute
+  MensWellbeingPressureRoute: typeof MensWellbeingPressureRoute
+  RelationshipsFamilyWellbeingRoute: typeof RelationshipsFamilyWellbeingRoute
+  LifeTransitionsWellbeingRoute: typeof LifeTransitionsWellbeingRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  PrivateWellbeingAdvisoryGulfRoute: PrivateWellbeingAdvisoryGulfRoute,
+  StressBurnoutExecutivesRoute: StressBurnoutExecutivesRoute,
+  WomensWellbeingGulfRoute: WomensWellbeingGulfRoute,
+  MensWellbeingPressureRoute: MensWellbeingPressureRoute,
+  RelationshipsFamilyWellbeingRoute: RelationshipsFamilyWellbeingRoute,
+  LifeTransitionsWellbeingRoute: LifeTransitionsWellbeingRoute
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface BusinessRouteChildren {
   BusinessExecutiveWellbeingRoute: typeof BusinessExecutiveWellbeingRoute
@@ -408,7 +458,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   AuthRoute: AuthRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   BookRoute: BookRoute,
   BusinessRoute: BusinessRouteWithChildren,
   MenRoute: MenRouteWithChildren,
