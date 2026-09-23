@@ -40,6 +40,15 @@ import { Route as LifeTransitionsRouteImport } from './routes/wellbeing/life-tra
 import { Route as EmotionalBalanceRouteImport } from './routes/wellbeing/emotional-balance'
 import { Route as RelationshipsFamilyRouteImport } from './routes/wellbeing/relationships-family'
 import { Route as ArabicRouteImport } from './routes/ar'
+import { Route as ArabicWellbeingRouteImport } from './routes/ar/wellbeing'
+import { Route as ArabicWomenRouteImport } from './routes/ar/women'
+import { Route as ArabicMenRouteImport } from './routes/ar/men'
+import { Route as ArabicBusinessRouteImport } from './routes/ar/business'
+import { Route as ArabicAboutRouteImport } from './routes/ar/about'
+import { Route as ArabicBlogRouteImport } from './routes/ar/blog'
+import { Route as ArabicBookRouteImport } from './routes/ar/book'
+import { Route as ArabicPrivacyRouteImport } from './routes/ar/privacy'
+import { Route as ArabicTermsRouteImport } from './routes/ar/terms'
 import { Route as MindfulnessBusyLivesRouteImport } from './routes/blog/mindfulness-busy-lives'
 import { Route as EmotionalBalancePrivateWellbeingRouteImport } from './routes/blog/emotional-balance-private-wellbeing'
 import { Route as ConfidenceSelfTrustBlogRouteImport } from './routes/blog/confidence-self-trust'
@@ -53,6 +62,21 @@ const IndexRoute = IndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArabicRoute = ArabicRouteImport.update({ id: '/ar', path: '/ar', getParentRoute: () => rootRouteImport } as any)
+const ArabicWellbeingRoute = ArabicWellbeingRouteImport.update({ id: '/ar/wellbeing', path: '/wellbeing', getParentRoute: () => ArabicRoute } as any)
+const ArabicWomenRoute = ArabicWomenRouteImport.update({ id: '/ar/women', path: '/women', getParentRoute: () => ArabicRoute } as any)
+const ArabicMenRoute = ArabicMenRouteImport.update({ id: '/ar/men', path: '/men', getParentRoute: () => ArabicRoute } as any)
+const ArabicBusinessRoute = ArabicBusinessRouteImport.update({ id: '/ar/business', path: '/business', getParentRoute: () => ArabicRoute } as any)
+const ArabicAboutRoute = ArabicAboutRouteImport.update({ id: '/ar/about', path: '/about', getParentRoute: () => ArabicRoute } as any)
+const ArabicBlogRoute = ArabicBlogRouteImport.update({ id: '/ar/blog', path: '/blog', getParentRoute: () => ArabicRoute } as any)
+const ArabicBookRoute = ArabicBookRouteImport.update({ id: '/ar/book', path: '/book', getParentRoute: () => ArabicRoute } as any)
+const ArabicPrivacyRoute = ArabicPrivacyRouteImport.update({ id: '/ar/privacy', path: '/privacy', getParentRoute: () => ArabicRoute } as any)
+const ArabicTermsRoute = ArabicTermsRouteImport.update({ id: '/ar/terms', path: '/terms', getParentRoute: () => ArabicRoute } as any)
+
+const ArabicRouteWithChildren = ArabicRoute._addFileChildren({
+  ArabicWellbeingRoute, ArabicWomenRoute, ArabicMenRoute, ArabicBusinessRoute,
+  ArabicAboutRoute, ArabicBlogRoute, ArabicBookRoute, ArabicPrivacyRoute, ArabicTermsRoute,
+})
+
 const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
   id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
@@ -373,6 +397,16 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ar': { id: '/ar', path: '/ar', fullPath: '/ar', preLoaderRoute: typeof ArabicRouteImport, parentRoute: typeof rootRouteImport }
+    '/ar/wellbeing': { id: '/ar/wellbeing', path: '/wellbeing', fullPath: '/ar/wellbeing', preLoaderRoute: typeof ArabicWellbeingRouteImport, parentRoute: typeof ArabicRoute }
+    '/ar/women': { id: '/ar/women', path: '/women', fullPath: '/ar/women', preLoaderRoute: typeof ArabicWomenRouteImport, parentRoute: typeof ArabicRoute }
+    '/ar/men': { id: '/ar/men', path: '/men', fullPath: '/ar/men', preLoaderRoute: typeof ArabicMenRouteImport, parentRoute: typeof ArabicRoute }
+    '/ar/business': { id: '/ar/business', path: '/business', fullPath: '/ar/business', preLoaderRoute: typeof ArabicBusinessRouteImport, parentRoute: typeof ArabicRoute }
+    '/ar/about': { id: '/ar/about', path: '/about', fullPath: '/ar/about', preLoaderRoute: typeof ArabicAboutRouteImport, parentRoute: typeof ArabicRoute }
+    '/ar/blog': { id: '/ar/blog', path: '/blog', fullPath: '/ar/blog', preLoaderRoute: typeof ArabicBlogRouteImport, parentRoute: typeof ArabicRoute }
+    '/ar/book': { id: '/ar/book', path: '/book', fullPath: '/ar/book', preLoaderRoute: typeof ArabicBookRouteImport, parentRoute: typeof ArabicRoute }
+    '/ar/privacy': { id: '/ar/privacy', path: '/privacy', fullPath: '/ar/privacy', preLoaderRoute: typeof ArabicPrivacyRouteImport, parentRoute: typeof ArabicRoute }
+    '/ar/terms': { id: '/ar/terms', path: '/terms', fullPath: '/ar/terms', preLoaderRoute: typeof ArabicTermsRouteImport, parentRoute: typeof ArabicRoute }
     '/about': {
       id: '/about'
       path: '/about'
@@ -464,6 +498,23 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface ArabicRouteChildren {
+  ArabicWellbeingRoute: typeof ArabicWellbeingRoute
+  ArabicWomenRoute: typeof ArabicWomenRoute
+  ArabicMenRoute: typeof ArabicMenRoute
+  ArabicBusinessRoute: typeof ArabicBusinessRoute
+  ArabicAboutRoute: typeof ArabicAboutRoute
+  ArabicBlogRoute: typeof ArabicBlogRoute
+  ArabicBookRoute: typeof ArabicBookRoute
+  ArabicPrivacyRoute: typeof ArabicPrivacyRoute
+  ArabicTermsRoute: typeof ArabicTermsRoute
+}
+
+const ArabicRouteChildren: ArabicRouteChildren = {
+  ArabicWellbeingRoute, ArabicWomenRoute, ArabicMenRoute, ArabicBusinessRoute,
+  ArabicAboutRoute, ArabicBlogRoute, ArabicBookRoute, ArabicPrivacyRoute, ArabicTermsRoute,
+}
+
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAdminRoute: typeof AuthenticatedAdminRoute
 }
@@ -539,6 +590,7 @@ const WellbeingRouteWithChildren = WellbeingRoute._addFileChildren({ WellbeingSt
 const WomenRouteWithChildren = WomenRoute._addFileChildren({ WomenMotherhoodRoute, ConfidenceSelfTrustRoute })
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArabicRoute: ArabicRouteWithChildren,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   AuthRoute: AuthRoute,
