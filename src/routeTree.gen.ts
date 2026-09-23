@@ -376,7 +376,6 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/ar': { id: '/ar', path: '/ar', fullPath: '/ar', preLoaderRoute: typeof ArabicRouteImport, parentRoute: typeof rootRouteImport }
     '/blog/mindfulness-busy-lives': { id: '/blog/mindfulness-busy-lives', path: '/mindfulness-busy-lives', fullPath: '/blog/mindfulness-busy-lives', preLoaderRoute: typeof MindfulnessBusyLivesRouteImport, parentRoute: typeof BlogRouteImport }
     '/blog/emotional-balance-private-wellbeing': { id: '/blog/emotional-balance-private-wellbeing', path: '/emotional-balance-private-wellbeing', fullPath: '/blog/emotional-balance-private-wellbeing', preLoaderRoute: typeof EmotionalBalancePrivateWellbeingRouteImport, parentRoute: typeof BlogRouteImport }
     '/blog/confidence-self-trust': { id: '/blog/confidence-self-trust', path: '/confidence-self-trust', fullPath: '/blog/confidence-self-trust', preLoaderRoute: typeof ConfidenceSelfTrustBlogRouteImport, parentRoute: typeof BlogRouteImport }
