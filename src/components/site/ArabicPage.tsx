@@ -29,7 +29,7 @@ type PageData = {
 
 const data: Record<Kind, PageData> = {
   wellbeing: {
-    eyebrow: "الرفاه والرفاه الخاصة",
+    eyebrow: "استشارات الرفاه الخاصة",
     title: "مساحة هادئة تعود فيها إلى نفسك.",
     intro:
       "استشارات خاصة لمن يحتاج إلى التوقف قليلاً، رؤية الصورة بوضوح، واستعادة قدر أكبر من الاتزان وسط متطلبات الحياة.",
@@ -137,7 +137,7 @@ const data: Record<Kind, PageData> = {
   },
   vip: {
     eyebrow: "VIP · رفاه خاص",
-    title: "عافية خاصة، بصيغة تناسب حياتك.",
+    title: "رفاه خاصة، بصيغة تناسب حياتك.",
     intro:
       "خدمة مصممة للأفراد والعائلات والقيادات الذين يقدّرون الخصوصية، المرونة والعلاقة الاستشارية الشخصية.",
     sections: [
@@ -165,7 +165,7 @@ const data: Record<Kind, PageData> = {
   },
   about: {
     eyebrow: "عن GULFWELLBEING",
-    title: "الرفاه تبدأ من علاقة إنسانية حقيقية.",
+    title: "الرفاه يبدأ من علاقة إنسانية حقيقية.",
     intro:
       "تقود GULFWELLBEING سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master، من خلال مقاربة خاصة تجمع الإصغاء، الوعي وممارسات الرفاه الشمولي بحسب احتياج كل شخص.",
     sections: [
@@ -251,7 +251,7 @@ const data: Record<Kind, PageData> = {
       {
         title: "طبيعة الخدمة",
         body:
-          "تقدم GULFWELLBEING خدمات استشارات الرفاه وCoaching وممارسات عافية شمولية. هذه الخدمات ليست بديلاً عن الطوارئ أو التشخيص أو العلاج الطبي أو النفسي المنظم.",
+          "تقدم GULFWELLBEING خدمات استشارات الرفاه وCoaching وممارسات الرفاه الشمولي. هذه الخدمات ليست بديلاً عن الطوارئ أو التشخيص أو العلاج الطبي أو النفسي المنظم.",
       },
       {
         title: "طلب الجلسة",
@@ -306,6 +306,32 @@ export function ArabicPage({ kind }: { kind: Kind }) {
           </article>
         ))}
       </section>
+
+      {kind === "business" && (
+        <section className="bg-secondary px-6 py-20 lg:px-12 lg:py-28">
+          <div className="mx-auto max-w-5xl">
+            <p className="eyebrow text-gold">رفاه الشركات والقيادات</p>
+            <h2 className="mt-4 font-serif text-5xl leading-tight sm:text-7xl">اختر المساحة الأقرب إلى وضعك.</h2>
+            <div className="mt-12 grid gap-px bg-border md:grid-cols-2">
+              {[
+                ["رفاه القيادات التنفيذية", "مساحة خاصة للمديرين والقيادات تحت ضغط المسؤولية المستمرة.", "/ar/business/executive-wellbeing"],
+                ["رفاه المؤسسين", "دعم خاص لمن يحملون الشركة والقرارات وعدم اليقين.", "/ar/business/founder-wellbeing"],
+                ["وضوح القيادة", "مساحة للتفكير في القرارات الصعبة والحدود والمحادثات القيادية.", "/ar/business/leadership-clarity"],
+                ["الضغط والوقاية من الاحتراق", "دعم حول الضغط المستمر والتعافي والعمل والحدود.", "/ar/business/burnout-prevention"],
+                ["رفاه القيادة والفريق", "دعم للقيادات التي تتحمل مسؤولية الأشخاص والتواصل والبيئة الإنسانية.", "/ar/business/team-wellbeing"],
+                ["استشارات رفاه الشركات", "منظور خارجي خاص للقيادات والمؤسسات خلال التغيير والضغط.", "/ar/business/corporate-advisory"],
+              ].map(([title, text, href], index) => (
+                <Link key={href} to={href as any} className="group bg-background p-7 transition-colors hover:bg-primary hover:text-primary-foreground">
+                  <span className="text-xs text-gold">{String(index + 1).padStart(2, "0")}</span>
+                  <h3 className="mt-8 font-serif text-3xl leading-tight">{title}</h3>
+                  <p className="mt-4 text-sm leading-8 text-muted-foreground group-hover:text-primary-foreground/70">{text}</p>
+                  <ArrowUpLeft className="mt-8 size-5 text-gold" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {!isLegal && (
         <section className="bg-secondary px-6 py-20 text-center">
