@@ -1,24 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, LockKeyhole, Sparkles } from "lucide-react";
+import { SiteShell } from "@/components/site/SiteShell";
+import { pageHead } from "@/components/site/PageMeta";
+import hero from "@/assets/gulfwellbeing-hero.jpg";
+import woman from "@/assets/woman-editorial.jpg";
+import executive from "@/assets/executive-editorial.jpg";
+import stillLife from "@/assets/private-still-life.jpg";
+export const Route=createFileRoute("/")({head:()=>pageHead("GULFWELLBEING — Private Wellbeing Advisor in the Gulf","Private wellbeing advisory for individuals, families, executives and high-performing professionals across the GCC."),component:Home});
+const areas=[['Wellbeing','Pressure, transition, relationships and renewed capacity.','/wellbeing/'],['For Women','A nuanced space for private and family life.','/women/'],['For Men','Clarity for responsibility, leadership and change.','/men/'],['Business & Executive','Private advisory for those leading at the highest level.','/business/']] as const;
+function Home(){return <SiteShell><section className="relative min-h-[calc(100vh-5rem)] overflow-hidden bg-primary text-primary-foreground"><img src={hero} width={1920} height={1200} fetchPriority="high" alt="A composed Gulf leader in a private Dubai interior" className="absolute inset-0 size-full object-cover"/><div className="absolute inset-0 bg-hero-overlay"/><div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-[1440px] items-end px-6 pb-16 lg:px-12 lg:pb-20"><div className="max-w-4xl reveal"><p className="eyebrow text-gold">PRIVATE WELLBEING ADVISORY · GCC & INTERNATIONAL</p><h1 className="mt-6 font-serif text-5xl leading-[.98] md:text-7xl lg:text-8xl">Wellbeing, reimagined for those who carry more.</h1><p className="mt-7 max-w-2xl text-lg leading-8 text-primary-foreground/75">Private, thoughtful support for individuals, families and leaders—designed around the realities of a demanding life.</p><div className="mt-9 flex flex-wrap gap-3"><Link to="/book/" className="button-gold">Book a Private Session <ArrowRight className="size-4"/></Link><Link to="/wellbeing/" className="button-on-dark">Explore Wellbeing</Link></div></div></div></section><section className="mx-auto max-w-[1440px] px-6 py-24 lg:px-12"><div className="grid gap-12 lg:grid-cols-[.7fr_1.3fr]"><div><p className="eyebrow text-gold">A MORE PERSONAL STANDARD</p><Sparkles className="mt-8 size-7 text-gold"/></div><div><h2 className="font-serif text-4xl leading-tight md:text-6xl">Clarity begins with space to think.</h2><p className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground">A calm, considered setting to navigate pressure, relationships, transitions and the responsibilities that rarely pause. Every conversation is shaped around you.</p><Link to="/about/" className="mt-8 inline-flex items-center gap-2 border-b border-gold pb-1 text-sm">Discover the Approach <ArrowRight className="size-4"/></Link></div></div></section><section className="bg-secondary"><div className="mx-auto max-w-[1440px] px-6 py-24 lg:px-12"><p className="eyebrow text-gold">AREAS OF ADVISORY</p><div className="mt-10 grid md:grid-cols-2">{areas.map((a,i)=><Link key={a[0]} to={a[2]} className="group border-t border-border p-8 transition-colors hover:bg-background md:min-h-64"><span className="font-serif text-xl text-gold">0{i+1}</span><h3 className="mt-10 font-serif text-4xl">{a[0]}</h3><p className="mt-3 max-w-sm text-muted-foreground">{a[1]}</p><ArrowRight className="mt-7 size-5 transition-transform group-hover:translate-x-2"/></Link>)}</div></div></section><section className="grid lg:grid-cols-2"><img src={woman} loading="lazy" width={1008} height={1408} alt="A confident Gulf woman in a private setting" className="h-[70vh] w-full object-cover"/><div className="flex items-center bg-primary px-8 py-16 text-primary-foreground lg:px-20"><div><p className="eyebrow text-gold">WOMEN</p><h2 className="mt-5 font-serif text-5xl">A private space for a life with many dimensions.</h2><p className="mt-6 max-w-lg leading-7 text-primary-foreground/65">Personal, family and professional life rarely exist separately. Explore support that respects the whole context.</p><Link to="/women/" className="button-gold mt-8">Explore Women's Wellbeing</Link></div></div></section><section className="grid lg:grid-cols-2"><div className="order-2 flex items-center px-8 py-16 lg:order-1 lg:px-20"><div><p className="eyebrow text-gold">MEN</p><h2 className="mt-5 font-serif text-5xl">Perspective for the person behind the responsibility.</h2><p className="mt-6 max-w-lg leading-7 text-muted-foreground">A discreet and practical setting for leadership, family, pressure and personal direction.</p><Link to="/men/" className="button-primary mt-8">Explore Men's Wellbeing</Link></div></div><img src={executive} loading="lazy" width={1008} height={1408} alt="A Gulf executive in a quiet architectural setting" className="order-1 h-[70vh] w-full object-cover lg:order-2"/></section><section className="relative min-h-[70vh] overflow-hidden"><img src={stillLife} loading="lazy" width={1408} height={1008} alt="Private advisory journal and magnolia flowers" className="absolute inset-0 size-full object-cover"/><div className="absolute inset-0 bg-image-overlay"/><div className="relative mx-auto flex min-h-[70vh] max-w-[1440px] items-center px-6 py-20 lg:px-12"><div className="max-w-2xl text-primary-foreground"><p className="eyebrow text-gold">VIP CONCIERGE WELLBEING</p><h2 className="mt-6 font-serif text-5xl md:text-6xl">Private support. Exceptional discretion. Entirely tailored to you.</h2><p className="mt-6 leading-7 text-primary-foreground/70">A highly personalised experience designed around private life, leadership and schedules that require flexibility.</p><Link to="/business/vip-concierge-wellbeing/" className="button-gold mt-8">Explore VIP Concierge</Link></div></div></section><section className="px-6 py-24 text-center lg:px-12"><LockKeyhole className="mx-auto size-8 text-gold"/><p className="eyebrow mt-6 text-gold">PRIVATE & DISCREET</p><h2 className="mx-auto mt-5 max-w-3xl font-serif text-5xl">A considered conversation can change the way forward.</h2><Link to="/book/" className="button-primary mt-9">Book a Private Session</Link></section></SiteShell>}
