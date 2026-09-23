@@ -96,6 +96,16 @@ function Home() {
       <img src={stillLife} width={1280} height={960} loading="lazy" alt="Private consultation salon with understated Gulf architecture" className="order-1 h-full min-h-[30rem] w-full object-cover lg:order-2" />
     </section>
 
+    <section className="grid bg-primary text-primary-foreground lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="min-h-[34rem]"><img src="/images/sourour-tarkan-home.jpg" width={240} height={300} loading="lazy" alt="Sourour Tarkan, private wellbeing advisor and coach" className="h-full w-full object-cover object-center" /></div>
+      <div className="flex items-center px-6 py-20 lg:px-20"><div className="max-w-xl">
+        <p className="text-[10px] uppercase tracking-[0.22em] text-gold">MEET SOUROUR TARKAN</p>
+        <h2 className="mt-5 font-serif text-5xl leading-none sm:text-7xl">A private relationship<br/>with a real person.</h2>
+        <p className="mt-7 text-sm leading-7 text-primary-foreground/70 sm:text-base">GULFWELLBEING is led by Sourour Tarkan, a private wellbeing advisor and coach and Reiki Master. Her approach begins with listening, context and the realities of the person behind the role.</p>
+        <Link to="/about" className="button-gold mt-9">Meet Sourour Tarkan <ArrowRight className="size-4" /></Link>
+      </div></div>
+    </section>
+
     <section className="bg-secondary px-5 py-20 lg:px-10 lg:py-28">
       <div className="mx-auto grid max-w-[1350px] gap-16 lg:grid-cols-2">
         <div><p className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">THE TARKAN APPROACH</p><h2 className="mt-5 font-serif text-5xl leading-none sm:text-7xl">Human attention,<br/>without assumption.</h2></div>
