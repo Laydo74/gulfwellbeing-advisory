@@ -122,5 +122,6 @@ function Home() {
         <Link to="/book" className="button-gold">Request a Private Session <ArrowRight className="size-4"/></Link>
       </div>
     </section>
-  </div>;
+  </div>
+  </SiteShell>;
 }
