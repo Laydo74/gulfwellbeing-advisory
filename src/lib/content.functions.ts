@@ -31,9 +31,24 @@ export const submitEnquiry = createServerFn({ method: "POST" }).inputValidator((
 
 export const claimOwner = createServerFn({ method: "POST" }).middleware([requireSupabaseAuth]).handler(async ({ context }) => {
   const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+  const ownerEmail = process.env["OWNER_EMAIL"]?.trim().toLowerCase();
+  if (!ownerEmail) throw new Error("OWNER_EMAIL is not configured.");
+  const { data: user, error: userError } = await supabaseAdmin.auth.admin.getUserById(context.userId);
+  if (userError || !user?.user?.email || user.user.email.toLowerCase() !== ownerEmail) {
+    throw new Error("This account is not authorised as the site owner.");
+  }
   const { count } = await supabaseAdmin.from("user_roles").select("id", { count: "exact", head: true });
   if ((count ?? 0) > 0) return { claimed: false };
   const { error } = await supabaseAdmin.from("user_roles").insert({ user_id: context.userId, role: "owner" });
   if (error) throw error;
   return { claimed: true };
+});
+
+export const updateEnquiryStatus = createServerFn({ method: "POST" }).middleware([requireSupabaseAuth]).inputValidator((data) => z.object({ id: z.string().uuid(), status: z.enum(["new", "contacted", "closed"]) }).parse(data)).handler(async ({ context, data }) => {
+  const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+  const { data: role } = await supabaseAdmin.from("user_roles").select("role").eq("user_id", context.userId).eq("role", "owner").maybeSingle();
+  if (!role) throw new Error("Not authorised.");
+  const { error } = await supabaseAdmin.from("booking_enquiries").update({ status: data.status }).eq("id", data.id);
+  if (error) throw error;
+  return { ok: true };
 });
