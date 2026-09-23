@@ -165,6 +165,12 @@ export interface FileRoutesByTo {
   '/business/burnout-prevention': typeof BurnoutPreventionRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/blog/private-wellbeing-advisory-gulf': typeof PrivateWellbeingAdvisoryGulfRoute
+  '/blog/stress-burnout-executives': typeof StressBurnoutExecutivesRoute
+  '/blog/womens-wellbeing-gulf': typeof WomensWellbeingGulfRoute
+  '/blog/mens-wellbeing-pressure': typeof MensWellbeingPressureRoute
+  '/blog/relationships-family-wellbeing': typeof RelationshipsFamilyWellbeingRoute
+  '/blog/life-transitions-wellbeing': typeof LifeTransitionsWellbeingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -268,6 +274,12 @@ export interface FileRouteTypes {
     | '/business/burnout-prevention'
     | '/privacy'
     | '/terms'
+    | '/blog/private-wellbeing-advisory-gulf'
+    | '/blog/stress-burnout-executives'
+    | '/blog/womens-wellbeing-gulf'
+    | '/blog/mens-wellbeing-pressure'
+    | '/blog/relationships-family-wellbeing'
+    | '/blog/life-transitions-wellbeing'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
