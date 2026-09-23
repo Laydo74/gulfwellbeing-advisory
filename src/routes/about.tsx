@@ -2,7 +2,6 @@ import { createFileRoute,Link } from "@tanstack/react-router";
 import { ArrowRight,LockKeyhole } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { pageHead } from "@/components/site/PageMeta";
-import stillLife from "@/assets/private-still-life.jpg";
 
 export const Route=createFileRoute("/about")({
   head:()=>pageHead("About Sourour Tarkan — GULFWELLBEING","Meet Sourour Tarkan, wellbeing advisor and coach, and discover the private Gulfwellbeing approach."),
