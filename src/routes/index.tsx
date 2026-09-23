@@ -19,7 +19,7 @@ const pathways=[
   ["01","Private Wellbeing","Stress, emotional balance, relationships, mindfulness, life transitions and holistic wellbeing.","/wellbeing",stillLife],
   ["02","Women's Wellbeing","Motherhood, family life, confidence, relationships, identity and personal transitions.","/women",woman],
   ["03","Men's Wellbeing","Pressure, fatherhood, emotional balance, leadership, responsibility and personal direction.","/men",executive],
-  ["04","Business & Executive","Executive wellbeing, pressure, burnout prevention, leadership clarity and team wellbeing.","/business",executive],
+  ["04","Business & Executive","Executive wellbeing, pressure, burnout prevention, leadership clarity and team wellbeing.","/business",stillLife],
 ] as const;
 
 function Home(){return <SiteShell>
@@ -69,7 +69,7 @@ function Home(){return <SiteShell>
   <div className="flex items-center px-6 py-20 lg:px-20"><div className="max-w-xl">
     <p className="eyebrow text-gold">BUSINESS & EXECUTIVE</p><h2 className="mt-5 font-serif text-5xl leading-none sm:text-7xl">Clearer within.<br/>Stronger in leadership.</h2>
     <p className="mt-7 text-sm leading-7 text-primary-foreground/65 sm:text-base">Private advisory for the human realities behind senior responsibility—sustained pressure, difficult decisions, changing identity and the need for clear perspective.</p>
-    <Link to="/business" className="button-gold mt-9">Explore Executive Wellbeing</Link>
+    <Link to="/business" className="button-gold mt-9">Explore Executive Wellbeing <ArrowRight className="size-4"/></Link>
   </div></div>
 </section>
 
@@ -111,6 +111,16 @@ function Home(){return <SiteShell>
     <div className="mt-12 grid gap-8 md:grid-cols-3">
       {[["01","Share your context","Tell us only what feels appropriate and what you would like support with."],["02","Explore the fit","The first conversation helps clarify your needs, preferences and the most relevant format."],["03","Shape the work","If appropriate, sessions are shaped around your circumstances, priorities and agreed focus."]].map(([n,t,b])=><div key={n} className="border-t border-primary-foreground/15 pt-6"><span className="font-serif text-2xl text-gold">{n}</span><h3 className="mt-6 font-serif text-3xl">{t}</h3><p className="mt-4 text-sm leading-7 text-primary-foreground/65">{b}</p></div>)}
     </div>
+  </div>
+</section>
+
+<section className="bg-secondary px-5 py-20 lg:px-10 lg:py-28">
+  <div className="mx-auto max-w-[1400px]">
+    <div className="flex items-end justify-between gap-8"><div><p className="eyebrow text-gold">THE PRIVATE JOURNAL</p><h2 className="mt-4 font-serif text-5xl sm:text-7xl">Perspectives for a more considered life.</h2></div><Link to="/blog" className="hidden items-center gap-2 border-b border-foreground pb-2 text-xs font-semibold uppercase tracking-[.14em] sm:inline-flex">View Journal <ArrowRight className="size-4"/></Link></div>
+    <div className="mt-12 grid gap-px bg-border md:grid-cols-3">
+      {[["Private Wellbeing Advisory in the Gulf","A personal approach for individuals and families living with demanding lives.","/blog/private-wellbeing-advisory-gulf"],["Stress and Burnout in Executives","Creating space before sustained pressure takes over.","/blog/stress-burnout-executives"],["Women's Wellbeing in the Gulf","Identity, relationships, family life, confidence and transitions.","/blog/womens-wellbeing-gulf"]].map(([title,text,to],i)=><Link key={to} to={to as any} className="group bg-background p-7 transition-colors hover:bg-card"><span className="text-xs text-gold">0{i+1}</span><h3 className="mt-10 font-serif text-3xl leading-tight">{title}</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">{text}</p><span className="mt-6 inline-flex items-center gap-2 text-sm">Read the perspective <ArrowRight className="size-4 transition-transform group-hover:translate-x-1"/></span></Link>)}
+    </div>
+    <Link to="/blog" className="mt-8 inline-flex items-center gap-2 border-b border-foreground pb-2 text-xs font-semibold uppercase tracking-[.14em] sm:hidden">View Journal <ArrowRight className="size-4"/></Link>
   </div>
 </section>
 
