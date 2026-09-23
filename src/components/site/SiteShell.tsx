@@ -9,7 +9,7 @@ const nav = [
   { label: "Wellbeing", ar: "الرفاه", to: "/wellbeing" },
   { label: "Women", ar: "المرأة", to: "/women" },
   { label: "Men", ar: "الرجل", to: "/men" },
-  { label: "Business & Executive", ar: "الأعمال والقيادات", to: "/business" },
+  { label: "Business Wellbeing", ar: "رفاه الشركات والقيادات", to: "/business" },
   { label: "VIP Concierge", ar: "الرفاه الخاص VIP", to: "/business/vip-concierge-wellbeing" },
   { label: "About", ar: "عن GULFWELLBEING", to: "/about" },
   { label: "Blog", ar: "المدونة", to: "/blog" },
@@ -63,23 +63,24 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 lg:px-10">
           <Link to={isArabic ? "/ar" : "/"} aria-label="GULFWELLBEING home"><BrandMark /></Link>
-          <nav className="hidden items-center gap-3 lg:flex" aria-label={isArabic ? "التنقل الرئيسي" : "Main navigation"}>
-            {nav.map((item, i) => (
-              <Link key={item.label} to={(isArabic ? `/ar${item.to === "/" ? "" : item.to}` : item.to) as any}
-                className={i === 8 ? "nav-book" : "nav-link"}
-                activeProps={{ className: i === 8 ? "nav-book" : "nav-link text-gold" }}>
-                {isArabic ? item.ar : item.label}
-              </Link>
-            ))}
-            <Link to={langTarget as any} className="nav-link inline-flex items-center gap-2 border-s border-border ps-4" aria-label={isArabic ? "Switch to English" : "التبديل إلى العربية"}>
+          <div className="hidden items-center gap-6 lg:flex" dir="ltr">
+            <nav className="flex items-center gap-3" dir={isArabic ? "rtl" : "ltr"} aria-label={isArabic ? "التنقل الرئيسي" : "Main navigation"}>
+              {nav.map((item, i) => (
+                <Link key={item.label} to={(isArabic ? `/ar${item.to === "/" ? "" : item.to}` : item.to) as any}
+                  className={i === 8 ? "nav-book" : "nav-link"}
+                  activeProps={{ className: i === 8 ? "nav-book" : "nav-link text-gold" }}>
+                  {isArabic ? item.ar : item.label}
+                </Link>
+              ))}
+            </nav>
+            <Link to={langTarget as any} dir="ltr" className="nav-link inline-flex shrink-0 items-center gap-2 border-s border-border ps-4" aria-label={isArabic ? "Switch to English" : "التبديل إلى العربية"}>
               <Languages className="size-4" /> {isArabic ? "English" : "العربية"}
             </Link>
-          </nav>
-          <Button variant="ghost" size="icon" className="lg:hidden" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>
+          </div>
+          <Button variant="ghost" size="icon" className="lg:hidden" dir="ltr" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>
             {open ? <X /> : <Menu />}
           </Button>
-        </div>
-        {open && (
+{open && (
           <div className="fixed inset-0 top-20 z-40 bg-primary px-6 py-10 text-primary-foreground lg:hidden">
             <nav className="flex flex-col" aria-label={isArabic ? "التنقل" : "Mobile navigation"}>
               {nav.map((item, i) => (
