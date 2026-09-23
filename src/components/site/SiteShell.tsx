@@ -17,11 +17,31 @@ const nav = [
 ] as const;
 
 function languageTarget(path: string) {
-  if (path.startsWith("/ar")) {
-    const english = path.replace(/^\/ar/, "") || "/";
-    return english;
-  }
-  return path === "/" ? "/ar" : `/ar${path}`;
+  const map: Record<string, string> = {
+    "/": "/ar",
+    "/wellbeing": "/ar/wellbeing",
+    "/women": "/ar/women",
+    "/men": "/ar/men",
+    "/business": "/ar/business",
+    "/business/vip-concierge-wellbeing": "/ar/business/vip-concierge-wellbeing",
+    "/about": "/ar/about",
+    "/blog": "/ar/blog",
+    "/book": "/ar/book",
+    "/privacy": "/ar/privacy",
+    "/terms": "/ar/terms",
+    "/ar": "/",
+    "/ar/wellbeing": "/wellbeing",
+    "/ar/women": "/women",
+    "/ar/men": "/men",
+    "/ar/business": "/business",
+    "/ar/business/vip-concierge-wellbeing": "/business/vip-concierge-wellbeing",
+    "/ar/about": "/about",
+    "/ar/blog": "/blog",
+    "/ar/book": "/book",
+    "/ar/privacy": "/privacy",
+    "/ar/terms": "/terms",
+  };
+  return map[path] || (path.startsWith("/ar/") ? path.replace(/^\/ar/, "") : `/ar${path}`);
 }
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
