@@ -114,6 +114,14 @@ export interface FileRoutesByFullPath {
   '/men/fatherhood': typeof MenFatherhoodRoute
   '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
   '/women/motherhood': typeof WomenMotherhoodRoute
+  '/wellbeing/relationships-family': typeof RelationshipsFamilyRoute
+  '/wellbeing/emotional-balance': typeof EmotionalBalanceRoute
+  '/wellbeing/life-transitions': typeof LifeTransitionsRoute
+  '/women/confidence-self-trust': typeof ConfidenceSelfTrustRoute
+  '/business/leadership-clarity': typeof LeadershipClarityRoute
+  '/business/burnout-prevention': typeof BurnoutPreventionRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -228,6 +236,14 @@ export interface FileRouteTypes {
     | '/men/fatherhood'
     | '/wellbeing/stress-burnout'
     | '/women/motherhood'
+    | '/wellbeing/relationships-family'
+    | '/wellbeing/emotional-balance'
+    | '/wellbeing/life-transitions'
+    | '/women/confidence-self-trust'
+    | '/business/leadership-clarity'
+    | '/business/burnout-prevention'
+    | '/privacy'
+    | '/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -241,6 +257,8 @@ export interface RootRouteChildren {
   MenRoute: typeof MenRoute
   WellbeingRoute: typeof WellbeingRoute
   WomenRoute: typeof WomenRoute
+  PrivacyRoute: typeof PrivacyRoute
+  TermsRoute: typeof TermsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -385,8 +403,6 @@ const WomenMotherhoodRoute = WomenMotherhoodRouteImport.update({ id: '/motherhoo
 const MenRouteWithChildren = MenRoute._addFileChildren({ MenFatherhoodRoute })
 const WellbeingRouteWithChildren = WellbeingRoute._addFileChildren({ WellbeingStressBurnoutRoute, RelationshipsFamilyRoute, EmotionalBalanceRoute, LifeTransitionsRoute })
 const WomenRouteWithChildren = WomenRoute._addFileChildren({ WomenMotherhoodRoute, ConfidenceSelfTrustRoute })
-const WellbeingRouteWithChildren = WellbeingRoute._addFileChildren({ WellbeingStressBurnoutRoute, RelationshipsFamilyRoute, EmotionalBalanceRoute, LifeTransitionsRoute })
-const WomenRouteWithChildren = WomenRoute._addFileChildren({ WomenMotherhoodRoute, ConfidenceSelfTrustRoute })
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
@@ -398,6 +414,8 @@ const rootRouteChildren: RootRouteChildren = {
   MenRoute: MenRouteWithChildren,
   WellbeingRoute: WellbeingRouteWithChildren,
   WomenRoute: WomenRouteWithChildren,
+  PrivacyRoute: PrivacyRoute,
+  TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
