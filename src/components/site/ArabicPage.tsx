@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpLeft, LockKeyhole } from "lucide-react";
+import { FaqSection } from "./FaqSection";
 import { SiteShell } from "@/components/site/SiteShell";
 import hero from "@/assets/gulfwellbeing-hero.jpg";
 import woman from "@/assets/woman-editorial.jpg";
@@ -122,7 +123,7 @@ const data: Record<Kind, PageData> = {
     ],
   },
   business: {
-    eyebrow: "الأعمال والقيادات",
+    eyebrow: "رفاه الشركات والقيادات",
     title: "عندما تكون مسؤولاً عن الكثير، تحتاج إلى مساحة لك أنت.",
     intro:
       "استشارات خاصة في الرفاه للمؤسسين والمديرين والمهنيين الذين يعيشون تحت ضغط القرارات، التوقعات والمسؤولية المستمرة.",
@@ -405,10 +406,10 @@ export function ArabicHome() {
               هناك إنسان.
             </h2>
             <p className="mt-7 text-base leading-9 text-primary-foreground/70">
-              استشارات خاصة للمؤسسين والمديرين والمهنيين الذين يعيشون تحت ضغط المسؤولية والقرارات المستمرة.
+              استشارات رفاه خاصة للمؤسسين والمديرين والقيادات والفرق، تركز على الضغط المستمر، وضوح القرار، مسؤولية القيادة والجانب الإنساني من الأداء.
             </p>
             <Link to="/ar/business" className="button-gold mt-9">
-              اكتشف عافية القيادات
+              اكتشف رفاه الشركات والقيادات
             </Link>
           </div>
         </div>
@@ -491,6 +492,8 @@ export function ArabicHome() {
           </div>
         </div>
       </section>
+
+      <FaqSection isArabic />
 
       <section className="bg-primary px-5 py-20 text-primary-foreground lg:px-10 lg:py-28">
         <div className="mx-auto flex max-w-[1200px] flex-col items-start justify-between gap-8 md:flex-row md:items-end">
