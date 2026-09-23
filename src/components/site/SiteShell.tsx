@@ -12,6 +12,7 @@ const nav = [
   { label: "Business & Executive", ar: "Business & Executive", to: "/business" },
   { label: "VIP Concierge", ar: "VIP Concierge", to: "/business/vip-concierge-wellbeing" },
   { label: "About", ar: "عن Gulfwellbeing", to: "/about" },
+  { label: "Journal", ar: "Journal", to: "/blog" },
   { label: "Book a Session", ar: "طلب جلسة خاصة", to: "/book" },
 ] as const;
 
@@ -42,11 +43,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 lg:px-10">
           <Link to={isArabic ? "/ar" : "/"} aria-label="GULFWELLBEING home"><BrandMark /></Link>
-          <nav className="hidden items-center gap-5 xl:flex" aria-label={isArabic ? "التنقل الرئيسي" : "Main navigation"}>
+          <nav className="hidden items-center gap-3 lg:flex" aria-label={isArabic ? "التنقل الرئيسي" : "Main navigation"}>
             {nav.map((item, i) => (
               <Link key={item.label} to={(isArabic ? `/ar${item.to === "/" ? "" : item.to}` : item.to) as any}
-                className={i === 7 ? "nav-book" : "nav-link"}
-                activeProps={{ className: i === 7 ? "nav-book" : "nav-link text-gold" }}>
+                className={i === 8 ? "nav-book" : "nav-link"}
+                activeProps={{ className: i === 8 ? "nav-book" : "nav-link text-gold" }}>
                 {isArabic ? item.ar : item.label}
               </Link>
             ))}
@@ -88,7 +89,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div>
             <p className="eyebrow text-gold">{isArabic ? "التنقل" : "Navigate"}</p>
             <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
-              {nav.slice(0, 7).map((n) => <Link key={n.label} to={(isArabic ? `/ar${n.to === "/" ? "" : n.to}` : n.to) as any}>{isArabic ? n.ar : n.label}</Link>)}
+              {nav.slice(0, 8).map((n) => <Link key={n.label} to={(isArabic ? `/ar${n.to === "/" ? "" : n.to}` : n.to) as any}>{isArabic ? n.ar : n.label}</Link>)}
               <Link to={(isArabic ? "/ar/blog" : "/blog") as any}>{isArabic ? "Journal" : "Journal"}</Link>
             </div>
           </div>
