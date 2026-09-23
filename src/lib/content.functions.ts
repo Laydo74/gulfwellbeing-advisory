@@ -23,7 +23,8 @@ const enquirySchema = z.object({
   name: z.string().trim().min(2).max(100), email: z.string().trim().email().max(255), phone: z.string().trim().max(40).optional(), country: z.string().trim().min(2).max(80), area_of_support: z.string().trim().min(2).max(120), session_format: z.string().trim().min(2).max(60), availability: z.string().trim().min(2).max(200), contact_method: z.string().trim().min(2).max(40), message: z.string().trim().max(2000).optional(),
 });
 export const submitEnquiry = createServerFn({ method: "POST" }).inputValidator((data) => enquirySchema.parse(data)).handler(async ({ data }) => {
-  const { error } = await publicClient().from("booking_enquiries").insert(data);
+  const payload = { ...data, phone: data.phone ?? null, message: data.message ?? null };
+  const { error } = await publicClient().from("booking_enquiries").insert(payload);
   if (error) throw new Error("We could not send your request. Please try again.");
   return { ok: true };
 });
