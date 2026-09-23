@@ -157,6 +157,10 @@ export interface FileRouteTypes {
     | '/women'
     | '/admin'
     | '/business/vip-concierge-wellbeing'
+    | '/business/executive-wellbeing'
+    | '/men/fatherhood'
+    | '/wellbeing/stress-burnout'
+    | '/women/motherhood'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -170,6 +174,10 @@ export interface FileRouteTypes {
     | '/women'
     | '/admin'
     | '/business/vip-concierge-wellbeing'
+    | '/business/executive-wellbeing'
+    | '/men/fatherhood'
+    | '/wellbeing/stress-burnout'
+    | '/women/motherhood'
   id:
     | '__root__'
     | '/'
@@ -184,6 +192,10 @@ export interface FileRouteTypes {
     | '/women'
     | '/_authenticated/admin'
     | '/business/vip-concierge-wellbeing'
+    | '/business/executive-wellbeing'
+    | '/men/fatherhood'
+    | '/wellbeing/stress-burnout'
+    | '/women/motherhood'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -304,16 +316,16 @@ const AuthenticatedRouteRouteWithChildren =
   AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
 interface BusinessRouteChildren {
+  BusinessExecutiveWellbeingRoute: typeof BusinessExecutiveWellbeingRoute
   BusinessVipConciergeWellbeingRoute: typeof BusinessVipConciergeWellbeingRoute
 }
 
 const BusinessRouteChildren: BusinessRouteChildren = {
+  BusinessExecutiveWellbeingRoute: BusinessExecutiveWellbeingRoute,
   BusinessVipConciergeWellbeingRoute: BusinessVipConciergeWellbeingRoute,
 }
 
-const BusinessRouteWithChildren = BusinessRoute._addFileChildren(
-  BusinessRouteChildren,
-)
+const BusinessRouteWithChildren = BusinessRoute._addFileChildren(BusinessRouteChildren)
 const MenFatherhoodRoute = MenFatherhoodRouteImport.update({ id: '/fatherhood', path: '/fatherhood', getParentRoute: () => MenRoute } as any)
 const WellbeingStressBurnoutRoute = WellbeingStressBurnoutRouteImport.update({ id: '/stress-burnout', path: '/stress-burnout', getParentRoute: () => WellbeingRoute } as any)
 const WomenMotherhoodRoute = WomenMotherhoodRouteImport.update({ id: '/motherhood', path: '/motherhood', getParentRoute: () => WomenRoute } as any)
