@@ -41,14 +41,16 @@ export const pageContent = {
     ] satisfies Section[],
   },
   business: {
-    eyebrow: "BUSINESS & EXECUTIVE WELLBEING",
-    title: "Private wellbeing advisory for leaders carrying responsibility.",
-    intro: "For founders, executives and senior professionals navigating sustained pressure, visibility, decision-making, leadership and the personal demands behind a demanding role.",
+    eyebrow: "BUSINESS WELLBEING & PRIVATE EXECUTIVE ADVISORY",
+    title: "Wellbeing for business, leadership and the people carrying responsibility.",
+    intro: "Private wellbeing advisory for founders, executives, senior professionals and organisations navigating sustained pressure, complex decisions, people responsibility and the human side of performance.",
     sections: [
-      { id: "executive-wellbeing", title: "Executive Wellbeing", body: "Executive wellbeing is not separate from performance. Energy, attention, relationships and personal capacity can all affect how a leader experiences responsibility. Gulfwellbeing provides a confidential space away from the role.", keywords: ["executive wellbeing", "executive coaching", "private wellbeing advisor"] },
-      { id: "burnout-prevention", title: "Pressure & Burnout Prevention", body: "Sustained professional pressure can become normal before it becomes visible. Private advisory helps leaders examine patterns of pressure, recovery, boundaries and workload before they become harder to change.", keywords: ["executive burnout", "burnout prevention", "leadership wellbeing"] },
-      { id: "leadership-clarity", title: "Leadership Clarity", body: "Senior decisions often require distance from the immediate noise. Advisory creates room to consider difficult conversations, boundaries, priorities and longer-term direction with greater perspective.", keywords: ["leadership clarity", "executive advisory", "leadership coaching"] },
-      { id: "team-wellbeing", title: "Leadership & Team Wellbeing", body: "Leaders influence the wellbeing culture around them. Advisory can support thoughtful approaches to leadership, communication, team expectations and the human side of organisational responsibility.", keywords: ["team wellbeing", "leadership wellbeing", "executive wellbeing"] },
+      { id: "executive-wellbeing", title: "Executive Wellbeing", body: "Leadership pressure can affect attention, relationships, energy and personal capacity. Private advisory creates a confidential space away from the role to reflect, restore perspective and protect sustainable capacity.", keywords: ["executive wellbeing", "executive coaching", "private wellbeing advisor"] },
+      { id: "founder-wellbeing", title: "Founder Wellbeing", body: "Founders often carry the business, the decisions, the people and the uncertainty at the same time. Advisory provides a private space to examine pressure, boundaries, identity and the personal cost of carrying a company.", keywords: ["founder wellbeing", "founder coaching", "entrepreneur wellbeing"] },
+      { id: "leadership-clarity", title: "Leadership Clarity & Decision-Making", body: "Senior decisions often need distance from immediate noise. Sessions can create room to think through difficult conversations, competing priorities, boundaries and longer-term direction with greater perspective.", keywords: ["leadership clarity", "decision making", "executive advisory"] },
+      { id: "burnout-prevention", title: "Pressure & Burnout Prevention", body: "Sustained pressure can become normal before it becomes visible. Private advisory helps leaders examine patterns of pressure, recovery, workload and boundaries before they become harder to change.", keywords: ["executive burnout", "burnout prevention", "leadership wellbeing"] },
+      { id: "team-wellbeing", title: "Leadership & Team Wellbeing", body: "Leaders shape the human environment around them. Advisory can support thoughtful approaches to communication, expectations, team wellbeing and the responsibilities that come with leading people.", keywords: ["team wellbeing", "leadership wellbeing", "workplace wellbeing"] },
+      { id: "corporate-advisory", title: "Corporate Wellbeing Advisory", body: "For organisations seeking a discreet external perspective on the human side of leadership and wellbeing. The focus can be tailored to leadership groups, senior teams or specific periods of organisational change.", keywords: ["corporate wellbeing", "workplace wellbeing advisory", "business wellbeing"] },
     ] satisfies Section[],
-  },
+  }
 } as const;
