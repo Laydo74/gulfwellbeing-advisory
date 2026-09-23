@@ -6,7 +6,7 @@ import woman from "@/assets/woman-editorial.jpg";
 import executive from "@/assets/executive-editorial.jpg";
 import stillLife from "@/assets/private-still-life.jpg";
 
-type Kind = "wellbeing" | "women" | "men" | "business" | "about" | "blog" | "privacy" | "terms";
+type Kind = "wellbeing" | "women" | "men" | "business" | "vip" | "about" | "blog" | "privacy" | "terms";
 
 const data: Record<Kind, {eyebrow:string; title:string; intro:string; sections:{title:string;body:string}[]}> = {
   wellbeing: {
@@ -52,6 +52,17 @@ const data: Record<Kind, {eyebrow:string; title:string; intro:string; sections:{
       {title:"الوقاية من الاحتراق",body:"التعرف على أنماط الضغط المستمرة وبناء مساحة شخصية أكثر استدامة قبل الوصول إلى الإنهاك."},
       {title:"وضوح القيادة",body:"وقت خاص للتفكير في القرارات، العلاقات المهنية، الحدود وأسلوب القيادة."},
       {title:"الحياة خلف المنصب",body:"لأن الحياة الخاصة لا تتوقف عند باب المكتب، يمكن أن يشمل الدعم العلاقات والأسرة والانتقالات الشخصية."}
+    ]
+  },
+  vip: {
+    eyebrow:"VIP CONCIERGE WELLBEING",
+    title:"Private Concierge Wellbeing، بمستوى أعلى من المرونة والخصوصية.",
+    intro:"ترتيبات Wellbeing خاصة للأفراد والعائلات والقيادات ذات الجداول المكثفة والحياة الدولية، عبر طلب خاص.",
+    sections:[
+      {title:"Private & discreet",body:"الخصوصية والمرونة جزء أساسي من التجربة، مع ترتيبات يتم الاتفاق عليها وفقاً للسياق والاحتياجات."},
+      {title:"Flexible arrangements",body:"جلسات عن بعد وترتيبات مرنة للعملاء في الخليج ودولياً، وفق التوفر."},
+      {title:"Executive & family support",body:"يمكن أن يشمل الدعم Wellbeing الشخصي، المسؤوليات التنفيذية، الحياة العائلية والتحولات الخاصة."},
+      {title:"By private enquiry",body:"لا يتم عرض رسوم VIP بشكل عام. يتم فهم الاحتياج أولاً ثم مناقشة الشكل المناسب والرسوم بشكل خاص."}
     ]
   },
   about: {
