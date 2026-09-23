@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, ArrowUpRight, LockKeyhole } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { pageHead } from "@/components/site/PageMeta";
+import { FaqSection } from "@/components/site/FaqSection";
 import hero from "@/assets/gulfwellbeing-hero.jpg";
 import woman from "@/assets/woman-editorial.jpg";
 import executive from "@/assets/executive-editorial.jpg";
@@ -72,6 +73,18 @@ function Home() {
       </div>
     </section>
 
+    <section className="grid bg-secondary lg:grid-cols-2">
+      <div className="flex min-h-[34rem] items-center px-6 py-20 lg:px-20">
+        <div>
+          <p className="text-[10px] uppercase tracking-[0.22em] text-gold">BUSINESS WELLBEING</p>
+          <h2 className="mt-5 font-serif text-5xl leading-none sm:text-7xl">Wellbeing for<br/>business & leadership.</h2>
+          <p className="mt-7 max-w-lg text-sm leading-7 text-muted-foreground sm:text-base">Private wellbeing advisory for founders, executives, leaders and organisations navigating sustained pressure, decision-making, people responsibility and the human side of performance.</p>
+          <Link to="/business" className="button-primary mt-9">Explore Business Wellbeing <ArrowRight className="size-4" /></Link>
+        </div>
+      </div>
+      <img src={executive} width={1280} height={960} loading="lazy" alt="Private business wellbeing advisory" className="h-full min-h-[34rem] w-full object-cover" />
+    </section>
+
     <section className="grid bg-primary text-primary-foreground lg:grid-cols-2">
       <div className="min-h-[34rem]"><img src={executive} width={1280} height={960} loading="lazy" alt="Executive reflecting beside a Gulf city skyline" className="h-full w-full object-cover" /></div>
       <div className="flex items-center px-6 py-20 lg:px-20"><div>
@@ -115,6 +128,8 @@ function Home() {
         </div>
       </div>
     </section>
+
+    <FaqSection />
 
     <section className="bg-primary px-5 py-20 text-primary-foreground lg:px-10 lg:py-28">
       <div className="mx-auto flex max-w-[1200px] flex-col items-start justify-between gap-8 md:flex-row md:items-end">
