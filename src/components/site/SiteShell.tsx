@@ -6,12 +6,12 @@ import { BrandMark } from "./BrandMark";
 
 const nav = [
   { label: "Home", ar: "الرئيسية", to: "/" },
-  { label: "Wellbeing", ar: "Wellbeing", to: "/wellbeing" },
-  { label: "Women", ar: "Women", to: "/women" },
-  { label: "Men", ar: "Men", to: "/men" },
-  { label: "Business & Executive", ar: "Business & Executive", to: "/business" },
-  { label: "VIP Concierge", ar: "VIP Concierge", to: "/business/vip-concierge-wellbeing" },
-  { label: "About", ar: "عن Gulfwellbeing", to: "/about" },
+  { label: "Wellbeing", ar: "الرفاه", to: "/wellbeing" },
+  { label: "Women", ar: "المرأة", to: "/women" },
+  { label: "Men", ar: "الرجل", to: "/men" },
+  { label: "Business & Executive", ar: "الأعمال والقيادات", to: "/business" },
+  { label: "VIP Concierge", ar: "الرفاه الخاص VIP", to: "/business/vip-concierge-wellbeing" },
+  { label: "About", ar: "عن GULFWELLBEING", to: "/about" },
   { label: "Blog", ar: "المدونة", to: "/blog" },
   { label: "Book a Session", ar: "طلب جلسة خاصة", to: "/book" },
 ] as const;
@@ -103,7 +103,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div>
             <BrandMark />
             <p className="mt-8 max-w-sm text-sm leading-7 text-primary-foreground/65">
-              {isArabic ? "استشارات Wellbeing خاصة للأفراد والعائلات والقيادات في الخليج ودولياً." : "Private wellbeing advisory for individuals, families and executives across the Gulf and internationally."}
+              {isArabic ? "استشارات رفاه خاصة للأفراد والعائلات والقيادات في الخليج ودولياً." : "Private wellbeing advisory for individuals, families and executives across the Gulf and internationally."}
             </p>
           </div>
           <div>
@@ -116,7 +116,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div>
             <p className="eyebrow text-gold">{isArabic ? "طلب خاص" : "Private enquiries"}</p>
             <p className="mt-5 text-sm leading-7 text-primary-foreground/65">
-              {isArabic ? "الطلبات الخاصة باستشارات Wellbeing والدعم التنفيذي وترتيبات VIP مرحب بها عبر طلب خاص." : "Private enquiries for wellbeing advisory, executive support and VIP concierge arrangements are welcomed by request."}
+              {isArabic ? "الطلبات الخاصة باستشارات الرفاه والدعم التنفيذي وترتيبات VIP مرحب بها عبر طلب خاص." : "Private enquiries for wellbeing advisory, executive support and VIP concierge arrangements are welcomed by request."}
             </p>
             <Link to={(isArabic ? "/ar/book" : "/book") as any} className="mt-6 inline-flex items-center gap-2 text-sm text-gold">
               {isArabic ? "طلب جلسة خاصة" : "Private enquiry"} <ArrowUpRight className="size-4"/>
