@@ -21,6 +21,10 @@ import { Route as WellbeingRouteImport } from './routes/wellbeing'
 import { Route as WomenRouteImport } from './routes/women'
 import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
 import { Route as BusinessVipConciergeWellbeingRouteImport } from './routes/business/vip-concierge-wellbeing'
+import { Route as BusinessExecutiveWellbeingRouteImport } from './routes/business/executive-wellbeing'
+import { Route as MenFatherhoodRouteImport } from './routes/men/fatherhood'
+import { Route as WellbeingStressBurnoutRouteImport } from './routes/wellbeing/stress-burnout'
+import { Route as WomenMotherhoodRouteImport } from './routes/women/motherhood'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -76,6 +80,9 @@ const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
   path: '/admin',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const BusinessExecutiveWellbeingRoute = BusinessExecutiveWellbeingRouteImport.update({
+  id: '/executive-wellbeing', path: '/executive-wellbeing', getParentRoute: () => BusinessRoute,
+} as any)
 const BusinessVipConciergeWellbeingRoute =
   BusinessVipConciergeWellbeingRouteImport.update({
     id: '/vip-concierge-wellbeing',
@@ -95,6 +102,10 @@ export interface FileRoutesByFullPath {
   '/women': typeof WomenRoute
   '/admin': typeof AuthenticatedAdminRoute
   '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
+  '/business/executive-wellbeing': typeof BusinessExecutiveWellbeingRoute
+  '/men/fatherhood': typeof MenFatherhoodRoute
+  '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
+  '/women/motherhood': typeof WomenMotherhoodRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -108,6 +119,10 @@ export interface FileRoutesByTo {
   '/women': typeof WomenRoute
   '/admin': typeof AuthenticatedAdminRoute
   '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
+  '/business/executive-wellbeing': typeof BusinessExecutiveWellbeingRoute
+  '/men/fatherhood': typeof MenFatherhoodRoute
+  '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
+  '/women/motherhood': typeof WomenMotherhoodRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -123,6 +138,10 @@ export interface FileRoutesById {
   '/women': typeof WomenRoute
   '/_authenticated/admin': typeof AuthenticatedAdminRoute
   '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
+  '/business/executive-wellbeing': typeof BusinessExecutiveWellbeingRoute
+  '/men/fatherhood': typeof MenFatherhoodRoute
+  '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
+  '/women/motherhood': typeof WomenMotherhoodRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -266,6 +285,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BusinessVipConciergeWellbeingRouteImport
       parentRoute: typeof BusinessRoute
     }
+    '/business/executive-wellbeing': { id: '/business/executive-wellbeing', path: '/executive-wellbeing', fullPath: '/business/executive-wellbeing', preLoaderRoute: typeof BusinessExecutiveWellbeingRouteImport, parentRoute: typeof BusinessRoute }
+    '/men/fatherhood': { id: '/men/fatherhood', path: '/fatherhood', fullPath: '/men/fatherhood', preLoaderRoute: typeof MenFatherhoodRouteImport, parentRoute: typeof MenRoute }
+    '/wellbeing/stress-burnout': { id: '/wellbeing/stress-burnout', path: '/stress-burnout', fullPath: '/wellbeing/stress-burnout', preLoaderRoute: typeof WellbeingStressBurnoutRouteImport, parentRoute: typeof WellbeingRoute }
+    '/women/motherhood': { id: '/women/motherhood', path: '/motherhood', fullPath: '/women/motherhood', preLoaderRoute: typeof WomenMotherhoodRouteImport, parentRoute: typeof WomenRoute }
   }
 }
 
@@ -291,7 +314,13 @@ const BusinessRouteChildren: BusinessRouteChildren = {
 const BusinessRouteWithChildren = BusinessRoute._addFileChildren(
   BusinessRouteChildren,
 )
+const MenFatherhoodRoute = MenFatherhoodRouteImport.update({ id: '/fatherhood', path: '/fatherhood', getParentRoute: () => MenRoute } as any)
+const WellbeingStressBurnoutRoute = WellbeingStressBurnoutRouteImport.update({ id: '/stress-burnout', path: '/stress-burnout', getParentRoute: () => WellbeingRoute } as any)
+const WomenMotherhoodRoute = WomenMotherhoodRouteImport.update({ id: '/motherhood', path: '/motherhood', getParentRoute: () => WomenRoute } as any)
 
+const MenRouteWithChildren = MenRoute._addFileChildren({ MenFatherhoodRoute })
+const WellbeingRouteWithChildren = WellbeingRoute._addFileChildren({ WellbeingStressBurnoutRoute })
+const WomenRouteWithChildren = WomenRoute._addFileChildren({ WomenMotherhoodRoute })
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
@@ -300,9 +329,9 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   BookRoute: BookRoute,
   BusinessRoute: BusinessRouteWithChildren,
-  MenRoute: MenRoute,
-  WellbeingRoute: WellbeingRoute,
-  WomenRoute: WomenRoute,
+  MenRoute: MenRouteWithChildren,
+  WellbeingRoute: WellbeingRouteWithChildren,
+  WomenRoute: WomenRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
