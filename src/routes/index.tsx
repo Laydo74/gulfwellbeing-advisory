@@ -85,16 +85,6 @@ function Home() {
       <img src={executive} width={1280} height={960} loading="lazy" alt="Private business wellbeing advisory" className="h-full min-h-[34rem] w-full object-cover" />
     </section>
 
-    <section className="grid bg-primary text-primary-foreground lg:grid-cols-2">
-      <div className="min-h-[34rem]"><img src={executive} width={1280} height={960} loading="lazy" alt="Executive reflecting beside a Gulf city skyline" className="h-full w-full object-cover" /></div>
-      <div className="flex items-center px-6 py-20 lg:px-20"><div>
-        <p className="text-[10px] uppercase tracking-[0.22em] text-gold">BUSINESS & EXECUTIVE</p>
-        <h2 className="mt-5 font-serif text-5xl leading-none sm:text-7xl">Clearer within.<br/>Stronger in leadership.</h2>
-        <p className="mt-7 max-w-lg text-sm leading-7 text-primary-foreground/65 sm:text-base">Private advisory for the human realities behind senior responsibility—sustained pressure, difficult decisions, changing identity and the need for clear perspective.</p>
-        <Link to="/business" className="button-gold mt-9">Explore Executive Wellbeing <ArrowRight className="size-4" /></Link>
-      </div></div>
-    </section>
-
     <section className="grid bg-background lg:grid-cols-[1.1fr_0.9fr]">
       <div className="order-2 flex items-center px-6 py-20 lg:order-1 lg:px-20"><div>
         <LockKeyhole className="size-5 text-gold" />
