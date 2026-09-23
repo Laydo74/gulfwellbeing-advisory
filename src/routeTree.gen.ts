@@ -598,7 +598,7 @@ interface ArabicRouteChildren {
   ArabicMenRoute: typeof ArabicMenRoute
   ArabicBusinessRoute: typeof ArabicBusinessRouteWithChildren
   ArabicAboutRoute: typeof ArabicAboutRoute
-  ArabicBlogRoute: typeof ArabicBlogRoute
+  ArabicBlogRoute: typeof ArabicBlogRouteWithChildren
   ArabicBookRoute: typeof ArabicBookRoute
   ArabicPrivacyRoute: typeof ArabicPrivacyRoute
   ArabicTermsRoute: typeof ArabicTermsRoute
