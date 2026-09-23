@@ -1,13 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpLeft, LockKeyhole } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import hero from "@/assets/gulfwellbeing-hero.jpg";
+import hero from "@/assets/gulfالرفاه-hero.jpg";
 import woman from "@/assets/woman-editorial.jpg";
 import executive from "@/assets/executive-editorial.jpg";
 import stillLife from "@/assets/private-still-life.jpg";
 
 type Kind =
-  | "wellbeing"
+  | "الرفاه"
   | "women"
   | "men"
   | "business"
@@ -27,7 +27,7 @@ type PageData = {
 };
 
 const data: Record<Kind, PageData> = {
-  wellbeing: {
+  الرفاه: {
     eyebrow: "الرفاه والعافية الخاصة",
     title: "مساحة هادئة تعود فيها إلى نفسك.",
     intro:
@@ -125,7 +125,7 @@ const data: Record<Kind, PageData> = {
     eyebrow: "الأعمال والقيادات",
     title: "عندما تكون مسؤولاً عن الكثير، تحتاج إلى مساحة لك أنت.",
     intro:
-      "استشارات Wellbeing خاصة للمؤسسين والمديرين والمهنيين الذين يعيشون تحت ضغط القرارات، التوقعات والمسؤولية المستمرة.",
+      "استشارات الرفاه خاصة للمؤسسين والمديرين والمهنيين الذين يعيشون تحت ضغط القرارات، التوقعات والمسؤولية المستمرة.",
     sections: [
       {
         title: "خلف المنصب",
@@ -150,7 +150,7 @@ const data: Record<Kind, PageData> = {
     ],
   },
   vip: {
-    eyebrow: "VIP · استشارات خاصة",
+    eyebrow: "VIP · رفاه خاص",
     title: "عافية خاصة، بصيغة تناسب حياتك.",
     intro:
       "خدمة مصممة للأفراد والعائلات والقيادات الذين يقدّرون الخصوصية، المرونة والعلاقة الاستشارية الشخصية.",
@@ -181,7 +181,7 @@ const data: Record<Kind, PageData> = {
     eyebrow: "عن GULFWELLBEING",
     title: "العافية تبدأ من علاقة إنسانية حقيقية.",
     intro:
-      "تقود GULFWELLBEING سورور تاركان، Wellbeing Advisor & Coach وReiki Master، من خلال مقاربة خاصة تجمع الإصغاء، الوعي وممارسات العافية الشمولية بحسب احتياج كل شخص.",
+      "تقود GULFWELLBEING سورور تاركان، الرفاه Advisor & Coach وReiki Master، من خلال مقاربة خاصة تجمع الإصغاء، الوعي وممارسات العافية الشمولية بحسب احتياج كل شخص.",
     sections: [
       {
         title: "سورور تاركان",
@@ -260,12 +260,12 @@ const data: Record<Kind, PageData> = {
     eyebrow: "الشروط والأحكام",
     title: "استخدام الموقع والخدمات.",
     intro:
-      "باستخدام الموقع، توافق على استخدامه بصورة مشروعة، وعلى فهم طبيعة خدمات Wellbeing وCoaching وحدودها.",
+      "باستخدام الموقع، توافق على استخدامه بصورة مشروعة، وعلى فهم طبيعة خدمات الرفاه وCoaching وحدودها.",
     sections: [
       {
         title: "طبيعة الخدمة",
         body:
-          "تقدم GULFWELLBEING خدمات Wellbeing Advisory وCoaching وممارسات عافية شمولية. هذه الخدمات ليست بديلاً عن الطوارئ أو التشخيص أو العلاج الطبي أو النفسي المنظم.",
+          "تقدم GULFWELLBEING خدمات الرفاه Advisory وCoaching وممارسات عافية شمولية. هذه الخدمات ليست بديلاً عن الطوارئ أو التشخيص أو العلاج الطبي أو النفسي المنظم.",
       },
       {
         title: "طلب الجلسة",
@@ -345,7 +345,7 @@ export function ArabicHome() {
         <div className="absolute inset-0 bg-linear-to-l from-primary via-primary/72 to-transparent" />
         <div className="relative mx-auto flex min-h-[calc(100svh-5rem)] max-w-[1500px] items-end px-6 pb-16 lg:px-12 lg:pb-24">
           <div className="max-w-4xl">
-            <p className="eyebrow text-gold">استشارات Wellbeing خاصة · الخليج ودولياً</p>
+            <p className="eyebrow text-gold">استشارات الرفاه خاصة · الخليج ودولياً</p>
             <h1 className="mt-6 font-serif text-6xl leading-[1.02] sm:text-8xl">
               مساحة خاصة
               <br />
@@ -358,7 +358,7 @@ export function ArabicHome() {
               <Link to="/ar/book" className="button-gold">
                 طلب استشارة خاصة <ArrowUpLeft className="size-4" />
               </Link>
-              <Link to="/ar/wellbeing" className="button-on-dark">
+              <Link to="/ar/الرفاه" className="button-on-dark">
                 اكتشف العافية
               </Link>
             </div>
@@ -387,7 +387,7 @@ export function ArabicHome() {
           <p className="eyebrow">مسارات خاصة</p>
           <h2 className="mt-4 font-serif text-5xl sm:text-7xl">اختر المساحة الأقرب إليك.</h2>
           <div className="mt-12 grid gap-px bg-border md:grid-cols-3">
-            <Area title="العافية الشخصية" text="للضغط، التوازن، العلاقات والتحولات التي تحتاج إلى مساحة." image={stillLife} href="/ar/wellbeing" />
+            <Area title="العافية الشخصية" text="للضغط، التوازن، العلاقات والتحولات التي تحتاج إلى مساحة." image={stillLife} href="/ar/الرفاه" />
             <Area title="عافية المرأة" text="مساحة للمرأة خلف أدوارها ومسؤولياتها اليومية." image={woman} href="/ar/women" />
             <Area title="عافية الرجل" text="للرجل الذي يحمل مسؤوليات كثيرة ويحتاج إلى مساحة له." image={executive} href="/ar/men" />
           </div>
@@ -420,14 +420,14 @@ export function ArabicHome() {
             <LockKeyhole className="size-5 text-gold" />
             <p className="mt-7 eyebrow">بناءً على طلب خاص</p>
             <h2 className="mt-4 font-serif text-5xl leading-[1.08] sm:text-7xl">
-              VIP Wellbeing
+              VIP الرفاه
               <br />
               بمعنى الخصوصية.
             </h2>
             <p className="mt-7 max-w-lg text-base leading-9 text-muted-foreground">
               تجربة مصممة حول الجداول المكثفة، الحياة الدولية والحاجة إلى مستوى أعلى من الخصوصية والمرونة.
             </p>
-            <Link to="/ar/business/vip-concierge-wellbeing" className="button-primary mt-9">
+            <Link to="/ar/business/vip-concierge-الرفاه" className="button-primary mt-9">
               اكتشف الخدمة الخاصة
             </Link>
           </div>
