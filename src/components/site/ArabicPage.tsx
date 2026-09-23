@@ -471,11 +471,11 @@ export function ArabicHome() {
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              ["العافية في حياة مليئة بالمسؤوليات", "كيف نصنع مساحة لأنفسنا عندما تكون الحياة ممتلئة؟"],
-              ["حين يصبح الضغط هو الوضع الطبيعي", "علامات تستحق الانتباه قبل أن يتحول الإرهاق إلى أسلوب حياة."],
-              ["المرأة خلف كل أدوارها", "عن الثقة، الأسرة والحاجة إلى مساحة شخصية حقيقية."],
-            ].map(([title, text], index) => (
-              <Link key={title} to="/ar/blog" className="group border-t border-border pt-6">
+              ["العافية في حياة مليئة بالمسؤوليات", "كيف نصنع مساحة لأنفسنا عندما تكون الحياة ممتلئة؟", "/ar/blog/private-wellbeing-high-responsibility"],
+              ["حين يصبح الضغط هو الوضع الطبيعي", "علامات تستحق الانتباه قبل أن يتحول الإرهاق إلى أسلوب حياة.", "/ar/blog/stress-burnout-executives"],
+              ["المرأة خلف كل أدوارها", "عن الثقة، الأسرة والحاجة إلى مساحة شخصية حقيقية.", "/ar/blog/womens-wellbeing-gulf"],
+            ].map(([title, text, href], index) => (
+              <Link key={title} to={href as any} className="group border-t border-border pt-6">
                 <span className="text-[10px] text-gold">{String(index + 1).padStart(2, "0")}</span>
                 <h3 className="mt-4 font-serif text-3xl leading-tight group-hover:underline">{title}</h3>
                 <p className="mt-4 text-sm leading-8 text-muted-foreground">{text}</p>
