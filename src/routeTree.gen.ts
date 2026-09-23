@@ -44,6 +44,7 @@ import { Route as ArabicWellbeingRouteImport } from './routes/ar/wellbeing'
 import { Route as ArabicWomenRouteImport } from './routes/ar/women'
 import { Route as ArabicMenRouteImport } from './routes/ar/men'
 import { Route as ArabicBusinessRouteImport } from './routes/ar/business'
+import { Route as ArabicVipConciergeRouteImport } from './routes/ar/business/vip-concierge-wellbeing'
 import { Route as ArabicAboutRouteImport } from './routes/ar/about'
 import { Route as ArabicBlogRouteImport } from './routes/ar/blog'
 import { Route as ArabicBookRouteImport } from './routes/ar/book'
@@ -66,6 +67,8 @@ const ArabicWellbeingRoute = ArabicWellbeingRouteImport.update({ id: '/ar/wellbe
 const ArabicWomenRoute = ArabicWomenRouteImport.update({ id: '/ar/women', path: '/women', getParentRoute: () => ArabicRoute } as any)
 const ArabicMenRoute = ArabicMenRouteImport.update({ id: '/ar/men', path: '/men', getParentRoute: () => ArabicRoute } as any)
 const ArabicBusinessRoute = ArabicBusinessRouteImport.update({ id: '/ar/business', path: '/business', getParentRoute: () => ArabicRoute } as any)
+const ArabicVipConciergeRoute = ArabicVipConciergeRouteImport.update({ id: '/ar/business/vip-concierge-wellbeing', path: '/vip-concierge-wellbeing', getParentRoute: () => ArabicBusinessRoute } as any)
+const ArabicBusinessRouteWithChildren = ArabicBusinessRoute._addFileChildren({ ArabicVipConciergeRoute })
 const ArabicAboutRoute = ArabicAboutRouteImport.update({ id: '/ar/about', path: '/about', getParentRoute: () => ArabicRoute } as any)
 const ArabicBlogRoute = ArabicBlogRouteImport.update({ id: '/ar/blog', path: '/blog', getParentRoute: () => ArabicRoute } as any)
 const ArabicBookRoute = ArabicBookRouteImport.update({ id: '/ar/book', path: '/book', getParentRoute: () => ArabicRoute } as any)
@@ -401,6 +404,7 @@ declare module '@tanstack/react-router' {
     '/ar/women': { id: '/ar/women', path: '/women', fullPath: '/ar/women', preLoaderRoute: typeof ArabicWomenRouteImport, parentRoute: typeof ArabicRoute }
     '/ar/men': { id: '/ar/men', path: '/men', fullPath: '/ar/men', preLoaderRoute: typeof ArabicMenRouteImport, parentRoute: typeof ArabicRoute }
     '/ar/business': { id: '/ar/business', path: '/business', fullPath: '/ar/business', preLoaderRoute: typeof ArabicBusinessRouteImport, parentRoute: typeof ArabicRoute }
+    '/ar/business/vip-concierge-wellbeing': { id: '/ar/business/vip-concierge-wellbeing', path: '/vip-concierge-wellbeing', fullPath: '/ar/business/vip-concierge-wellbeing', preLoaderRoute: typeof ArabicVipConciergeRouteImport, parentRoute: typeof ArabicBusinessRoute }
     '/ar/about': { id: '/ar/about', path: '/about', fullPath: '/ar/about', preLoaderRoute: typeof ArabicAboutRouteImport, parentRoute: typeof ArabicRoute }
     '/ar/blog': { id: '/ar/blog', path: '/blog', fullPath: '/ar/blog', preLoaderRoute: typeof ArabicBlogRouteImport, parentRoute: typeof ArabicRoute }
     '/ar/book': { id: '/ar/book', path: '/book', fullPath: '/ar/book', preLoaderRoute: typeof ArabicBookRouteImport, parentRoute: typeof ArabicRoute }
@@ -501,7 +505,7 @@ interface ArabicRouteChildren {
   ArabicWellbeingRoute: typeof ArabicWellbeingRoute
   ArabicWomenRoute: typeof ArabicWomenRoute
   ArabicMenRoute: typeof ArabicMenRoute
-  ArabicBusinessRoute: typeof ArabicBusinessRoute
+  ArabicBusinessRoute: typeof ArabicBusinessRouteWithChildren
   ArabicAboutRoute: typeof ArabicAboutRoute
   ArabicBlogRoute: typeof ArabicBlogRoute
   ArabicBookRoute: typeof ArabicBookRoute
