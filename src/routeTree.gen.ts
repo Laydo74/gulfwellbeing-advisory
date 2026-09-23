@@ -28,6 +28,9 @@ import { Route as WomenRouteImport } from './routes/women'
 import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
 import { Route as BusinessVipConciergeWellbeingRouteImport } from './routes/business/vip-concierge-wellbeing'
 import { Route as BusinessExecutiveWellbeingRouteImport } from './routes/business/executive-wellbeing'
+import { Route as FounderWellbeingRouteImport } from './routes/business/founder-wellbeing'
+import { Route as TeamWellbeingRouteImport } from './routes/business/team-wellbeing'
+import { Route as CorporateAdvisoryRouteImport } from './routes/business/corporate-advisory'
 import { Route as MenFatherhoodRouteImport } from './routes/men/fatherhood'
 import { Route as WellbeingStressBurnoutRouteImport } from './routes/wellbeing/stress-burnout'
 import { Route as WomenMotherhoodRouteImport } from './routes/women/motherhood'
@@ -45,8 +48,15 @@ import { Route as ArabicWomenRouteImport } from './routes/ar/women'
 import { Route as ArabicMenRouteImport } from './routes/ar/men'
 import { Route as ArabicBusinessRouteImport } from './routes/ar/business'
 import { Route as ArabicVipConciergeRouteImport } from './routes/ar/business/vip-concierge-wellbeing'
+import { Route as ArabicExecutiveWellbeingRouteImport } from './routes/ar/business/executive-wellbeing'
+import { Route as ArabicFounderWellbeingRouteImport } from './routes/ar/business/founder-wellbeing'
+import { Route as ArabicLeadershipClarityRouteImport } from './routes/ar/business/leadership-clarity'
+import { Route as ArabicBurnoutPreventionRouteImport } from './routes/ar/business/burnout-prevention'
+import { Route as ArabicTeamWellbeingRouteImport } from './routes/ar/business/team-wellbeing'
+import { Route as ArabicCorporateAdvisoryRouteImport } from './routes/ar/business/corporate-advisory'
 import { Route as ArabicAboutRouteImport } from './routes/ar/about'
 import { Route as ArabicBlogRouteImport } from './routes/ar/blog'
+import { Route as ArabicBlogSlugRouteImport } from './routes/ar/blog/$slug'
 import { Route as ArabicBookRouteImport } from './routes/ar/book'
 import { Route as ArabicPrivacyRouteImport } from './routes/ar/privacy'
 import { Route as ArabicTermsRouteImport } from './routes/ar/terms'
@@ -68,16 +78,24 @@ const ArabicWomenRoute = ArabicWomenRouteImport.update({ id: '/ar/women', path: 
 const ArabicMenRoute = ArabicMenRouteImport.update({ id: '/ar/men', path: '/men', getParentRoute: () => ArabicRoute } as any)
 const ArabicBusinessRoute = ArabicBusinessRouteImport.update({ id: '/ar/business', path: '/business', getParentRoute: () => ArabicRoute } as any)
 const ArabicVipConciergeRoute = ArabicVipConciergeRouteImport.update({ id: '/ar/business/vip-concierge-wellbeing', path: '/vip-concierge-wellbeing', getParentRoute: () => ArabicBusinessRoute } as any)
-const ArabicBusinessRouteWithChildren = ArabicBusinessRoute._addFileChildren({ ArabicVipConciergeRoute })
+const ArabicExecutiveWellbeingRoute = ArabicExecutiveWellbeingRouteImport.update({ id: '/ar/business/executive-wellbeing', path: '/executive-wellbeing', getParentRoute: () => ArabicBusinessRoute } as any)
+const ArabicFounderWellbeingRoute = ArabicFounderWellbeingRouteImport.update({ id: '/ar/business/founder-wellbeing', path: '/founder-wellbeing', getParentRoute: () => ArabicBusinessRoute } as any)
+const ArabicLeadershipClarityRoute = ArabicLeadershipClarityRouteImport.update({ id: '/ar/business/leadership-clarity', path: '/leadership-clarity', getParentRoute: () => ArabicBusinessRoute } as any)
+const ArabicBurnoutPreventionRoute = ArabicBurnoutPreventionRouteImport.update({ id: '/ar/business/burnout-prevention', path: '/burnout-prevention', getParentRoute: () => ArabicBusinessRoute } as any)
+const ArabicTeamWellbeingRoute = ArabicTeamWellbeingRouteImport.update({ id: '/ar/business/team-wellbeing', path: '/team-wellbeing', getParentRoute: () => ArabicBusinessRoute } as any)
+const ArabicCorporateAdvisoryRoute = ArabicCorporateAdvisoryRouteImport.update({ id: '/ar/business/corporate-advisory', path: '/corporate-advisory', getParentRoute: () => ArabicBusinessRoute } as any)
+const ArabicBusinessRouteWithChildren = ArabicBusinessRoute._addFileChildren({ ArabicVipConciergeRoute, ArabicExecutiveWellbeingRoute, ArabicFounderWellbeingRoute, ArabicLeadershipClarityRoute, ArabicBurnoutPreventionRoute, ArabicTeamWellbeingRoute, ArabicCorporateAdvisoryRoute })
 const ArabicAboutRoute = ArabicAboutRouteImport.update({ id: '/ar/about', path: '/about', getParentRoute: () => ArabicRoute } as any)
 const ArabicBlogRoute = ArabicBlogRouteImport.update({ id: '/ar/blog', path: '/blog', getParentRoute: () => ArabicRoute } as any)
+const ArabicBlogSlugRoute = ArabicBlogSlugRouteImport.update({ id: '/ar/blog/$slug', path: '/$slug', getParentRoute: () => ArabicBlogRoute } as any)
+const ArabicBlogRouteWithChildren = ArabicBlogRoute._addFileChildren({ ArabicBlogSlugRoute })
 const ArabicBookRoute = ArabicBookRouteImport.update({ id: '/ar/book', path: '/book', getParentRoute: () => ArabicRoute } as any)
 const ArabicPrivacyRoute = ArabicPrivacyRouteImport.update({ id: '/ar/privacy', path: '/privacy', getParentRoute: () => ArabicRoute } as any)
 const ArabicTermsRoute = ArabicTermsRouteImport.update({ id: '/ar/terms', path: '/terms', getParentRoute: () => ArabicRoute } as any)
 
 const ArabicRouteWithChildren = ArabicRoute._addFileChildren({
   ArabicWellbeingRoute, ArabicWomenRoute, ArabicMenRoute, ArabicBusinessRoute: ArabicBusinessRouteWithChildren,
-  ArabicAboutRoute, ArabicBlogRoute, ArabicBookRoute, ArabicPrivacyRoute, ArabicTermsRoute,
+  ArabicAboutRoute, ArabicBlogRoute: ArabicBlogRouteWithChildren, ArabicBookRoute, ArabicPrivacyRoute, ArabicTermsRoute,
 })
 
 const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
@@ -144,6 +162,9 @@ const LifeTransitionsWellbeingRoute = LifeTransitionsWellbeingRouteImport.update
 const BusinessExecutiveWellbeingRoute = BusinessExecutiveWellbeingRouteImport.update({
   id: '/executive-wellbeing', path: '/executive-wellbeing', getParentRoute: () => BusinessRoute,
 } as any)
+const FounderWellbeingRoute = FounderWellbeingRouteImport.update({ id: '/founder-wellbeing', path: '/founder-wellbeing', getParentRoute: () => BusinessRoute } as any)
+const TeamWellbeingRoute = TeamWellbeingRouteImport.update({ id: '/team-wellbeing', path: '/team-wellbeing', getParentRoute: () => BusinessRoute } as any)
+const CorporateAdvisoryRoute = CorporateAdvisoryRouteImport.update({ id: '/corporate-advisory', path: '/corporate-advisory', getParentRoute: () => BusinessRoute } as any)
 const BusinessVipConciergeWellbeingRoute =
   BusinessVipConciergeWellbeingRouteImport.update({
     id: '/vip-concierge-wellbeing',
@@ -153,6 +174,16 @@ const BusinessVipConciergeWellbeingRoute =
 
 export interface FileRoutesByFullPath {
   '/ar': typeof ArabicRoute
+  '/ar/business/executive-wellbeing': typeof ArabicExecutiveWellbeingRoute
+  '/ar/business/founder-wellbeing': typeof ArabicFounderWellbeingRoute
+  '/ar/business/leadership-clarity': typeof ArabicLeadershipClarityRoute
+  '/ar/business/burnout-prevention': typeof ArabicBurnoutPreventionRoute
+  '/ar/business/team-wellbeing': typeof ArabicTeamWellbeingRoute
+  '/ar/business/corporate-advisory': typeof ArabicCorporateAdvisoryRoute
+  '/ar/blog/$slug': typeof ArabicBlogSlugRoute
+  '/business/founder-wellbeing': typeof FounderWellbeingRoute
+  '/business/team-wellbeing': typeof TeamWellbeingRoute
+  '/business/corporate-advisory': typeof CorporateAdvisoryRoute
   '/blog/mindfulness-busy-lives': typeof MindfulnessBusyLivesRoute
   '/blog/emotional-balance-private-wellbeing': typeof EmotionalBalancePrivateWellbeingRoute
   '/blog/confidence-self-trust': typeof ConfidenceSelfTrustBlogRoute
@@ -191,6 +222,16 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/ar': typeof ArabicRoute
+  '/ar/business/executive-wellbeing': typeof ArabicExecutiveWellbeingRoute
+  '/ar/business/founder-wellbeing': typeof ArabicFounderWellbeingRoute
+  '/ar/business/leadership-clarity': typeof ArabicLeadershipClarityRoute
+  '/ar/business/burnout-prevention': typeof ArabicBurnoutPreventionRoute
+  '/ar/business/team-wellbeing': typeof ArabicTeamWellbeingRoute
+  '/ar/business/corporate-advisory': typeof ArabicCorporateAdvisoryRoute
+  '/ar/blog/$slug': typeof ArabicBlogSlugRoute
+  '/business/founder-wellbeing': typeof FounderWellbeingRoute
+  '/business/team-wellbeing': typeof TeamWellbeingRoute
+  '/business/corporate-advisory': typeof CorporateAdvisoryRoute
   '/blog/mindfulness-busy-lives': typeof MindfulnessBusyLivesRoute
   '/blog/emotional-balance-private-wellbeing': typeof EmotionalBalancePrivateWellbeingRoute
   '/blog/confidence-self-trust': typeof ConfidenceSelfTrustBlogRoute
@@ -229,6 +270,16 @@ export interface FileRoutesByTo {
 }
 export interface FileRoutesById {
   '/ar': typeof ArabicRoute
+  '/ar/business/executive-wellbeing': typeof ArabicExecutiveWellbeingRoute
+  '/ar/business/founder-wellbeing': typeof ArabicFounderWellbeingRoute
+  '/ar/business/leadership-clarity': typeof ArabicLeadershipClarityRoute
+  '/ar/business/burnout-prevention': typeof ArabicBurnoutPreventionRoute
+  '/ar/business/team-wellbeing': typeof ArabicTeamWellbeingRoute
+  '/ar/business/corporate-advisory': typeof ArabicCorporateAdvisoryRoute
+  '/ar/blog/$slug': typeof ArabicBlogSlugRoute
+  '/business/founder-wellbeing': typeof FounderWellbeingRoute
+  '/business/team-wellbeing': typeof TeamWellbeingRoute
+  '/business/corporate-advisory': typeof CorporateAdvisoryRoute
   '/blog/mindfulness-busy-lives': typeof MindfulnessBusyLivesRoute
   '/blog/emotional-balance-private-wellbeing': typeof EmotionalBalancePrivateWellbeingRoute
   '/blog/confidence-self-trust': typeof ConfidenceSelfTrustBlogRoute
@@ -268,6 +319,16 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/ar'
+    | '/ar/blog/$slug'
+    | '/ar/business/executive-wellbeing'
+    | '/ar/business/founder-wellbeing'
+    | '/ar/business/leadership-clarity'
+    | '/ar/business/burnout-prevention'
+    | '/ar/business/team-wellbeing'
+    | '/ar/business/corporate-advisory'
+    | '/business/founder-wellbeing'
+    | '/business/team-wellbeing'
+    | '/business/corporate-advisory'
     | '/blog/mindfulness-busy-lives'
     | '/blog/emotional-balance-private-wellbeing'
     | '/blog/confidence-self-trust'
@@ -306,6 +367,16 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/ar'
+    | '/ar/blog/$slug'
+    | '/ar/business/executive-wellbeing'
+    | '/ar/business/founder-wellbeing'
+    | '/ar/business/leadership-clarity'
+    | '/ar/business/burnout-prevention'
+    | '/ar/business/team-wellbeing'
+    | '/ar/business/corporate-advisory'
+    | '/business/founder-wellbeing'
+    | '/business/team-wellbeing'
+    | '/business/corporate-advisory'
     | '/blog/mindfulness-busy-lives'
     | '/blog/emotional-balance-private-wellbeing'
     | '/blog/confidence-self-trust'
@@ -329,6 +400,16 @@ export interface FileRouteTypes {
     | '/women/motherhood'
   id:
     | '__root__'
+    | '/ar/blog/$slug'
+    | '/ar/business/executive-wellbeing'
+    | '/ar/business/founder-wellbeing'
+    | '/ar/business/leadership-clarity'
+    | '/ar/business/burnout-prevention'
+    | '/ar/business/team-wellbeing'
+    | '/ar/business/corporate-advisory'
+    | '/business/founder-wellbeing'
+    | '/business/team-wellbeing'
+    | '/business/corporate-advisory'
     | '/'
     | '/_authenticated'
     | '/about'
@@ -410,6 +491,16 @@ declare module '@tanstack/react-router' {
     '/ar/book': { id: '/ar/book', path: '/book', fullPath: '/ar/book', preLoaderRoute: typeof ArabicBookRouteImport, parentRoute: typeof ArabicRoute }
     '/ar/privacy': { id: '/ar/privacy', path: '/privacy', fullPath: '/ar/privacy', preLoaderRoute: typeof ArabicPrivacyRouteImport, parentRoute: typeof ArabicRoute }
     '/ar/terms': { id: '/ar/terms', path: '/terms', fullPath: '/ar/terms', preLoaderRoute: typeof ArabicTermsRouteImport, parentRoute: typeof ArabicRoute }
+    '/ar/blog/$slug': { id: '/ar/blog/$slug', path: '/$slug', fullPath: '/ar/blog/$slug', preLoaderRoute: typeof ArabicBlogSlugRouteImport, parentRoute: typeof ArabicBlogRoute }
+    '/ar/business/executive-wellbeing': { id: '/ar/business/executive-wellbeing', path: '/executive-wellbeing', fullPath: '/ar/business/executive-wellbeing', preLoaderRoute: typeof ArabicExecutiveWellbeingRouteImport, parentRoute: typeof ArabicBusinessRoute }
+    '/ar/business/founder-wellbeing': { id: '/ar/business/founder-wellbeing', path: '/founder-wellbeing', fullPath: '/ar/business/founder-wellbeing', preLoaderRoute: typeof ArabicFounderWellbeingRouteImport, parentRoute: typeof ArabicBusinessRoute }
+    '/ar/business/leadership-clarity': { id: '/ar/business/leadership-clarity', path: '/leadership-clarity', fullPath: '/ar/business/leadership-clarity', preLoaderRoute: typeof ArabicLeadershipClarityRouteImport, parentRoute: typeof ArabicBusinessRoute }
+    '/ar/business/burnout-prevention': { id: '/ar/business/burnout-prevention', path: '/burnout-prevention', fullPath: '/ar/business/burnout-prevention', preLoaderRoute: typeof ArabicBurnoutPreventionRouteImport, parentRoute: typeof ArabicBusinessRoute }
+    '/ar/business/team-wellbeing': { id: '/ar/business/team-wellbeing', path: '/team-wellbeing', fullPath: '/ar/business/team-wellbeing', preLoaderRoute: typeof ArabicTeamWellbeingRouteImport, parentRoute: typeof ArabicBusinessRoute }
+    '/ar/business/corporate-advisory': { id: '/ar/business/corporate-advisory', path: '/corporate-advisory', fullPath: '/ar/business/corporate-advisory', preLoaderRoute: typeof ArabicCorporateAdvisoryRouteImport, parentRoute: typeof ArabicBusinessRoute }
+    '/business/founder-wellbeing': { id: '/business/founder-wellbeing', path: '/founder-wellbeing', fullPath: '/business/founder-wellbeing', preLoaderRoute: typeof FounderWellbeingRouteImport, parentRoute: typeof BusinessRoute }
+    '/business/team-wellbeing': { id: '/business/team-wellbeing', path: '/team-wellbeing', fullPath: '/business/team-wellbeing', preLoaderRoute: typeof TeamWellbeingRouteImport, parentRoute: typeof BusinessRoute }
+    '/business/corporate-advisory': { id: '/business/corporate-advisory', path: '/corporate-advisory', fullPath: '/business/corporate-advisory', preLoaderRoute: typeof CorporateAdvisoryRouteImport, parentRoute: typeof BusinessRoute }
     '/about': {
       id: '/about'
       path: '/about'
@@ -529,6 +620,9 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
 const AuthenticatedRouteRouteWithChildren =
   AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
+interface ArabicBlogRouteChildren { ArabicBlogSlugRoute: typeof ArabicBlogSlugRoute }
+const ArabicBlogRouteChildren: ArabicBlogRouteChildren = { ArabicBlogSlugRoute }
+
 interface BlogRouteChildren {
   MindfulnessBusyLivesRoute: typeof MindfulnessBusyLivesRoute
   EmotionalBalancePrivateWellbeingRoute: typeof EmotionalBalancePrivateWellbeingRoute
@@ -563,9 +657,15 @@ const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface BusinessRouteChildren {
   BusinessExecutiveWellbeingRoute: typeof BusinessExecutiveWellbeingRoute
+  FounderWellbeingRoute: typeof FounderWellbeingRoute
+  TeamWellbeingRoute: typeof TeamWellbeingRoute
+  CorporateAdvisoryRoute: typeof CorporateAdvisoryRoute
   BusinessVipConciergeWellbeingRoute: typeof BusinessVipConciergeWellbeingRoute
   LeadershipClarityRoute: typeof LeadershipClarityRoute
   BurnoutPreventionRoute: typeof BurnoutPreventionRoute
+  FounderWellbeingRoute: typeof FounderWellbeingRoute
+  TeamWellbeingRoute: typeof TeamWellbeingRoute
+  CorporateAdvisoryRoute: typeof CorporateAdvisoryRoute
 }
 
 const BusinessRouteChildren: BusinessRouteChildren = {
@@ -573,6 +673,9 @@ const BusinessRouteChildren: BusinessRouteChildren = {
   BusinessVipConciergeWellbeingRoute: BusinessVipConciergeWellbeingRoute,
   LeadershipClarityRoute: LeadershipClarityRoute,
   BurnoutPreventionRoute: BurnoutPreventionRoute,
+  FounderWellbeingRoute: FounderWellbeingRoute,
+  TeamWellbeingRoute: TeamWellbeingRoute,
+  CorporateAdvisoryRoute: CorporateAdvisoryRoute,
 }
 
 const BusinessRouteWithChildren = BusinessRoute._addFileChildren(BusinessRouteChildren)
