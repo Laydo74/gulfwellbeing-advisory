@@ -76,7 +76,7 @@ const ArabicPrivacyRoute = ArabicPrivacyRouteImport.update({ id: '/ar/privacy', 
 const ArabicTermsRoute = ArabicTermsRouteImport.update({ id: '/ar/terms', path: '/terms', getParentRoute: () => ArabicRoute } as any)
 
 const ArabicRouteWithChildren = ArabicRoute._addFileChildren({
-  ArabicWellbeingRoute, ArabicWomenRoute, ArabicMenRoute, ArabicBusinessRoute,
+  ArabicWellbeingRoute, ArabicWomenRoute, ArabicMenRoute, ArabicBusinessRoute: ArabicBusinessRouteWithChildren,
   ArabicAboutRoute, ArabicBlogRoute, ArabicBookRoute, ArabicPrivacyRoute, ArabicTermsRoute,
 })
 
