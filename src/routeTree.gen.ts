@@ -25,6 +25,14 @@ import { Route as BusinessExecutiveWellbeingRouteImport } from './routes/busines
 import { Route as MenFatherhoodRouteImport } from './routes/men/fatherhood'
 import { Route as WellbeingStressBurnoutRouteImport } from './routes/wellbeing/stress-burnout'
 import { Route as WomenMotherhoodRouteImport } from './routes/women/motherhood'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as BurnoutPreventionRouteImport } from './routes/business/burnout-prevention'
+import { Route as LeadershipClarityRouteImport } from './routes/business/leadership-clarity'
+import { Route as ConfidenceSelfTrustRouteImport } from './routes/women/confidence-self-trust'
+import { Route as LifeTransitionsRouteImport } from './routes/wellbeing/life-transitions'
+import { Route as EmotionalBalanceRouteImport } from './routes/wellbeing/emotional-balance'
+import { Route as RelationshipsFamilyRouteImport } from './routes/wellbeing/relationships-family'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -123,6 +131,14 @@ export interface FileRoutesByTo {
   '/men/fatherhood': typeof MenFatherhoodRoute
   '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
   '/women/motherhood': typeof WomenMotherhoodRoute
+  '/wellbeing/relationships-family': typeof RelationshipsFamilyRoute
+  '/wellbeing/emotional-balance': typeof EmotionalBalanceRoute
+  '/wellbeing/life-transitions': typeof LifeTransitionsRoute
+  '/women/confidence-self-trust': typeof ConfidenceSelfTrustRoute
+  '/business/leadership-clarity': typeof LeadershipClarityRoute
+  '/business/burnout-prevention': typeof BurnoutPreventionRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -142,6 +158,14 @@ export interface FileRoutesById {
   '/men/fatherhood': typeof MenFatherhoodRoute
   '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
   '/women/motherhood': typeof WomenMotherhoodRoute
+  '/wellbeing/relationships-family': typeof RelationshipsFamilyRoute
+  '/wellbeing/emotional-balance': typeof EmotionalBalanceRoute
+  '/wellbeing/life-transitions': typeof LifeTransitionsRoute
+  '/women/confidence-self-trust': typeof ConfidenceSelfTrustRoute
+  '/business/leadership-clarity': typeof LeadershipClarityRoute
+  '/business/burnout-prevention': typeof BurnoutPreventionRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -161,6 +185,14 @@ export interface FileRouteTypes {
     | '/men/fatherhood'
     | '/wellbeing/stress-burnout'
     | '/women/motherhood'
+    | '/wellbeing/relationships-family'
+    | '/wellbeing/emotional-balance'
+    | '/wellbeing/life-transitions'
+    | '/women/confidence-self-trust'
+    | '/business/leadership-clarity'
+    | '/business/burnout-prevention'
+    | '/privacy'
+    | '/terms'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -301,6 +333,14 @@ declare module '@tanstack/react-router' {
     '/men/fatherhood': { id: '/men/fatherhood', path: '/fatherhood', fullPath: '/men/fatherhood', preLoaderRoute: typeof MenFatherhoodRouteImport, parentRoute: typeof MenRoute }
     '/wellbeing/stress-burnout': { id: '/wellbeing/stress-burnout', path: '/stress-burnout', fullPath: '/wellbeing/stress-burnout', preLoaderRoute: typeof WellbeingStressBurnoutRouteImport, parentRoute: typeof WellbeingRoute }
     '/women/motherhood': { id: '/women/motherhood', path: '/motherhood', fullPath: '/women/motherhood', preLoaderRoute: typeof WomenMotherhoodRouteImport, parentRoute: typeof WomenRoute }
+    '/wellbeing/relationships-family': { id: '/wellbeing/relationships-family', path: '/relationships-family', fullPath: '/wellbeing/relationships-family', preLoaderRoute: typeof RelationshipsFamilyRouteImport, parentRoute: typeof WellbeingRoute }
+    '/wellbeing/emotional-balance': { id: '/wellbeing/emotional-balance', path: '/emotional-balance', fullPath: '/wellbeing/emotional-balance', preLoaderRoute: typeof EmotionalBalanceRouteImport, parentRoute: typeof WellbeingRoute }
+    '/wellbeing/life-transitions': { id: '/wellbeing/life-transitions', path: '/life-transitions', fullPath: '/wellbeing/life-transitions', preLoaderRoute: typeof LifeTransitionsRouteImport, parentRoute: typeof WellbeingRoute }
+    '/women/confidence-self-trust': { id: '/women/confidence-self-trust', path: '/confidence-self-trust', fullPath: '/women/confidence-self-trust', preLoaderRoute: typeof ConfidenceSelfTrustRouteImport, parentRoute: typeof WomenRoute }
+    '/business/leadership-clarity': { id: '/business/leadership-clarity', path: '/leadership-clarity', fullPath: '/business/leadership-clarity', preLoaderRoute: typeof LeadershipClarityRouteImport, parentRoute: typeof BusinessRoute }
+    '/business/burnout-prevention': { id: '/business/burnout-prevention', path: '/burnout-prevention', fullPath: '/business/burnout-prevention', preLoaderRoute: typeof BurnoutPreventionRouteImport, parentRoute: typeof BusinessRoute }
+    '/privacy': { id: '/privacy', path: '/privacy', fullPath: '/privacy', preLoaderRoute: typeof PrivacyRouteImport, parentRoute: typeof rootRouteImport }
+    '/terms': { id: '/terms', path: '/terms', fullPath: '/terms', preLoaderRoute: typeof TermsRouteImport, parentRoute: typeof rootRouteImport }
   }
 }
 
@@ -318,21 +358,35 @@ const AuthenticatedRouteRouteWithChildren =
 interface BusinessRouteChildren {
   BusinessExecutiveWellbeingRoute: typeof BusinessExecutiveWellbeingRoute
   BusinessVipConciergeWellbeingRoute: typeof BusinessVipConciergeWellbeingRoute
+  LeadershipClarityRoute: typeof LeadershipClarityRoute
+  BurnoutPreventionRoute: typeof BurnoutPreventionRoute
 }
 
 const BusinessRouteChildren: BusinessRouteChildren = {
   BusinessExecutiveWellbeingRoute: BusinessExecutiveWellbeingRoute,
   BusinessVipConciergeWellbeingRoute: BusinessVipConciergeWellbeingRoute,
+  LeadershipClarityRoute: LeadershipClarityRoute,
+  BurnoutPreventionRoute: BurnoutPreventionRoute,
 }
 
 const BusinessRouteWithChildren = BusinessRoute._addFileChildren(BusinessRouteChildren)
+const RelationshipsFamilyRoute = RelationshipsFamilyRouteImport.update({ id: '/relationships-family', path: '/relationships-family', getParentRoute: () => WellbeingRoute } as any)
+const EmotionalBalanceRoute = EmotionalBalanceRouteImport.update({ id: '/emotional-balance', path: '/emotional-balance', getParentRoute: () => WellbeingRoute } as any)
+const LifeTransitionsRoute = LifeTransitionsRouteImport.update({ id: '/life-transitions', path: '/life-transitions', getParentRoute: () => WellbeingRoute } as any)
+const ConfidenceSelfTrustRoute = ConfidenceSelfTrustRouteImport.update({ id: '/confidence-self-trust', path: '/confidence-self-trust', getParentRoute: () => WomenRoute } as any)
+const LeadershipClarityRoute = LeadershipClarityRouteImport.update({ id: '/leadership-clarity', path: '/leadership-clarity', getParentRoute: () => BusinessRoute } as any)
+const BurnoutPreventionRoute = BurnoutPreventionRouteImport.update({ id: '/burnout-prevention', path: '/burnout-prevention', getParentRoute: () => BusinessRoute } as any)
+const PrivacyRoute = PrivacyRouteImport.update({ id: '/privacy', path: '/privacy', getParentRoute: () => rootRouteImport } as any)
+const TermsRoute = TermsRouteImport.update({ id: '/terms', path: '/terms', getParentRoute: () => rootRouteImport } as any)
 const MenFatherhoodRoute = MenFatherhoodRouteImport.update({ id: '/fatherhood', path: '/fatherhood', getParentRoute: () => MenRoute } as any)
 const WellbeingStressBurnoutRoute = WellbeingStressBurnoutRouteImport.update({ id: '/stress-burnout', path: '/stress-burnout', getParentRoute: () => WellbeingRoute } as any)
 const WomenMotherhoodRoute = WomenMotherhoodRouteImport.update({ id: '/motherhood', path: '/motherhood', getParentRoute: () => WomenRoute } as any)
 
 const MenRouteWithChildren = MenRoute._addFileChildren({ MenFatherhoodRoute })
-const WellbeingRouteWithChildren = WellbeingRoute._addFileChildren({ WellbeingStressBurnoutRoute })
-const WomenRouteWithChildren = WomenRoute._addFileChildren({ WomenMotherhoodRoute })
+const WellbeingRouteWithChildren = WellbeingRoute._addFileChildren({ WellbeingStressBurnoutRoute, RelationshipsFamilyRoute, EmotionalBalanceRoute, LifeTransitionsRoute })
+const WomenRouteWithChildren = WomenRoute._addFileChildren({ WomenMotherhoodRoute, ConfidenceSelfTrustRoute })
+const WellbeingRouteWithChildren = WellbeingRoute._addFileChildren({ WellbeingStressBurnoutRoute, RelationshipsFamilyRoute, EmotionalBalanceRoute, LifeTransitionsRoute })
+const WomenRouteWithChildren = WomenRoute._addFileChildren({ WomenMotherhoodRoute, ConfidenceSelfTrustRoute })
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
