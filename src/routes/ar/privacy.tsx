@@ -1,0 +1,1 @@
+import { createFileRoute } from "@tanstack/react-router"; import { ArabicPage } from "@/components/site/ArabicPage"; import { pageHead } from "@/components/site/PageMeta"; export const Route=createFileRoute("/ar/privacy")({head:()=>pageHead("Privacy | GULFWELLBEING","سياسة الخصوصية والبيانات في Gulfwellbeing."),component:()=> <ArabicPage kind="privacy"/>});
