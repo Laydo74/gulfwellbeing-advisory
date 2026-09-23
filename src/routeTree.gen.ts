@@ -663,9 +663,6 @@ interface BusinessRouteChildren {
   BusinessVipConciergeWellbeingRoute: typeof BusinessVipConciergeWellbeingRoute
   LeadershipClarityRoute: typeof LeadershipClarityRoute
   BurnoutPreventionRoute: typeof BurnoutPreventionRoute
-  FounderWellbeingRoute: typeof FounderWellbeingRoute
-  TeamWellbeingRoute: typeof TeamWellbeingRoute
-  CorporateAdvisoryRoute: typeof CorporateAdvisoryRoute
 }
 
 const BusinessRouteChildren: BusinessRouteChildren = {
