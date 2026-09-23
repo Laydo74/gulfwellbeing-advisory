@@ -76,7 +76,7 @@ const data: Record<Kind, {eyebrow:string; title:string; intro:string; sections:{
     ]
   },
   blog: {
-    eyebrow:"THE PRIVATE JOURNAL",
+    eyebrow:"THE BLOG",
     title:"أفكار لحياة أكثر وعياً واتزاناً.",
     intro:"مقالات وتأملات حول Wellbeing، العلاقات، القيادة، الحياة العائلية والتحولات الشخصية.",
     sections:[
@@ -132,7 +132,7 @@ export function ArabicPage({kind}:{kind:Kind}) {
         </div>
       </article>)}
     </section>
-    {isBlog && <section className="bg-secondary px-6 py-16 text-center"><h2 className="font-serif text-5xl">استكشف Journal</h2><p className="mx-auto mt-5 max-w-xl text-muted-foreground">مقالات إضافية حول Wellbeing، العلاقات، القيادة والتحولات.</p><Link to="/blog" className="button-primary mt-8">English Journal <ArrowRight className="size-4"/></Link></section>}
+    {isBlog && <section className="bg-secondary px-6 py-16 text-center"><h2 className="font-serif text-5xl">استكشف المدونة</h2><p className="mx-auto mt-5 max-w-xl text-muted-foreground">مقالات إضافية حول Wellbeing، العلاقات، القيادة والتحولات.</p><Link to="/ar/blog" className="button-primary mt-8">English Blog <ArrowRight className="size-4"/></Link></section>}
     {!["privacy","terms"].includes(kind) && <section className="bg-secondary px-6 py-20 text-center"><LockKeyhole className="mx-auto size-5 text-gold"/><h2 className="mt-5 font-serif text-5xl">ابدأ بمحادثة خاصة.</h2><p className="mx-auto mt-5 max-w-xl text-muted-foreground">طلب الجلسة يتم بشكل خاص، ثم يتم التواصل معك لمناقشة الخطوة التالية.</p><Link to="/ar/book" className="button-primary mt-8">طلب جلسة خاصة</Link></section>}
   </SiteShell>;
 }
@@ -158,7 +158,7 @@ export function ArabicHome() {
       <Area title="Men's Wellbeing" text="المسؤولية، الأبوة، الضغط، القيادة والتوازن." image={executive} href="/ar/men"/>
       <Area title="Business & Executive" text="Executive wellbeing، وضوح القيادة والوقاية من الاحتراق." image={executive} href="/ar/business"/>
     </div></div></section>
-    <section className="grid bg-primary text-primary-foreground lg:grid-cols-2"><img src={stillLife} alt="VIP Concierge Wellbeing" className="min-h-[30rem] w-full object-cover"/><div className="flex items-center px-6 py-20 lg:px-20"><div className="max-w-xl"><LockKeyhole className="size-5 text-gold"/><p className="eyebrow mt-7 text-gold">VIP CONCIERGE WELLBEING</p><h2 className="mt-5 font-serif text-5xl sm:text-7xl">مستوى أكثر خصوصية.</h2><p className="mt-7 text-base leading-8 text-primary-foreground/70">تجربة مخصصة للأشخاص والعائلات والقيادات ذات الجداول المكثفة والحياة الدولية.</p><Link to="/business/vip-concierge-wellbeing" className="button-gold mt-9">اكتشف VIP Concierge</Link></div></div></section>
+    <section className="grid bg-primary text-primary-foreground lg:grid-cols-2"><img src={stillLife} alt="VIP Concierge Wellbeing" className="min-h-[30rem] w-full object-cover"/><div className="flex items-center px-6 py-20 lg:px-20"><div className="max-w-xl"><LockKeyhole className="size-5 text-gold"/><p className="eyebrow mt-7 text-gold">VIP CONCIERGE WELLBEING</p><h2 className="mt-5 font-serif text-5xl sm:text-7xl">مستوى أكثر خصوصية.</h2><p className="mt-7 text-base leading-8 text-primary-foreground/70">تجربة مخصصة للأشخاص والعائلات والقيادات ذات الجداول المكثفة والحياة الدولية.</p><Link to="/ar/business/vip-concierge-wellbeing" className="button-gold mt-9">اكتشف VIP Concierge</Link></div></div></section>
   </SiteShell>;
 }
 function Area({title,text,image,href}:{title:string;text:string;image:string;href:string}){return <Link to={href as any} className="group relative min-h-[28rem] overflow-hidden bg-primary text-primary-foreground"><img src={image} alt="" className="absolute inset-0 size-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-[1.025]"/><div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent"/><div className="absolute inset-x-0 bottom-0 p-7"><h3 className="font-serif text-4xl">{title}</h3><p className="mt-3 max-w-md text-sm leading-7 text-primary-foreground/70">{text}</p><ArrowUpLeft className="mt-6 size-5"/></div></Link>}
