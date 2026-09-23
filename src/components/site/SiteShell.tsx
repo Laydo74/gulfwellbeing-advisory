@@ -12,7 +12,7 @@ const nav = [
   { label: "Business & Executive", ar: "Business & Executive", to: "/business" },
   { label: "VIP Concierge", ar: "VIP Concierge", to: "/business/vip-concierge-wellbeing" },
   { label: "About", ar: "عن Gulfwellbeing", to: "/about" },
-  { label: "Journal", ar: "Journal", to: "/blog" },
+  { label: "Blog", ar: "المدونة", to: "/blog" },
   { label: "Book a Session", ar: "طلب جلسة خاصة", to: "/book" },
 ] as const;
 
@@ -55,12 +55,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               <Languages className="size-4" /> {isArabic ? "English" : "العربية"}
             </Link>
           </nav>
-          <Button variant="ghost" size="icon" className="xl:hidden" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>
+          <Button variant="ghost" size="icon" className="lg:hidden" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>
             {open ? <X /> : <Menu />}
           </Button>
         </div>
         {open && (
-          <div className="fixed inset-0 top-20 z-40 bg-primary px-6 py-10 text-primary-foreground xl:hidden">
+          <div className="fixed inset-0 top-20 z-40 bg-primary px-6 py-10 text-primary-foreground lg:hidden">
             <nav className="flex flex-col" aria-label={isArabic ? "التنقل" : "Mobile navigation"}>
               {nav.map((item, i) => (
                 <Link key={item.label} to={(isArabic ? `/ar${item.to === "/" ? "" : item.to}` : item.to) as any} onClick={() => setOpen(false)}
@@ -90,7 +90,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <p className="eyebrow text-gold">{isArabic ? "التنقل" : "Navigate"}</p>
             <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
               {nav.slice(0, 8).map((n) => <Link key={n.label} to={(isArabic ? `/ar${n.to === "/" ? "" : n.to}` : n.to) as any}>{isArabic ? n.ar : n.label}</Link>)}
-              <Link to={(isArabic ? "/ar/blog" : "/blog") as any}>{isArabic ? "Journal" : "Journal"}</Link>
+              <Link to={(isArabic ? "/ar/blog" : "/blog") as any}>{isArabic ? "المدونة" : "Blog"}</Link>
             </div>
           </div>
           <div>
