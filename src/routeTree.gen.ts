@@ -53,12 +53,6 @@ const IndexRoute = IndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArabicRoute = ArabicRouteImport.update({ id: '/ar', path: '/ar', getParentRoute: () => rootRouteImport } as any)
-const MindfulnessBusyLivesRoute = MindfulnessBusyLivesRouteImport.update({ id: '/mindfulness-busy-lives', path: '/mindfulness-busy-lives', getParentRoute: () => BlogRoute } as any)
-const EmotionalBalancePrivateWellbeingRoute = EmotionalBalancePrivateWellbeingRouteImport.update({ id: '/emotional-balance-private-wellbeing', path: '/emotional-balance-private-wellbeing', getParentRoute: () => BlogRoute } as any)
-const ConfidenceSelfTrustBlogRoute = ConfidenceSelfTrustBlogRouteImport.update({ id: '/confidence-self-trust', path: '/confidence-self-trust', getParentRoute: () => BlogRoute } as any)
-const LeadershipClarityPrivateAdvisoryRoute = LeadershipClarityPrivateAdvisoryRouteImport.update({ id: '/leadership-clarity-private-advisory', path: '/leadership-clarity-private-advisory', getParentRoute: () => BlogRoute } as any)
-const FamilyLifeGulfWellbeingRoute = FamilyLifeGulfWellbeingRouteImport.update({ id: '/family-life-gulf-wellbeing', path: '/family-life-gulf-wellbeing', getParentRoute: () => BlogRoute } as any)
-const PrivateWellbeingHighResponsibilityRoute = PrivateWellbeingHighResponsibilityRouteImport.update({ id: '/private-wellbeing-high-responsibility', path: '/private-wellbeing-high-responsibility', getParentRoute: () => BlogRoute } as any)
 const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
   id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
@@ -78,6 +72,12 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MindfulnessBusyLivesRoute = MindfulnessBusyLivesRouteImport.update({ id: '/mindfulness-busy-lives', path: '/mindfulness-busy-lives', getParentRoute: () => BlogRoute } as any)
+const EmotionalBalancePrivateWellbeingRoute = EmotionalBalancePrivateWellbeingRouteImport.update({ id: '/emotional-balance-private-wellbeing', path: '/emotional-balance-private-wellbeing', getParentRoute: () => BlogRoute } as any)
+const ConfidenceSelfTrustBlogRoute = ConfidenceSelfTrustBlogRouteImport.update({ id: '/confidence-self-trust', path: '/confidence-self-trust', getParentRoute: () => BlogRoute } as any)
+const LeadershipClarityPrivateAdvisoryRoute = LeadershipClarityPrivateAdvisoryRouteImport.update({ id: '/leadership-clarity-private-advisory', path: '/leadership-clarity-private-advisory', getParentRoute: () => BlogRoute } as any)
+const FamilyLifeGulfWellbeingRoute = FamilyLifeGulfWellbeingRouteImport.update({ id: '/family-life-gulf-wellbeing', path: '/family-life-gulf-wellbeing', getParentRoute: () => BlogRoute } as any)
+const PrivateWellbeingHighResponsibilityRoute = PrivateWellbeingHighResponsibilityRouteImport.update({ id: '/private-wellbeing-high-responsibility', path: '/private-wellbeing-high-responsibility', getParentRoute: () => BlogRoute } as any)
 const BookRoute = BookRouteImport.update({
   id: '/book',
   path: '/book',
@@ -352,6 +352,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/ar': { id: '/ar', path: '/ar', fullPath: '/ar', preLoaderRoute: typeof ArabicRouteImport, parentRoute: typeof rootRouteImport }
+    '/blog/mindfulness-busy-lives': { id: '/blog/mindfulness-busy-lives', path: '/mindfulness-busy-lives', fullPath: '/blog/mindfulness-busy-lives', preLoaderRoute: typeof MindfulnessBusyLivesRouteImport, parentRoute: typeof BlogRouteImport }
+    '/blog/emotional-balance-private-wellbeing': { id: '/blog/emotional-balance-private-wellbeing', path: '/emotional-balance-private-wellbeing', fullPath: '/blog/emotional-balance-private-wellbeing', preLoaderRoute: typeof EmotionalBalancePrivateWellbeingRouteImport, parentRoute: typeof BlogRouteImport }
+    '/blog/confidence-self-trust': { id: '/blog/confidence-self-trust', path: '/confidence-self-trust', fullPath: '/blog/confidence-self-trust', preLoaderRoute: typeof ConfidenceSelfTrustBlogRouteImport, parentRoute: typeof BlogRouteImport }
+    '/blog/leadership-clarity-private-advisory': { id: '/blog/leadership-clarity-private-advisory', path: '/leadership-clarity-private-advisory', fullPath: '/blog/leadership-clarity-private-advisory', preLoaderRoute: typeof LeadershipClarityPrivateAdvisoryRouteImport, parentRoute: typeof BlogRouteImport }
+    '/blog/family-life-gulf-wellbeing': { id: '/blog/family-life-gulf-wellbeing', path: '/family-life-gulf-wellbeing', fullPath: '/blog/family-life-gulf-wellbeing', preLoaderRoute: typeof FamilyLifeGulfWellbeingRouteImport, parentRoute: typeof BlogRouteImport }
+    '/blog/private-wellbeing-high-responsibility': { id: '/blog/private-wellbeing-high-responsibility', path: '/private-wellbeing-high-responsibility', fullPath: '/blog/private-wellbeing-high-responsibility', preLoaderRoute: typeof PrivateWellbeingHighResponsibilityRouteImport, parentRoute: typeof BlogRouteImport }
     '/': {
       id: '/'
       path: '/'
