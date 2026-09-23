@@ -10,107 +10,106 @@ type Kind = "wellbeing" | "women" | "men" | "business" | "vip" | "about" | "blog
 
 const data: Record<Kind, {eyebrow:string; title:string; intro:string; sections:{title:string;body:string}[]}> = {
   wellbeing: {
-    eyebrow:"PRIVATE WELLBEING ADVISORY",
-    title:"Wellbeing شخصي، في مساحة تحترم خصوصية حياتك.",
-    intro:"استشارات Wellbeing خاصة وسرية للأشخاص الذين يعيشون تحت ضغط، يمرون بمرحلة تغيير أو يحتاجون إلى مساحة هادئة لاستعادة الوضوح والتوازن.",
+    eyebrow:"استشارات العافية الخاصة",
+    title:"مساحة هادئة لاستعادة التوازن والوضوح.",
+    intro:"استشارات خاصة وسرية مع سورور تاركان للأشخاص الذين يواجهون ضغوطاً متراكمة، أو يعيشون مرحلة انتقالية، أو يحتاجون إلى مساحة آمنة للتوقف وإعادة ترتيب الأولويات.",
     sections:[
-      {title:"الضغط والإرهاق",body:"مساحة للتعامل مع الضغط المتراكم، المسؤوليات الكثيرة والإرهاق قبل أن يصبح كل شيء أصعب."},
-      {title:"التوازن العاطفي",body:"فهم ما يحدث داخلياً، تنظيم المساحة العاطفية واستعادة القدرة على التعامل مع الحياة بوضوح وهدوء."},
-      {title:"العلاقات والأسرة",body:"دعم خاص للتعامل مع العلاقات، التواصل، الحدود والتغيرات داخل الحياة العائلية."},
-      {title:"التحولات الحياتية",body:"عندما تتغير الأدوار أو الأولويات أو الظروف، يمكن أن تساعد المساحة الخاصة على فهم المرحلة التالية."},
-      {title:"الحضور واستعادة الطاقة",body:"ممارسات وطرق تساعد على التوقف، الحضور واستعادة الإيقاع الشخصي بطريقة تناسب الحياة الواقعية."}
+      {title:"الضغط والإرهاق",body:"فهم الضغوط المتراكمة والمسؤوليات المتعددة، وإيجاد أساليب أكثر هدوءاً واستدامة للتعامل معها."},
+      {title:"التوازن الداخلي",body:"مساحة للتوقف، وفهم ما يحدث داخلياً، واستعادة الهدوء والقدرة على التعامل مع متطلبات الحياة بوضوح."},
+      {title:"العلاقات والحياة الخاصة",body:"دعم خاص للتفكير في العلاقات، التواصل، الحدود والتغيرات التي تطرأ على الحياة الأسرية والشخصية."},
+      {title:"التحولات الحياتية",body:"عندما تتغير الأولويات أو الأدوار أو الظروف، تساعد المساحة الخاصة على فهم المرحلة الجديدة والتعامل معها بوعي."},
+      {title:"الحضور واستعادة الطاقة",body:"ممارسات للعناية بالذات والحضور واستعادة الإيقاع الشخصي بما يتناسب مع واقع الحياة اليومية."}
     ]
   },
   women: {
-    eyebrow:"WOMEN'S WELLBEING",
-    title:"مساحة خاصة للمرأة، بعيداً عن الأدوار التي تحملها كل يوم.",
-    intro:"استشارات Wellbeing خاصة للنساء حول الثقة بالنفس، الأمومة، الحياة العائلية، العلاقات، الضغط والتحولات الشخصية.",
+    eyebrow:"عافية المرأة",
+    title:"مساحة خاصة للمرأة، بعيداً عن كل الأدوار التي تحملها.",
+    intro:"دعم خاص للمرأة في الثقة بالنفس، الأمومة، العلاقات، الحياة الأسرية، الضغط والتحولات الشخصية.",
     sections:[
-      {title:"الأمومة والضغط اليومي",body:"التعامل مع مسؤولية الأمومة دون اختزال المرأة في دور واحد، وإيجاد مساحة شخصية داخل الحياة العائلية."},
-      {title:"الثقة بالنفس والهوية",body:"استعادة الثقة، وضوح الحدود والقدرة على اتخاذ قرارات تنسجم مع الشخص الحقيقي خلف التوقعات."},
-      {title:"الزواج والعلاقات",body:"مساحة هادئة للتفكير في التواصل، الضغط العاطفي، الحدود والتغيرات داخل العلاقة."},
-      {title:"الانتقالات الشخصية",body:"مراحل جديدة في الحياة، تغيّر الأولويات أو الشعور بأن النسخة القديمة من الحياة لم تعد مناسبة."}
+      {title:"الأمومة وضغط الحياة",body:"مساحة للمرأة حتى تجد مكاناً لها وسط مسؤوليات الأمومة والأسرة والعمل، من دون أن تختزل هويتها في دور واحد."},
+      {title:"الثقة والهوية الشخصية",body:"التوقف أمام ما تريده المرأة فعلاً، تقوية الثقة بالنفس، ووضع حدود أكثر وضوحاً وانسجاماً مع قيمها."},
+      {title:"الزواج والعلاقات",body:"مساحة هادئة للتفكير في التواصل، الضغوط العاطفية، الحدود والتغيرات داخل العلاقة."},
+      {title:"المراحل والانتقالات",body:"مرافقة شخصية خلال المراحل الجديدة، تغير الأولويات أو الشعور بأن الحياة الحالية لم تعد تشبه ما كانت عليه."}
     ]
   },
   men: {
-    eyebrow:"MEN'S WELLBEING",
+    eyebrow:"عافية الرجل",
     title:"مساحة خاصة للرجل الذي يحمل مسؤوليات كثيرة.",
-    intro:"استشارات Wellbeing خاصة للرجال حول الضغط، الأبوة، المسؤولية، الثقة، القيادة والتغيرات الشخصية.",
+    intro:"دعم خاص للرجال في التعامل مع الضغط، المسؤولية، الأبوة، الثقة، القيادة والتحولات الشخصية.",
     sections:[
-      {title:"ضغط المسؤولية",body:"عندما تصبح المسؤولية خلفية دائمة لكل قرار، تساعد المساحة الخاصة على التوقف وإعادة ترتيب الأولويات."},
-      {title:"الأبوة والعائلة",body:"التعامل مع دور الأب، الأسرة والتوقعات دون فقدان المساحة الشخصية."},
-      {title:"التوازن العاطفي",body:"مساحة للتعبير والتفكير في المشاعر والاحتياجات بطريقة هادئة وخاصة."},
-      {title:"الثقة والقيادة",body:"الوضوح الشخصي والقدرة على اتخاذ القرارات عندما تتقاطع القيادة مع الحياة الخاصة."}
+      {title:"ثقل المسؤولية",body:"عندما تصبح المسؤولية حاضرة في كل قرار، تمنح المساحة الخاصة فرصة للتوقف وإعادة ترتيب الأولويات."},
+      {title:"الأبوة والحياة الأسرية",body:"التعامل مع دور الأب ومسؤوليات الأسرة والتوقعات المختلفة مع الحفاظ على مساحة شخصية متوازنة."},
+      {title:"التوازن العاطفي",body:"مساحة خاصة للتفكير والتعبير وفهم الاحتياجات والمشاعر بعيداً عن الضغوط اليومية."},
+      {title:"الثقة والقيادة",body:"وضوح شخصي يساعد على التعامل مع القرارات والقيادة عندما تتداخل المسؤوليات المهنية مع الحياة الخاصة."}
     ]
   },
   business: {
-    eyebrow:"BUSINESS & EXECUTIVE",
-    title:"وضوح خاص لمن يعيش تحت مسؤولية كبيرة.",
-    intro:"دعم Wellbeing خاص للمؤسسين والمديرين والمهنيين الذين يحتاجون إلى مساحة مستقلة للتفكير، الوقاية من الإرهاق والحفاظ على الوضوح.",
+    eyebrow:"الأعمال والقيادات",
+    title:"وضوح أكبر لمن يعيش تحت مسؤولية كبيرة.",
+    intro:"استشارات عافية خاصة للمؤسسين والمديرين والمهنيين الذين يحتاجون إلى مساحة مستقلة للتفكير، إدارة الضغط والحفاظ على الوضوح.",
     sections:[
-      {title:"Executive Wellbeing",body:"مساحة خاصة لفهم الضغط المرتبط بالمسؤولية والقرارات والأدوار المتعددة."},
-      {title:"الوقاية من الاحتراق",body:"التعرف على أنماط الضغط المستمرة وبناء مساحة شخصية أكثر استدامة قبل الوصول إلى الإنهاك."},
+      {title:"عافية القيادات",body:"مساحة خاصة للتعامل مع الضغط المرتبط بالقرارات، المسؤولية والأدوار المتعددة التي ترافق المناصب العليا."},
+      {title:"الوقاية من الاحتراق",body:"التعرف على أنماط الضغط المستمرة وبناء مساحة شخصية أكثر استدامة قبل أن يتحول الإرهاق إلى أسلوب حياة."},
       {title:"وضوح القيادة",body:"وقت خاص للتفكير في القرارات، العلاقات المهنية، الحدود وأسلوب القيادة."},
-      {title:"الحياة خلف المنصب",body:"لأن الحياة الخاصة لا تتوقف عند باب المكتب، يمكن أن يشمل الدعم العلاقات والأسرة والانتقالات الشخصية."}
+      {title:"الحياة خلف المنصب",body:"لأن الحياة الخاصة لا تتوقف عند باب المكتب، يمكن أن يشمل الدعم العلاقات والأسرة والتحولات الشخصية."}
     ]
   },
   vip: {
-    eyebrow:"VIP CONCIERGE WELLBEING",
-    title:"Private Concierge Wellbeing، بمستوى أعلى من المرونة والخصوصية.",
-    intro:"ترتيبات Wellbeing خاصة للأفراد والعائلات والقيادات ذات الجداول المكثفة والحياة الدولية، عبر طلب خاص.",
+    eyebrow:"خدمة العافية الخاصة VIP",
+    title:"تجربة أكثر خصوصية، مصممة حول حياتك.",
+    intro:"ترتيبات خاصة للأفراد والعائلات والقيادات ذات الجداول المكثفة والحياة الدولية، مع مستوى عالٍ من الخصوصية والمرونة.",
     sections:[
-      {title:"Private & discreet",body:"الخصوصية والمرونة جزء أساسي من التجربة، مع ترتيبات يتم الاتفاق عليها وفقاً للسياق والاحتياجات."},
-      {title:"Flexible arrangements",body:"جلسات عن بعد وترتيبات مرنة للعملاء في الخليج ودولياً، وفق التوفر."},
-      {title:"Executive & family support",body:"يمكن أن يشمل الدعم Wellbeing الشخصي، المسؤوليات التنفيذية، الحياة العائلية والتحولات الخاصة."},
-      {title:"By private enquiry",body:"لا يتم عرض رسوم VIP بشكل عام. يتم فهم الاحتياج أولاً ثم مناقشة الشكل المناسب والرسوم بشكل خاص."}
+      {title:"خصوصية تامة",body:"تُبنى التجربة حول خصوصية العميل وسياقه، مع ترتيبات يتم الاتفاق عليها بشكل شخصي."},
+      {title:"مرونة في المواعيد",body:"جلسات عن بُعد وترتيبات مرنة للعملاء في الخليج ودولياً، وفق التوفر."},
+      {title:"دعم شخصي وعائلي وتنفيذي",body:"يمكن أن يشمل الدعم العافية الشخصية، المسؤوليات التنفيذية، الحياة العائلية والتحولات الخاصة."},
+      {title:"بناءً على طلب خاص",body:"لا يتم نشر رسوم الخدمة VIP. يتم فهم الاحتياج أولاً، ثم مناقشة الصيغة المناسبة والتكلفة بشكل خاص."}
     ]
   },
   about: {
-    eyebrow:"ABOUT GULFWELLBEING",
-    title:"مقاربة إنسانية لحياة معقدة.",
-    intro:"يقود Gulfwellbeing Sourour Tarkan، وهي Wellbeing Advisor & Coach وReiki Master، وتقدم مساحة خاصة ومدروسة للتفكير والرفاه والتغيير الشخصي.",
+    eyebrow:"عن GULFWELLBEING",
+    title:"مقاربة إنسانية لحياة مليئة بالتفاصيل والمسؤوليات.",
+    intro:"تقود GULFWELLBEING سورور تاركان، مستشارة Wellbeing ومدرّبة وReiki Master، وتقدم مساحة خاصة ومدروسة للتفكير والعافية والتغيير الشخصي.",
     sections:[
-      {title:"Sourour Tarkan",body:"يبدأ العمل بالاستماع وفهم الشخص وظروفه، وليس ببرنامج جاهز. يمكن أن يجمع العمل بين reflective coaching وممارسات holistic wellbeing وReiki وفقاً لاحتياجات الشخص واتفاقه."},
-      {title:"Personal. Holistic. Considered.",body:"لا توجد صيغة واحدة للحياة الخاصة، ولا طريقة واحدة تناسب الجميع. يتم تشكيل كل جلسة حول السياق والأولويات وما يحتاج الشخص إلى فهمه أو تغييره."},
-      {title:"الخصوصية جزء من التجربة",body:"المساحة مصممة لتكون هادئة ومحترمة، بحيث يمكن الحديث عن الظروف الشخصية دون حكم أو تعرض غير ضروري."}
+      {title:"سورور تاركان",body:"يبدأ العمل بالاستماع وفهم الشخص وظروفه، وليس ببرنامج جاهز. ويمكن، بحسب احتياج الشخص ورغبته، أن يجمع العمل بين التوجيه التأملي وممارسات العافية الشمولية وReiki."},
+      {title:"شخصي. شامل. مدروس.",body:"لا توجد صيغة واحدة للحياة الخاصة، ولا طريقة واحدة تناسب الجميع. تُبنى كل جلسة حول السياق والأولويات وما يحتاج الشخص إلى فهمه أو تغييره."},
+      {title:"الخصوصية جزء أساسي",body:"المساحة مصممة لتكون هادئة ومحترمة، بحيث يمكن الحديث عن الأمور الشخصية بعيداً عن الأحكام أو التعرض غير الضروري."}
     ]
   },
   blog: {
-    eyebrow:"THE BLOG",
-    title:"أفكار لحياة أكثر وعياً واتزاناً.",
-    intro:"مقالات وتأملات حول Wellbeing، العلاقات، القيادة، الحياة العائلية والتحولات الشخصية.",
+    eyebrow:"المدونة",
+    title:"أفكار حول العافية، الحياة والعلاقات.",
+    intro:"مقالات وتأملات حول العافية الشخصية، العلاقات، الحياة الأسرية، القيادة والتحولات التي نمر بها.",
     sections:[
-      {title:"Wellbeing خاص في الخليج",body:"كيف يمكن لمساحة خاصة ومدروسة أن تساعد الأشخاص الذين يعيشون حياة مليئة بالمسؤوليات."},
-      {title:"الضغط والاحتراق لدى القيادات",body:"مساحة للتفكير قبل أن يصبح الضغط المستمر هو الوضع الطبيعي."},
-      {title:"Wellbeing للمرأة والرجل",body:"مقاربات حول الثقة، الأسرة، المسؤولية، العلاقات والتحولات."},
+      {title:"العافية الخاصة في الخليج",body:"كيف يمكن لمساحة خاصة ومدروسة أن تساعد الأشخاص الذين يعيشون حياة مليئة بالمسؤوليات."},
+      {title:"الضغط والاحتراق لدى القيادات",body:"كيف نتوقف وننتبه إلى الضغط المستمر قبل أن يصبح جزءاً طبيعياً من الحياة."},
+      {title:"عافية المرأة والرجل",body:"أفكار حول الثقة، الأسرة، المسؤولية، العلاقات والتحولات الشخصية."},
       {title:"وضوح القيادة",body:"لماذا يحتاج أصحاب المسؤوليات الكبيرة أحياناً إلى مساحة خاصة بعيداً عن القرارات اليومية."}
     ]
   },
   privacy: {
-    eyebrow:"PRIVACY",
-    title:"الخصوصية والبيانات.",
-    intro:"نحن نتعامل مع طلبات التواصل والبيانات الشخصية بعناية وبالقدر اللازم لتقديم تجربة الموقع والرد على الاستفسارات الخاصة.",
+    eyebrow:"الخصوصية",
+    title:"خصوصيتك وبياناتك محل اهتمام.",
+    intro:"نتعامل مع البيانات التي تقدمها عبر الموقع بعناية وبالقدر اللازم للرد على استفساراتك وإدارة طلباتك الخاصة.",
     sections:[
-      {title:"البيانات التي تقدمها",body:"قد تشمل بيانات الاسم والبريد والهاتف والبلد وطريقة التواصل والوقت المفضل ورسالة الاستفسار."},
-      {title:"استخدام البيانات",body:"تستخدم البيانات لمعالجة الاستفسار والتواصل معك وإدارة الطلبات الخاصة. لا نعرض طلبات العملاء للعامة."},
-      {title:"الخدمات الخارجية",body:"قد يعتمد الموقع على خدمات تقنية مثل الاستضافة وقاعدة البيانات والمصادقة. تتم إدارة الوصول وفقاً لإعدادات هذه الخدمات."}
+      {title:"البيانات التي تقدمها",body:"قد تشمل الاسم والبريد الإلكتروني والهاتف والبلد وطريقة التواصل والوقت المفضل ورسالة الاستفسار."},
+      {title:"استخدام البيانات",body:"تُستخدم البيانات لمعالجة الاستفسار والتواصل معك وإدارة الطلبات الخاصة، ولا تُعرض طلبات العملاء للعامة."},
+      {title:"الخدمات التقنية",body:"قد يعتمد الموقع على خدمات الاستضافة وقاعدة البيانات والمصادقة. تتم إدارة الوصول وفق إعدادات هذه الخدمات."}
     ]
   },
   terms: {
-    eyebrow:"TERMS & CONDITIONS",
+    eyebrow:"الشروط والأحكام",
     title:"شروط استخدام الموقع.",
-    intro:"باستخدام هذا الموقع، أنت توافق على استخدامه لأغراض مشروعة وعلى أن المعلومات المنشورة لا تشكل بديلاً عن الرعاية الطبية أو النفسية المنظمة.",
+    intro:"باستخدام هذا الموقع، توافق على استخدامه لأغراض مشروعة، وعلى أن المعلومات المنشورة لا تشكل بديلاً عن الرعاية الطبية أو النفسية المنظمة.",
     sections:[
-      {title:"طبيعة الخدمات",body:"Gulfwellbeing يقدم Wellbeing advisory وcoaching وممارسات wellbeing. هذه الخدمات لا تُقدّم كبديل للطوارئ أو التشخيص أو العلاج الطبي أو النفسي المنظم."},
-      {title:"الاستفسارات والحجوزات",body:"طلب الجلسة هو private enquiry وليس حجزاً آلياً. يتم التواصل لاحقاً لمناقشة التوفر والشكل المناسب والرسوم."},
-      {title:"محتوى الموقع",body:"المحتوى مخصص للمعلومات العامة ولا يشكل نصيحة شخصية أو طبية أو قانونية."}
+      {title:"طبيعة الخدمات",body:"تقدم GULFWELLBEING استشارات Wellbeing وCoaching وممارسات عافية. ولا تُقدّم هذه الخدمات كبديل للطوارئ أو التشخيص أو العلاج الطبي أو النفسي المنظم."},
+      {title:"الاستفسارات والجلسات",body:"طلب الجلسة هو استفسار خاص وليس حجزاً آلياً. يتم التواصل لاحقاً لمناقشة التوفر والشكل المناسب والرسوم."},
+      {title:"محتوى الموقع",body:"المحتوى المنشور مخصص للمعلومات العامة ولا يشكل نصيحة شخصية أو طبية أو قانونية."}
     ]
   }
 };
 
 export function ArabicPage({kind}:{kind:Kind}) {
   const d=data[kind];
-  const isBlog=kind==="blog";
   const image=kind==="women"?woman:kind==="men"||kind==="business"?executive:stillLife;
   return <SiteShell>
     <section className="page-hero">
@@ -132,33 +131,49 @@ export function ArabicPage({kind}:{kind:Kind}) {
         </div>
       </article>)}
     </section>
-    {isBlog && <section className="bg-secondary px-6 py-16 text-center"><h2 className="font-serif text-5xl">استكشف المدونة</h2><p className="mx-auto mt-5 max-w-xl text-muted-foreground">مقالات إضافية حول Wellbeing، العلاقات، القيادة والتحولات.</p><Link to="/ar/blog" className="button-primary mt-8">English Blog <ArrowRight className="size-4"/></Link></section>}
-    {!["privacy","terms"].includes(kind) && <section className="bg-secondary px-6 py-20 text-center"><LockKeyhole className="mx-auto size-5 text-gold"/><h2 className="mt-5 font-serif text-5xl">ابدأ بمحادثة خاصة.</h2><p className="mx-auto mt-5 max-w-xl text-muted-foreground">طلب الجلسة يتم بشكل خاص، ثم يتم التواصل معك لمناقشة الخطوة التالية.</p><Link to="/ar/book" className="button-primary mt-8">طلب جلسة خاصة</Link></section>}
+    {!["privacy","terms"].includes(kind) && <section className="bg-secondary px-6 py-20 text-center"><LockKeyhole className="mx-auto size-5 text-gold"/><h2 className="mt-5 font-serif text-5xl">ابدأ بخطوة خاصة.</h2><p className="mx-auto mt-5 max-w-xl text-muted-foreground">أرسل طلبك بشكل خاص، ثم يتم التواصل معك لمناقشة الخطوة التالية.</p><Link to="/ar/book" className="button-primary mt-8">طلب جلسة خاصة</Link></section>}
   </SiteShell>;
 }
 
 export function ArabicHome() {
   return <SiteShell>
     <section className="relative min-h-[calc(100svh-5rem)] overflow-hidden bg-primary text-primary-foreground">
-      <img src={hero} alt="مساحة خاصة وهادئة لـ Wellbeing" className="absolute inset-0 size-full object-cover"/>
-      <div className="absolute inset-0 bg-linear-to-l from-primary via-primary/70 to-transparent"/>
+      <img src={hero} alt="مساحة هادئة وخاصة للعافية" className="absolute inset-0 size-full object-cover"/>
+      <div className="absolute inset-0 bg-linear-to-l from-primary via-primary/72 to-transparent"/>
       <div className="relative mx-auto flex min-h-[calc(100svh-5rem)] max-w-[1500px] items-end px-6 pb-16 lg:px-12 lg:pb-24">
         <div className="max-w-4xl">
-          <p className="eyebrow text-gold">PRIVATE WELLBEING ADVISORY · GCC & INTERNATIONAL</p>
-          <h1 className="mt-6 font-serif text-6xl leading-[.95] sm:text-8xl">لمن يحمل<br/><em className="font-normal">الكثير.</em></h1>
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-primary-foreground/75">مساحة خاصة وسرية مع Sourour Tarkan للتعامل مع الضغط، العلاقات، المسؤوليات، التغيير والقيادة بوضوح أكبر.</p>
-          <div className="mt-9 flex flex-wrap gap-3"><Link to="/ar/book" className="button-gold">طلب جلسة خاصة <ArrowUpLeft className="size-4"/></Link><Link to="/ar/wellbeing" className="button-on-dark">استكشف Wellbeing</Link></div>
+          <p className="eyebrow text-gold">استشارات Wellbeing خاصة · الخليج ودولياً</p>
+          <h1 className="mt-6 font-serif text-6xl leading-[.95] sm:text-8xl">رفاهك<br/><em className="font-normal">يستحق مساحة خاصة.</em></h1>
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-primary-foreground/75">مساحة هادئة وسرية مع سورور تاركان للتعامل مع الضغوط، العلاقات، المسؤوليات والتحولات الشخصية بوضوح واتزان أكبر.</p>
+          <div className="mt-9 flex flex-wrap gap-3"><Link to="/ar/book" className="button-gold">طلب جلسة خاصة <ArrowUpLeft className="size-4"/></Link><Link to="/ar/wellbeing" className="button-on-dark">اكتشف Wellbeing</Link></div>
         </div>
       </div>
     </section>
-    <section className="px-6 py-20 lg:px-12 lg:py-32"><div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[.7fr_1.3fr]"><p className="eyebrow">PRIVATE ADVISORY</p><div><h2 className="font-serif text-5xl leading-none sm:text-7xl">Wellbeing شخصي.<br/>ودعم يليق بخصوصية حياتك.</h2><p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground">Gulfwellbeing يقدم مساحة هادئة وسرية للتفكير، استعادة المنظور والتعامل مع مراحل الحياة المعقدة. لا يوجد برنامج واحد للجميع.</p></div></div></section>
-    <section className="bg-secondary px-6 py-20 lg:px-12 lg:py-28"><div className="mx-auto max-w-[1500px]"><p className="eyebrow">المجالات</p><h2 className="mt-4 font-serif text-5xl sm:text-7xl">مسارات خاصة</h2><div className="mt-12 grid gap-px bg-border md:grid-cols-2">
-      <Area title="Private Wellbeing" text="الضغط، التوازن العاطفي، العلاقات، الحضور والتغيير." image={stillLife} href="/ar/wellbeing"/>
-      <Area title="Women's Wellbeing" text="الأمومة، الثقة، العلاقات، الأسرة والتحولات الشخصية." image={woman} href="/ar/women"/>
-      <Area title="Men's Wellbeing" text="المسؤولية، الأبوة، الضغط، القيادة والتوازن." image={executive} href="/ar/men"/>
-      <Area title="Business & Executive" text="Executive wellbeing، وضوح القيادة والوقاية من الاحتراق." image={executive} href="/ar/business"/>
+
+    <section className="px-6 py-20 lg:px-12 lg:py-32"><div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[.7fr_1.3fr]"><p className="eyebrow">علاقة استشارية خاصة</p><div><h2 className="font-serif text-5xl leading-none sm:text-7xl">العافية شخصية.<br/>والدعم يجب أن يكون كذلك.</h2><p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground">تقدم GULFWELLBEING مساحة هادئة وسرية للتفكير، استعادة المنظور والتعامل مع مراحل الحياة المعقدة. لا يوجد برنامج واحد يناسب الجميع.</p></div></div></section>
+
+    <section className="bg-secondary px-6 py-20 lg:px-12 lg:py-28"><div className="mx-auto max-w-[1500px]"><p className="eyebrow">مجالات الاستشارة</p><h2 className="mt-4 font-serif text-5xl sm:text-7xl">مسارات خاصة</h2><div className="mt-12 grid gap-px bg-border md:grid-cols-3">
+      <Area title="العافية الشخصية" text="الضغط، التوازن الداخلي، العلاقات، الحضور والتحولات." image={stillLife} href="/ar/wellbeing"/>
+      <Area title="عافية المرأة" text="الأمومة، الثقة، العلاقات، الأسرة والتحولات الشخصية." image={woman} href="/ar/women"/>
+      <Area title="عافية الرجل" text="المسؤولية، الأبوة، الضغط، الثقة والقيادة." image={executive} href="/ar/men"/>
     </div></div></section>
-    <section className="grid bg-primary text-primary-foreground lg:grid-cols-2"><img src={stillLife} alt="VIP Concierge Wellbeing" className="min-h-[30rem] w-full object-cover"/><div className="flex items-center px-6 py-20 lg:px-20"><div className="max-w-xl"><LockKeyhole className="size-5 text-gold"/><p className="eyebrow mt-7 text-gold">VIP CONCIERGE WELLBEING</p><h2 className="mt-5 font-serif text-5xl sm:text-7xl">مستوى أكثر خصوصية.</h2><p className="mt-7 text-base leading-8 text-primary-foreground/70">تجربة مخصصة للأشخاص والعائلات والقيادات ذات الجداول المكثفة والحياة الدولية.</p><Link to="/ar/business/vip-concierge-wellbeing" className="button-gold mt-9">اكتشف VIP Concierge</Link></div></div></section>
+
+    <section className="grid bg-primary text-primary-foreground lg:grid-cols-2"><img src={executive} alt="دعم خاص للقيادات" className="min-h-[30rem] w-full object-cover"/><div className="flex items-center px-6 py-20 lg:px-20"><div className="max-w-xl"><p className="eyebrow text-gold">الأعمال والقيادات</p><h2 className="mt-5 font-serif text-5xl sm:text-7xl">وضوح أكبر.<br/>وحضور أقوى.</h2><p className="mt-7 text-base leading-8 text-primary-foreground/70">استشارات خاصة للمؤسسين والمديرين والمهنيين الذين يعيشون تحت ضغط المسؤولية والقرارات المستمرة.</p><Link to="/ar/business" className="button-gold mt-9">اكتشف عافية القيادات</Link></div></div></section>
+
+    <section className="grid bg-background lg:grid-cols-[1.1fr_0.9fr]"><div className="order-2 flex items-center px-6 py-20 lg:order-1 lg:px-20"><div><LockKeyhole className="size-5 text-gold"/><p className="mt-7 eyebrow">بناءً على طلب خاص</p><h2 className="mt-4 font-serif text-5xl leading-none sm:text-7xl">خدمة VIP<br/>للعافية الخاصة</h2><p className="mt-7 max-w-lg text-base leading-8 text-muted-foreground">تجربة مصممة حول الجداول المكثفة، الحياة الدولية والحاجة إلى مستوى أعلى من الخصوصية والمرونة.</p><Link to="/ar/business/vip-concierge-wellbeing" className="button-primary mt-9">اكتشف خدمة VIP</Link></div></div><img src={stillLife} alt="مساحة خاصة وهادئة" className="order-1 h-full min-h-[30rem] w-full object-cover lg:order-2"/></section>
+
+    <section className="bg-secondary px-5 py-20 lg:px-10 lg:py-28"><div className="mx-auto grid max-w-[1350px] gap-16 lg:grid-cols-2"><div><p className="eyebrow">مقاربة سورور تاركان</p><h2 className="mt-5 font-serif text-5xl leading-none sm:text-7xl">الاهتمام بالإنسان،<br/>من دون افتراضات.</h2></div><div className="space-y-8 text-base leading-8 text-muted-foreground"><p>يبدأ العمل بالاستماع وفهم واقع الشخص، لا بتطبيق برنامج جاهز. هناك مساحة للتعقيد، مع توجيه عملي يتناسب مع الحياة الحقيقية.</p><p>يمكن أن يركز الدعم على العافية الشخصية، العلاقات، الأسرة، الانتقال من مرحلة إلى أخرى، القيادة أو الضغوط التي يصعب الحديث عنها في أماكن أخرى.</p><p>وعندما يكون ذلك مناسباً ومطلوباً، يمكن أن تدخل ممارسات العافية الشمولية وReiki ضمن العمل. سورور تاركان هي Reiki Master.</p><Link to="/ar/about" className="inline-flex items-center gap-2 border-b border-foreground pb-2 text-xs font-semibold uppercase tracking-[.14em] text-foreground">تعرّف على سورور تاركان <ArrowUpLeft className="size-4"/></Link></div></div></section>
+
+    <section className="bg-background px-5 py-20 lg:px-10 lg:py-28"><div className="mx-auto max-w-[1350px]"><div className="mb-12 flex items-end justify-between"><div><p className="eyebrow">المدونة</p><h2 className="mt-3 font-serif text-5xl sm:text-7xl">من المدونة</h2></div><Link to="/ar/blog" className="hidden items-center gap-2 text-xs font-semibold uppercase tracking-[.14em] sm:inline-flex">عرض الكل <ArrowUpLeft className="size-4"/></Link></div><div className="grid gap-8 md:grid-cols-3">{[
+      ["العافية الخاصة في الخليج","مساحة خاصة للأشخاص الذين يحملون مسؤوليات كبيرة.","/blog/private-wellbeing-advisory-gulf"],
+      ["الضغط والاحتراق لدى القيادات","كيف ننتبه إلى الضغط المستمر قبل أن يصبح الوضع الطبيعي.","/blog/stress-burnout-executives"],
+      ["عافية المرأة في الخليج","الثقة، الأسرة، العلاقات والتحولات الشخصية.","/blog/womens-wellbeing-gulf"]
+    ].map(([title,text,to],i)=><Link key={title} to={to as any} className="group border-t border-border pt-6"><span className="text-[10px] text-gold">0{i+1}</span><h3 className="mt-4 font-serif text-3xl leading-tight group-hover:underline">{title}</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">{text}</p><span className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[.14em]">اقرأ المقال <ArrowUpLeft className="size-4"/></span></Link>)}</div></div></section>
+
+    <section className="bg-primary px-5 py-20 text-primary-foreground lg:px-10 lg:py-28"><div className="mx-auto flex max-w-[1200px] flex-col items-start justify-between gap-8 md:flex-row md:items-end"><div><p className="eyebrow text-gold">استفسار خاص</p><h2 className="mt-4 font-serif text-5xl leading-none sm:text-7xl">مساحة سرية<br/>لما يهمك حقاً.</h2></div><Link to="/ar/book" className="button-gold">طلب جلسة خاصة <ArrowUpLeft className="size-4"/></Link></div></section>
   </SiteShell>;
 }
-function Area({title,text,image,href}:{title:string;text:string;image:string;href:string}){return <Link to={href as any} className="group relative min-h-[28rem] overflow-hidden bg-primary text-primary-foreground"><img src={image} alt="" className="absolute inset-0 size-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-[1.025]"/><div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent"/><div className="absolute inset-x-0 bottom-0 p-7"><h3 className="font-serif text-4xl">{title}</h3><p className="mt-3 max-w-md text-sm leading-7 text-primary-foreground/70">{text}</p><ArrowUpLeft className="mt-6 size-5"/></div></Link>}
+
+function Area({title,text,image,href}:{title:string;text:string;image:string;href:string}) {
+  return <Link to={href as any} className="group relative min-h-[30rem] overflow-hidden bg-primary text-primary-foreground"><img src={image} alt="" className="absolute inset-0 size-full object-cover opacity-65 transition-transform duration-700 group-hover:scale-[1.025]"/><div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent"/><div className="absolute inset-x-0 bottom-0 p-7"><h3 className="font-serif text-4xl">{title}</h3><p className="mt-3 max-w-md text-sm leading-7 text-primary-foreground/70">{text}</p><ArrowUpLeft className="mt-6 size-5"/></div></Link>;
+}
