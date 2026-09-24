@@ -10,7 +10,7 @@ import stillLife from "@/assets/private-still-life.jpg";
 
 export const Route = createFileRoute("/")({
   head: (ctx) => pageHeadFor(ctx, 
-    "GULFWELLBEING | Private Wellbeing Advisory & Coaching",
+    "Private Wellbeing Advisor for the Gulf | GULFWELLBEING",
     "Private wellbeing advisory and coaching with Sourour Tarkan for individuals, women, men, families, founders and executives across the Gulf and internationally."
   ),
   component: Home,
@@ -36,8 +36,8 @@ function Home() {
       <div className="relative mx-auto flex min-h-[92svh] max-w-[1600px] items-end px-5 pb-16 pt-36 lg:px-10 lg:pb-20">
         <div className="max-w-4xl">
           <p className="mb-6 text-[10px] uppercase tracking-[0.25em] text-gold">PRIVATE WELLBEING ADVISORY · GCC & INTERNATIONAL</p>
-          <h1 className="font-serif text-[clamp(3.2rem,7vw,7.2rem)] leading-[0.9]">Private Wellbeing Advisor<br/><em className="font-normal">in Dubai & the Gulf.</em></h1>
-          <p className="mt-8 max-w-xl text-sm leading-7 text-primary-foreground/72 sm:text-base">Personal, discreet guidance for the inner life behind responsibility, family, leadership and change.</p>
+          <h1 className="font-serif text-[clamp(3.2rem,7vw,7.2rem)] leading-[0.9]">Private Wellbeing Advisor<br/><em className="font-normal">for the Gulf.</em></h1>
+          <p className="mt-8 max-w-xl text-sm leading-7 text-primary-foreground/72 sm:text-base">Online, with private sessions by invitation.<br/>Personal, discreet guidance for the inner life behind responsibility, family, leadership and change.</p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link to="/book" className="button-gold">Book a Private Session <ArrowRight className="size-4" /></Link>
             <Link to="/wellbeing" className="button-on-dark">Explore Wellbeing</Link>
@@ -65,7 +65,7 @@ function Home() {
         </div>
         <div className="grid gap-px bg-border md:grid-cols-3">
           {pathways.map(([n, title, text, to, image]) => <Link key={title} to={to ?? "/"} className="group relative min-h-[30rem] overflow-hidden bg-primary text-primary-foreground">
-            <img src={image} width={1280} height={960} loading="lazy" alt="" className="absolute inset-0 h-full w-full object-cover opacity-62 transition-transform duration-700 group-hover:scale-[1.025]" />
+            <img src={image} width={1280} height={960} loading="lazy" alt={`${title} — GULFWELLBEING`} className="absolute inset-0 h-full w-full object-cover opacity-62 transition-transform duration-700 group-hover:scale-[1.025]" />
             <div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-7"><span className="text-[10px] text-gold">{n}</span><h3 className="mt-3 font-serif text-5xl">{title}</h3><p className="mt-3 max-w-xs text-sm leading-6 text-primary-foreground/68">{text}</p><ArrowUpRight className="mt-6 size-5" /></div>
           </Link>)}
