@@ -52,10 +52,20 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   useEffect(() => {
 document.documentElement.lang = isArabic ? "ar" : "en";
 document.documentElement.dir = isArabic ? "rtl" : "ltr";
-const existing = Array.from(document.head.querySelectorAll('link[data-gulfwellbeing-hreflang]'));
+const existing = Array.from(document.head.querySelectorAll('link[data-gulfwellbeing-hreflang], link[data-gulfwellbeing-canonical]'));
 existing.forEach((el) => el.remove());
 const origin = window.location.origin;
 const current = window.location.pathname;
+const canonicalLink = document.createElement("link");
+canonicalLink.rel = "canonical";
+canonicalLink.href = origin + current;
+canonicalLink.dataset.gulfwellbeingCanonical = "true";
+document.head.appendChild(canonicalLink);
+const ogUrl = document.head.querySelector('meta[data-gulfwellbeing-og-url]') || document.createElement("meta");
+ogUrl.setAttribute("property","og:url");
+ogUrl.setAttribute("content",origin + current);
+ogUrl.dataset.gulfwellbeingOgUrl = "true";
+document.head.appendChild(ogUrl);
 const enPath = current.startsWith("/ar") ? (current.replace(/^\/ar/, "") || "/") : current;
 const arPath = enPath === "/" ? "/ar" : `/ar${enPath}`;
 [["en", enPath], ["ar", arPath], ["x-default", enPath]].forEach(([lang, href]) => {
