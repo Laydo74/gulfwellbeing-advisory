@@ -64,7 +64,7 @@ function Home() {
           <span className="hidden text-xs text-muted-foreground sm:block">01 — 03</span>
         </div>
         <div className="grid gap-px bg-border md:grid-cols-3">
-          {pathways.map(([n, title, text, to, image]) => <Link key={title} to={to} className="group relative min-h-[30rem] overflow-hidden bg-primary text-primary-foreground">
+          {pathways.map(([n, title, text, to, image]) => <Link key={title} to={to ?? "/"} className="group relative min-h-[30rem] overflow-hidden bg-primary text-primary-foreground">
             <img src={image} width={1280} height={960} loading="lazy" alt="" className="absolute inset-0 h-full w-full object-cover opacity-62 transition-transform duration-700 group-hover:scale-[1.025]" />
             <div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-7"><span className="text-[10px] text-gold">{n}</span><h3 className="mt-3 font-serif text-5xl">{title}</h3><p className="mt-3 max-w-xs text-sm leading-6 text-primary-foreground/68">{text}</p><ArrowUpRight className="mt-6 size-5" /></div>
