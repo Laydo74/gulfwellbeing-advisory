@@ -18,8 +18,12 @@ const BILINGUAL = new Set<string>([
   "/blog", "/book", "/privacy", "/terms",
   ...BUSINESS_SUB.map((s) => `/business/${s}`),
   ...BLOG_SLUGS.map((s) => `/blog/${s}`),
+  "/women/confidence-self-trust", "/women/motherhood",
+  "/men/fatherhood",
+  "/wellbeing/emotional-balance", "/wellbeing/life-transitions",
+  "/wellbeing/relationships-family", "/wellbeing/stress-burnout",
 ]);
-const NOINDEX = new Set(["/auth"]);
+const NOINDEX = new Set(["/auth", "/admin"]);
 
 const abs = (p: string) => (p === "/" ? `${SITE_URL}/` : `${SITE_URL}${p}`);
 const normalize = (p: string) => (p.length > 1 ? p.replace(/\/+$/, "") : p) || "/";
@@ -67,7 +71,8 @@ export function pageHead(title: string, description: string, path?: string) {
 }
 
 /** Route head helper: derives the path from the matched route; only the leaf match emits canonical/hreflang. */
-export function pageHeadFor(ctx: HeadCtx, title: string, description: string, _path?: string) {
+export function pageHeadFor(ctx: HeadCtx, title: string, description: string, explicitPath?: string) {
   const isLeaf = ctx.matches[ctx.matches.length - 1]?.id === ctx.match.id;
-  return pageHead(title, description, isLeaf ? ctx.match.pathname : undefined);
+  const routePath = explicitPath ?? ctx.match.pathname;
+  return pageHead(title, description, isLeaf ? routePath : undefined);
 }
