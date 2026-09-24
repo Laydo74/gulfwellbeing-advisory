@@ -78,11 +78,19 @@ const link = document.createElement("link"); link.rel = "alternate"; link.hrefla
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
-        name: "Gulfwellbeing",
+        "@id": `${window.location.origin}/#organization`,
+        name: "GULFWELLBEING",
+        url: window.location.origin,
         description: "Private wellbeing advisory and coaching for individuals, families and executives across the Gulf and internationally.",
-        founder: { "@type": "Person", name: "Sourour Tarkan", jobTitle: "Wellbeing Advisor & Coach", knowsAbout: ["Wellbeing advisory", "Reiki", "Holistic wellbeing", "Reflective coaching"] },
-        areaServed: ["United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman", "Gulf Cooperation Council", "International"],
-        serviceType: ["Private Wellbeing Advisory", "Wellbeing Coaching", "Executive Wellbeing", "Women’s Wellbeing", "Men’s Wellbeing"],
+        founder: {
+          "@type": "Person",
+          "@id": `${window.location.origin}/#sourour-tarkan`,
+          name: "Sourour Tarkan",
+          jobTitle: "Private Wellbeing Advisor & Coach",
+          knowsAbout: ["Private wellbeing advisory", "Wellbeing coaching", "Reiki", "Executive wellbeing", "Women's wellbeing", "Men's wellbeing"],
+        },
+        areaServed: ["United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman"],
+        serviceType: ["Private Wellbeing Advisory", "Wellbeing Coaching", "Executive Wellbeing", "Women's Wellbeing", "Men's Wellbeing"],
       }) }} />
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 lg:px-10">
