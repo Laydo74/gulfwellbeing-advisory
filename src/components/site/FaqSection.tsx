@@ -24,8 +24,18 @@ const arabicFaq: FaqItem[] = [
 export function FaqSection({ isArabic = false }: { isArabic?: boolean }) {
   const [open, setOpen] = useState<number | null>(null);
   const items = isArabic ? arabicFaq : englishFaq;
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
   return (
     <section className="bg-background px-5 py-20 lg:px-10 lg:py-28" dir={isArabic ? "rtl" : "ltr"}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-[.7fr_1.3fr]">
         <div>
           <p className="eyebrow text-gold">{isArabic ? "الأسئلة الشائعة" : "FAQ"}</p>
