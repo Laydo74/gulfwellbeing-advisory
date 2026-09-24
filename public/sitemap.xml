@@ -13,58 +13,52 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/about" />
   </url>
   <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/ar/men/fatherhood</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/men/fatherhood" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/men/fatherhood" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/men/fatherhood" />
+  </url>
+  <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/emotional-balance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/emotional-balance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/emotional-balance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/emotional-balance" />
+  </url>
+  <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/life-transitions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/life-transitions" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/life-transitions" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/life-transitions" />
+  </url>
+  <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/relationships-family</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/relationships-family" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/relationships-family" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/relationships-family" />
+  </url>
+  <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/stress-burnout</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/stress-burnout" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/stress-burnout" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/stress-burnout" />
+  </url>
+  <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/ar/women/confidence-self-trust</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/women/confidence-self-trust" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/women/confidence-self-trust" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/women/confidence-self-trust" />
+  </url>
+  <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/ar/women/motherhood</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/women/motherhood" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/women/motherhood" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/women/motherhood" />
+  </url>
+  <url>
     <loc>https://gulfwellbeing-advisory.vercel.app/blog</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/blog" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/blog" />
-  </url>
-  <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/book</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/book" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/book" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/book" />
-  </url>
-  <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/business</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/business" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/business" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/business" />
-  </url>
-  <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/men</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/men" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/men" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/men" />
-  </url>
-  <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/privacy</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/privacy" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/privacy" />
-  </url>
-  <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/terms</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/terms" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/terms" />
-  </url>
-  <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/the-tarkan-approach</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/the-tarkan-approach" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/the-tarkan-approach" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/the-tarkan-approach" />
-  </url>
-  <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/wellbeing</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing" />
-  </url>
-  <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/women</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/women" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/women" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/women" />
   </url>
   <url>
     <loc>https://gulfwellbeing-advisory.vercel.app/blog/confidence-self-trust</loc>
@@ -139,6 +133,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/blog/womens-wellbeing-gulf" />
   </url>
   <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/book</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/book" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/book" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/book" />
+  </url>
+  <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/business" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/business" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/business" />
+  </url>
+  <url>
     <loc>https://gulfwellbeing-advisory.vercel.app/business/burnout-prevention</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/business/burnout-prevention" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/business/burnout-prevention" />
@@ -181,25 +187,43 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/business/vip-concierge-wellbeing" />
   </url>
   <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/men</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/men" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/men" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/men" />
+  </url>
+  <url>
     <loc>https://gulfwellbeing-advisory.vercel.app/men/fatherhood</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/men/fatherhood" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/men/fatherhood" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/men/fatherhood" />
   </url>
   <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/ar/men/fatherhood</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/men/fatherhood" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/men/fatherhood" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/men/fatherhood" />
+    <loc>https://gulfwellbeing-advisory.vercel.app/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/privacy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/privacy" />
+  </url>
+  <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/terms" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/terms" />
+  </url>
+  <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/the-tarkan-approach</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/the-tarkan-approach" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/the-tarkan-approach" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/the-tarkan-approach" />
+  </url>
+  <url>
+    <loc>https://gulfwellbeing-advisory.vercel.app/wellbeing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing" />
   </url>
   <url>
     <loc>https://gulfwellbeing-advisory.vercel.app/wellbeing/emotional-balance</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/emotional-balance" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/emotional-balance" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/emotional-balance" />
-  </url>
-  <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/emotional-balance</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/emotional-balance" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/emotional-balance" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/emotional-balance" />
@@ -211,19 +235,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/life-transitions" />
   </url>
   <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/life-transitions</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/life-transitions" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/life-transitions" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/life-transitions" />
-  </url>
-  <url>
     <loc>https://gulfwellbeing-advisory.vercel.app/wellbeing/relationships-family</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/relationships-family" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/relationships-family" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/relationships-family" />
-  </url>
-  <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/relationships-family</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/relationships-family" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/relationships-family" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/relationships-family" />
@@ -235,10 +247,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/stress-burnout" />
   </url>
   <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/stress-burnout</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/stress-burnout" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/wellbeing/stress-burnout" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/wellbeing/stress-burnout" />
+    <loc>https://gulfwellbeing-advisory.vercel.app/women</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/women" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/women" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/women" />
   </url>
   <url>
     <loc>https://gulfwellbeing-advisory.vercel.app/women/confidence-self-trust</loc>
@@ -247,19 +259,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/women/confidence-self-trust" />
   </url>
   <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/ar/women/confidence-self-trust</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/women/confidence-self-trust" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/women/confidence-self-trust" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/women/confidence-self-trust" />
-  </url>
-  <url>
     <loc>https://gulfwellbeing-advisory.vercel.app/women/motherhood</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/women/motherhood" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/women/motherhood" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/women/motherhood" />
-  </url>
-  <url>
-    <loc>https://gulfwellbeing-advisory.vercel.app/ar/women/motherhood</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://gulfwellbeing-advisory.vercel.app/women/motherhood" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://gulfwellbeing-advisory.vercel.app/ar/women/motherhood" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gulfwellbeing-advisory.vercel.app/women/motherhood" />
