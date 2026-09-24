@@ -35,6 +35,8 @@ import { Route as MenFatherhoodRouteImport } from './routes/men/fatherhood'
 import { Route as WellbeingStressBurnoutRouteImport } from './routes/wellbeing/stress-burnout'
 import { Route as WomenMotherhoodRouteImport } from './routes/women/motherhood'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TheTarkanApproachRouteImport } from './routes/the-tarkan-approach'
+import { Route as ArabicTheTarkanApproachRouteImport } from './routes/ar/the-tarkan-approach'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as BurnoutPreventionRouteImport } from './routes/business/burnout-prevention'
 import { Route as LeadershipClarityRouteImport } from './routes/business/leadership-clarity'
@@ -92,10 +94,11 @@ const ArabicBlogRouteWithChildren = ArabicBlogRoute._addFileChildren({ ArabicBlo
 const ArabicBookRoute = ArabicBookRouteImport.update({ id: '/ar/book', path: '/book', getParentRoute: () => ArabicRoute } as any)
 const ArabicPrivacyRoute = ArabicPrivacyRouteImport.update({ id: '/ar/privacy', path: '/privacy', getParentRoute: () => ArabicRoute } as any)
 const ArabicTermsRoute = ArabicTermsRouteImport.update({ id: '/ar/terms', path: '/terms', getParentRoute: () => ArabicRoute } as any)
+const ArabicTheTarkanApproachRoute = ArabicTheTarkanApproachRouteImport.update({ id: '/ar/the-tarkan-approach', path: '/the-tarkan-approach', getParentRoute: () => ArabicRoute } as any)
 
 const ArabicRouteWithChildren = ArabicRoute._addFileChildren({
   ArabicWellbeingRoute, ArabicWomenRoute, ArabicMenRoute, ArabicBusinessRoute: ArabicBusinessRouteWithChildren,
-  ArabicAboutRoute, ArabicBlogRoute: ArabicBlogRouteWithChildren, ArabicBookRoute, ArabicPrivacyRoute, ArabicTermsRoute,
+  ArabicAboutRoute, ArabicBlogRoute: ArabicBlogRouteWithChildren, ArabicBookRoute, ArabicPrivacyRoute, ArabicTermsRoute, ArabicTheTarkanApproachRoute,
 })
 
 const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
@@ -213,6 +216,7 @@ export interface FileRoutesByFullPath {
   '/business/burnout-prevention': typeof BurnoutPreventionRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/the-tarkan-approach': typeof TheTarkanApproachRoute
   '/blog/private-wellbeing-advisory-gulf': typeof PrivateWellbeingAdvisoryGulfRoute
   '/blog/stress-burnout-executives': typeof StressBurnoutExecutivesRoute
   '/blog/womens-wellbeing-gulf': typeof WomensWellbeingGulfRoute
@@ -261,6 +265,7 @@ export interface FileRoutesByTo {
   '/business/burnout-prevention': typeof BurnoutPreventionRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/the-tarkan-approach': typeof TheTarkanApproachRoute
   '/blog/private-wellbeing-advisory-gulf': typeof PrivateWellbeingAdvisoryGulfRoute
   '/blog/stress-burnout-executives': typeof StressBurnoutExecutivesRoute
   '/blog/womens-wellbeing-gulf': typeof WomensWellbeingGulfRoute
@@ -314,6 +319,7 @@ export interface FileRoutesById {
   '/business/burnout-prevention': typeof BurnoutPreventionRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/the-tarkan-approach': typeof TheTarkanApproachRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -358,6 +364,7 @@ export interface FileRouteTypes {
     | '/business/burnout-prevention'
     | '/privacy'
     | '/terms'
+    | '/the-tarkan-approach'
     | '/blog/private-wellbeing-advisory-gulf'
     | '/blog/stress-burnout-executives'
     | '/blog/womens-wellbeing-gulf'
@@ -434,6 +441,7 @@ export interface FileRouteTypes {
     | '/business/burnout-prevention'
     | '/privacy'
     | '/terms'
+    | '/the-tarkan-approach'
     | '/blog/private-wellbeing-advisory-gulf'
     | '/blog/stress-burnout-executives'
     | '/blog/womens-wellbeing-gulf'
@@ -456,6 +464,7 @@ export interface RootRouteChildren {
   WomenRoute: typeof WomenRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
+  TheTarkanApproachRoute: typeof TheTarkanApproachRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -491,6 +500,7 @@ declare module '@tanstack/react-router' {
     '/ar/book': { id: '/ar/book', path: '/book', fullPath: '/ar/book', preLoaderRoute: typeof ArabicBookRouteImport, parentRoute: typeof ArabicRoute }
     '/ar/privacy': { id: '/ar/privacy', path: '/privacy', fullPath: '/ar/privacy', preLoaderRoute: typeof ArabicPrivacyRouteImport, parentRoute: typeof ArabicRoute }
     '/ar/terms': { id: '/ar/terms', path: '/terms', fullPath: '/ar/terms', preLoaderRoute: typeof ArabicTermsRouteImport, parentRoute: typeof ArabicRoute }
+    '/ar/the-tarkan-approach': { id: '/ar/the-tarkan-approach', path: '/the-tarkan-approach', fullPath: '/ar/the-tarkan-approach', preLoaderRoute: typeof ArabicTheTarkanApproachRouteImport, parentRoute: typeof ArabicRoute }
     '/ar/blog/$slug': { id: '/ar/blog/$slug', path: '/$slug', fullPath: '/ar/blog/$slug', preLoaderRoute: typeof ArabicBlogSlugRouteImport, parentRoute: typeof ArabicBlogRoute }
     '/ar/business/executive-wellbeing': { id: '/ar/business/executive-wellbeing', path: '/executive-wellbeing', fullPath: '/ar/business/executive-wellbeing', preLoaderRoute: typeof ArabicExecutiveWellbeingRouteImport, parentRoute: typeof ArabicBusinessRoute }
     '/ar/business/founder-wellbeing': { id: '/ar/business/founder-wellbeing', path: '/founder-wellbeing', fullPath: '/ar/business/founder-wellbeing', preLoaderRoute: typeof ArabicFounderWellbeingRouteImport, parentRoute: typeof ArabicBusinessRoute }
@@ -582,6 +592,7 @@ declare module '@tanstack/react-router' {
     '/business/leadership-clarity': { id: '/business/leadership-clarity', path: '/leadership-clarity', fullPath: '/business/leadership-clarity', preLoaderRoute: typeof LeadershipClarityRouteImport, parentRoute: typeof BusinessRoute }
     '/business/burnout-prevention': { id: '/business/burnout-prevention', path: '/burnout-prevention', fullPath: '/business/burnout-prevention', preLoaderRoute: typeof BurnoutPreventionRouteImport, parentRoute: typeof BusinessRoute }
     '/privacy': { id: '/privacy', path: '/privacy', fullPath: '/privacy', preLoaderRoute: typeof PrivacyRouteImport, parentRoute: typeof rootRouteImport }
+    '/the-tarkan-approach': { id: '/the-tarkan-approach', path: '/the-tarkan-approach', fullPath: '/the-tarkan-approach', preLoaderRoute: typeof TheTarkanApproachRouteImport, parentRoute: typeof rootRouteImport }
     '/terms': { id: '/terms', path: '/terms', fullPath: '/terms', preLoaderRoute: typeof TermsRouteImport, parentRoute: typeof rootRouteImport }
     '/blog/private-wellbeing-advisory-gulf': { id: '/blog/private-wellbeing-advisory-gulf', path: '/private-wellbeing-advisory-gulf', fullPath: '/blog/private-wellbeing-advisory-gulf', preLoaderRoute: typeof PrivateWellbeingAdvisoryGulfRouteImport, parentRoute: typeof BlogRoute }
     '/blog/stress-burnout-executives': { id: '/blog/stress-burnout-executives', path: '/stress-burnout-executives', fullPath: '/blog/stress-burnout-executives', preLoaderRoute: typeof StressBurnoutExecutivesRouteImport, parentRoute: typeof BlogRoute }
@@ -684,6 +695,7 @@ const LeadershipClarityRoute = LeadershipClarityRouteImport.update({ id: '/leade
 const BurnoutPreventionRoute = BurnoutPreventionRouteImport.update({ id: '/burnout-prevention', path: '/burnout-prevention', getParentRoute: () => BusinessRoute } as any)
 const PrivacyRoute = PrivacyRouteImport.update({ id: '/privacy', path: '/privacy', getParentRoute: () => rootRouteImport } as any)
 const TermsRoute = TermsRouteImport.update({ id: '/terms', path: '/terms', getParentRoute: () => rootRouteImport } as any)
+const TheTarkanApproachRoute = TheTarkanApproachRouteImport.update({ id: '/the-tarkan-approach', path: '/the-tarkan-approach', getParentRoute: () => rootRouteImport } as any)
 const MenFatherhoodRoute = MenFatherhoodRouteImport.update({ id: '/fatherhood', path: '/fatherhood', getParentRoute: () => MenRoute } as any)
 const WellbeingStressBurnoutRoute = WellbeingStressBurnoutRouteImport.update({ id: '/stress-burnout', path: '/stress-burnout', getParentRoute: () => WellbeingRoute } as any)
 const WomenMotherhoodRoute = WomenMotherhoodRouteImport.update({ id: '/motherhood', path: '/motherhood', getParentRoute: () => WomenRoute } as any)
@@ -705,6 +717,7 @@ const rootRouteChildren: RootRouteChildren = {
   WomenRoute: WomenRouteWithChildren,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
+  TheTarkanApproachRoute: TheTarkanApproachRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
