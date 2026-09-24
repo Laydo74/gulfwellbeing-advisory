@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpLeft, ArrowRight } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 import { arabicPosts } from "@/lib/arabic-blog";
 
 const seo: Record<string,{title:string;description:string}> = {

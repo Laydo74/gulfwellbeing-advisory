@@ -2,11 +2,11 @@ import { createFileRoute,Link,useLocation } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { JournalArticle } from "@/components/site/JournalArticle";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 import stillLife from "@/assets/private-still-life.jpg";
 
 export const Route=createFileRoute("/blog")({
-  head:()=>pageHead("Private Wellbeing Blog | GULFWELLBEING","Original perspectives on private wellbeing, relationships, leadership, executive pressure and life transitions across the Gulf and internationally.","/blog"),
+  head: (ctx) => pageHeadFor(ctx, "Private Wellbeing Blog | GULFWELLBEING","Original perspectives on private wellbeing, relationships, leadership, executive pressure and life transitions across the Gulf and internationally.","/blog"),
   component:Page
 });
 const categories=["Wellbeing","Leadership","Women","Men","Relationships","Life Transitions","Executive Wellbeing"];

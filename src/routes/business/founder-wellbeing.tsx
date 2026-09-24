@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 
 export const Route = createFileRoute("/business/founder-wellbeing")({
-  head: () => pageHead(
+  head: (ctx) => pageHeadFor(ctx, 
     "Founder Wellbeing Advisory | GULFWELLBEING",
     "Private founder wellbeing advisory for entrepreneurs carrying business responsibility, uncertainty, decision-making and personal pressure."
   ),

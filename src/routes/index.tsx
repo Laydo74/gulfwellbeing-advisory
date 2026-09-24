@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, ArrowUpRight, LockKeyhole } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 import { FaqSection } from "@/components/site/FaqSection";
 import hero from "@/assets/gulfwellbeing-hero.jpg";
 import woman from "@/assets/woman-editorial.jpg";
@@ -9,7 +9,7 @@ import executive from "@/assets/executive-editorial.jpg";
 import stillLife from "@/assets/private-still-life.jpg";
 
 export const Route = createFileRoute("/")({
-  head: () => pageHead(
+  head: (ctx) => pageHeadFor(ctx, 
     "GULFWELLBEING | Private Wellbeing Advisory & Coaching",
     "Private wellbeing advisory and coaching with Sourour Tarkan for individuals, women, men, families, founders and executives across the Gulf and internationally."
   ),
