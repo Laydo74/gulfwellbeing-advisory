@@ -321,7 +321,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
               </a>
             )}
           </div>
-          <img src={image} alt="" className="h-[48vh] w-full object-cover" />
+          <img src={image} alt="" className="mx-auto h-[38vh] w-full max-w-[34rem] object-cover lg:h-[44vh]" />
         </div>
       </section>
 
