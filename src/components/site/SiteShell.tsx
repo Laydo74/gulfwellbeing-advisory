@@ -56,7 +56,7 @@ const existing = Array.from(document.head.querySelectorAll('link[data-gulfwellbe
 existing.forEach((el) => el.remove());
 const origin = window.location.origin;
 const current = window.location.pathname;
-const enPath = current.startsWith("/ar") ? (current.replace(/^\\/ar/, "") || "/") : current;
+const enPath = current.startsWith("/ar") ? (current.replace(/^\/ar/, "") || "/") : current;
 const arPath = enPath === "/" ? "/ar" : `/ar${enPath}`;
 [["en", enPath], ["ar", arPath], ["x-default", enPath]].forEach(([lang, href]) => {
 const link = document.createElement("link"); link.rel = "alternate"; link.hreflang = lang; link.href = origin + href; link.dataset.gulfwellbeingHreflang = "true"; document.head.appendChild(link);
