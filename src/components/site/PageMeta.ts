@@ -10,12 +10,15 @@ export function pageHead(title:string,description:string,path?:string){
       {property:"og:title",content:title},
       {property:"og:description",content:description},
       {property:"og:type",content:"website"},
+      {property:"og:locale",content:"en_US"},
+      {property:"og:image:alt",content:"GULFWELLBEING — Private wellbeing advisory with Sourour Tarkan"},
       {property:"og:site_name",content:SITE_NAME},
       {property:"og:image",content:DEFAULT_IMAGE},
       {name:"twitter:card",content:"summary_large_image"},
       {name:"twitter:title",content:title},
       {name:"twitter:description",content:description},
-      {name:"twitter:image",content:DEFAULT_IMAGE}
+      {name:"twitter:image",content:DEFAULT_IMAGE},
+      {name:"twitter:image:alt",content:"GULFWELLBEING — Private wellbeing advisory with Sourour Tarkan"}
     ],
     ...(path ? {links:[{rel:"canonical",href:path}]} : {})
   };
