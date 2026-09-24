@@ -316,9 +316,9 @@ export function ArabicPage({ kind }: { kind: Kind }) {
             <h1 className="mt-6 font-serif text-5xl leading-[1.08] md:text-7xl">{d.title}</h1>
             <p className="mt-7 max-w-2xl text-lg leading-9 text-muted-foreground">{d.intro}</p>
             {!isLegal && (
-              <Link to="/ar/book" className="button-primary mt-9">
+              <a href="/ar/book" className="button-primary mt-9">
                 طلب استشارة خاصة <ArrowUpLeft className="size-4" />
-              </Link>
+              </a>
             )}
           </div>
           <img src={image} alt="" className="h-[48vh] w-full object-cover" />
@@ -360,7 +360,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
                   <h3 className="mt-8 font-serif text-3xl leading-tight">{title}</h3>
                   <p className="mt-4 text-sm leading-8 text-muted-foreground group-hover:text-primary-foreground/70">{text}</p>
                   <ArrowUpLeft className="mt-8 size-5 text-gold" />
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -374,9 +374,9 @@ export function ArabicPage({ kind }: { kind: Kind }) {
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
             أخبرنا بما تبحث عنه، وسنتواصل معك بهدوء لمناقشة الخطوة المناسبة.
           </p>
-          <Link to="/ar/book" className="button-primary mt-8">
+          <a href="/ar/book" className="button-primary mt-8">
             إرسال طلب خاص
-          </Link>
+          </a>
         </section>
       )}
     </SiteShell>
@@ -401,12 +401,12 @@ export function ArabicHome() {
               مع سرور طركان، مساحة هادئة وسرية للتعامل مع الضغوط، العلاقات، المسؤوليات والتحولات الشخصية بوضوح واتزان أكبر.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Link to="/ar/book" className="button-gold">
+              <a href="/ar/book" className="button-gold">
                 طلب استشارة خاصة <ArrowUpLeft className="size-4" />
-              </Link>
-              <Link to="/ar/wellbeing" className="button-on-dark">
+              </a>
+              <a href="/ar/wellbeing" className="button-on-dark">
                 اكتشف الرفاه
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -453,9 +453,9 @@ export function ArabicHome() {
             <p className="mt-7 text-base leading-9 text-primary-foreground/70">
               استشارات رفاه خاصة للمؤسسين والمديرين والقيادات والفرق، تركز على الضغط المستمر، وضوح القرار، مسؤولية القيادة والجانب الإنساني من الأداء.
             </p>
-            <Link to="/ar/business" className="button-gold mt-9">
+            <a href="/ar/business" className="button-gold mt-9">
               اكتشف رفاه الشركات والقيادات
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -473,9 +473,9 @@ export function ArabicHome() {
             <p className="mt-7 max-w-lg text-base leading-9 text-muted-foreground">
               تجربة مصممة حول الجداول المكثفة، الحياة الدولية والحاجة إلى مستوى أعلى من الخصوصية والمرونة.
             </p>
-            <Link to="/ar/business/vip-concierge-wellbeing" className="button-primary mt-9">
+            <a href="/ar/business/vip-concierge-wellbeing" className="button-primary mt-9">
               اكتشف الخدمة الخاصة
-            </Link>
+            </a>
           </div>
         </div>
         <img src={stillLife} alt="مساحة خاصة وهادئة" className="order-1 h-full min-h-[30rem] w-full object-cover lg:order-2" />
@@ -487,7 +487,7 @@ export function ArabicHome() {
           <p className="eyebrow text-gold">تعرّف على سرور طركان</p>
           <h2 className="mt-5 font-serif text-5xl leading-[1.08] sm:text-7xl">علاقة خاصة<br/>مع إنسانة حقيقية.</h2>
           <p className="mt-7 text-base leading-9 text-primary-foreground/70">تقود GULFWELLBEING سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master. تبدأ المقاربة بالاستماع وفهم واقع الشخص، لا بتطبيق قالب جاهز.</p>
-          <Link to="/ar/the-tarkan-approach" className="button-gold mt-9">اكتشف منهج سرور طركان <ArrowUpLeft className="size-4" /></Link>
+          <a href="/ar/the-tarkan-approach" className="button-gold mt-9">اكتشف منهج سرور طركان <ArrowUpLeft className="size-4" /></a>
         </div></div>
       </section>
 
@@ -511,9 +511,9 @@ export function ArabicHome() {
             <p>
               وعندما يكون ذلك مناسباً ومطلوباً، يمكن أن تدخل ممارسات الرفاه الشمولي وReiki ضمن العمل. سرور طركان هي Reiki Master.
             </p>
-            <Link to="/ar/about" className="inline-flex items-center gap-2 border-b border-foreground pb-2 text-xs font-semibold tracking-[.12em]">
+            <a href="/ar/about" className="inline-flex items-center gap-2 border-b border-foreground pb-2 text-xs font-semibold tracking-[.12em]">
               تعرّف على سرور طركان <ArrowUpLeft className="size-4" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -525,9 +525,9 @@ export function ArabicHome() {
               <p className="eyebrow">المدونة</p>
               <h2 className="mt-3 font-serif text-5xl sm:text-7xl">أفكار تستحق التوقف عندها.</h2>
             </div>
-            <Link to="/ar/blog" className="hidden items-center gap-2 text-xs font-semibold tracking-[.12em] sm:inline-flex">
+            <a href="/ar/blog" className="hidden items-center gap-2 text-xs font-semibold tracking-[.12em] sm:inline-flex">
               عرض المدونة <ArrowUpLeft className="size-4" />
-            </Link>
+            </a>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {[
@@ -542,7 +542,7 @@ export function ArabicHome() {
                 <span className="mt-6 inline-flex items-center gap-2 text-xs tracking-[.12em]">
                   اقرأ من المدونة <ArrowUpLeft className="size-4" />
                 </span>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -560,9 +560,9 @@ export function ArabicHome() {
               تستحق مساحة خاصة.
             </h2>
           </div>
-          <Link to="/ar/book" className="button-gold">
+          <a href="/ar/book" className="button-gold">
             إرسال طلب خاص <ArrowUpLeft className="size-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </SiteShell>
@@ -581,7 +581,7 @@ function Area({
   href: string;
 }) {
   return (
-    <Link to={href as any} className="group relative min-h-[30rem] overflow-hidden bg-primary text-primary-foreground">
+    <a href={href as any} className="group relative min-h-[30rem] overflow-hidden bg-primary text-primary-foreground">
       <img src={image} alt="" className="absolute inset-0 size-full object-cover opacity-65 transition-transform duration-700 group-hover:scale-[1.025]" />
       <div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 p-7">
@@ -589,6 +589,6 @@ function Area({
         <p className="mt-3 max-w-md text-sm leading-8 text-primary-foreground/70">{text}</p>
         <ArrowUpLeft className="mt-6 size-5" />
       </div>
-    </Link>
+    </a>
   );
 }
