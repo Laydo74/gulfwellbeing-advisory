@@ -12,7 +12,7 @@ const nav = [
   { label: "Business", ar: "الأعمال والقيادات", to: "/business" },
   { label: "The Tarkan Approach", ar: "منهج سرور طركان", to: "/the-tarkan-approach" },
   { label: "About", ar: "عن سرور طركان", to: "/about" },
-  { label: "Journal", ar: "المجلة", to: "/blog" },
+  { label: "Blog", ar: "المدونة", to: "/blog" },
   { label: "Book", ar: "طلب جلسة", to: "/book" },
 ] as const;
 
