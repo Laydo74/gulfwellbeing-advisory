@@ -113,7 +113,7 @@ function Home() {
           <p>The work is attentive, practical and shaped around the realities of your life. There is room for complexity without judgement, and direction without rigid formulas.</p>
           <p>Support may focus on personal wellbeing, relationships, transition, leadership, family dynamics or the quieter pressures that are difficult to discuss elsewhere.</p>
           <p>Where appropriate and welcomed, holistic wellbeing practices and Reiki may form part of the work. Sourour Tarkan is a Reiki Master.</p>
-          <Link to="/about" className="inline-flex items-center gap-2 border-b border-foreground pb-2 text-xs font-semibold uppercase tracking-[0.14em] text-foreground">Meet Sourour Tarkan <ArrowUpRight className="size-4" /></Link>
+          <Link to="/the-tarkan-approach" className="inline-flex items-center gap-2 border-b border-foreground pb-2 text-xs font-semibold uppercase tracking-[0.14em] text-foreground">Discover The Tarkan Approach <ArrowUpRight className="size-4" /></Link>
         </div>
       </div>
     </section>
