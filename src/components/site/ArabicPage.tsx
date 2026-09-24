@@ -14,6 +14,7 @@ type Kind =
   | "business"
   | "vip"
   | "about"
+  | "approach"
   | "blog"
   | "privacy"
   | "terms";
@@ -164,10 +165,10 @@ const data: Record<Kind, PageData> = {
     ],
   },
   about: {
-    eyebrow: "عن GULFWELLBEING",
+    eyebrow: "عن سرور طركان",
     title: "الرفاه يبدأ من علاقة إنسانية حقيقية.",
     intro:
-      "تقود GULFWELLBEING سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master، من خلال مقاربة خاصة تجمع الإصغاء، الوعي وممارسات الرفاه الشمولي بحسب احتياج كل شخص.",
+      "سرور طركان هي مستشارة رفاه ومدرّبة وReiki Master. تقود عملها من خلال مقاربة شخصية تضع الإنسان وسياقه وحياته الفعلية في مركز العلاقة الاستشارية.",
     sections: [
       {
         title: "سرور طركان",
@@ -188,6 +189,39 @@ const data: Record<Kind, PageData> = {
         title: "مساحة بلا أحكام",
         body:
           "الخصوصية والاحترام ليسا تفصيلاً إضافياً. هما جزء من طبيعة العلاقة الاستشارية، بحيث يستطيع العميل التحدث والتفكير بحرية أكبر.",
+      },
+    ],
+  },
+  approach: {
+    eyebrow: "منهج سرور طركان",
+    title: "مقاربة تبدأ بالإنسان، لا بالمشكلة.",
+    intro:
+      "منهج شخصي ومرن للرفاه يبدأ بفهم الإنسان كما هو، وسياقه كما هو، ثم بناء مساحة مناسبة لما يحتاج إلى فهمه أو تغييره.",
+    sections: [
+      {
+        title: "الإنسان قبل المشكلة",
+        body:
+          "لا تختزل التجربة الإنسانية في عنوان واحد. نبدأ بالشخص: ما الذي يعيشه، ما الذي يحمله، وما الذي تغير في حياته.",
+      },
+      {
+        title: "السياق قبل النصيحة",
+        body:
+          "قبل تقديم أي اتجاه، تأتي مساحة لفهم الواقع، المسؤوليات، العلاقات والظروف التي تشكل التجربة اليومية.",
+      },
+      {
+        title: "الوضوح الداخلي قبل التغيير الخارجي",
+        body:
+          "عندما يصبح ما يحدث في الداخل أوضح، يمكن النظر إلى القرارات والحدود والعلاقات والخطوات القادمة بوعي أكبر.",
+      },
+      {
+        title: "رفاه الإنسان ككل",
+        body:
+          "يمكن أن تتقاطع في العمل الحياة الخاصة، العلاقات، الأسرة، المسؤولية، القيادة ونمط الحياة، لأن هذه الجوانب لا تعيش منفصلة عن بعضها.",
+      },
+      {
+        title: "خاص، فردي، بلا قالب جاهز",
+        body:
+          "لا يوجد برنامج واحد مفروض على الجميع. يتشكل الحوار والإيقاع والتركيز وفق الشخص واحتياجه وما يتم الاتفاق عليه.",
       },
     ],
   },
@@ -287,7 +321,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
               </Link>
             )}
           </div>
-          <img src={image} width={1408} height={1008} alt="" className="h-[48vh] w-full object-cover" />
+          <img src={image} alt="" className="h-[48vh] w-full object-cover" />
         </div>
       </section>
 
@@ -448,12 +482,12 @@ export function ArabicHome() {
       </section>
 
       <section className="grid bg-primary text-primary-foreground lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="min-h-[34rem]"><img src="/images/sourour-tarkan-home.jpg" width={240} height={300} loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="h-full w-full object-cover object-center" /></div>
+        <div className="min-h-[34rem]"><img src="/images/sourour-tarkan-home.jpg" loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="h-full w-full object-cover object-center" /></div>
         <div className="flex items-center px-6 py-20 lg:px-20"><div className="max-w-xl">
           <p className="eyebrow text-gold">تعرّف على سرور طركان</p>
           <h2 className="mt-5 font-serif text-5xl leading-[1.08] sm:text-7xl">علاقة خاصة<br/>مع إنسانة حقيقية.</h2>
           <p className="mt-7 text-base leading-9 text-primary-foreground/70">تقود GULFWELLBEING سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master. تبدأ المقاربة بالاستماع وفهم واقع الشخص، لا بتطبيق قالب جاهز.</p>
-          <Link to="/ar/about" className="button-gold mt-9">تعرّف على سرور طركان <ArrowUpLeft className="size-4" /></Link>
+          <Link to="/ar/the-tarkan-approach" className="button-gold mt-9">اكتشف منهج سرور طركان <ArrowUpLeft className="size-4" /></Link>
         </div></div>
       </section>
 
