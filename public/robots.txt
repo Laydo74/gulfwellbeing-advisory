@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /auth
 
-Sitemap: https://gulfwellbeing-advisory-623uvptgy-laydo.vercel.app/sitemap.xml
+Sitemap: https://gulfwellbeing-advisory.vercel.app/sitemap.xml
