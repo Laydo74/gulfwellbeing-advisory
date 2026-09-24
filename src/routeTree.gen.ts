@@ -12,95 +12,70 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as ArRouteImport } from './routes/ar'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as BlogRouteImport } from './routes/blog'
-import { Route as LifeTransitionsWellbeingRouteImport } from './routes/blog/life-transitions-wellbeing'
-import { Route as RelationshipsFamilyWellbeingRouteImport } from './routes/blog/relationships-family-wellbeing'
-import { Route as MensWellbeingPressureRouteImport } from './routes/blog/mens-wellbeing-pressure'
-import { Route as WomensWellbeingGulfRouteImport } from './routes/blog/womens-wellbeing-gulf'
-import { Route as StressBurnoutExecutivesRouteImport } from './routes/blog/stress-burnout-executives'
-import { Route as PrivateWellbeingAdvisoryGulfRouteImport } from './routes/blog/private-wellbeing-advisory-gulf'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as BusinessRouteImport } from './routes/business'
 import { Route as MenRouteImport } from './routes/men'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TheTarkanApproachRouteImport } from './routes/the-tarkan-approach'
 import { Route as WellbeingRouteImport } from './routes/wellbeing'
 import { Route as WomenRouteImport } from './routes/women'
 import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
-import { Route as BusinessVipConciergeWellbeingRouteImport } from './routes/business/vip-concierge-wellbeing'
+import { Route as ArIndexRouteImport } from './routes/ar/index'
+import { Route as ArAboutRouteImport } from './routes/ar/about'
+import { Route as ArBlogRouteImport } from './routes/ar/blog'
+import { Route as ArBookRouteImport } from './routes/ar/book'
+import { Route as ArBusinessRouteImport } from './routes/ar/business'
+import { Route as ArMenRouteImport } from './routes/ar/men'
+import { Route as ArPrivacyRouteImport } from './routes/ar/privacy'
+import { Route as ArTermsRouteImport } from './routes/ar/terms'
+import { Route as ArTheTarkanApproachRouteImport } from './routes/ar/the-tarkan-approach'
+import { Route as ArWellbeingRouteImport } from './routes/ar/wellbeing'
+import { Route as ArWomenRouteImport } from './routes/ar/women'
+import { Route as BlogConfidenceSelfTrustRouteImport } from './routes/blog/confidence-self-trust'
+import { Route as BlogEmotionalBalancePrivateWellbeingRouteImport } from './routes/blog/emotional-balance-private-wellbeing'
+import { Route as BlogFamilyLifeGulfWellbeingRouteImport } from './routes/blog/family-life-gulf-wellbeing'
+import { Route as BlogLeadershipClarityPrivateAdvisoryRouteImport } from './routes/blog/leadership-clarity-private-advisory'
+import { Route as BlogLifeTransitionsWellbeingRouteImport } from './routes/blog/life-transitions-wellbeing'
+import { Route as BlogMensWellbeingPressureRouteImport } from './routes/blog/mens-wellbeing-pressure'
+import { Route as BlogMindfulnessBusyLivesRouteImport } from './routes/blog/mindfulness-busy-lives'
+import { Route as BlogPrivateWellbeingAdvisoryGulfRouteImport } from './routes/blog/private-wellbeing-advisory-gulf'
+import { Route as BlogPrivateWellbeingHighResponsibilityRouteImport } from './routes/blog/private-wellbeing-high-responsibility'
+import { Route as BlogRelationshipsFamilyWellbeingRouteImport } from './routes/blog/relationships-family-wellbeing'
+import { Route as BlogStressBurnoutExecutivesRouteImport } from './routes/blog/stress-burnout-executives'
+import { Route as BlogWomensWellbeingGulfRouteImport } from './routes/blog/womens-wellbeing-gulf'
+import { Route as BusinessBurnoutPreventionRouteImport } from './routes/business/burnout-prevention'
+import { Route as BusinessCorporateAdvisoryRouteImport } from './routes/business/corporate-advisory'
 import { Route as BusinessExecutiveWellbeingRouteImport } from './routes/business/executive-wellbeing'
-import { Route as FounderWellbeingRouteImport } from './routes/business/founder-wellbeing'
-import { Route as TeamWellbeingRouteImport } from './routes/business/team-wellbeing'
-import { Route as CorporateAdvisoryRouteImport } from './routes/business/corporate-advisory'
+import { Route as BusinessFounderWellbeingRouteImport } from './routes/business/founder-wellbeing'
+import { Route as BusinessLeadershipClarityRouteImport } from './routes/business/leadership-clarity'
+import { Route as BusinessTeamWellbeingRouteImport } from './routes/business/team-wellbeing'
+import { Route as BusinessVipConciergeWellbeingRouteImport } from './routes/business/vip-concierge-wellbeing'
 import { Route as MenFatherhoodRouteImport } from './routes/men/fatherhood'
+import { Route as WellbeingEmotionalBalanceRouteImport } from './routes/wellbeing/emotional-balance'
+import { Route as WellbeingLifeTransitionsRouteImport } from './routes/wellbeing/life-transitions'
+import { Route as WellbeingRelationshipsFamilyRouteImport } from './routes/wellbeing/relationships-family'
 import { Route as WellbeingStressBurnoutRouteImport } from './routes/wellbeing/stress-burnout'
+import { Route as WomenConfidenceSelfTrustRouteImport } from './routes/women/confidence-self-trust'
 import { Route as WomenMotherhoodRouteImport } from './routes/women/motherhood'
-import { Route as TermsRouteImport } from './routes/terms'
-import { Route as TheTarkanApproachRouteImport } from './routes/the-tarkan-approach'
-import { Route as ArabicTheTarkanApproachRouteImport } from './routes/ar/the-tarkan-approach'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as BurnoutPreventionRouteImport } from './routes/business/burnout-prevention'
-import { Route as LeadershipClarityRouteImport } from './routes/business/leadership-clarity'
-import { Route as ConfidenceSelfTrustRouteImport } from './routes/women/confidence-self-trust'
-import { Route as LifeTransitionsRouteImport } from './routes/wellbeing/life-transitions'
-import { Route as EmotionalBalanceRouteImport } from './routes/wellbeing/emotional-balance'
-import { Route as RelationshipsFamilyRouteImport } from './routes/wellbeing/relationships-family'
-import { Route as ArabicRouteImport } from './routes/ar'
-import { Route as ArabicWellbeingRouteImport } from './routes/ar/wellbeing'
-import { Route as ArabicWomenRouteImport } from './routes/ar/women'
-import { Route as ArabicMenRouteImport } from './routes/ar/men'
-import { Route as ArabicBusinessRouteImport } from './routes/ar/business'
-import { Route as ArabicVipConciergeRouteImport } from './routes/ar/business/vip-concierge-wellbeing'
-import { Route as ArabicExecutiveWellbeingRouteImport } from './routes/ar/business/executive-wellbeing'
-import { Route as ArabicFounderWellbeingRouteImport } from './routes/ar/business/founder-wellbeing'
-import { Route as ArabicLeadershipClarityRouteImport } from './routes/ar/business/leadership-clarity'
-import { Route as ArabicBurnoutPreventionRouteImport } from './routes/ar/business/burnout-prevention'
-import { Route as ArabicTeamWellbeingRouteImport } from './routes/ar/business/team-wellbeing'
-import { Route as ArabicCorporateAdvisoryRouteImport } from './routes/ar/business/corporate-advisory'
-import { Route as ArabicAboutRouteImport } from './routes/ar/about'
-import { Route as ArabicBlogRouteImport } from './routes/ar/blog'
-import { Route as ArabicBlogSlugRouteImport } from './routes/ar/blog/$slug'
-import { Route as ArabicBookRouteImport } from './routes/ar/book'
-import { Route as ArabicPrivacyRouteImport } from './routes/ar/privacy'
-import { Route as ArabicTermsRouteImport } from './routes/ar/terms'
-import { Route as MindfulnessBusyLivesRouteImport } from './routes/blog/mindfulness-busy-lives'
-import { Route as EmotionalBalancePrivateWellbeingRouteImport } from './routes/blog/emotional-balance-private-wellbeing'
-import { Route as ConfidenceSelfTrustBlogRouteImport } from './routes/blog/confidence-self-trust'
-import { Route as LeadershipClarityPrivateAdvisoryRouteImport } from './routes/blog/leadership-clarity-private-advisory'
-import { Route as FamilyLifeGulfWellbeingRouteImport } from './routes/blog/family-life-gulf-wellbeing'
-import { Route as PrivateWellbeingHighResponsibilityRouteImport } from './routes/blog/private-wellbeing-high-responsibility'
+import { Route as ArBlogIndexRouteImport } from './routes/ar/blog/index'
+import { Route as ArBlogSlugRouteImport } from './routes/ar/blog/$slug'
+import { Route as ArBusinessBurnoutPreventionRouteImport } from './routes/ar/business/burnout-prevention'
+import { Route as ArBusinessCorporateAdvisoryRouteImport } from './routes/ar/business/corporate-advisory'
+import { Route as ArBusinessExecutiveWellbeingRouteImport } from './routes/ar/business/executive-wellbeing'
+import { Route as ArBusinessFounderWellbeingRouteImport } from './routes/ar/business/founder-wellbeing'
+import { Route as ArBusinessLeadershipClarityRouteImport } from './routes/ar/business/leadership-clarity'
+import { Route as ArBusinessTeamWellbeingRouteImport } from './routes/ar/business/team-wellbeing'
+import { Route as ArBusinessVipConciergeWellbeingRouteImport } from './routes/ar/business/vip-concierge-wellbeing'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ArabicRoute = ArabicRouteImport.update({ id: '/ar', path: '/ar', getParentRoute: () => rootRouteImport } as any)
-const ArabicWellbeingRoute = ArabicWellbeingRouteImport.update({ id: '/ar/wellbeing', path: '/wellbeing', getParentRoute: () => ArabicRoute } as any)
-const ArabicWomenRoute = ArabicWomenRouteImport.update({ id: '/ar/women', path: '/women', getParentRoute: () => ArabicRoute } as any)
-const ArabicMenRoute = ArabicMenRouteImport.update({ id: '/ar/men', path: '/men', getParentRoute: () => ArabicRoute } as any)
-const ArabicBusinessRoute = ArabicBusinessRouteImport.update({ id: '/ar/business', path: '/business', getParentRoute: () => ArabicRoute } as any)
-const ArabicVipConciergeRoute = ArabicVipConciergeRouteImport.update({ id: '/ar/business/vip-concierge-wellbeing', path: '/vip-concierge-wellbeing', getParentRoute: () => ArabicBusinessRoute } as any)
-const ArabicExecutiveWellbeingRoute = ArabicExecutiveWellbeingRouteImport.update({ id: '/ar/business/executive-wellbeing', path: '/executive-wellbeing', getParentRoute: () => ArabicBusinessRoute } as any)
-const ArabicFounderWellbeingRoute = ArabicFounderWellbeingRouteImport.update({ id: '/ar/business/founder-wellbeing', path: '/founder-wellbeing', getParentRoute: () => ArabicBusinessRoute } as any)
-const ArabicLeadershipClarityRoute = ArabicLeadershipClarityRouteImport.update({ id: '/ar/business/leadership-clarity', path: '/leadership-clarity', getParentRoute: () => ArabicBusinessRoute } as any)
-const ArabicBurnoutPreventionRoute = ArabicBurnoutPreventionRouteImport.update({ id: '/ar/business/burnout-prevention', path: '/burnout-prevention', getParentRoute: () => ArabicBusinessRoute } as any)
-const ArabicTeamWellbeingRoute = ArabicTeamWellbeingRouteImport.update({ id: '/ar/business/team-wellbeing', path: '/team-wellbeing', getParentRoute: () => ArabicBusinessRoute } as any)
-const ArabicCorporateAdvisoryRoute = ArabicCorporateAdvisoryRouteImport.update({ id: '/ar/business/corporate-advisory', path: '/corporate-advisory', getParentRoute: () => ArabicBusinessRoute } as any)
-const ArabicBusinessRouteWithChildren = ArabicBusinessRoute._addFileChildren({ ArabicVipConciergeRoute, ArabicExecutiveWellbeingRoute, ArabicFounderWellbeingRoute, ArabicLeadershipClarityRoute, ArabicBurnoutPreventionRoute, ArabicTeamWellbeingRoute, ArabicCorporateAdvisoryRoute })
-const ArabicAboutRoute = ArabicAboutRouteImport.update({ id: '/ar/about', path: '/about', getParentRoute: () => ArabicRoute } as any)
-const ArabicBlogRoute = ArabicBlogRouteImport.update({ id: '/ar/blog', path: '/blog', getParentRoute: () => ArabicRoute } as any)
-const ArabicBlogSlugRoute = ArabicBlogSlugRouteImport.update({ id: '/ar/blog/$slug', path: '/$slug', getParentRoute: () => ArabicBlogRoute } as any)
-const ArabicBlogRouteWithChildren = ArabicBlogRoute._addFileChildren({ ArabicBlogSlugRoute })
-const ArabicBookRoute = ArabicBookRouteImport.update({ id: '/ar/book', path: '/book', getParentRoute: () => ArabicRoute } as any)
-const ArabicPrivacyRoute = ArabicPrivacyRouteImport.update({ id: '/ar/privacy', path: '/privacy', getParentRoute: () => ArabicRoute } as any)
-const ArabicTermsRoute = ArabicTermsRouteImport.update({ id: '/ar/terms', path: '/terms', getParentRoute: () => ArabicRoute } as any)
-const ArabicTheTarkanApproachRoute = ArabicTheTarkanApproachRouteImport.update({ id: '/ar/the-tarkan-approach', path: '/the-tarkan-approach', getParentRoute: () => ArabicRoute } as any)
-
-const ArabicRouteWithChildren = ArabicRoute._addFileChildren({
-  ArabicWellbeingRoute, ArabicWomenRoute, ArabicMenRoute, ArabicBusinessRoute: ArabicBusinessRouteWithChildren,
-  ArabicAboutRoute, ArabicBlogRoute: ArabicBlogRouteWithChildren, ArabicBookRoute, ArabicPrivacyRoute, ArabicTermsRoute, ArabicTheTarkanApproachRoute,
-})
-
 const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
   id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
@@ -108,6 +83,11 @@ const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArRoute = ArRouteImport.update({
+  id: '/ar',
+  path: '/ar',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -120,12 +100,6 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MindfulnessBusyLivesRoute = MindfulnessBusyLivesRouteImport.update({ id: '/mindfulness-busy-lives', path: '/mindfulness-busy-lives', getParentRoute: () => BlogRoute } as any)
-const EmotionalBalancePrivateWellbeingRoute = EmotionalBalancePrivateWellbeingRouteImport.update({ id: '/emotional-balance-private-wellbeing', path: '/emotional-balance-private-wellbeing', getParentRoute: () => BlogRoute } as any)
-const ConfidenceSelfTrustBlogRoute = ConfidenceSelfTrustBlogRouteImport.update({ id: '/confidence-self-trust', path: '/confidence-self-trust', getParentRoute: () => BlogRoute } as any)
-const LeadershipClarityPrivateAdvisoryRoute = LeadershipClarityPrivateAdvisoryRouteImport.update({ id: '/leadership-clarity-private-advisory', path: '/leadership-clarity-private-advisory', getParentRoute: () => BlogRoute } as any)
-const FamilyLifeGulfWellbeingRoute = FamilyLifeGulfWellbeingRouteImport.update({ id: '/family-life-gulf-wellbeing', path: '/family-life-gulf-wellbeing', getParentRoute: () => BlogRoute } as any)
-const PrivateWellbeingHighResponsibilityRoute = PrivateWellbeingHighResponsibilityRouteImport.update({ id: '/private-wellbeing-high-responsibility', path: '/private-wellbeing-high-responsibility', getParentRoute: () => BlogRoute } as any)
 const BookRoute = BookRouteImport.update({
   id: '/book',
   path: '/book',
@@ -139,6 +113,21 @@ const BusinessRoute = BusinessRouteImport.update({
 const MenRoute = MenRouteImport.update({
   id: '/men',
   path: '/men',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TheTarkanApproachRoute = TheTarkanApproachRouteImport.update({
+  id: '/the-tarkan-approach',
+  path: '/the-tarkan-approach',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WellbeingRoute = WellbeingRouteImport.update({
@@ -156,240 +145,514 @@ const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
   path: '/admin',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
-const PrivateWellbeingAdvisoryGulfRoute = PrivateWellbeingAdvisoryGulfRouteImport.update({ id: '/private-wellbeing-advisory-gulf', path: '/private-wellbeing-advisory-gulf', getParentRoute: () => BlogRoute } as any)
-const StressBurnoutExecutivesRoute = StressBurnoutExecutivesRouteImport.update({ id: '/stress-burnout-executives', path: '/stress-burnout-executives', getParentRoute: () => BlogRoute } as any)
-const WomensWellbeingGulfRoute = WomensWellbeingGulfRouteImport.update({ id: '/womens-wellbeing-gulf', path: '/womens-wellbeing-gulf', getParentRoute: () => BlogRoute } as any)
-const MensWellbeingPressureRoute = MensWellbeingPressureRouteImport.update({ id: '/mens-wellbeing-pressure', path: '/mens-wellbeing-pressure', getParentRoute: () => BlogRoute } as any)
-const RelationshipsFamilyWellbeingRoute = RelationshipsFamilyWellbeingRouteImport.update({ id: '/relationships-family-wellbeing', path: '/relationships-family-wellbeing', getParentRoute: () => BlogRoute } as any)
-const LifeTransitionsWellbeingRoute = LifeTransitionsWellbeingRouteImport.update({ id: '/life-transitions-wellbeing', path: '/life-transitions-wellbeing', getParentRoute: () => BlogRoute } as any)
-const BusinessExecutiveWellbeingRoute = BusinessExecutiveWellbeingRouteImport.update({
-  id: '/executive-wellbeing', path: '/executive-wellbeing', getParentRoute: () => BusinessRoute,
+const ArIndexRoute = ArIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ArRoute,
 } as any)
-const FounderWellbeingRoute = FounderWellbeingRouteImport.update({ id: '/founder-wellbeing', path: '/founder-wellbeing', getParentRoute: () => BusinessRoute } as any)
-const TeamWellbeingRoute = TeamWellbeingRouteImport.update({ id: '/team-wellbeing', path: '/team-wellbeing', getParentRoute: () => BusinessRoute } as any)
-const CorporateAdvisoryRoute = CorporateAdvisoryRouteImport.update({ id: '/corporate-advisory', path: '/corporate-advisory', getParentRoute: () => BusinessRoute } as any)
+const ArAboutRoute = ArAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArBlogRoute = ArBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArBookRoute = ArBookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArBusinessRoute = ArBusinessRouteImport.update({
+  id: '/business',
+  path: '/business',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArMenRoute = ArMenRouteImport.update({
+  id: '/men',
+  path: '/men',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArPrivacyRoute = ArPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArTermsRoute = ArTermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArTheTarkanApproachRoute = ArTheTarkanApproachRouteImport.update({
+  id: '/the-tarkan-approach',
+  path: '/the-tarkan-approach',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArWellbeingRoute = ArWellbeingRouteImport.update({
+  id: '/wellbeing',
+  path: '/wellbeing',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArWomenRoute = ArWomenRouteImport.update({
+  id: '/women',
+  path: '/women',
+  getParentRoute: () => ArRoute,
+} as any)
+const BlogConfidenceSelfTrustRoute = BlogConfidenceSelfTrustRouteImport.update({
+  id: '/confidence-self-trust',
+  path: '/confidence-self-trust',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogEmotionalBalancePrivateWellbeingRoute =
+  BlogEmotionalBalancePrivateWellbeingRouteImport.update({
+    id: '/emotional-balance-private-wellbeing',
+    path: '/emotional-balance-private-wellbeing',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogFamilyLifeGulfWellbeingRoute =
+  BlogFamilyLifeGulfWellbeingRouteImport.update({
+    id: '/family-life-gulf-wellbeing',
+    path: '/family-life-gulf-wellbeing',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogLeadershipClarityPrivateAdvisoryRoute =
+  BlogLeadershipClarityPrivateAdvisoryRouteImport.update({
+    id: '/leadership-clarity-private-advisory',
+    path: '/leadership-clarity-private-advisory',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogLifeTransitionsWellbeingRoute =
+  BlogLifeTransitionsWellbeingRouteImport.update({
+    id: '/life-transitions-wellbeing',
+    path: '/life-transitions-wellbeing',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogMensWellbeingPressureRoute =
+  BlogMensWellbeingPressureRouteImport.update({
+    id: '/mens-wellbeing-pressure',
+    path: '/mens-wellbeing-pressure',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogMindfulnessBusyLivesRoute =
+  BlogMindfulnessBusyLivesRouteImport.update({
+    id: '/mindfulness-busy-lives',
+    path: '/mindfulness-busy-lives',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogPrivateWellbeingAdvisoryGulfRoute =
+  BlogPrivateWellbeingAdvisoryGulfRouteImport.update({
+    id: '/private-wellbeing-advisory-gulf',
+    path: '/private-wellbeing-advisory-gulf',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogPrivateWellbeingHighResponsibilityRoute =
+  BlogPrivateWellbeingHighResponsibilityRouteImport.update({
+    id: '/private-wellbeing-high-responsibility',
+    path: '/private-wellbeing-high-responsibility',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogRelationshipsFamilyWellbeingRoute =
+  BlogRelationshipsFamilyWellbeingRouteImport.update({
+    id: '/relationships-family-wellbeing',
+    path: '/relationships-family-wellbeing',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogStressBurnoutExecutivesRoute =
+  BlogStressBurnoutExecutivesRouteImport.update({
+    id: '/stress-burnout-executives',
+    path: '/stress-burnout-executives',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogWomensWellbeingGulfRoute = BlogWomensWellbeingGulfRouteImport.update({
+  id: '/womens-wellbeing-gulf',
+  path: '/womens-wellbeing-gulf',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BusinessBurnoutPreventionRoute =
+  BusinessBurnoutPreventionRouteImport.update({
+    id: '/burnout-prevention',
+    path: '/burnout-prevention',
+    getParentRoute: () => BusinessRoute,
+  } as any)
+const BusinessCorporateAdvisoryRoute =
+  BusinessCorporateAdvisoryRouteImport.update({
+    id: '/corporate-advisory',
+    path: '/corporate-advisory',
+    getParentRoute: () => BusinessRoute,
+  } as any)
+const BusinessExecutiveWellbeingRoute =
+  BusinessExecutiveWellbeingRouteImport.update({
+    id: '/executive-wellbeing',
+    path: '/executive-wellbeing',
+    getParentRoute: () => BusinessRoute,
+  } as any)
+const BusinessFounderWellbeingRoute =
+  BusinessFounderWellbeingRouteImport.update({
+    id: '/founder-wellbeing',
+    path: '/founder-wellbeing',
+    getParentRoute: () => BusinessRoute,
+  } as any)
+const BusinessLeadershipClarityRoute =
+  BusinessLeadershipClarityRouteImport.update({
+    id: '/leadership-clarity',
+    path: '/leadership-clarity',
+    getParentRoute: () => BusinessRoute,
+  } as any)
+const BusinessTeamWellbeingRoute = BusinessTeamWellbeingRouteImport.update({
+  id: '/team-wellbeing',
+  path: '/team-wellbeing',
+  getParentRoute: () => BusinessRoute,
+} as any)
 const BusinessVipConciergeWellbeingRoute =
   BusinessVipConciergeWellbeingRouteImport.update({
     id: '/vip-concierge-wellbeing',
     path: '/vip-concierge-wellbeing',
     getParentRoute: () => BusinessRoute,
   } as any)
+const MenFatherhoodRoute = MenFatherhoodRouteImport.update({
+  id: '/fatherhood',
+  path: '/fatherhood',
+  getParentRoute: () => MenRoute,
+} as any)
+const WellbeingEmotionalBalanceRoute =
+  WellbeingEmotionalBalanceRouteImport.update({
+    id: '/emotional-balance',
+    path: '/emotional-balance',
+    getParentRoute: () => WellbeingRoute,
+  } as any)
+const WellbeingLifeTransitionsRoute =
+  WellbeingLifeTransitionsRouteImport.update({
+    id: '/life-transitions',
+    path: '/life-transitions',
+    getParentRoute: () => WellbeingRoute,
+  } as any)
+const WellbeingRelationshipsFamilyRoute =
+  WellbeingRelationshipsFamilyRouteImport.update({
+    id: '/relationships-family',
+    path: '/relationships-family',
+    getParentRoute: () => WellbeingRoute,
+  } as any)
+const WellbeingStressBurnoutRoute = WellbeingStressBurnoutRouteImport.update({
+  id: '/stress-burnout',
+  path: '/stress-burnout',
+  getParentRoute: () => WellbeingRoute,
+} as any)
+const WomenConfidenceSelfTrustRoute =
+  WomenConfidenceSelfTrustRouteImport.update({
+    id: '/confidence-self-trust',
+    path: '/confidence-self-trust',
+    getParentRoute: () => WomenRoute,
+  } as any)
+const WomenMotherhoodRoute = WomenMotherhoodRouteImport.update({
+  id: '/motherhood',
+  path: '/motherhood',
+  getParentRoute: () => WomenRoute,
+} as any)
+const ArBlogIndexRoute = ArBlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ArBlogRoute,
+} as any)
+const ArBlogSlugRoute = ArBlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ArBlogRoute,
+} as any)
+const ArBusinessBurnoutPreventionRoute =
+  ArBusinessBurnoutPreventionRouteImport.update({
+    id: '/burnout-prevention',
+    path: '/burnout-prevention',
+    getParentRoute: () => ArBusinessRoute,
+  } as any)
+const ArBusinessCorporateAdvisoryRoute =
+  ArBusinessCorporateAdvisoryRouteImport.update({
+    id: '/corporate-advisory',
+    path: '/corporate-advisory',
+    getParentRoute: () => ArBusinessRoute,
+  } as any)
+const ArBusinessExecutiveWellbeingRoute =
+  ArBusinessExecutiveWellbeingRouteImport.update({
+    id: '/executive-wellbeing',
+    path: '/executive-wellbeing',
+    getParentRoute: () => ArBusinessRoute,
+  } as any)
+const ArBusinessFounderWellbeingRoute =
+  ArBusinessFounderWellbeingRouteImport.update({
+    id: '/founder-wellbeing',
+    path: '/founder-wellbeing',
+    getParentRoute: () => ArBusinessRoute,
+  } as any)
+const ArBusinessLeadershipClarityRoute =
+  ArBusinessLeadershipClarityRouteImport.update({
+    id: '/leadership-clarity',
+    path: '/leadership-clarity',
+    getParentRoute: () => ArBusinessRoute,
+  } as any)
+const ArBusinessTeamWellbeingRoute = ArBusinessTeamWellbeingRouteImport.update({
+  id: '/team-wellbeing',
+  path: '/team-wellbeing',
+  getParentRoute: () => ArBusinessRoute,
+} as any)
+const ArBusinessVipConciergeWellbeingRoute =
+  ArBusinessVipConciergeWellbeingRouteImport.update({
+    id: '/vip-concierge-wellbeing',
+    path: '/vip-concierge-wellbeing',
+    getParentRoute: () => ArBusinessRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
-  '/ar': typeof ArabicRoute
-  '/ar/business/executive-wellbeing': typeof ArabicExecutiveWellbeingRoute
-  '/ar/business/founder-wellbeing': typeof ArabicFounderWellbeingRoute
-  '/ar/business/leadership-clarity': typeof ArabicLeadershipClarityRoute
-  '/ar/business/burnout-prevention': typeof ArabicBurnoutPreventionRoute
-  '/ar/business/team-wellbeing': typeof ArabicTeamWellbeingRoute
-  '/ar/business/corporate-advisory': typeof ArabicCorporateAdvisoryRoute
-  '/ar/blog/$slug': typeof ArabicBlogSlugRoute
-  '/business/founder-wellbeing': typeof FounderWellbeingRoute
-  '/business/team-wellbeing': typeof TeamWellbeingRoute
-  '/business/corporate-advisory': typeof CorporateAdvisoryRoute
-  '/blog/mindfulness-busy-lives': typeof MindfulnessBusyLivesRoute
-  '/blog/emotional-balance-private-wellbeing': typeof EmotionalBalancePrivateWellbeingRoute
-  '/blog/confidence-self-trust': typeof ConfidenceSelfTrustBlogRoute
-  '/blog/leadership-clarity-private-advisory': typeof LeadershipClarityPrivateAdvisoryRoute
-  '/blog/family-life-gulf-wellbeing': typeof FamilyLifeGulfWellbeingRoute
-  '/blog/private-wellbeing-high-responsibility': typeof PrivateWellbeingHighResponsibilityRoute
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/ar': typeof ArRouteWithChildren
   '/auth': typeof AuthRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/book': typeof BookRoute
   '/business': typeof BusinessRouteWithChildren
-  '/men': typeof MenRoute
-  '/wellbeing': typeof WellbeingRoute
-  '/women': typeof WomenRoute
-  '/admin': typeof AuthenticatedAdminRoute
-  '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
-  '/business/executive-wellbeing': typeof BusinessExecutiveWellbeingRoute
-  '/men/fatherhood': typeof MenFatherhoodRoute
-  '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
-  '/women/motherhood': typeof WomenMotherhoodRoute
-  '/wellbeing/relationships-family': typeof RelationshipsFamilyRoute
-  '/wellbeing/emotional-balance': typeof EmotionalBalanceRoute
-  '/wellbeing/life-transitions': typeof LifeTransitionsRoute
-  '/women/confidence-self-trust': typeof ConfidenceSelfTrustRoute
-  '/business/leadership-clarity': typeof LeadershipClarityRoute
-  '/business/burnout-prevention': typeof BurnoutPreventionRoute
+  '/men': typeof MenRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/the-tarkan-approach': typeof TheTarkanApproachRoute
-  '/blog/private-wellbeing-advisory-gulf': typeof PrivateWellbeingAdvisoryGulfRoute
-  '/blog/stress-burnout-executives': typeof StressBurnoutExecutivesRoute
-  '/blog/womens-wellbeing-gulf': typeof WomensWellbeingGulfRoute
-  '/blog/mens-wellbeing-pressure': typeof MensWellbeingPressureRoute
-  '/blog/relationships-family-wellbeing': typeof RelationshipsFamilyWellbeingRoute
-  '/blog/life-transitions-wellbeing': typeof LifeTransitionsWellbeingRoute
+  '/wellbeing': typeof WellbeingRouteWithChildren
+  '/women': typeof WomenRouteWithChildren
+  '/admin': typeof AuthenticatedAdminRoute
+  '/ar/about': typeof ArAboutRoute
+  '/ar/blog': typeof ArBlogRouteWithChildren
+  '/ar/book': typeof ArBookRoute
+  '/ar/business': typeof ArBusinessRouteWithChildren
+  '/ar/men': typeof ArMenRoute
+  '/ar/privacy': typeof ArPrivacyRoute
+  '/ar/terms': typeof ArTermsRoute
+  '/ar/the-tarkan-approach': typeof ArTheTarkanApproachRoute
+  '/ar/wellbeing': typeof ArWellbeingRoute
+  '/ar/women': typeof ArWomenRoute
+  '/blog/confidence-self-trust': typeof BlogConfidenceSelfTrustRoute
+  '/blog/emotional-balance-private-wellbeing': typeof BlogEmotionalBalancePrivateWellbeingRoute
+  '/blog/family-life-gulf-wellbeing': typeof BlogFamilyLifeGulfWellbeingRoute
+  '/blog/leadership-clarity-private-advisory': typeof BlogLeadershipClarityPrivateAdvisoryRoute
+  '/blog/life-transitions-wellbeing': typeof BlogLifeTransitionsWellbeingRoute
+  '/blog/mens-wellbeing-pressure': typeof BlogMensWellbeingPressureRoute
+  '/blog/mindfulness-busy-lives': typeof BlogMindfulnessBusyLivesRoute
+  '/blog/private-wellbeing-advisory-gulf': typeof BlogPrivateWellbeingAdvisoryGulfRoute
+  '/blog/private-wellbeing-high-responsibility': typeof BlogPrivateWellbeingHighResponsibilityRoute
+  '/blog/relationships-family-wellbeing': typeof BlogRelationshipsFamilyWellbeingRoute
+  '/blog/stress-burnout-executives': typeof BlogStressBurnoutExecutivesRoute
+  '/blog/womens-wellbeing-gulf': typeof BlogWomensWellbeingGulfRoute
+  '/business/burnout-prevention': typeof BusinessBurnoutPreventionRoute
+  '/business/corporate-advisory': typeof BusinessCorporateAdvisoryRoute
+  '/business/executive-wellbeing': typeof BusinessExecutiveWellbeingRoute
+  '/business/founder-wellbeing': typeof BusinessFounderWellbeingRoute
+  '/business/leadership-clarity': typeof BusinessLeadershipClarityRoute
+  '/business/team-wellbeing': typeof BusinessTeamWellbeingRoute
+  '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
+  '/men/fatherhood': typeof MenFatherhoodRoute
+  '/wellbeing/emotional-balance': typeof WellbeingEmotionalBalanceRoute
+  '/wellbeing/life-transitions': typeof WellbeingLifeTransitionsRoute
+  '/wellbeing/relationships-family': typeof WellbeingRelationshipsFamilyRoute
+  '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
+  '/women/confidence-self-trust': typeof WomenConfidenceSelfTrustRoute
+  '/women/motherhood': typeof WomenMotherhoodRoute
+  '/ar/': typeof ArIndexRoute
+  '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/business/burnout-prevention': typeof ArBusinessBurnoutPreventionRoute
+  '/ar/business/corporate-advisory': typeof ArBusinessCorporateAdvisoryRoute
+  '/ar/business/executive-wellbeing': typeof ArBusinessExecutiveWellbeingRoute
+  '/ar/business/founder-wellbeing': typeof ArBusinessFounderWellbeingRoute
+  '/ar/business/leadership-clarity': typeof ArBusinessLeadershipClarityRoute
+  '/ar/business/team-wellbeing': typeof ArBusinessTeamWellbeingRoute
+  '/ar/business/vip-concierge-wellbeing': typeof ArBusinessVipConciergeWellbeingRoute
+  '/ar/blog/': typeof ArBlogIndexRoute
 }
 export interface FileRoutesByTo {
-  '/ar': typeof ArabicRoute
-  '/ar/business/executive-wellbeing': typeof ArabicExecutiveWellbeingRoute
-  '/ar/business/founder-wellbeing': typeof ArabicFounderWellbeingRoute
-  '/ar/business/leadership-clarity': typeof ArabicLeadershipClarityRoute
-  '/ar/business/burnout-prevention': typeof ArabicBurnoutPreventionRoute
-  '/ar/business/team-wellbeing': typeof ArabicTeamWellbeingRoute
-  '/ar/business/corporate-advisory': typeof ArabicCorporateAdvisoryRoute
-  '/ar/blog/$slug': typeof ArabicBlogSlugRoute
-  '/business/founder-wellbeing': typeof FounderWellbeingRoute
-  '/business/team-wellbeing': typeof TeamWellbeingRoute
-  '/business/corporate-advisory': typeof CorporateAdvisoryRoute
-  '/blog/mindfulness-busy-lives': typeof MindfulnessBusyLivesRoute
-  '/blog/emotional-balance-private-wellbeing': typeof EmotionalBalancePrivateWellbeingRoute
-  '/blog/confidence-self-trust': typeof ConfidenceSelfTrustBlogRoute
-  '/blog/leadership-clarity-private-advisory': typeof LeadershipClarityPrivateAdvisoryRoute
-  '/blog/family-life-gulf-wellbeing': typeof FamilyLifeGulfWellbeingRoute
-  '/blog/private-wellbeing-high-responsibility': typeof PrivateWellbeingHighResponsibilityRoute
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/book': typeof BookRoute
   '/business': typeof BusinessRouteWithChildren
-  '/men': typeof MenRoute
-  '/wellbeing': typeof WellbeingRoute
-  '/women': typeof WomenRoute
-  '/admin': typeof AuthenticatedAdminRoute
-  '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
-  '/business/executive-wellbeing': typeof BusinessExecutiveWellbeingRoute
-  '/men/fatherhood': typeof MenFatherhoodRoute
-  '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
-  '/women/motherhood': typeof WomenMotherhoodRoute
-  '/wellbeing/relationships-family': typeof RelationshipsFamilyRoute
-  '/wellbeing/emotional-balance': typeof EmotionalBalanceRoute
-  '/wellbeing/life-transitions': typeof LifeTransitionsRoute
-  '/women/confidence-self-trust': typeof ConfidenceSelfTrustRoute
-  '/business/leadership-clarity': typeof LeadershipClarityRoute
-  '/business/burnout-prevention': typeof BurnoutPreventionRoute
+  '/men': typeof MenRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/the-tarkan-approach': typeof TheTarkanApproachRoute
-  '/blog/private-wellbeing-advisory-gulf': typeof PrivateWellbeingAdvisoryGulfRoute
-  '/blog/stress-burnout-executives': typeof StressBurnoutExecutivesRoute
-  '/blog/womens-wellbeing-gulf': typeof WomensWellbeingGulfRoute
-  '/blog/mens-wellbeing-pressure': typeof MensWellbeingPressureRoute
-  '/blog/relationships-family-wellbeing': typeof RelationshipsFamilyWellbeingRoute
-  '/blog/life-transitions-wellbeing': typeof LifeTransitionsWellbeingRoute
+  '/wellbeing': typeof WellbeingRouteWithChildren
+  '/women': typeof WomenRouteWithChildren
+  '/admin': typeof AuthenticatedAdminRoute
+  '/ar/about': typeof ArAboutRoute
+  '/ar/book': typeof ArBookRoute
+  '/ar/business': typeof ArBusinessRouteWithChildren
+  '/ar/men': typeof ArMenRoute
+  '/ar/privacy': typeof ArPrivacyRoute
+  '/ar/terms': typeof ArTermsRoute
+  '/ar/the-tarkan-approach': typeof ArTheTarkanApproachRoute
+  '/ar/wellbeing': typeof ArWellbeingRoute
+  '/ar/women': typeof ArWomenRoute
+  '/blog/confidence-self-trust': typeof BlogConfidenceSelfTrustRoute
+  '/blog/emotional-balance-private-wellbeing': typeof BlogEmotionalBalancePrivateWellbeingRoute
+  '/blog/family-life-gulf-wellbeing': typeof BlogFamilyLifeGulfWellbeingRoute
+  '/blog/leadership-clarity-private-advisory': typeof BlogLeadershipClarityPrivateAdvisoryRoute
+  '/blog/life-transitions-wellbeing': typeof BlogLifeTransitionsWellbeingRoute
+  '/blog/mens-wellbeing-pressure': typeof BlogMensWellbeingPressureRoute
+  '/blog/mindfulness-busy-lives': typeof BlogMindfulnessBusyLivesRoute
+  '/blog/private-wellbeing-advisory-gulf': typeof BlogPrivateWellbeingAdvisoryGulfRoute
+  '/blog/private-wellbeing-high-responsibility': typeof BlogPrivateWellbeingHighResponsibilityRoute
+  '/blog/relationships-family-wellbeing': typeof BlogRelationshipsFamilyWellbeingRoute
+  '/blog/stress-burnout-executives': typeof BlogStressBurnoutExecutivesRoute
+  '/blog/womens-wellbeing-gulf': typeof BlogWomensWellbeingGulfRoute
+  '/business/burnout-prevention': typeof BusinessBurnoutPreventionRoute
+  '/business/corporate-advisory': typeof BusinessCorporateAdvisoryRoute
+  '/business/executive-wellbeing': typeof BusinessExecutiveWellbeingRoute
+  '/business/founder-wellbeing': typeof BusinessFounderWellbeingRoute
+  '/business/leadership-clarity': typeof BusinessLeadershipClarityRoute
+  '/business/team-wellbeing': typeof BusinessTeamWellbeingRoute
+  '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
+  '/men/fatherhood': typeof MenFatherhoodRoute
+  '/wellbeing/emotional-balance': typeof WellbeingEmotionalBalanceRoute
+  '/wellbeing/life-transitions': typeof WellbeingLifeTransitionsRoute
+  '/wellbeing/relationships-family': typeof WellbeingRelationshipsFamilyRoute
+  '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
+  '/women/confidence-self-trust': typeof WomenConfidenceSelfTrustRoute
+  '/women/motherhood': typeof WomenMotherhoodRoute
+  '/ar': typeof ArIndexRoute
+  '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/business/burnout-prevention': typeof ArBusinessBurnoutPreventionRoute
+  '/ar/business/corporate-advisory': typeof ArBusinessCorporateAdvisoryRoute
+  '/ar/business/executive-wellbeing': typeof ArBusinessExecutiveWellbeingRoute
+  '/ar/business/founder-wellbeing': typeof ArBusinessFounderWellbeingRoute
+  '/ar/business/leadership-clarity': typeof ArBusinessLeadershipClarityRoute
+  '/ar/business/team-wellbeing': typeof ArBusinessTeamWellbeingRoute
+  '/ar/business/vip-concierge-wellbeing': typeof ArBusinessVipConciergeWellbeingRoute
+  '/ar/blog': typeof ArBlogIndexRoute
 }
 export interface FileRoutesById {
-  '/ar': typeof ArabicRoute
-  '/ar/business/executive-wellbeing': typeof ArabicExecutiveWellbeingRoute
-  '/ar/business/founder-wellbeing': typeof ArabicFounderWellbeingRoute
-  '/ar/business/leadership-clarity': typeof ArabicLeadershipClarityRoute
-  '/ar/business/burnout-prevention': typeof ArabicBurnoutPreventionRoute
-  '/ar/business/team-wellbeing': typeof ArabicTeamWellbeingRoute
-  '/ar/business/corporate-advisory': typeof ArabicCorporateAdvisoryRoute
-  '/ar/blog/$slug': typeof ArabicBlogSlugRoute
-  '/business/founder-wellbeing': typeof FounderWellbeingRoute
-  '/business/team-wellbeing': typeof TeamWellbeingRoute
-  '/business/corporate-advisory': typeof CorporateAdvisoryRoute
-  '/blog/mindfulness-busy-lives': typeof MindfulnessBusyLivesRoute
-  '/blog/emotional-balance-private-wellbeing': typeof EmotionalBalancePrivateWellbeingRoute
-  '/blog/confidence-self-trust': typeof ConfidenceSelfTrustBlogRoute
-  '/blog/leadership-clarity-private-advisory': typeof LeadershipClarityPrivateAdvisoryRoute
-  '/blog/family-life-gulf-wellbeing': typeof FamilyLifeGulfWellbeingRoute
-  '/blog/private-wellbeing-high-responsibility': typeof PrivateWellbeingHighResponsibilityRoute
-  '/blog/leadership-clarity-private-advisory': typeof LeadershipClarityPrivateAdvisoryRoute
-  '/blog/family-life-gulf-wellbeing': typeof FamilyLifeGulfWellbeingRoute
-  '/blog/private-wellbeing-high-responsibility': typeof PrivateWellbeingHighResponsibilityRoute
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/about': typeof AboutRoute
+  '/ar': typeof ArRouteWithChildren
   '/auth': typeof AuthRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/book': typeof BookRoute
   '/business': typeof BusinessRouteWithChildren
-  '/men': typeof MenRoute
-  '/wellbeing': typeof WellbeingRoute
-  '/women': typeof WomenRoute
-  '/_authenticated/admin': typeof AuthenticatedAdminRoute
-  '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
-  '/business/executive-wellbeing': typeof BusinessExecutiveWellbeingRoute
-  '/men/fatherhood': typeof MenFatherhoodRoute
-  '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
-  '/women/motherhood': typeof WomenMotherhoodRoute
-  '/wellbeing/relationships-family': typeof RelationshipsFamilyRoute
-  '/wellbeing/emotional-balance': typeof EmotionalBalanceRoute
-  '/wellbeing/life-transitions': typeof LifeTransitionsRoute
-  '/women/confidence-self-trust': typeof ConfidenceSelfTrustRoute
-  '/business/leadership-clarity': typeof LeadershipClarityRoute
-  '/business/burnout-prevention': typeof BurnoutPreventionRoute
+  '/men': typeof MenRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/the-tarkan-approach': typeof TheTarkanApproachRoute
+  '/wellbeing': typeof WellbeingRouteWithChildren
+  '/women': typeof WomenRouteWithChildren
+  '/_authenticated/admin': typeof AuthenticatedAdminRoute
+  '/ar/about': typeof ArAboutRoute
+  '/ar/blog': typeof ArBlogRouteWithChildren
+  '/ar/book': typeof ArBookRoute
+  '/ar/business': typeof ArBusinessRouteWithChildren
+  '/ar/men': typeof ArMenRoute
+  '/ar/privacy': typeof ArPrivacyRoute
+  '/ar/terms': typeof ArTermsRoute
+  '/ar/the-tarkan-approach': typeof ArTheTarkanApproachRoute
+  '/ar/wellbeing': typeof ArWellbeingRoute
+  '/ar/women': typeof ArWomenRoute
+  '/blog/confidence-self-trust': typeof BlogConfidenceSelfTrustRoute
+  '/blog/emotional-balance-private-wellbeing': typeof BlogEmotionalBalancePrivateWellbeingRoute
+  '/blog/family-life-gulf-wellbeing': typeof BlogFamilyLifeGulfWellbeingRoute
+  '/blog/leadership-clarity-private-advisory': typeof BlogLeadershipClarityPrivateAdvisoryRoute
+  '/blog/life-transitions-wellbeing': typeof BlogLifeTransitionsWellbeingRoute
+  '/blog/mens-wellbeing-pressure': typeof BlogMensWellbeingPressureRoute
+  '/blog/mindfulness-busy-lives': typeof BlogMindfulnessBusyLivesRoute
+  '/blog/private-wellbeing-advisory-gulf': typeof BlogPrivateWellbeingAdvisoryGulfRoute
+  '/blog/private-wellbeing-high-responsibility': typeof BlogPrivateWellbeingHighResponsibilityRoute
+  '/blog/relationships-family-wellbeing': typeof BlogRelationshipsFamilyWellbeingRoute
+  '/blog/stress-burnout-executives': typeof BlogStressBurnoutExecutivesRoute
+  '/blog/womens-wellbeing-gulf': typeof BlogWomensWellbeingGulfRoute
+  '/business/burnout-prevention': typeof BusinessBurnoutPreventionRoute
+  '/business/corporate-advisory': typeof BusinessCorporateAdvisoryRoute
+  '/business/executive-wellbeing': typeof BusinessExecutiveWellbeingRoute
+  '/business/founder-wellbeing': typeof BusinessFounderWellbeingRoute
+  '/business/leadership-clarity': typeof BusinessLeadershipClarityRoute
+  '/business/team-wellbeing': typeof BusinessTeamWellbeingRoute
+  '/business/vip-concierge-wellbeing': typeof BusinessVipConciergeWellbeingRoute
+  '/men/fatherhood': typeof MenFatherhoodRoute
+  '/wellbeing/emotional-balance': typeof WellbeingEmotionalBalanceRoute
+  '/wellbeing/life-transitions': typeof WellbeingLifeTransitionsRoute
+  '/wellbeing/relationships-family': typeof WellbeingRelationshipsFamilyRoute
+  '/wellbeing/stress-burnout': typeof WellbeingStressBurnoutRoute
+  '/women/confidence-self-trust': typeof WomenConfidenceSelfTrustRoute
+  '/women/motherhood': typeof WomenMotherhoodRoute
+  '/ar/': typeof ArIndexRoute
+  '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/business/burnout-prevention': typeof ArBusinessBurnoutPreventionRoute
+  '/ar/business/corporate-advisory': typeof ArBusinessCorporateAdvisoryRoute
+  '/ar/business/executive-wellbeing': typeof ArBusinessExecutiveWellbeingRoute
+  '/ar/business/founder-wellbeing': typeof ArBusinessFounderWellbeingRoute
+  '/ar/business/leadership-clarity': typeof ArBusinessLeadershipClarityRoute
+  '/ar/business/team-wellbeing': typeof ArBusinessTeamWellbeingRoute
+  '/ar/business/vip-concierge-wellbeing': typeof ArBusinessVipConciergeWellbeingRoute
+  '/ar/blog/': typeof ArBlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/ar'
-    | '/ar/blog/$slug'
-    | '/ar/business/executive-wellbeing'
-    | '/ar/business/founder-wellbeing'
-    | '/ar/business/leadership-clarity'
-    | '/ar/business/burnout-prevention'
-    | '/ar/business/team-wellbeing'
-    | '/ar/business/corporate-advisory'
-    | '/business/founder-wellbeing'
-    | '/business/team-wellbeing'
-    | '/business/corporate-advisory'
-    | '/blog/mindfulness-busy-lives'
-    | '/blog/emotional-balance-private-wellbeing'
-    | '/blog/confidence-self-trust'
-    | '/blog/leadership-clarity-private-advisory'
-    | '/blog/family-life-gulf-wellbeing'
-    | '/blog/private-wellbeing-high-responsibility'
     | '/'
     | '/about'
+    | '/ar'
     | '/auth'
     | '/blog'
     | '/book'
     | '/business'
     | '/men'
-    | '/wellbeing'
-    | '/women'
-    | '/admin'
-    | '/business/vip-concierge-wellbeing'
-    | '/business/executive-wellbeing'
-    | '/men/fatherhood'
-    | '/wellbeing/stress-burnout'
-    | '/women/motherhood'
-    | '/wellbeing/relationships-family'
-    | '/wellbeing/emotional-balance'
-    | '/wellbeing/life-transitions'
-    | '/women/confidence-self-trust'
-    | '/business/leadership-clarity'
-    | '/business/burnout-prevention'
     | '/privacy'
     | '/terms'
     | '/the-tarkan-approach'
+    | '/wellbeing'
+    | '/women'
+    | '/admin'
+    | '/ar/about'
+    | '/ar/blog'
+    | '/ar/book'
+    | '/ar/business'
+    | '/ar/men'
+    | '/ar/privacy'
+    | '/ar/terms'
+    | '/ar/the-tarkan-approach'
+    | '/ar/wellbeing'
+    | '/ar/women'
+    | '/blog/confidence-self-trust'
+    | '/blog/emotional-balance-private-wellbeing'
+    | '/blog/family-life-gulf-wellbeing'
+    | '/blog/leadership-clarity-private-advisory'
+    | '/blog/life-transitions-wellbeing'
+    | '/blog/mens-wellbeing-pressure'
+    | '/blog/mindfulness-busy-lives'
     | '/blog/private-wellbeing-advisory-gulf'
+    | '/blog/private-wellbeing-high-responsibility'
+    | '/blog/relationships-family-wellbeing'
     | '/blog/stress-burnout-executives'
     | '/blog/womens-wellbeing-gulf'
-    | '/blog/mens-wellbeing-pressure'
-    | '/blog/relationships-family-wellbeing'
-    | '/blog/life-transitions-wellbeing'
-  fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/ar'
+    | '/business/burnout-prevention'
+    | '/business/corporate-advisory'
+    | '/business/executive-wellbeing'
+    | '/business/founder-wellbeing'
+    | '/business/leadership-clarity'
+    | '/business/team-wellbeing'
+    | '/business/vip-concierge-wellbeing'
+    | '/men/fatherhood'
+    | '/wellbeing/emotional-balance'
+    | '/wellbeing/life-transitions'
+    | '/wellbeing/relationships-family'
+    | '/wellbeing/stress-burnout'
+    | '/women/confidence-self-trust'
+    | '/women/motherhood'
+    | '/ar/'
     | '/ar/blog/$slug'
+    | '/ar/business/burnout-prevention'
+    | '/ar/business/corporate-advisory'
     | '/ar/business/executive-wellbeing'
     | '/ar/business/founder-wellbeing'
     | '/ar/business/leadership-clarity'
-    | '/ar/business/burnout-prevention'
     | '/ar/business/team-wellbeing'
-    | '/ar/business/corporate-advisory'
-    | '/business/founder-wellbeing'
-    | '/business/team-wellbeing'
-    | '/business/corporate-advisory'
-    | '/blog/mindfulness-busy-lives'
-    | '/blog/emotional-balance-private-wellbeing'
-    | '/blog/confidence-self-trust'
-    | '/blog/leadership-clarity-private-advisory'
-    | '/blog/family-life-gulf-wellbeing'
-    | '/blog/private-wellbeing-high-responsibility'
+    | '/ar/business/vip-concierge-wellbeing'
+    | '/ar/blog/'
+  fileRoutesByTo: FileRoutesByTo
+  to:
     | '/'
     | '/about'
     | '/auth'
@@ -397,84 +660,141 @@ export interface FileRouteTypes {
     | '/book'
     | '/business'
     | '/men'
+    | '/privacy'
+    | '/terms'
+    | '/the-tarkan-approach'
     | '/wellbeing'
     | '/women'
     | '/admin'
-    | '/business/vip-concierge-wellbeing'
+    | '/ar/about'
+    | '/ar/book'
+    | '/ar/business'
+    | '/ar/men'
+    | '/ar/privacy'
+    | '/ar/terms'
+    | '/ar/the-tarkan-approach'
+    | '/ar/wellbeing'
+    | '/ar/women'
+    | '/blog/confidence-self-trust'
+    | '/blog/emotional-balance-private-wellbeing'
+    | '/blog/family-life-gulf-wellbeing'
+    | '/blog/leadership-clarity-private-advisory'
+    | '/blog/life-transitions-wellbeing'
+    | '/blog/mens-wellbeing-pressure'
+    | '/blog/mindfulness-busy-lives'
+    | '/blog/private-wellbeing-advisory-gulf'
+    | '/blog/private-wellbeing-high-responsibility'
+    | '/blog/relationships-family-wellbeing'
+    | '/blog/stress-burnout-executives'
+    | '/blog/womens-wellbeing-gulf'
+    | '/business/burnout-prevention'
+    | '/business/corporate-advisory'
     | '/business/executive-wellbeing'
+    | '/business/founder-wellbeing'
+    | '/business/leadership-clarity'
+    | '/business/team-wellbeing'
+    | '/business/vip-concierge-wellbeing'
     | '/men/fatherhood'
+    | '/wellbeing/emotional-balance'
+    | '/wellbeing/life-transitions'
+    | '/wellbeing/relationships-family'
     | '/wellbeing/stress-burnout'
+    | '/women/confidence-self-trust'
     | '/women/motherhood'
-  id:
-    | '__root__'
+    | '/ar'
     | '/ar/blog/$slug'
+    | '/ar/business/burnout-prevention'
+    | '/ar/business/corporate-advisory'
     | '/ar/business/executive-wellbeing'
     | '/ar/business/founder-wellbeing'
     | '/ar/business/leadership-clarity'
-    | '/ar/business/burnout-prevention'
     | '/ar/business/team-wellbeing'
-    | '/ar/business/corporate-advisory'
-    | '/business/founder-wellbeing'
-    | '/business/team-wellbeing'
-    | '/business/corporate-advisory'
+    | '/ar/business/vip-concierge-wellbeing'
+    | '/ar/blog'
+  id:
+    | '__root__'
     | '/'
     | '/_authenticated'
     | '/about'
+    | '/ar'
     | '/auth'
     | '/blog'
     | '/book'
     | '/business'
     | '/men'
-    | '/wellbeing'
-    | '/women'
-    | '/_authenticated/admin'
-    | '/business/vip-concierge-wellbeing'
-    | '/business/executive-wellbeing'
-    | '/men/fatherhood'
-    | '/wellbeing/stress-burnout'
-    | '/women/motherhood'
-    | '/wellbeing/relationships-family'
-    | '/wellbeing/emotional-balance'
-    | '/wellbeing/life-transitions'
-    | '/women/confidence-self-trust'
-    | '/business/leadership-clarity'
-    | '/business/burnout-prevention'
     | '/privacy'
     | '/terms'
     | '/the-tarkan-approach'
+    | '/wellbeing'
+    | '/women'
+    | '/_authenticated/admin'
+    | '/ar/about'
+    | '/ar/blog'
+    | '/ar/book'
+    | '/ar/business'
+    | '/ar/men'
+    | '/ar/privacy'
+    | '/ar/terms'
+    | '/ar/the-tarkan-approach'
+    | '/ar/wellbeing'
+    | '/ar/women'
+    | '/blog/confidence-self-trust'
+    | '/blog/emotional-balance-private-wellbeing'
+    | '/blog/family-life-gulf-wellbeing'
+    | '/blog/leadership-clarity-private-advisory'
+    | '/blog/life-transitions-wellbeing'
+    | '/blog/mens-wellbeing-pressure'
+    | '/blog/mindfulness-busy-lives'
     | '/blog/private-wellbeing-advisory-gulf'
+    | '/blog/private-wellbeing-high-responsibility'
+    | '/blog/relationships-family-wellbeing'
     | '/blog/stress-burnout-executives'
     | '/blog/womens-wellbeing-gulf'
-    | '/blog/mens-wellbeing-pressure'
-    | '/blog/relationships-family-wellbeing'
-    | '/blog/life-transitions-wellbeing'
+    | '/business/burnout-prevention'
+    | '/business/corporate-advisory'
+    | '/business/executive-wellbeing'
+    | '/business/founder-wellbeing'
+    | '/business/leadership-clarity'
+    | '/business/team-wellbeing'
+    | '/business/vip-concierge-wellbeing'
+    | '/men/fatherhood'
+    | '/wellbeing/emotional-balance'
+    | '/wellbeing/life-transitions'
+    | '/wellbeing/relationships-family'
+    | '/wellbeing/stress-burnout'
+    | '/women/confidence-self-trust'
+    | '/women/motherhood'
+    | '/ar/'
+    | '/ar/blog/$slug'
+    | '/ar/business/burnout-prevention'
+    | '/ar/business/corporate-advisory'
+    | '/ar/business/executive-wellbeing'
+    | '/ar/business/founder-wellbeing'
+    | '/ar/business/leadership-clarity'
+    | '/ar/business/team-wellbeing'
+    | '/ar/business/vip-concierge-wellbeing'
+    | '/ar/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  ArabicRoute: typeof ArabicRouteWithChildren
   IndexRoute: typeof IndexRoute
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
+  ArRoute: typeof ArRouteWithChildren
   AuthRoute: typeof AuthRoute
   BlogRoute: typeof BlogRouteWithChildren
   BookRoute: typeof BookRoute
   BusinessRoute: typeof BusinessRouteWithChildren
-  MenRoute: typeof MenRoute
-  WellbeingRoute: typeof WellbeingRoute
-  WomenRoute: typeof WomenRoute
+  MenRoute: typeof MenRouteWithChildren
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
   TheTarkanApproachRoute: typeof TheTarkanApproachRoute
+  WellbeingRoute: typeof WellbeingRouteWithChildren
+  WomenRoute: typeof WomenRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/blog/mindfulness-busy-lives': { id: '/blog/mindfulness-busy-lives', path: '/mindfulness-busy-lives', fullPath: '/blog/mindfulness-busy-lives', preLoaderRoute: typeof MindfulnessBusyLivesRouteImport, parentRoute: typeof BlogRouteImport }
-    '/blog/emotional-balance-private-wellbeing': { id: '/blog/emotional-balance-private-wellbeing', path: '/emotional-balance-private-wellbeing', fullPath: '/blog/emotional-balance-private-wellbeing', preLoaderRoute: typeof EmotionalBalancePrivateWellbeingRouteImport, parentRoute: typeof BlogRouteImport }
-    '/blog/confidence-self-trust': { id: '/blog/confidence-self-trust', path: '/confidence-self-trust', fullPath: '/blog/confidence-self-trust', preLoaderRoute: typeof ConfidenceSelfTrustBlogRouteImport, parentRoute: typeof BlogRouteImport }
-    '/blog/leadership-clarity-private-advisory': { id: '/blog/leadership-clarity-private-advisory', path: '/leadership-clarity-private-advisory', fullPath: '/blog/leadership-clarity-private-advisory', preLoaderRoute: typeof LeadershipClarityPrivateAdvisoryRouteImport, parentRoute: typeof BlogRouteImport }
-    '/blog/family-life-gulf-wellbeing': { id: '/blog/family-life-gulf-wellbeing', path: '/family-life-gulf-wellbeing', fullPath: '/blog/family-life-gulf-wellbeing', preLoaderRoute: typeof FamilyLifeGulfWellbeingRouteImport, parentRoute: typeof BlogRouteImport }
-    '/blog/private-wellbeing-high-responsibility': { id: '/blog/private-wellbeing-high-responsibility', path: '/private-wellbeing-high-responsibility', fullPath: '/blog/private-wellbeing-high-responsibility', preLoaderRoute: typeof PrivateWellbeingHighResponsibilityRouteImport, parentRoute: typeof BlogRouteImport }
     '/': {
       id: '/'
       path: '/'
@@ -489,33 +809,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ar': { id: '/ar', path: '/ar', fullPath: '/ar', preLoaderRoute: typeof ArabicRouteImport, parentRoute: typeof rootRouteImport }
-    '/ar/wellbeing': { id: '/ar/wellbeing', path: '/wellbeing', fullPath: '/ar/wellbeing', preLoaderRoute: typeof ArabicWellbeingRouteImport, parentRoute: typeof ArabicRoute }
-    '/ar/women': { id: '/ar/women', path: '/women', fullPath: '/ar/women', preLoaderRoute: typeof ArabicWomenRouteImport, parentRoute: typeof ArabicRoute }
-    '/ar/men': { id: '/ar/men', path: '/men', fullPath: '/ar/men', preLoaderRoute: typeof ArabicMenRouteImport, parentRoute: typeof ArabicRoute }
-    '/ar/business': { id: '/ar/business', path: '/business', fullPath: '/ar/business', preLoaderRoute: typeof ArabicBusinessRouteImport, parentRoute: typeof ArabicRoute }
-    '/ar/business/vip-concierge-wellbeing': { id: '/ar/business/vip-concierge-wellbeing', path: '/vip-concierge-wellbeing', fullPath: '/ar/business/vip-concierge-wellbeing', preLoaderRoute: typeof ArabicVipConciergeRouteImport, parentRoute: typeof ArabicBusinessRoute }
-    '/ar/about': { id: '/ar/about', path: '/about', fullPath: '/ar/about', preLoaderRoute: typeof ArabicAboutRouteImport, parentRoute: typeof ArabicRoute }
-    '/ar/blog': { id: '/ar/blog', path: '/blog', fullPath: '/ar/blog', preLoaderRoute: typeof ArabicBlogRouteImport, parentRoute: typeof ArabicRoute }
-    '/ar/book': { id: '/ar/book', path: '/book', fullPath: '/ar/book', preLoaderRoute: typeof ArabicBookRouteImport, parentRoute: typeof ArabicRoute }
-    '/ar/privacy': { id: '/ar/privacy', path: '/privacy', fullPath: '/ar/privacy', preLoaderRoute: typeof ArabicPrivacyRouteImport, parentRoute: typeof ArabicRoute }
-    '/ar/terms': { id: '/ar/terms', path: '/terms', fullPath: '/ar/terms', preLoaderRoute: typeof ArabicTermsRouteImport, parentRoute: typeof ArabicRoute }
-    '/ar/the-tarkan-approach': { id: '/ar/the-tarkan-approach', path: '/the-tarkan-approach', fullPath: '/ar/the-tarkan-approach', preLoaderRoute: typeof ArabicTheTarkanApproachRouteImport, parentRoute: typeof ArabicRoute }
-    '/ar/blog/$slug': { id: '/ar/blog/$slug', path: '/$slug', fullPath: '/ar/blog/$slug', preLoaderRoute: typeof ArabicBlogSlugRouteImport, parentRoute: typeof ArabicBlogRoute }
-    '/ar/business/executive-wellbeing': { id: '/ar/business/executive-wellbeing', path: '/executive-wellbeing', fullPath: '/ar/business/executive-wellbeing', preLoaderRoute: typeof ArabicExecutiveWellbeingRouteImport, parentRoute: typeof ArabicBusinessRoute }
-    '/ar/business/founder-wellbeing': { id: '/ar/business/founder-wellbeing', path: '/founder-wellbeing', fullPath: '/ar/business/founder-wellbeing', preLoaderRoute: typeof ArabicFounderWellbeingRouteImport, parentRoute: typeof ArabicBusinessRoute }
-    '/ar/business/leadership-clarity': { id: '/ar/business/leadership-clarity', path: '/leadership-clarity', fullPath: '/ar/business/leadership-clarity', preLoaderRoute: typeof ArabicLeadershipClarityRouteImport, parentRoute: typeof ArabicBusinessRoute }
-    '/ar/business/burnout-prevention': { id: '/ar/business/burnout-prevention', path: '/burnout-prevention', fullPath: '/ar/business/burnout-prevention', preLoaderRoute: typeof ArabicBurnoutPreventionRouteImport, parentRoute: typeof ArabicBusinessRoute }
-    '/ar/business/team-wellbeing': { id: '/ar/business/team-wellbeing', path: '/team-wellbeing', fullPath: '/ar/business/team-wellbeing', preLoaderRoute: typeof ArabicTeamWellbeingRouteImport, parentRoute: typeof ArabicBusinessRoute }
-    '/ar/business/corporate-advisory': { id: '/ar/business/corporate-advisory', path: '/corporate-advisory', fullPath: '/ar/business/corporate-advisory', preLoaderRoute: typeof ArabicCorporateAdvisoryRouteImport, parentRoute: typeof ArabicBusinessRoute }
-    '/business/founder-wellbeing': { id: '/business/founder-wellbeing', path: '/founder-wellbeing', fullPath: '/business/founder-wellbeing', preLoaderRoute: typeof FounderWellbeingRouteImport, parentRoute: typeof BusinessRoute }
-    '/business/team-wellbeing': { id: '/business/team-wellbeing', path: '/team-wellbeing', fullPath: '/business/team-wellbeing', preLoaderRoute: typeof TeamWellbeingRouteImport, parentRoute: typeof BusinessRoute }
-    '/business/corporate-advisory': { id: '/business/corporate-advisory', path: '/corporate-advisory', fullPath: '/business/corporate-advisory', preLoaderRoute: typeof CorporateAdvisoryRouteImport, parentRoute: typeof BusinessRoute }
     '/about': {
       id: '/about'
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar': {
+      id: '/ar'
+      path: '/ar'
+      fullPath: '/ar'
+      preLoaderRoute: typeof ArRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -553,6 +858,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/the-tarkan-approach': {
+      id: '/the-tarkan-approach'
+      path: '/the-tarkan-approach'
+      fullPath: '/the-tarkan-approach'
+      preLoaderRoute: typeof TheTarkanApproachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/wellbeing': {
       id: '/wellbeing'
       path: '/wellbeing'
@@ -574,6 +900,209 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/ar/': {
+      id: '/ar/'
+      path: '/'
+      fullPath: '/ar/'
+      preLoaderRoute: typeof ArIndexRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/about': {
+      id: '/ar/about'
+      path: '/about'
+      fullPath: '/ar/about'
+      preLoaderRoute: typeof ArAboutRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/blog': {
+      id: '/ar/blog'
+      path: '/blog'
+      fullPath: '/ar/blog'
+      preLoaderRoute: typeof ArBlogRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/book': {
+      id: '/ar/book'
+      path: '/book'
+      fullPath: '/ar/book'
+      preLoaderRoute: typeof ArBookRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/business': {
+      id: '/ar/business'
+      path: '/business'
+      fullPath: '/ar/business'
+      preLoaderRoute: typeof ArBusinessRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/men': {
+      id: '/ar/men'
+      path: '/men'
+      fullPath: '/ar/men'
+      preLoaderRoute: typeof ArMenRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/privacy': {
+      id: '/ar/privacy'
+      path: '/privacy'
+      fullPath: '/ar/privacy'
+      preLoaderRoute: typeof ArPrivacyRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/terms': {
+      id: '/ar/terms'
+      path: '/terms'
+      fullPath: '/ar/terms'
+      preLoaderRoute: typeof ArTermsRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/the-tarkan-approach': {
+      id: '/ar/the-tarkan-approach'
+      path: '/the-tarkan-approach'
+      fullPath: '/ar/the-tarkan-approach'
+      preLoaderRoute: typeof ArTheTarkanApproachRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/wellbeing': {
+      id: '/ar/wellbeing'
+      path: '/wellbeing'
+      fullPath: '/ar/wellbeing'
+      preLoaderRoute: typeof ArWellbeingRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/women': {
+      id: '/ar/women'
+      path: '/women'
+      fullPath: '/ar/women'
+      preLoaderRoute: typeof ArWomenRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/blog/confidence-self-trust': {
+      id: '/blog/confidence-self-trust'
+      path: '/confidence-self-trust'
+      fullPath: '/blog/confidence-self-trust'
+      preLoaderRoute: typeof BlogConfidenceSelfTrustRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/emotional-balance-private-wellbeing': {
+      id: '/blog/emotional-balance-private-wellbeing'
+      path: '/emotional-balance-private-wellbeing'
+      fullPath: '/blog/emotional-balance-private-wellbeing'
+      preLoaderRoute: typeof BlogEmotionalBalancePrivateWellbeingRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/family-life-gulf-wellbeing': {
+      id: '/blog/family-life-gulf-wellbeing'
+      path: '/family-life-gulf-wellbeing'
+      fullPath: '/blog/family-life-gulf-wellbeing'
+      preLoaderRoute: typeof BlogFamilyLifeGulfWellbeingRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/leadership-clarity-private-advisory': {
+      id: '/blog/leadership-clarity-private-advisory'
+      path: '/leadership-clarity-private-advisory'
+      fullPath: '/blog/leadership-clarity-private-advisory'
+      preLoaderRoute: typeof BlogLeadershipClarityPrivateAdvisoryRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/life-transitions-wellbeing': {
+      id: '/blog/life-transitions-wellbeing'
+      path: '/life-transitions-wellbeing'
+      fullPath: '/blog/life-transitions-wellbeing'
+      preLoaderRoute: typeof BlogLifeTransitionsWellbeingRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/mens-wellbeing-pressure': {
+      id: '/blog/mens-wellbeing-pressure'
+      path: '/mens-wellbeing-pressure'
+      fullPath: '/blog/mens-wellbeing-pressure'
+      preLoaderRoute: typeof BlogMensWellbeingPressureRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/mindfulness-busy-lives': {
+      id: '/blog/mindfulness-busy-lives'
+      path: '/mindfulness-busy-lives'
+      fullPath: '/blog/mindfulness-busy-lives'
+      preLoaderRoute: typeof BlogMindfulnessBusyLivesRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/private-wellbeing-advisory-gulf': {
+      id: '/blog/private-wellbeing-advisory-gulf'
+      path: '/private-wellbeing-advisory-gulf'
+      fullPath: '/blog/private-wellbeing-advisory-gulf'
+      preLoaderRoute: typeof BlogPrivateWellbeingAdvisoryGulfRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/private-wellbeing-high-responsibility': {
+      id: '/blog/private-wellbeing-high-responsibility'
+      path: '/private-wellbeing-high-responsibility'
+      fullPath: '/blog/private-wellbeing-high-responsibility'
+      preLoaderRoute: typeof BlogPrivateWellbeingHighResponsibilityRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/relationships-family-wellbeing': {
+      id: '/blog/relationships-family-wellbeing'
+      path: '/relationships-family-wellbeing'
+      fullPath: '/blog/relationships-family-wellbeing'
+      preLoaderRoute: typeof BlogRelationshipsFamilyWellbeingRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/stress-burnout-executives': {
+      id: '/blog/stress-burnout-executives'
+      path: '/stress-burnout-executives'
+      fullPath: '/blog/stress-burnout-executives'
+      preLoaderRoute: typeof BlogStressBurnoutExecutivesRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/womens-wellbeing-gulf': {
+      id: '/blog/womens-wellbeing-gulf'
+      path: '/womens-wellbeing-gulf'
+      fullPath: '/blog/womens-wellbeing-gulf'
+      preLoaderRoute: typeof BlogWomensWellbeingGulfRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/business/burnout-prevention': {
+      id: '/business/burnout-prevention'
+      path: '/burnout-prevention'
+      fullPath: '/business/burnout-prevention'
+      preLoaderRoute: typeof BusinessBurnoutPreventionRouteImport
+      parentRoute: typeof BusinessRoute
+    }
+    '/business/corporate-advisory': {
+      id: '/business/corporate-advisory'
+      path: '/corporate-advisory'
+      fullPath: '/business/corporate-advisory'
+      preLoaderRoute: typeof BusinessCorporateAdvisoryRouteImport
+      parentRoute: typeof BusinessRoute
+    }
+    '/business/executive-wellbeing': {
+      id: '/business/executive-wellbeing'
+      path: '/executive-wellbeing'
+      fullPath: '/business/executive-wellbeing'
+      preLoaderRoute: typeof BusinessExecutiveWellbeingRouteImport
+      parentRoute: typeof BusinessRoute
+    }
+    '/business/founder-wellbeing': {
+      id: '/business/founder-wellbeing'
+      path: '/founder-wellbeing'
+      fullPath: '/business/founder-wellbeing'
+      preLoaderRoute: typeof BusinessFounderWellbeingRouteImport
+      parentRoute: typeof BusinessRoute
+    }
+    '/business/leadership-clarity': {
+      id: '/business/leadership-clarity'
+      path: '/leadership-clarity'
+      fullPath: '/business/leadership-clarity'
+      preLoaderRoute: typeof BusinessLeadershipClarityRouteImport
+      parentRoute: typeof BusinessRoute
+    }
+    '/business/team-wellbeing': {
+      id: '/business/team-wellbeing'
+      path: '/team-wellbeing'
+      fullPath: '/business/team-wellbeing'
+      preLoaderRoute: typeof BusinessTeamWellbeingRouteImport
+      parentRoute: typeof BusinessRoute
+    }
     '/business/vip-concierge-wellbeing': {
       id: '/business/vip-concierge-wellbeing'
       path: '/vip-concierge-wellbeing'
@@ -581,43 +1110,119 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BusinessVipConciergeWellbeingRouteImport
       parentRoute: typeof BusinessRoute
     }
-    '/business/executive-wellbeing': { id: '/business/executive-wellbeing', path: '/executive-wellbeing', fullPath: '/business/executive-wellbeing', preLoaderRoute: typeof BusinessExecutiveWellbeingRouteImport, parentRoute: typeof BusinessRoute }
-    '/men/fatherhood': { id: '/men/fatherhood', path: '/fatherhood', fullPath: '/men/fatherhood', preLoaderRoute: typeof MenFatherhoodRouteImport, parentRoute: typeof MenRoute }
-    '/wellbeing/stress-burnout': { id: '/wellbeing/stress-burnout', path: '/stress-burnout', fullPath: '/wellbeing/stress-burnout', preLoaderRoute: typeof WellbeingStressBurnoutRouteImport, parentRoute: typeof WellbeingRoute }
-    '/women/motherhood': { id: '/women/motherhood', path: '/motherhood', fullPath: '/women/motherhood', preLoaderRoute: typeof WomenMotherhoodRouteImport, parentRoute: typeof WomenRoute }
-    '/wellbeing/relationships-family': { id: '/wellbeing/relationships-family', path: '/relationships-family', fullPath: '/wellbeing/relationships-family', preLoaderRoute: typeof RelationshipsFamilyRouteImport, parentRoute: typeof WellbeingRoute }
-    '/wellbeing/emotional-balance': { id: '/wellbeing/emotional-balance', path: '/emotional-balance', fullPath: '/wellbeing/emotional-balance', preLoaderRoute: typeof EmotionalBalanceRouteImport, parentRoute: typeof WellbeingRoute }
-    '/wellbeing/life-transitions': { id: '/wellbeing/life-transitions', path: '/life-transitions', fullPath: '/wellbeing/life-transitions', preLoaderRoute: typeof LifeTransitionsRouteImport, parentRoute: typeof WellbeingRoute }
-    '/women/confidence-self-trust': { id: '/women/confidence-self-trust', path: '/confidence-self-trust', fullPath: '/women/confidence-self-trust', preLoaderRoute: typeof ConfidenceSelfTrustRouteImport, parentRoute: typeof WomenRoute }
-    '/business/leadership-clarity': { id: '/business/leadership-clarity', path: '/leadership-clarity', fullPath: '/business/leadership-clarity', preLoaderRoute: typeof LeadershipClarityRouteImport, parentRoute: typeof BusinessRoute }
-    '/business/burnout-prevention': { id: '/business/burnout-prevention', path: '/burnout-prevention', fullPath: '/business/burnout-prevention', preLoaderRoute: typeof BurnoutPreventionRouteImport, parentRoute: typeof BusinessRoute }
-    '/privacy': { id: '/privacy', path: '/privacy', fullPath: '/privacy', preLoaderRoute: typeof PrivacyRouteImport, parentRoute: typeof rootRouteImport }
-    '/the-tarkan-approach': { id: '/the-tarkan-approach', path: '/the-tarkan-approach', fullPath: '/the-tarkan-approach', preLoaderRoute: typeof TheTarkanApproachRouteImport, parentRoute: typeof rootRouteImport }
-    '/terms': { id: '/terms', path: '/terms', fullPath: '/terms', preLoaderRoute: typeof TermsRouteImport, parentRoute: typeof rootRouteImport }
-    '/blog/private-wellbeing-advisory-gulf': { id: '/blog/private-wellbeing-advisory-gulf', path: '/private-wellbeing-advisory-gulf', fullPath: '/blog/private-wellbeing-advisory-gulf', preLoaderRoute: typeof PrivateWellbeingAdvisoryGulfRouteImport, parentRoute: typeof BlogRoute }
-    '/blog/stress-burnout-executives': { id: '/blog/stress-burnout-executives', path: '/stress-burnout-executives', fullPath: '/blog/stress-burnout-executives', preLoaderRoute: typeof StressBurnoutExecutivesRouteImport, parentRoute: typeof BlogRoute }
-    '/blog/womens-wellbeing-gulf': { id: '/blog/womens-wellbeing-gulf', path: '/womens-wellbeing-gulf', fullPath: '/blog/womens-wellbeing-gulf', preLoaderRoute: typeof WomensWellbeingGulfRouteImport, parentRoute: typeof BlogRoute }
-    '/blog/mens-wellbeing-pressure': { id: '/blog/mens-wellbeing-pressure', path: '/mens-wellbeing-pressure', fullPath: '/blog/mens-wellbeing-pressure', preLoaderRoute: typeof MensWellbeingPressureRouteImport, parentRoute: typeof BlogRoute }
-    '/blog/relationships-family-wellbeing': { id: '/blog/relationships-family-wellbeing', path: '/relationships-family-wellbeing', fullPath: '/blog/relationships-family-wellbeing', preLoaderRoute: typeof RelationshipsFamilyWellbeingRouteImport, parentRoute: typeof BlogRoute }
-    '/blog/life-transitions-wellbeing': { id: '/blog/life-transitions-wellbeing', path: '/life-transitions-wellbeing', fullPath: '/blog/life-transitions-wellbeing', preLoaderRoute: typeof LifeTransitionsWellbeingRouteImport, parentRoute: typeof BlogRoute }
+    '/men/fatherhood': {
+      id: '/men/fatherhood'
+      path: '/fatherhood'
+      fullPath: '/men/fatherhood'
+      preLoaderRoute: typeof MenFatherhoodRouteImport
+      parentRoute: typeof MenRoute
+    }
+    '/wellbeing/emotional-balance': {
+      id: '/wellbeing/emotional-balance'
+      path: '/emotional-balance'
+      fullPath: '/wellbeing/emotional-balance'
+      preLoaderRoute: typeof WellbeingEmotionalBalanceRouteImport
+      parentRoute: typeof WellbeingRoute
+    }
+    '/wellbeing/life-transitions': {
+      id: '/wellbeing/life-transitions'
+      path: '/life-transitions'
+      fullPath: '/wellbeing/life-transitions'
+      preLoaderRoute: typeof WellbeingLifeTransitionsRouteImport
+      parentRoute: typeof WellbeingRoute
+    }
+    '/wellbeing/relationships-family': {
+      id: '/wellbeing/relationships-family'
+      path: '/relationships-family'
+      fullPath: '/wellbeing/relationships-family'
+      preLoaderRoute: typeof WellbeingRelationshipsFamilyRouteImport
+      parentRoute: typeof WellbeingRoute
+    }
+    '/wellbeing/stress-burnout': {
+      id: '/wellbeing/stress-burnout'
+      path: '/stress-burnout'
+      fullPath: '/wellbeing/stress-burnout'
+      preLoaderRoute: typeof WellbeingStressBurnoutRouteImport
+      parentRoute: typeof WellbeingRoute
+    }
+    '/women/confidence-self-trust': {
+      id: '/women/confidence-self-trust'
+      path: '/confidence-self-trust'
+      fullPath: '/women/confidence-self-trust'
+      preLoaderRoute: typeof WomenConfidenceSelfTrustRouteImport
+      parentRoute: typeof WomenRoute
+    }
+    '/women/motherhood': {
+      id: '/women/motherhood'
+      path: '/motherhood'
+      fullPath: '/women/motherhood'
+      preLoaderRoute: typeof WomenMotherhoodRouteImport
+      parentRoute: typeof WomenRoute
+    }
+    '/ar/blog/': {
+      id: '/ar/blog/'
+      path: '/'
+      fullPath: '/ar/blog/'
+      preLoaderRoute: typeof ArBlogIndexRouteImport
+      parentRoute: typeof ArBlogRoute
+    }
+    '/ar/blog/$slug': {
+      id: '/ar/blog/$slug'
+      path: '/$slug'
+      fullPath: '/ar/blog/$slug'
+      preLoaderRoute: typeof ArBlogSlugRouteImport
+      parentRoute: typeof ArBlogRoute
+    }
+    '/ar/business/burnout-prevention': {
+      id: '/ar/business/burnout-prevention'
+      path: '/burnout-prevention'
+      fullPath: '/ar/business/burnout-prevention'
+      preLoaderRoute: typeof ArBusinessBurnoutPreventionRouteImport
+      parentRoute: typeof ArBusinessRoute
+    }
+    '/ar/business/corporate-advisory': {
+      id: '/ar/business/corporate-advisory'
+      path: '/corporate-advisory'
+      fullPath: '/ar/business/corporate-advisory'
+      preLoaderRoute: typeof ArBusinessCorporateAdvisoryRouteImport
+      parentRoute: typeof ArBusinessRoute
+    }
+    '/ar/business/executive-wellbeing': {
+      id: '/ar/business/executive-wellbeing'
+      path: '/executive-wellbeing'
+      fullPath: '/ar/business/executive-wellbeing'
+      preLoaderRoute: typeof ArBusinessExecutiveWellbeingRouteImport
+      parentRoute: typeof ArBusinessRoute
+    }
+    '/ar/business/founder-wellbeing': {
+      id: '/ar/business/founder-wellbeing'
+      path: '/founder-wellbeing'
+      fullPath: '/ar/business/founder-wellbeing'
+      preLoaderRoute: typeof ArBusinessFounderWellbeingRouteImport
+      parentRoute: typeof ArBusinessRoute
+    }
+    '/ar/business/leadership-clarity': {
+      id: '/ar/business/leadership-clarity'
+      path: '/leadership-clarity'
+      fullPath: '/ar/business/leadership-clarity'
+      preLoaderRoute: typeof ArBusinessLeadershipClarityRouteImport
+      parentRoute: typeof ArBusinessRoute
+    }
+    '/ar/business/team-wellbeing': {
+      id: '/ar/business/team-wellbeing'
+      path: '/team-wellbeing'
+      fullPath: '/ar/business/team-wellbeing'
+      preLoaderRoute: typeof ArBusinessTeamWellbeingRouteImport
+      parentRoute: typeof ArBusinessRoute
+    }
+    '/ar/business/vip-concierge-wellbeing': {
+      id: '/ar/business/vip-concierge-wellbeing'
+      path: '/vip-concierge-wellbeing'
+      fullPath: '/ar/business/vip-concierge-wellbeing'
+      preLoaderRoute: typeof ArBusinessVipConciergeWellbeingRouteImport
+      parentRoute: typeof ArBusinessRoute
+    }
   }
-}
-
-interface ArabicRouteChildren {
-  ArabicWellbeingRoute: typeof ArabicWellbeingRoute
-  ArabicWomenRoute: typeof ArabicWomenRoute
-  ArabicMenRoute: typeof ArabicMenRoute
-  ArabicBusinessRoute: typeof ArabicBusinessRouteWithChildren
-  ArabicAboutRoute: typeof ArabicAboutRoute
-  ArabicBlogRoute: typeof ArabicBlogRouteWithChildren
-  ArabicBookRoute: typeof ArabicBookRoute
-  ArabicPrivacyRoute: typeof ArabicPrivacyRoute
-  ArabicTermsRoute: typeof ArabicTermsRoute
-}
-
-const ArabicRouteChildren: ArabicRouteChildren = {
-  ArabicWellbeingRoute, ArabicWomenRoute, ArabicMenRoute, ArabicBusinessRoute,
-  ArabicAboutRoute, ArabicBlogRoute, ArabicBookRoute, ArabicPrivacyRoute, ArabicTermsRoute,
 }
 
 interface AuthenticatedRouteRouteChildren {
@@ -631,93 +1236,187 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
 const AuthenticatedRouteRouteWithChildren =
   AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
-interface ArabicBlogRouteChildren { ArabicBlogSlugRoute: typeof ArabicBlogSlugRoute }
-const ArabicBlogRouteChildren: ArabicBlogRouteChildren = { ArabicBlogSlugRoute }
+interface ArBlogRouteChildren {
+  ArBlogSlugRoute: typeof ArBlogSlugRoute
+  ArBlogIndexRoute: typeof ArBlogIndexRoute
+}
+
+const ArBlogRouteChildren: ArBlogRouteChildren = {
+  ArBlogSlugRoute: ArBlogSlugRoute,
+  ArBlogIndexRoute: ArBlogIndexRoute,
+}
+
+const ArBlogRouteWithChildren =
+  ArBlogRoute._addFileChildren(ArBlogRouteChildren)
+
+interface ArBusinessRouteChildren {
+  ArBusinessBurnoutPreventionRoute: typeof ArBusinessBurnoutPreventionRoute
+  ArBusinessCorporateAdvisoryRoute: typeof ArBusinessCorporateAdvisoryRoute
+  ArBusinessExecutiveWellbeingRoute: typeof ArBusinessExecutiveWellbeingRoute
+  ArBusinessFounderWellbeingRoute: typeof ArBusinessFounderWellbeingRoute
+  ArBusinessLeadershipClarityRoute: typeof ArBusinessLeadershipClarityRoute
+  ArBusinessTeamWellbeingRoute: typeof ArBusinessTeamWellbeingRoute
+  ArBusinessVipConciergeWellbeingRoute: typeof ArBusinessVipConciergeWellbeingRoute
+}
+
+const ArBusinessRouteChildren: ArBusinessRouteChildren = {
+  ArBusinessBurnoutPreventionRoute: ArBusinessBurnoutPreventionRoute,
+  ArBusinessCorporateAdvisoryRoute: ArBusinessCorporateAdvisoryRoute,
+  ArBusinessExecutiveWellbeingRoute: ArBusinessExecutiveWellbeingRoute,
+  ArBusinessFounderWellbeingRoute: ArBusinessFounderWellbeingRoute,
+  ArBusinessLeadershipClarityRoute: ArBusinessLeadershipClarityRoute,
+  ArBusinessTeamWellbeingRoute: ArBusinessTeamWellbeingRoute,
+  ArBusinessVipConciergeWellbeingRoute: ArBusinessVipConciergeWellbeingRoute,
+}
+
+const ArBusinessRouteWithChildren = ArBusinessRoute._addFileChildren(
+  ArBusinessRouteChildren,
+)
+
+interface ArRouteChildren {
+  ArAboutRoute: typeof ArAboutRoute
+  ArBlogRoute: typeof ArBlogRouteWithChildren
+  ArBookRoute: typeof ArBookRoute
+  ArBusinessRoute: typeof ArBusinessRouteWithChildren
+  ArMenRoute: typeof ArMenRoute
+  ArPrivacyRoute: typeof ArPrivacyRoute
+  ArTermsRoute: typeof ArTermsRoute
+  ArTheTarkanApproachRoute: typeof ArTheTarkanApproachRoute
+  ArWellbeingRoute: typeof ArWellbeingRoute
+  ArWomenRoute: typeof ArWomenRoute
+  ArIndexRoute: typeof ArIndexRoute
+}
+
+const ArRouteChildren: ArRouteChildren = {
+  ArAboutRoute: ArAboutRoute,
+  ArBlogRoute: ArBlogRouteWithChildren,
+  ArBookRoute: ArBookRoute,
+  ArBusinessRoute: ArBusinessRouteWithChildren,
+  ArMenRoute: ArMenRoute,
+  ArPrivacyRoute: ArPrivacyRoute,
+  ArTermsRoute: ArTermsRoute,
+  ArTheTarkanApproachRoute: ArTheTarkanApproachRoute,
+  ArWellbeingRoute: ArWellbeingRoute,
+  ArWomenRoute: ArWomenRoute,
+  ArIndexRoute: ArIndexRoute,
+}
+
+const ArRouteWithChildren = ArRoute._addFileChildren(ArRouteChildren)
 
 interface BlogRouteChildren {
-  MindfulnessBusyLivesRoute: typeof MindfulnessBusyLivesRoute
-  EmotionalBalancePrivateWellbeingRoute: typeof EmotionalBalancePrivateWellbeingRoute
-  ConfidenceSelfTrustBlogRoute: typeof ConfidenceSelfTrustBlogRoute
-  LeadershipClarityPrivateAdvisoryRoute: typeof LeadershipClarityPrivateAdvisoryRoute
-  FamilyLifeGulfWellbeingRoute: typeof FamilyLifeGulfWellbeingRoute
-  PrivateWellbeingHighResponsibilityRoute: typeof PrivateWellbeingHighResponsibilityRoute
-  PrivateWellbeingAdvisoryGulfRoute: typeof PrivateWellbeingAdvisoryGulfRoute
-  StressBurnoutExecutivesRoute: typeof StressBurnoutExecutivesRoute
-  WomensWellbeingGulfRoute: typeof WomensWellbeingGulfRoute
-  MensWellbeingPressureRoute: typeof MensWellbeingPressureRoute
-  RelationshipsFamilyWellbeingRoute: typeof RelationshipsFamilyWellbeingRoute
-  LifeTransitionsWellbeingRoute: typeof LifeTransitionsWellbeingRoute
+  BlogConfidenceSelfTrustRoute: typeof BlogConfidenceSelfTrustRoute
+  BlogEmotionalBalancePrivateWellbeingRoute: typeof BlogEmotionalBalancePrivateWellbeingRoute
+  BlogFamilyLifeGulfWellbeingRoute: typeof BlogFamilyLifeGulfWellbeingRoute
+  BlogLeadershipClarityPrivateAdvisoryRoute: typeof BlogLeadershipClarityPrivateAdvisoryRoute
+  BlogLifeTransitionsWellbeingRoute: typeof BlogLifeTransitionsWellbeingRoute
+  BlogMensWellbeingPressureRoute: typeof BlogMensWellbeingPressureRoute
+  BlogMindfulnessBusyLivesRoute: typeof BlogMindfulnessBusyLivesRoute
+  BlogPrivateWellbeingAdvisoryGulfRoute: typeof BlogPrivateWellbeingAdvisoryGulfRoute
+  BlogPrivateWellbeingHighResponsibilityRoute: typeof BlogPrivateWellbeingHighResponsibilityRoute
+  BlogRelationshipsFamilyWellbeingRoute: typeof BlogRelationshipsFamilyWellbeingRoute
+  BlogStressBurnoutExecutivesRoute: typeof BlogStressBurnoutExecutivesRoute
+  BlogWomensWellbeingGulfRoute: typeof BlogWomensWellbeingGulfRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
-  MindfulnessBusyLivesRoute,
-  EmotionalBalancePrivateWellbeingRoute,
-  ConfidenceSelfTrustBlogRoute,
-  LeadershipClarityPrivateAdvisoryRoute,
-  FamilyLifeGulfWellbeingRoute,
-  PrivateWellbeingHighResponsibilityRoute,
-  PrivateWellbeingAdvisoryGulfRoute: PrivateWellbeingAdvisoryGulfRoute,
-  StressBurnoutExecutivesRoute: StressBurnoutExecutivesRoute,
-  WomensWellbeingGulfRoute: WomensWellbeingGulfRoute,
-  MensWellbeingPressureRoute: MensWellbeingPressureRoute,
-  RelationshipsFamilyWellbeingRoute: RelationshipsFamilyWellbeingRoute,
-  LifeTransitionsWellbeingRoute: LifeTransitionsWellbeingRoute
+  BlogConfidenceSelfTrustRoute: BlogConfidenceSelfTrustRoute,
+  BlogEmotionalBalancePrivateWellbeingRoute:
+    BlogEmotionalBalancePrivateWellbeingRoute,
+  BlogFamilyLifeGulfWellbeingRoute: BlogFamilyLifeGulfWellbeingRoute,
+  BlogLeadershipClarityPrivateAdvisoryRoute:
+    BlogLeadershipClarityPrivateAdvisoryRoute,
+  BlogLifeTransitionsWellbeingRoute: BlogLifeTransitionsWellbeingRoute,
+  BlogMensWellbeingPressureRoute: BlogMensWellbeingPressureRoute,
+  BlogMindfulnessBusyLivesRoute: BlogMindfulnessBusyLivesRoute,
+  BlogPrivateWellbeingAdvisoryGulfRoute: BlogPrivateWellbeingAdvisoryGulfRoute,
+  BlogPrivateWellbeingHighResponsibilityRoute:
+    BlogPrivateWellbeingHighResponsibilityRoute,
+  BlogRelationshipsFamilyWellbeingRoute: BlogRelationshipsFamilyWellbeingRoute,
+  BlogStressBurnoutExecutivesRoute: BlogStressBurnoutExecutivesRoute,
+  BlogWomensWellbeingGulfRoute: BlogWomensWellbeingGulfRoute,
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface BusinessRouteChildren {
+  BusinessBurnoutPreventionRoute: typeof BusinessBurnoutPreventionRoute
+  BusinessCorporateAdvisoryRoute: typeof BusinessCorporateAdvisoryRoute
   BusinessExecutiveWellbeingRoute: typeof BusinessExecutiveWellbeingRoute
-  FounderWellbeingRoute: typeof FounderWellbeingRoute
-  TeamWellbeingRoute: typeof TeamWellbeingRoute
-  CorporateAdvisoryRoute: typeof CorporateAdvisoryRoute
+  BusinessFounderWellbeingRoute: typeof BusinessFounderWellbeingRoute
+  BusinessLeadershipClarityRoute: typeof BusinessLeadershipClarityRoute
+  BusinessTeamWellbeingRoute: typeof BusinessTeamWellbeingRoute
   BusinessVipConciergeWellbeingRoute: typeof BusinessVipConciergeWellbeingRoute
-  LeadershipClarityRoute: typeof LeadershipClarityRoute
-  BurnoutPreventionRoute: typeof BurnoutPreventionRoute
 }
 
 const BusinessRouteChildren: BusinessRouteChildren = {
+  BusinessBurnoutPreventionRoute: BusinessBurnoutPreventionRoute,
+  BusinessCorporateAdvisoryRoute: BusinessCorporateAdvisoryRoute,
   BusinessExecutiveWellbeingRoute: BusinessExecutiveWellbeingRoute,
+  BusinessFounderWellbeingRoute: BusinessFounderWellbeingRoute,
+  BusinessLeadershipClarityRoute: BusinessLeadershipClarityRoute,
+  BusinessTeamWellbeingRoute: BusinessTeamWellbeingRoute,
   BusinessVipConciergeWellbeingRoute: BusinessVipConciergeWellbeingRoute,
-  LeadershipClarityRoute: LeadershipClarityRoute,
-  BurnoutPreventionRoute: BurnoutPreventionRoute,
-  FounderWellbeingRoute: FounderWellbeingRoute,
-  TeamWellbeingRoute: TeamWellbeingRoute,
-  CorporateAdvisoryRoute: CorporateAdvisoryRoute,
 }
 
-const BusinessRouteWithChildren = BusinessRoute._addFileChildren(BusinessRouteChildren)
-const RelationshipsFamilyRoute = RelationshipsFamilyRouteImport.update({ id: '/relationships-family', path: '/relationships-family', getParentRoute: () => WellbeingRoute } as any)
-const EmotionalBalanceRoute = EmotionalBalanceRouteImport.update({ id: '/emotional-balance', path: '/emotional-balance', getParentRoute: () => WellbeingRoute } as any)
-const LifeTransitionsRoute = LifeTransitionsRouteImport.update({ id: '/life-transitions', path: '/life-transitions', getParentRoute: () => WellbeingRoute } as any)
-const ConfidenceSelfTrustRoute = ConfidenceSelfTrustRouteImport.update({ id: '/confidence-self-trust', path: '/confidence-self-trust', getParentRoute: () => WomenRoute } as any)
-const LeadershipClarityRoute = LeadershipClarityRouteImport.update({ id: '/leadership-clarity', path: '/leadership-clarity', getParentRoute: () => BusinessRoute } as any)
-const BurnoutPreventionRoute = BurnoutPreventionRouteImport.update({ id: '/burnout-prevention', path: '/burnout-prevention', getParentRoute: () => BusinessRoute } as any)
-const PrivacyRoute = PrivacyRouteImport.update({ id: '/privacy', path: '/privacy', getParentRoute: () => rootRouteImport } as any)
-const TermsRoute = TermsRouteImport.update({ id: '/terms', path: '/terms', getParentRoute: () => rootRouteImport } as any)
-const TheTarkanApproachRoute = TheTarkanApproachRouteImport.update({ id: '/the-tarkan-approach', path: '/the-tarkan-approach', getParentRoute: () => rootRouteImport } as any)
-const MenFatherhoodRoute = MenFatherhoodRouteImport.update({ id: '/fatherhood', path: '/fatherhood', getParentRoute: () => MenRoute } as any)
-const WellbeingStressBurnoutRoute = WellbeingStressBurnoutRouteImport.update({ id: '/stress-burnout', path: '/stress-burnout', getParentRoute: () => WellbeingRoute } as any)
-const WomenMotherhoodRoute = WomenMotherhoodRouteImport.update({ id: '/motherhood', path: '/motherhood', getParentRoute: () => WomenRoute } as any)
+const BusinessRouteWithChildren = BusinessRoute._addFileChildren(
+  BusinessRouteChildren,
+)
 
-const MenRouteWithChildren = MenRoute._addFileChildren({ MenFatherhoodRoute })
-const WellbeingRouteWithChildren = WellbeingRoute._addFileChildren({ WellbeingStressBurnoutRoute, RelationshipsFamilyRoute, EmotionalBalanceRoute, LifeTransitionsRoute })
-const WomenRouteWithChildren = WomenRoute._addFileChildren({ WomenMotherhoodRoute, ConfidenceSelfTrustRoute })
+interface MenRouteChildren {
+  MenFatherhoodRoute: typeof MenFatherhoodRoute
+}
+
+const MenRouteChildren: MenRouteChildren = {
+  MenFatherhoodRoute: MenFatherhoodRoute,
+}
+
+const MenRouteWithChildren = MenRoute._addFileChildren(MenRouteChildren)
+
+interface WellbeingRouteChildren {
+  WellbeingEmotionalBalanceRoute: typeof WellbeingEmotionalBalanceRoute
+  WellbeingLifeTransitionsRoute: typeof WellbeingLifeTransitionsRoute
+  WellbeingRelationshipsFamilyRoute: typeof WellbeingRelationshipsFamilyRoute
+  WellbeingStressBurnoutRoute: typeof WellbeingStressBurnoutRoute
+}
+
+const WellbeingRouteChildren: WellbeingRouteChildren = {
+  WellbeingEmotionalBalanceRoute: WellbeingEmotionalBalanceRoute,
+  WellbeingLifeTransitionsRoute: WellbeingLifeTransitionsRoute,
+  WellbeingRelationshipsFamilyRoute: WellbeingRelationshipsFamilyRoute,
+  WellbeingStressBurnoutRoute: WellbeingStressBurnoutRoute,
+}
+
+const WellbeingRouteWithChildren = WellbeingRoute._addFileChildren(
+  WellbeingRouteChildren,
+)
+
+interface WomenRouteChildren {
+  WomenConfidenceSelfTrustRoute: typeof WomenConfidenceSelfTrustRoute
+  WomenMotherhoodRoute: typeof WomenMotherhoodRoute
+}
+
+const WomenRouteChildren: WomenRouteChildren = {
+  WomenConfidenceSelfTrustRoute: WomenConfidenceSelfTrustRoute,
+  WomenMotherhoodRoute: WomenMotherhoodRoute,
+}
+
+const WomenRouteWithChildren = WomenRoute._addFileChildren(WomenRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ArabicRoute: ArabicRouteWithChildren,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
+  ArRoute: ArRouteWithChildren,
   AuthRoute: AuthRoute,
   BlogRoute: BlogRouteWithChildren,
   BookRoute: BookRoute,
   BusinessRoute: BusinessRouteWithChildren,
   MenRoute: MenRouteWithChildren,
-  WellbeingRoute: WellbeingRouteWithChildren,
-  WomenRoute: WomenRouteWithChildren,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
   TheTarkanApproachRoute: TheTarkanApproachRoute,
+  WellbeingRoute: WellbeingRouteWithChildren,
+  WomenRoute: WomenRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

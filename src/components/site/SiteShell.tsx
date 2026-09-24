@@ -52,25 +52,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   useEffect(() => {
 document.documentElement.lang = isArabic ? "ar" : "en";
 document.documentElement.dir = isArabic ? "rtl" : "ltr";
-const existing = Array.from(document.head.querySelectorAll('link[data-gulfwellbeing-hreflang], link[data-gulfwellbeing-canonical]'));
-existing.forEach((el) => el.remove());
-const origin = window.location.origin;
-const current = window.location.pathname;
-const canonicalLink = document.createElement("link");
-canonicalLink.rel = "canonical";
-canonicalLink.href = origin + current;
-canonicalLink.dataset.gulfwellbeingCanonical = "true";
-document.head.appendChild(canonicalLink);
-const ogUrl = document.head.querySelector('meta[data-gulfwellbeing-og-url]') || document.createElement("meta");
-ogUrl.setAttribute("property","og:url");
-ogUrl.setAttribute("content",origin + current);
-ogUrl.dataset.gulfwellbeingOgUrl = "true";
-document.head.appendChild(ogUrl);
-const enPath = current.startsWith("/ar") ? (current.replace(/^\/ar/, "") || "/") : current;
-const arPath = enPath === "/" ? "/ar" : `/ar${enPath}`;
-[["en", enPath], ["ar", arPath], ["x-default", enPath]].forEach(([lang, href]) => {
-const link = document.createElement("link"); link.rel = "alternate"; link.hreflang = lang; link.href = origin + href; link.dataset.gulfwellbeingHreflang = "true"; document.head.appendChild(link);
-});
 }, [isArabic, path]);
 
   return (
@@ -78,11 +59,16 @@ const link = document.createElement("link"); link.rel = "alternate"; link.hrefla
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
-        name: "Gulfwellbeing",
+        name: "GULFWELLBEING",
         description: "Private wellbeing advisory and coaching for individuals, families and executives across the Gulf and internationally.",
-        founder: { "@type": "Person", name: "Sourour Tarkan", jobTitle: "Wellbeing Advisor & Coach", knowsAbout: ["Wellbeing advisory", "Reiki", "Holistic wellbeing", "Reflective coaching"] },
-        areaServed: ["United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman", "Gulf Cooperation Council", "International"],
-        serviceType: ["Private Wellbeing Advisory", "Wellbeing Coaching", "Executive Wellbeing", "Women’s Wellbeing", "Men’s Wellbeing"],
+        founder: {
+          "@type": "Person",
+          name: "Sourour Tarkan",
+          jobTitle: "Private Wellbeing Advisor & Coach",
+          knowsAbout: ["Private wellbeing advisory", "Wellbeing coaching", "Reiki", "Executive wellbeing", "Women's wellbeing", "Men's wellbeing"],
+        },
+        areaServed: ["United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman"],
+        serviceType: ["Private Wellbeing Advisory", "Wellbeing Coaching", "Executive Wellbeing", "Women's Wellbeing", "Men's Wellbeing"],
       }) }} />
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 lg:px-10">

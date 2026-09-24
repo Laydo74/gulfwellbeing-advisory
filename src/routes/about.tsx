@@ -1,10 +1,10 @@
 import { createFileRoute,Link } from "@tanstack/react-router";
 import { ArrowRight,LockKeyhole } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 
 export const Route=createFileRoute("/about")({
-  head:()=>pageHead("Sourour Tarkan | Private Wellbeing Advisor in Dubai & the Gulf — GULFWELLBEING","Meet Sourour Tarkan, private wellbeing advisor, coach and Reiki Master, offering discreet wellbeing advisory for individuals, families and executives across Dubai and the Gulf.","/about"),
+  head: (ctx) => pageHeadFor(ctx, "Sourour Tarkan | Private Wellbeing Advisor in Dubai & the Gulf — GULFWELLBEING","Meet Sourour Tarkan, private wellbeing advisor, coach and Reiki Master, offering discreet wellbeing advisory for individuals, families and executives across Dubai and the Gulf.","/about"),
   component:Page
 });
 

@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, LockKeyhole } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 import stillLife from "@/assets/private-still-life.jpg";
 
 export const Route=createFileRoute("/business/vip-concierge-wellbeing")({
-  head:()=>pageHead("VIP Concierge Wellbeing | Private Wellbeing Advisory | GULFWELLBEING","Private VIP concierge wellbeing advisory for individuals, families, executives and international clients seeking discretion, flexibility and personalised support."),
+  head: (ctx) => pageHeadFor(ctx, "VIP Concierge Wellbeing | Private Wellbeing Advisory | GULFWELLBEING","Private VIP concierge wellbeing advisory for individuals, families, executives and international clients seeking discretion, flexibility and personalised support."),
   component:Page
 });
 const features=["Private wellbeing advisory","Flexible session arrangements","Priority scheduling where available","Personalised wellbeing planning","Executive and leadership support","Family and private-life support","Travel-compatible sessions","Remote international sessions"];

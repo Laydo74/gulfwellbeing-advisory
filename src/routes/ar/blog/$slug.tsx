@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpLeft, ArrowRight } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHeadFor, SITE_URL } from "@/components/site/PageMeta";
 import { arabicPosts } from "@/lib/arabic-blog";
 
 const seo: Record<string,{title:string;description:string}> = {
@@ -111,9 +111,10 @@ const related: Record<string,[string,string][]> = {
 
 export const Route = createFileRoute("/ar/blog/$slug")({
   loader: ({ params }) => arabicPosts[params.slug] ?? null,
-  head: ({ loaderData }) => {
+  head: (ctx) => {
+    const { loaderData } = ctx;
     const item = loaderData ? seo[loaderData.slug] : null;
-    return pageHead(item?.title ?? "المقال | GULFWELLBEING", item?.description ?? "مقال من مدونة GULFWELLBEING.");
+    return pageHeadFor(ctx, item?.title ?? "المقال | GULFWELLBEING", item?.description ?? "مقال من مدونة GULFWELLBEING.");
   },
   component: Page,
 });
@@ -130,7 +131,7 @@ function Page() {
     ["هل يمكن عقد الجلسات عن بُعد في الخليج؟","نعم، يمكن ترتيب جلسات خاصة عن بُعد للعملاء في دول الخليج ودولياً، بحسب الترتيب المتاح."],
     ["هل الاستشارة الخاصة بديل عن العلاج الطبي أو النفسي؟","لا. عندما تكون هناك حاجة إلى تشخيص أو علاج طبي أو نفسي، ينبغي الاستعانة بالمختص المؤهل المناسب."]
   ];
-  const origin=typeof window!=="undefined"?window.location.origin:"";
+  const origin=SITE_URL;
   const canonical=origin?origin+"/ar/blog/"+slug:"/ar/blog/"+slug;
   const articleSchema={"@context":"https://schema.org","@type":"BlogPosting","headline":post.title,"description":post.description,"inLanguage":"ar","author":{"@type":"Person","name":"Sourour Tarkan","url":origin?origin+"/ar/about":"/ar/about"},"publisher":{"@type":"Organization","name":"GULFWELLBEING"},"mainEntityOfPage":{"@type":"WebPage","@id":canonical},"image":origin?[origin+"/images/sourour-tarkan-home.jpg"]:[ "/images/sourour-tarkan-home.jpg" ]};
   const breadcrumbSchema={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":origin?origin+"/ar":"/ar"},{"@type":"ListItem","position":2,"name":"المدونة","item":origin?origin+"/ar/blog":"/ar/blog"},{"@type":"ListItem","position":3,"name":post.title,"item":canonical}]};

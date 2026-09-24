@@ -1,7 +1,7 @@
-import { Link } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 
 const principles = [
   ["01", "THE PERSON BEFORE THE PROBLEM", "We do not reduce a person to a single issue. The starting point is the individual: what they are carrying, what has changed, and what matters now.", "We begin with the person, not the label."],
@@ -12,7 +12,7 @@ const principles = [
 ] as const;
 
 export const Route = createFileRoute("/the-tarkan-approach")({
-  head: () => pageHead("The Tarkan Approach — GULFWELLBEING", "Discover the private wellbeing approach developed around Sourour Tarkan's person-first, contextual and whole-person philosophy."),
+  head: (ctx) => pageHeadFor(ctx, "The Tarkan Approach — GULFWELLBEING", "Discover the private wellbeing approach developed around Sourour Tarkan's person-first, contextual and whole-person philosophy."),
   component: Page,
 });
 

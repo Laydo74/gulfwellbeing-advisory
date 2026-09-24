@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpLeft } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 
 export const Route = createFileRoute("/ar/business/founder-wellbeing")({
-  head: () => pageHead("رفاه المؤسسين | GULFWELLBEING","استشارات خاصة في رفاه المؤسسين حول ضغط المسؤولية، القرارات، الحدود والجانب الشخصي من ريادة الأعمال."),
+  head: (ctx) => pageHeadFor(ctx, "رفاه المؤسسين | GULFWELLBEING","استشارات خاصة في رفاه المؤسسين حول ضغط المسؤولية، القرارات، الحدود والجانب الشخصي من ريادة الأعمال."),
   component: Page,
 });
 

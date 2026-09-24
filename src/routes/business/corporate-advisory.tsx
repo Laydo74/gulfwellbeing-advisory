@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 
 export const Route = createFileRoute("/business/corporate-advisory")({
-  head: () => pageHead(
+  head: (ctx) => pageHeadFor(ctx, 
     "Corporate Wellbeing Advisory | GULFWELLBEING",
     "Discreet corporate wellbeing advisory for leadership groups, senior teams and organisations navigating change, pressure and people responsibility."
   ),

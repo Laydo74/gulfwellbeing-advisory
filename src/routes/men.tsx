@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site/SiteShell";
 import { EditorialPage } from "@/components/site/PublicPage";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 import { pageContent } from "@/lib/site-content";
 const content=pageContent.men;
-export const Route=createFileRoute("/men")({head:()=>pageHead("Men’s Wellbeing Advisor in Dubai & the Gulf | GULFWELLBEING","Private men’s wellbeing advisory for pressure, fatherhood, emotional balance, leadership and personal transitions in Dubai, Abu Dhabi, Riyadh, Doha and across the Gulf.","/men"),component:Page});
+export const Route=createFileRoute("/men")({head: (ctx) => pageHeadFor(ctx, "Men’s Wellbeing Advisor in Dubai & the Gulf | GULFWELLBEING","Private men’s wellbeing advisory for pressure, fatherhood, emotional balance, leadership and personal transitions in Dubai, Abu Dhabi, Riyadh, Doha and across the Gulf.","/men"),component:Page});
 function Page(){return <SiteShell><EditorialPage page="men" {...content}/></SiteShell>}

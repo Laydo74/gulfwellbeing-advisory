@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpLeft } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 
 const principles = [
   ["01","الإنسان قبل المشكلة","لا نختزل الإنسان في مشكلة أو عنوان واحد. البداية هي الشخص نفسه: ما الذي يعيشه، ما الذي يحمله، وما الذي تغيّر في حياته."],
@@ -12,7 +12,7 @@ const principles = [
 ] as const;
 
 export const Route = createFileRoute("/ar/the-tarkan-approach")({
-  head: () => pageHead(
+  head: (ctx) => pageHeadFor(ctx, 
     "منهج سرور طركان | The Tarkan Approach | استشارات رفاه خاصة في الخليج",
     "اكتشف The Tarkan Approach، منهج سرور طركان في الاستشارات الخاصة للرفاه في دبي وأبوظبي والرياض وجدة والدوحة والكويت والبحرين وعُمان، ويبدأ بالإنسان والسياق والوضوح الداخلي."
   ),

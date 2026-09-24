@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { EditorialPage } from "@/components/site/PublicPage";
-import { pageHead } from "@/components/site/PageMeta";
+import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 import { pageContent } from "@/lib/site-content";
 
 const content = pageContent.business;
@@ -17,7 +17,7 @@ const subcategories = [
 ] as const;
 
 export const Route = createFileRoute("/business")({
-  head: () => pageHead(
+  head: (ctx) => pageHeadFor(ctx, 
     "Business Wellbeing & Private Executive Advisory | GULFWELLBEING",
     "Private business wellbeing advisory for founders, executives, senior professionals and organisations navigating pressure, leadership, burnout prevention and the human side of performance."
   ),
