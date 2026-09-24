@@ -86,7 +86,7 @@ function Home() {
     </section>
 
     <section className="grid bg-background lg:grid-cols-[1.1fr_0.9fr]">
-      <div className="order-2 flex items-center px-6 py-20 lg:order-1 lg:px-20"><div>
+      <div className="order-2 flex items-center px-6 py-20 lg:order-2 lg:px-20"><div>
         <LockKeyhole className="size-5 text-gold" />
         <p className="mt-7 text-[10px] uppercase tracking-[0.22em] text-muted-foreground">BY PRIVATE ENQUIRY</p>
         <h2 className="mt-4 font-serif text-5xl leading-none sm:text-7xl">VIP Concierge<br/>Wellbeing</h2>
@@ -122,7 +122,7 @@ function Home() {
       <div className="mx-auto max-w-[1350px]">
         <div className="mb-12 flex items-end justify-between"><div><p className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">THE BLOG</p><h2 className="mt-3 font-serif text-5xl sm:text-7xl">From the Blog</h2></div><Link to="/blog" className="hidden items-center gap-2 text-xs font-semibold uppercase tracking-[.14em] sm:inline-flex">View all <ArrowUpRight className="size-4"/></Link></div>
         <div className="grid gap-8 md:grid-cols-3">
-          {posts.map(([title,text,to],i) => <a key={title} href={to} className="group border-t border-border pt-6">
+          {posts.map(([title,text,to],i) => <a key={title} href={to} className="group relative z-10 block cursor-pointer border-t border-border pt-6">
             <span className="text-[10px] text-gold">0{i+1}</span><h3 className="mt-4 font-serif text-3xl leading-tight group-hover:underline">{title}</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">{text}</p><span className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[.14em]">Read article <ArrowUpRight className="size-4"/></span>
           </a>)}
         </div>
