@@ -3,6 +3,6 @@ import { pageHead } from "@/components/site/PageMeta";
 import { ArabicHome } from "@/components/site/ArabicPage";
 
 export const Route = createFileRoute("/ar/")({
-  head: () => pageHead("GULFWELLBEING | استشارات خاصة في الرفاه", "استشارات خاصة في الرفاه وسرية مع سرور طركان للأفراد والعائلات والقيادات."),
+  head: () => pageHead("GULFWELLBEING | استشارات خاصة في الرفاه في الخليج", "استشارات خاصة وسرية في الرفاه مع سرور طركان للأفراد والعائلات والقيادات في دبي وأبوظبي والرياض والدوحة والكويت والبحرين وعُمان.", "/ar"),
   component: ArabicHome,
 });
