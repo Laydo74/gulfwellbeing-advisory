@@ -9,11 +9,11 @@ const nav = [
   { label: "Wellbeing", ar: "الرفاه", to: "/wellbeing" },
   { label: "Women", ar: "المرأة", to: "/women" },
   { label: "Men", ar: "الرجل", to: "/men" },
-  { label: "Business Wellbeing", ar: "رفاه الشركات والقيادات", to: "/business" },
+  { label: "Business", ar: "الأعمال والقيادات", to: "/business" },
   { label: "The Tarkan Approach", ar: "منهج سرور طركان", to: "/the-tarkan-approach" },
   { label: "About", ar: "عن سرور طركان", to: "/about" },
-  { label: "Blog", ar: "المدونة", to: "/blog" },
-  { label: "Book a Session", ar: "طلب جلسة خاصة", to: "/book" },
+  { label: "Journal", ar: "المجلة", to: "/blog" },
+  { label: "Book", ar: "طلب جلسة", to: "/book" },
 ] as const;
 
 function languageTarget(path: string) {
@@ -54,11 +54,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-background text-foreground" dir={isArabic ? "rtl" : "ltr"} lang={isArabic ? "ar" : "en"}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "ProfessionalService",
         name: "Gulfwellbeing",
         description: "Private wellbeing advisory and coaching for individuals, families and executives across the Gulf and internationally.",
         founder: { "@type": "Person", name: "Sourour Tarkan", jobTitle: "Wellbeing Advisor & Coach", knowsAbout: ["Wellbeing advisory", "Reiki", "Holistic wellbeing", "Reflective coaching"] },
-        areaServed: ["Gulf Cooperation Council", "International"]
+        areaServed: ["United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman", "Gulf Cooperation Council", "International"],
+        serviceType: ["Private Wellbeing Advisory", "Wellbeing Coaching", "Executive Wellbeing", "Women’s Wellbeing", "Men’s Wellbeing"],
       }) }} />
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 lg:px-10">
@@ -97,7 +98,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </div>
       </header>
 
-      <main className="pt-20">{children}</main>
+      <main className="pt-20">{children}</main>\n      <a href="https://wa.me/?text=Hello%20Sourour%20Tarkan%2C%20I%20would%20like%20to%20make%20a%20private%20wellbeing%20enquiry." target="_blank" rel="noreferrer" aria-label={isArabic ? "تواصل عبر واتساب" : "Contact via WhatsApp"} className="fixed bottom-5 end-5 z-50 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-xs font-semibold uppercase tracking-[.12em] text-primary-foreground shadow-xl transition-transform hover:-translate-y-1"><span className="size-2 rounded-full bg-green-400" />WhatsApp</a>
 
       <footer className="bg-primary text-primary-foreground">
         <div className="mx-auto grid max-w-[1440px] gap-12 px-6 py-16 md:grid-cols-[1.4fr_1fr_1fr] lg:px-12">
