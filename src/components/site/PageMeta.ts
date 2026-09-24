@@ -1,5 +1,5 @@
 const SITE_NAME = "GULFWELLBEING";
-const DEFAULT_IMAGE = "/images/gulfwellbeing-og.jpg";
+const DEFAULT_IMAGE = "/images/sourour-tarkan-home.jpg";
 
 export function pageHead(title:string,description:string,path?:string){
   return {
