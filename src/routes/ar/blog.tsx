@@ -26,12 +26,12 @@ function Page() {
     </section>
     <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12">
       <div className="grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
-        {posts.map((post, index) => <Link key={post.slug} to={`/ar/blog/${post.slug}`} className="group bg-background p-7 transition-colors hover:bg-secondary">
+        {posts.map((post, index) => <a key={post.slug} href={`/ar/blog/${post.slug}`} className="group bg-background p-7 transition-colors hover:bg-secondary">
           <span className="text-xs text-gold">{String(index + 1).padStart(2, "0")} · {post.category}</span>
           <h2 className="mt-10 font-serif text-3xl leading-tight group-hover:underline">{post.title}</h2>
           <p className="mt-4 text-sm leading-8 text-muted-foreground">{post.description}</p>
           <span className="mt-6 inline-flex items-center gap-2 text-sm">اقرأ المقال <ArrowUpLeft className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"/></span>
-        </Link>)}
+        </a>)}
       </div>
     </section>
   </SiteShell>;
