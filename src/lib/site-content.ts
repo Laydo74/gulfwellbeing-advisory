@@ -4,7 +4,7 @@ export const pageContent = {
   wellbeing: {
     eyebrow: "PRIVATE WELLBEING ADVISORY",
     title: "Private wellbeing advisory for a more considered life.",
-    intro: "Gulfwellbeing offers private wellbeing advisory and coaching for individuals navigating stress, emotional pressure, relationships, life transitions and the demands of a full life. Sessions are personal, discreet and shaped around your circumstances.",
+    intro: "Gulfwellbeing offers private wellbeing advisory and coaching for individuals navigating stress, emotional pressure, relationships, life transitions and the demands of a full life. Sessions are personal, discreet and shaped around your circumstances. Clients may be based in Dubai, Abu Dhabi, Riyadh, Jeddah, Doha, Kuwait City, Manama, Muscat or elsewhere internationally.",
     sections: [
       { id: "stress-burnout", title: "Stress & Burnout", body: "Sustained pressure can affect concentration, relationships, energy and the ability to feel present. Private advisory creates space to understand what is driving the pressure, identify what needs attention and consider more sustainable ways of working and living.", keywords: ["stress support", "burnout prevention", "private wellbeing coaching"] },
       { id: "emotional-balance", title: "Emotional Balance", body: "A confidential setting to reflect on difficult emotions, recurring patterns and periods when life feels harder to navigate. The focus is on greater awareness, perspective and practical next steps rather than a one-size-fits-all programme.", keywords: ["emotional wellbeing", "private coaching", "personal wellbeing"] },
@@ -17,7 +17,7 @@ export const pageContent = {
   women: {
     eyebrow: "PRIVATE ADVISORY FOR WOMEN",
     title: "Women's wellbeing, approached as a whole.",
-    intro: "Private wellbeing advisory for women navigating relationships, motherhood, family responsibilities, confidence, identity, professional pressure and periods of meaningful change.",
+    intro: "Private wellbeing advisory for women navigating relationships, motherhood, family responsibilities, confidence, identity, professional pressure and periods of meaningful change across Dubai, Abu Dhabi, Riyadh, Doha and the wider Gulf.",
     sections: [
       { id: "womens-wellbeing", title: "Women's Wellbeing", body: "Women's wellbeing is shaped by many overlapping parts of life. Gulfwellbeing creates a confidential space to consider your own needs alongside relationships, family, work, expectations and personal priorities.", keywords: ["women's wellbeing", "wellbeing advisor for women", "private coaching for women"] },
       { id: "motherhood", title: "Motherhood", body: "Motherhood can bring love and meaning alongside responsibility, fatigue, changing identity and pressure to meet competing expectations. Sessions provide space to reflect on the woman beyond the role and what she needs now.", keywords: ["motherhood support", "maternal wellbeing", "women's coaching"] },
@@ -30,7 +30,7 @@ export const pageContent = {
   men: {
     eyebrow: "PRIVATE ADVISORY FOR MEN",
     title: "Men's wellbeing beyond the role and the responsibility.",
-    intro: "Discreet wellbeing advisory for men carrying professional responsibility, family expectations, leadership pressure and personal questions that may not have a natural place elsewhere.",
+    intro: "Discreet wellbeing advisory for men carrying professional responsibility, family expectations, leadership pressure and personal questions across Dubai, Abu Dhabi, Riyadh, Doha and the wider Gulf.",
     sections: [
       { id: "mens-wellbeing", title: "Men's Wellbeing", body: "Men's wellbeing can be closely connected to work, family, responsibility, identity and expectations around strength. Private advisory provides room to look at the full picture rather than one isolated issue.", keywords: ["men's wellbeing", "wellbeing advisor for men", "private coaching for men"] },
       { id: "fatherhood-pressure", title: "Fatherhood & Pressure", body: "Fatherhood can bring responsibility as well as pressure to provide, protect and remain present. Sessions offer a private place to reflect on expectations, partnership, family life and personal capacity.", keywords: ["fatherhood support", "men's wellbeing", "family wellbeing"] },
@@ -43,7 +43,7 @@ export const pageContent = {
   business: {
     eyebrow: "BUSINESS WELLBEING & PRIVATE EXECUTIVE ADVISORY",
     title: "Wellbeing for business, leadership and the people carrying responsibility.",
-    intro: "Private wellbeing advisory for founders, executives, senior professionals and organisations navigating sustained pressure, complex decisions, people responsibility and the human side of performance.",
+    intro: "Private wellbeing advisory for founders, executives, senior professionals and organisations in Dubai, Abu Dhabi, Riyadh, Jeddah, Doha, Kuwait, Bahrain and Oman, navigating sustained pressure, complex decisions, people responsibility and the human side of performance.",
     sections: [
       { id: "executive-wellbeing", title: "Executive Wellbeing", body: "Leadership pressure can affect attention, relationships, energy and personal capacity. Private advisory creates a confidential space away from the role to reflect, restore perspective and protect sustainable capacity.", keywords: ["executive wellbeing", "executive coaching", "private wellbeing advisor"] },
       { id: "founder-wellbeing", title: "Founder Wellbeing", body: "Founders often carry the business, the decisions, the people and the uncertainty at the same time. Advisory provides a private space to examine pressure, boundaries, identity and the personal cost of carrying a company.", keywords: ["founder wellbeing", "founder coaching", "entrepreneur wellbeing"] },
