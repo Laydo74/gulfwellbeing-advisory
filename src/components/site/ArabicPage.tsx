@@ -360,7 +360,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
                   <h3 className="mt-8 font-serif text-3xl leading-tight">{title}</h3>
                   <p className="mt-4 text-sm leading-8 text-muted-foreground group-hover:text-primary-foreground/70">{text}</p>
                   <ArrowUpLeft className="mt-8 size-5 text-gold" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -542,7 +542,7 @@ export function ArabicHome() {
                 <span className="mt-6 inline-flex items-center gap-2 text-xs tracking-[.12em]">
                   اقرأ من المدونة <ArrowUpLeft className="size-4" />
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
