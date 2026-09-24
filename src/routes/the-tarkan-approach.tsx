@@ -12,7 +12,7 @@ const principles = [
 ] as const;
 
 export const Route = createFileRoute("/the-tarkan-approach")({
-  head: (ctx) => pageHeadFor(ctx, "The Tarkan Approach — GULFWELLBEING", "Discover the private wellbeing approach developed around Sourour Tarkan's person-first, contextual and whole-person philosophy."),
+  head: (ctx) => pageHeadFor(ctx, "The Tarkan Approach | Private Wellbeing Advisory | GULFWELLBEING", "Discover the private wellbeing approach developed around Sourour Tarkan's person-first, contextual and whole-person philosophy."),
   component: Page,
 });
 
