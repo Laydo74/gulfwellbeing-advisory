@@ -97,7 +97,7 @@ function Home() {
     </section>
 
     <section className="grid bg-primary text-primary-foreground lg:grid-cols-[1.05fr_0.95fr]">
-      <div className="order-2 flex items-center justify-center px-6 py-14 lg:order-2 lg:px-16"><img src="/images/sourour-tarkan-home.jpg" width={700} height={875} loading="lazy" alt="Sourour Tarkan, private wellbeing advisor and coach" className="h-[24rem] w-full max-w-[26rem] object-cover object-center sm:h-[30rem]" /></div>
+      <div className="order-2 flex items-center justify-center px-6 py-14 lg:order-2 lg:px-16"><img src="/images/sourour-tarkan-home.jpg" width={700} height={875} loading="lazy" alt="Sourour Tarkan, private wellbeing advisor and coach" className="h-[20rem] w-full max-w-[20rem] object-cover object-center sm:h-[24rem]" /></div>
       <div className="order-1 flex items-center px-6 py-20 lg:order-1 lg:px-20"><div className="max-w-xl">
         <p className="text-[10px] uppercase tracking-[0.22em] text-gold">MEET SOUROUR TARKAN</p>
         <h2 className="mt-5 font-serif text-5xl leading-none sm:text-7xl">A private relationship<br/>with a real person.</h2>
