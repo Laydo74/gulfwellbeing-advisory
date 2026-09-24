@@ -124,7 +124,7 @@ function Home() {
         <div className="grid gap-8 md:grid-cols-3">
           {posts.map(([title,text,to],i) => <a key={title} href={to} className="group border-t border-border pt-6">
             <span className="text-[10px] text-gold">0{i+1}</span><h3 className="mt-4 font-serif text-3xl leading-tight group-hover:underline">{title}</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">{text}</p><span className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[.14em]">Read article <ArrowUpRight className="size-4"/></span>
-          </Link>)}
+          </a>)}
         </div>
       </div>
     </section>
