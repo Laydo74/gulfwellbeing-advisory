@@ -1,6 +1,6 @@
-export const SITE_URL = "https://gulfwellbeing-advisory.vercel.app";
+export const SITE_URL = "https://www.gulfwellbeing.com";
 const SITE_NAME = "GULFWELLBEING";
-const DEFAULT_IMAGE = `${SITE_URL}/images/sourour-tarkan-about.jpg`;
+const DEFAULT_IMAGE = `${SITE_URL}/images/og-default.jpg`;
 
 const BLOG_SLUGS = [
   "private-wellbeing-advisory-gulf", "stress-burnout-executives", "womens-wellbeing-gulf",
@@ -18,10 +18,6 @@ const BILINGUAL = new Set<string>([
   "/blog", "/book", "/privacy", "/terms",
   ...BUSINESS_SUB.map((s) => `/business/${s}`),
   ...BLOG_SLUGS.map((s) => `/blog/${s}`),
-  "/women/confidence-self-trust", "/women/motherhood",
-  "/men/fatherhood",
-  "/wellbeing/emotional-balance", "/wellbeing/life-transitions",
-  "/wellbeing/relationships-family", "/wellbeing/stress-burnout",
 ]);
 const NOINDEX = new Set(["/auth", "/admin"]);
 
@@ -47,6 +43,8 @@ export function pageHead(title: string, description: string, path?: string) {
     { property: "og:locale", content: isArabic ? "ar_AE" : "en_US" },
     { property: "og:site_name", content: SITE_NAME },
     { property: "og:image", content: DEFAULT_IMAGE },
+    { property: "og:image:width", content: "1200" },
+    { property: "og:image:height", content: "630" },
     { property: "og:image:alt", content: alt },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: title },

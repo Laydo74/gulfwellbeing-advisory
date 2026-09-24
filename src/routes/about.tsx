@@ -4,7 +4,7 @@ import { SiteShell } from "@/components/site/SiteShell";
 import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 
 export const Route=createFileRoute("/about")({
-  head: (ctx) => pageHeadFor(ctx, "Sourour Tarkan | Private Wellbeing Advisor in Dubai & the Gulf — GULFWELLBEING","Meet Sourour Tarkan, private wellbeing advisor, coach and Reiki Master, offering discreet wellbeing advisory for individuals, families and executives across Dubai and the Gulf.","/about"),
+  head: (ctx) => pageHeadFor(ctx, "Sourour Tarkan | Private Wellbeing Advisor for the Gulf — GULFWELLBEING","Meet Sourour Tarkan, private wellbeing advisor, coach and Reiki Master, offering discreet wellbeing advisory for individuals, families and executives across the Gulf.","/about"),
   component:Page
 });
 

@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /auth
 
-Sitemap: https://gulfwellbeing-advisory.vercel.app/sitemap.xml
+Sitemap: https://www.gulfwellbeing.com/sitemap.xml
