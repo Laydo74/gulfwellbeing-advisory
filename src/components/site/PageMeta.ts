@@ -1,5 +1,5 @@
 const SITE_NAME = "GULFWELLBEING";
-const DEFAULT_IMAGE = "/images/sourour-tarkan-home.jpg";
+const DEFAULT_IMAGE = "/images/sourour-tarkan-about.jpg";
 
 export function pageHead(title: string, description: string, path?: string) {
   const isArabic = path?.startsWith("/ar") ?? false;
