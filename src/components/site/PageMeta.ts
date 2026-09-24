@@ -1,25 +1,31 @@
 const SITE_NAME = "GULFWELLBEING";
 const DEFAULT_IMAGE = "/images/sourour-tarkan-home.jpg";
 
-export function pageHead(title:string,description:string,path?:string){
+export function pageHead(title: string, description: string, path?: string) {
+  const isArabic = path?.startsWith("/ar") ?? false;
+  const locale = isArabic ? "ar_AE" : "en_US";
+  const canonical = path || "/";
+
   return {
-    meta:[
-      {title},
-      {name:"description",content:description},
-      {name:"robots",content:"index,follow,max-image-preview:large"},
-      {property:"og:title",content:title},
-      {property:"og:description",content:description},
-      {property:"og:type",content:"website"},
-      {property:"og:locale",content:"en_US"},
-      {property:"og:image:alt",content:"GULFWELLBEING — Private wellbeing advisory with Sourour Tarkan"},
-      {property:"og:site_name",content:SITE_NAME},
-      {property:"og:image",content:DEFAULT_IMAGE},
-      {name:"twitter:card",content:"summary_large_image"},
-      {name:"twitter:title",content:title},
-      {name:"twitter:description",content:description},
-      {name:"twitter:image",content:DEFAULT_IMAGE},
-      {name:"twitter:image:alt",content:"GULFWELLBEING — Private wellbeing advisory with Sourour Tarkan"}
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { name: "robots", content: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" },
+      { name: "author", content: "Sourour Tarkan | GULFWELLBEING" },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:locale", content: locale },
+      { property: "og:site_name", content: SITE_NAME },
+      { property: "og:image", content: DEFAULT_IMAGE },
+      { property: "og:image:alt", content: isArabic ? "سرور طركان — استشارات رفاه خاصة" : "Sourour Tarkan — Private wellbeing advisory" },
+      { property: "og:url", content: canonical },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+      { name: "twitter:image", content: DEFAULT_IMAGE },
+      { name: "twitter:image:alt", content: isArabic ? "سرور طركان — استشارات رفاه خاصة" : "Sourour Tarkan — Private wellbeing advisory" },
     ],
-    ...(path ? {links:[{rel:"canonical",href:path}]} : {})
+    links: [{ rel: "canonical", href: canonical }],
   };
 }
