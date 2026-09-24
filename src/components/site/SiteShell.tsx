@@ -66,16 +66,15 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div className="hidden items-center gap-6 lg:flex" dir="ltr">
             <nav className="flex items-center gap-3" dir={isArabic ? "rtl" : "ltr"} aria-label={isArabic ? "التنقل الرئيسي" : "Main navigation"}>
               {nav.map((item, i) => (
-                <Link key={item.label} to={(isArabic ? `/ar${item.to === "/" ? "" : item.to}` : item.to) as any}
-                  className={i === 8 ? "nav-book" : "nav-link"}
-                  activeProps={{ className: i === 8 ? "nav-book" : "nav-link text-gold" }}>
+                <a key={item.label} href={isArabic ? `/ar${item.to === "/" ? "" : item.to}` : item.to}
+                  className={i === 8 ? "nav-book" : "nav-link"}>
                   {isArabic ? item.ar : item.label}
-                </Link>
+                </a>
               ))}
             </nav>
-            <Link to={langTarget as any} dir="ltr" className="nav-link inline-flex shrink-0 items-center gap-2 border-s border-border ps-4" aria-label={isArabic ? "Switch to English" : "التبديل إلى العربية"}>
+            <a href={langTarget} dir="ltr" className="nav-link inline-flex shrink-0 items-center gap-2 border-s border-border ps-4" aria-label={isArabic ? "Switch to English" : "التبديل إلى العربية"}>
               <Languages className="size-4" /> {isArabic ? "English" : "العربية"}
-            </Link>
+            </a>
           </div>
           <Button variant="ghost" size="icon" className="lg:hidden" dir="ltr" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>
             {open ? <X /> : <Menu />}
@@ -84,14 +83,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div className="fixed inset-0 top-20 z-40 bg-primary px-6 py-10 text-primary-foreground lg:hidden">
             <nav className="flex flex-col" aria-label={isArabic ? "التنقل" : "Mobile navigation"}>
               {nav.map((item, i) => (
-                <Link key={item.label} to={(isArabic ? `/ar${item.to === "/" ? "" : item.to}` : item.to) as any} onClick={() => setOpen(false)}
+                <a key={item.label} href={isArabic ? `/ar${item.to === "/" ? "" : item.to}` : item.to} onClick={() => setOpen(false)}
                   className="border-b border-primary-foreground/15 py-4 font-serif text-3xl">
                   {String(i + 1).padStart(2, "0")} <span className="ms-4">{isArabic ? item.ar : item.label}</span>
-                </Link>
+                </a>
               ))}
-              <Link to={langTarget as any} onClick={() => setOpen(false)} className="mt-6 inline-flex items-center gap-3 py-4 text-gold">
+              <a href={langTarget} onClick={() => setOpen(false)} className="mt-6 inline-flex items-center gap-3 py-4 text-gold">
                 <Languages className="size-5" /> {isArabic ? "English" : "العربية"}
-              </Link>
+              </a>
             </nav>
           </div>
         )}
@@ -111,8 +110,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div>
             <p className="eyebrow text-gold">{isArabic ? "التنقل" : "Navigate"}</p>
             <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
-              {nav.slice(0, 8).map((n) => <Link key={n.label} to={(isArabic ? `/ar${n.to === "/" ? "" : n.to}` : n.to) as any}>{isArabic ? n.ar : n.label}</Link>)}
-              <Link to={(isArabic ? "/ar/blog" : "/blog") as any}>{isArabic ? "المدونة" : "Blog"}</Link>
+              {nav.slice(0, 8).map((n) => <a key={n.label} href={isArabic ? `/ar${n.to === "/" ? "" : n.to}` : n.to}>{isArabic ? n.ar : n.label}</a>)}
+              <a href={isArabic ? "/ar/blog" : "/blog"}>{isArabic ? "المدونة" : "Blog"}</a>
             </div>
           </div>
           <div>
@@ -120,17 +119,17 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <p className="mt-5 text-sm leading-7 text-primary-foreground/65">
               {isArabic ? "الطلبات الخاصة باستشارات الرفاه والدعم التنفيذي وترتيبات VIP مرحب بها عبر طلب خاص." : "Private enquiries for wellbeing advisory, executive support and VIP concierge arrangements are welcomed by request."}
             </p>
-            <Link to={(isArabic ? "/ar/book" : "/book") as any} className="mt-6 inline-flex items-center gap-2 text-sm text-gold">
+            <a href={isArabic ? "/ar/book" : "/book"} className="mt-6 inline-flex items-center gap-2 text-sm text-gold">
               {isArabic ? "طلب جلسة خاصة" : "Private enquiry"} <ArrowUpRight className="size-4"/>
-            </Link>
+            </a>
           </div>
         </div>
         <div className="border-t border-primary-foreground/10 px-6 py-5 text-xs text-primary-foreground/50">
           <div className="mx-auto flex max-w-[1440px] flex-wrap justify-between gap-4">
             <span>© {new Date().getFullYear()} GULFWELLBEING</span>
             <span>
-              <Link to={(isArabic ? "/ar/privacy" : "/privacy") as any}>{isArabic ? "الخصوصية" : "Privacy Policy"}</Link> ·{" "}
-              <Link to={(isArabic ? "/ar/terms" : "/terms") as any}>{isArabic ? "الشروط" : "Terms & Conditions"}</Link>
+              <a href={isArabic ? "/ar/privacy" : "/privacy"}>{isArabic ? "الخصوصية" : "Privacy Policy"}</a> ·{" "}
+              <a href={isArabic ? "/ar/terms" : "/terms"}>{isArabic ? "الشروط" : "Terms & Conditions"}</a>
             </span>
           </div>
         </div>
