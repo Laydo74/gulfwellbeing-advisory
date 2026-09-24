@@ -36,7 +36,7 @@ function Home() {
       <div className="relative mx-auto flex min-h-[92svh] max-w-[1600px] items-end px-5 pb-16 pt-36 lg:px-10 lg:pb-20">
         <div className="max-w-4xl">
           <p className="mb-6 text-[10px] uppercase tracking-[0.25em] text-gold">PRIVATE WELLBEING ADVISORY · GCC & INTERNATIONAL</p>
-          <h1 className="font-serif text-[clamp(3.8rem,8.4vw,8.6rem)] leading-[0.82]">For those who<br/><em className="font-normal">carry more.</em></h1>
+          <h1 className="font-serif text-[clamp(3.2rem,7vw,7.2rem)] leading-[0.9]">Private Wellbeing Advisor<br/><em className="font-normal">in Dubai & the Gulf.</em></h1>
           <p className="mt-8 max-w-xl text-sm leading-7 text-primary-foreground/72 sm:text-base">Personal, discreet guidance for the inner life behind responsibility, family, leadership and change.</p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link to="/book" className="button-gold">Book a Private Session <ArrowRight className="size-4" /></Link>
