@@ -10,7 +10,7 @@ import stillLife from "@/assets/private-still-life.jpg";
 
 export const Route = createFileRoute("/")({
   head: (ctx) => pageHeadFor(ctx, 
-    "GULFWELLBEING | Private Wellbeing Advisory & Coaching",
+    "Private Wellbeing Advisory in Dubai & the Gulf | GULFWELLBEING",
     "Private wellbeing advisory and coaching with Sourour Tarkan for individuals, women, men, families, founders and executives across the Gulf and internationally."
   ),
   component: Home,
