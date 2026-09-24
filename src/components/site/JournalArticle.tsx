@@ -109,7 +109,31 @@ const deepContent:Record<string,[string,string][]> = {
 export function JournalArticle({eyebrow,title,description,sections,related}:ArticleProps){
  const extended=[...(sections||[]),...(deepContent[title]||[])];
  const faqs=faqByTitle[title]||[["What is private wellbeing advisory?","A confidential, personalised space for reflection, wellbeing and personal direction."],["Who is it for?","Individuals who value discretion and a whole-person approach to demanding life circumstances."],["Can sessions be remote?","Yes, remote sessions can be arranged for Gulf and international clients."],["Does it replace medical or psychological care?","No. Appropriate qualified professionals should be involved when clinical care is required."]];
+ const origin = typeof window !== "undefined" ? window.location.origin : "";
+ const canonical = origin ? origin + window.location.pathname : window.location.pathname;
+ const articleSchema = {
+  "@context":"https://schema.org",
+  "@type":"BlogPosting",
+  "headline":title,
+  "description":description,
+  "inLanguage":"en",
+  "author":{"@type":"Person","name":"Sourour Tarkan","url":origin ? origin + "/about" : "/about"},
+  "publisher":{"@type":"Organization","name":"GULFWELLBEING"},
+  "mainEntityOfPage":{"@type":"WebPage","@id":canonical},
+  "image":origin ? [origin + "/images/sourour-tarkan-home.jpg"] : ["/images/sourour-tarkan-home.jpg"]
+ };
+ const breadcrumbSchema = {
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+   {"@type":"ListItem","position":1,"name":"Home","item":origin ? origin + "/" : "/"},
+   {"@type":"ListItem","position":2,"name":"Blog","item":origin ? origin + "/blog" : "/blog"},
+   {"@type":"ListItem","position":3,"name":title,"item":canonical}
+  ]
+ };
  return <SiteShell><article>
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(articleSchema)}} />
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}} />
   <header className="page-hero"><div className="mx-auto max-w-4xl px-6 py-24 lg:px-12 lg:py-32"><p className="eyebrow text-gold">{eyebrow}</p><h1 className="mt-6 font-serif text-5xl leading-tight md:text-7xl">{title}</h1><p className="mt-7 max-w-3xl text-lg leading-8 text-muted-foreground">{description}</p></div></header>
   <figure className="mx-auto max-w-6xl px-6 pt-10 lg:px-12 lg:pt-16">
    <img src={stillLife} width={1408} height={1008} alt={title + " — GULFWELLBEING private wellbeing journal"} className="h-[38vh] w-full object-cover lg:h-[52vh]" loading="eager"/>
