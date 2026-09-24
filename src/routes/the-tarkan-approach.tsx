@@ -4,11 +4,11 @@ import { SiteShell } from "@/components/site/SiteShell";
 import { pageHead } from "@/components/site/PageMeta";
 
 const principles = [
-  ["01", "THE PERSON BEFORE THE PROBLEM", "We do not reduce a person to a single issue. The starting point is the individual: what they are carrying, what has changed, and what matters now."],
-  ["02", "CONTEXT BEFORE ADVICE", "Before direction comes understanding. Life circumstances, responsibilities, relationships and the environment around the person shape what support can realistically mean."],
-  ["03", "INNER CLARITY BEFORE OUTER CHANGE", "Greater clarity can create space for more considered decisions, boundaries, conversations and next steps."],
-  ["04", "WHOLE-PERSON WELLBEING", "Private life, relationships, family, responsibility, leadership and lifestyle can overlap. The approach considers the person as a whole rather than separating life into isolated categories."],
-  ["05", "PRIVATE, INDIVIDUAL, UNSCRIPTED", "There is no fixed programme imposed on everyone. The focus, pace and format are shaped around the person and the purpose of the conversation."]
+  ["01", "THE PERSON BEFORE THE PROBLEM", "We do not reduce a person to a single issue. The starting point is the individual: what they are carrying, what has changed, and what matters now.", "We begin with the person, not the label."],
+  ["02", "CONTEXT BEFORE ADVICE", "Before direction comes understanding. Life circumstances, responsibilities, relationships and the environment around the person shape what support can realistically mean.", "Understanding the circumstances comes before prescribing a direction."],
+  ["03", "INNER CLARITY BEFORE OUTER CHANGE", "Greater clarity can create space for more considered decisions, boundaries, conversations and next steps.", "Clarity is given room before change is demanded."],
+  ["04", "WHOLE-PERSON WELLBEING", "Private life, relationships, family, responsibility, leadership and lifestyle can overlap. The approach considers the person as a whole rather than separating life into isolated categories.", "The different parts of a life are considered together."],
+  ["05", "PRIVATE, INDIVIDUAL, UNSCRIPTED", "There is no fixed programme imposed on everyone. The focus, pace and format are shaped around the person and the purpose of the conversation.", "The work remains personal, private and responsive rather than scripted."]
 ] as const;
 
 export const Route = createFileRoute("/the-tarkan-approach")({
@@ -32,7 +32,7 @@ function Page() {
       </div>
     </section>
     <section className="mx-auto max-w-[1300px] px-6 py-20 lg:px-12 lg:py-32">
-      {principles.map(([n,eyebrow,title],i)=><article key={n} className="grid gap-8 border-t border-border py-14 md:grid-cols-[100px_260px_1fr]"><span className="font-serif text-3xl text-gold">{n}</span><p className="eyebrow">{eyebrow}</p><div><h2 className="font-serif text-4xl leading-tight sm:text-5xl">{title}</h2><p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">{i===0?"We begin with the person, not the label.":i===1?"Understanding the circumstances comes before prescribing a direction.":i===2?"Clarity is given room before change is demanded.":i===3?"The different parts of a life are considered together.":"The work remains personal, private and responsive rather than scripted."}</p></div></article>)}
+      {principles.map(([n,title,description,closing])=><article key={n} className="grid gap-8 border-t border-border py-14 md:grid-cols-[100px_1fr] lg:grid-cols-[100px_1fr]"><span className="font-serif text-3xl text-gold">{n}</span><div><h2 className="max-w-5xl font-sans text-3xl font-semibold uppercase leading-[1.08] tracking-[-0.02em] sm:text-5xl lg:text-6xl">{title}</h2><p className="mt-6 max-w-4xl text-base leading-8 text-muted-foreground sm:text-lg sm:leading-9">{description}</p><p className="mt-5 max-w-3xl text-sm font-medium leading-7 text-foreground/70 sm:text-base">{closing}</p></div></article>)}
     </section>
     <section className="bg-secondary px-6 py-20 text-center lg:py-28">
       <p className="eyebrow text-gold">A PRIVATE CONVERSATION</p>
