@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X, ArrowUpRight, Languages } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { BrandMark } from "./BrandMark";
 
@@ -49,6 +49,19 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   const path = useRouterState({ select: (s) => s.location.pathname });
   const isArabic = path === "/ar" || path.startsWith("/ar/");
   const langTarget = languageTarget(path);
+  useEffect(() => {
+document.documentElement.lang = isArabic ? "ar" : "en";
+document.documentElement.dir = isArabic ? "rtl" : "ltr";
+const existing = Array.from(document.head.querySelectorAll('link[data-gulfwellbeing-hreflang]'));
+existing.forEach((el) => el.remove());
+const origin = window.location.origin;
+const current = window.location.pathname;
+const enPath = current.startsWith("/ar") ? (current.replace(/^\\/ar/, "") || "/") : current;
+const arPath = enPath === "/" ? "/ar" : `/ar${enPath}`;
+[["en", enPath], ["ar", arPath], ["x-default", enPath]].forEach(([lang, href]) => {
+const link = document.createElement("link"); link.rel = "alternate"; link.hreflang = lang; link.href = origin + href; link.dataset.gulfwellbeingHreflang = "true"; document.head.appendChild(link);
+});
+}, [isArabic, path]);
 
   return (
     <div className="min-h-screen bg-background text-foreground" dir={isArabic ? "rtl" : "ltr"} lang={isArabic ? "ar" : "en"}>
