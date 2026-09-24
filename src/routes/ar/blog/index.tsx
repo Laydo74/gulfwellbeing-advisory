@@ -4,6 +4,7 @@ import { SiteShell } from "@/components/site/SiteShell";
 import { arabicPosts } from "@/lib/arabic-blog";
 
 export const Route = createFileRoute("/ar/blog/")({
+  head: () => pageHead("المدونة | رفاه خاص وحياة متوازنة في الخليج | GULFWELLBEING", "مقالات عربية أصلية حول الرفاه الخاص، الضغط، العلاقات، الأسرة، القيادة والتحولات الشخصية في الخليج.", "/ar/blog"),
   component: Page,
 });
 
