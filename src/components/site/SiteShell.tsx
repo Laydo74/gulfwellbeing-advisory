@@ -78,13 +78,10 @@ const link = document.createElement("link"); link.rel = "alternate"; link.hrefla
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
-        "@id": `${window.location.origin}/#organization`,
         name: "GULFWELLBEING",
-        url: window.location.origin,
         description: "Private wellbeing advisory and coaching for individuals, families and executives across the Gulf and internationally.",
         founder: {
           "@type": "Person",
-          "@id": `${window.location.origin}/#sourour-tarkan`,
           name: "Sourour Tarkan",
           jobTitle: "Private Wellbeing Advisor & Coach",
           knowsAbout: ["Private wellbeing advisory", "Wellbeing coaching", "Reiki", "Executive wellbeing", "Women's wellbeing", "Men's wellbeing"],
