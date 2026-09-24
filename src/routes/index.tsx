@@ -82,7 +82,7 @@ function Home() {
           <Link to="/business" className="button-primary mt-9">Explore Business Wellbeing <ArrowRight className="size-4" /></Link>
         </div>
       </div>
-      <img src={executive} width={1280} height={960} loading="lazy" alt="Private business wellbeing advisory" className="h-full min-h-[34rem] w-full object-cover" />
+      <img src={executive} width={1100} height={825} loading="lazy" alt="Private business wellbeing advisory" className="h-[28rem] w-full object-cover lg:h-[34rem]" />
     </section>
 
     <section className="grid bg-background lg:grid-cols-[1.1fr_0.9fr]">
@@ -93,12 +93,12 @@ function Home() {
         <p className="mt-7 max-w-lg text-sm leading-7 text-muted-foreground sm:text-base">A highly personalised experience designed around demanding schedules, international lives and the value of exceptional discretion.</p>
         <Link to="/business/vip-concierge-wellbeing" className="button-primary mt-9">Explore VIP Concierge</Link>
       </div></div>
-      <img src={stillLife} width={1280} height={960} loading="lazy" alt="Private consultation salon with understated Gulf architecture" className="order-1 h-full min-h-[30rem] w-full object-cover lg:order-2" />
+      <img src={stillLife} width={900} height={700} loading="lazy" alt="Private consultation salon with understated Gulf architecture" className="order-1 h-[24rem] w-full object-cover lg:order-1 lg:h-[34rem]" />
     </section>
 
-    <section className="grid bg-primary text-primary-foreground lg:grid-cols-[0.9fr_1.1fr]">
-      <div className="min-h-[34rem]"><img src="/images/sourour-tarkan-home.jpg" width={240} height={300} loading="lazy" alt="Sourour Tarkan, private wellbeing advisor and coach" className="h-full w-full object-cover object-center" /></div>
-      <div className="flex items-center px-6 py-20 lg:px-20"><div className="max-w-xl">
+    <section className="grid bg-primary text-primary-foreground lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="order-2 flex items-center justify-center px-6 py-14 lg:order-2 lg:px-16"><img src="/images/sourour-tarkan-home.jpg" width={700} height={875} loading="lazy" alt="Sourour Tarkan, private wellbeing advisor and coach" className="h-[24rem] w-full max-w-[26rem] object-cover object-center sm:h-[30rem]" /></div>
+      <div className="order-1 flex items-center px-6 py-20 lg:order-1 lg:px-20"><div className="max-w-xl">
         <p className="text-[10px] uppercase tracking-[0.22em] text-gold">MEET SOUROUR TARKAN</p>
         <h2 className="mt-5 font-serif text-5xl leading-none sm:text-7xl">A private relationship<br/>with a real person.</h2>
         <p className="mt-7 text-sm leading-7 text-primary-foreground/70 sm:text-base">GULFWELLBEING is led by Sourour Tarkan, a private wellbeing advisor and coach and Reiki Master. Her approach begins with listening, context and the realities of the person behind the role.</p>
@@ -122,7 +122,7 @@ function Home() {
       <div className="mx-auto max-w-[1350px]">
         <div className="mb-12 flex items-end justify-between"><div><p className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">THE BLOG</p><h2 className="mt-3 font-serif text-5xl sm:text-7xl">From the Blog</h2></div><Link to="/blog" className="hidden items-center gap-2 text-xs font-semibold uppercase tracking-[.14em] sm:inline-flex">View all <ArrowUpRight className="size-4"/></Link></div>
         <div className="grid gap-8 md:grid-cols-3">
-          {posts.map(([title,text,to],i) => <Link key={title} to={to} className="group border-t border-border pt-6">
+          {posts.map(([title,text,to],i) => <a key={title} href={to} className="group border-t border-border pt-6">
             <span className="text-[10px] text-gold">0{i+1}</span><h3 className="mt-4 font-serif text-3xl leading-tight group-hover:underline">{title}</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">{text}</p><span className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[.14em]">Read article <ArrowUpRight className="size-4"/></span>
           </Link>)}
         </div>
