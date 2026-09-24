@@ -98,7 +98,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </div>
       </header>
 
-      <main className="pt-20">{children}</main>\n      <a href="https://wa.me/?text=Hello%20Sourour%20Tarkan%2C%20I%20would%20like%20to%20make%20a%20private%20wellbeing%20enquiry." target="_blank" rel="noreferrer" aria-label={isArabic ? "تواصل عبر واتساب" : "Contact via WhatsApp"} className="fixed bottom-5 end-5 z-50 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-xs font-semibold uppercase tracking-[.12em] text-primary-foreground shadow-xl transition-transform hover:-translate-y-1"><span className="size-2 rounded-full bg-green-400" />WhatsApp</a>
+      <main className="pt-20">{children}</main>
+<a href="https://wa.me/?text=Hello%20Sourour%20Tarkan%2C%20I%20would%20like%20to%20make%20a%20private%20wellbeing%20enquiry." target="_blank" rel="noreferrer" aria-label={isArabic ? "تواصل عبر واتساب" : "Contact via WhatsApp"} className="fixed bottom-5 end-5 z-50 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-xs font-semibold uppercase tracking-[.12em] text-primary-foreground shadow-xl transition-transform hover:-translate-y-1"><span className="size-2 rounded-full bg-green-400" />WhatsApp</a>
 
       <footer className="bg-primary text-primary-foreground">
         <div className="mx-auto grid max-w-[1440px] gap-12 px-6 py-16 md:grid-cols-[1.4fr_1fr_1fr] lg:px-12">
