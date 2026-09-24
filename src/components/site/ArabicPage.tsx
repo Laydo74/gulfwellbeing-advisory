@@ -306,6 +306,18 @@ export function ArabicPage({ kind }: { kind: Kind }) {
   const image =
     kind === "about" ? "/images/sourour-tarkan-about.jpg" : kind === "women" ? woman : kind === "men" || kind === "business" ? executive : stillLife;
   const isLegal = kind === "privacy" || kind === "terms";
+  const gulfContext: Record<Kind, { title: string; body: string }> = {
+    wellbeing: { title: "استشارات خاصة لمن يعيش حياة الخليج بكل تعقيداتها", body: "قد تتقاطع الحياة بين دبي وأبوظبي والرياض والدوحة والكويت والمنامة ومسقط مع العمل والسفر والأسرة والالتزامات الاجتماعية. لذلك تُبنى الاستشارة حول سياق الشخص الفعلي، لا حول برنامج موحّد." },
+    women: { title: "رفاه المرأة في الخليج، بعيداً عن القوالب الجاهزة", body: "في مدن مثل دبي وأبوظبي والرياض والدوحة، قد تتداخل الحياة المهنية والعائلية والأمومة والعلاقات بصورة خاصة. المساحة هنا مخصصة للمرأة نفسها، وما تحتاج إلى فهمه أو تغييره في هذه المرحلة." },
+    men: { title: "مساحة خاصة للرجل تحت ضغط المسؤولية", body: "من دبي وأبوظبي إلى الرياض والدوحة والكويت، قد ترتبط حياة الرجل بالعمل والقيادة والأسرة واتخاذ القرار. الاستشارة تمنحه مساحة للنظر في ما يحمله بعيداً عن الحاجة إلى الظهور بصورة معينة." },
+    business: { title: "رفاه القيادات والأعمال في بيئة الخليج", body: "القيادات والمؤسسون في الإمارات والسعودية وقطر والكويت والبحرين وعُمان يعملون داخل بيئات سريعة ومتغيرة. الاستشارة الخاصة تركز على الإنسان خلف الدور: الضغط، وضوح القرار، الحدود، العلاقات والقدرة على الاستمرار." },
+    about: { title: "مقاربة تفهم واقع الحياة في الخليج", body: "تعمل سرور طركان مع أشخاص يعيشون بين مسؤوليات شخصية ومهنية وعائلية متداخلة، في الخليج أو ضمن حياة دولية. تبدأ العلاقة من الاستماع وفهم السياق قبل تقديم أي اتجاه." },
+    approach: { title: "المنهج والسياق الخليجي", body: "لا يفترض The Tarkan Approach أن تجربة شخص في دبي هي نفسها تجربة شخص في الرياض أو الدوحة. المكان، الأسرة، العمل، السفر والمسؤوليات جزء من السياق الذي تُفهم من خلاله حياة كل شخص." },
+    vip: { title: "خصوصية تناسب الحياة الدولية", body: "لمن تتوزع حياتهم بين الخليج والسفر الدولي، يمكن أن تُرتب التجربة الخاصة حول الجداول المكثفة، المرونة والحاجة إلى مستوى عالٍ من الخصوصية." },
+    blog: { title: "قراءة حول الرفاه في الخليج والحياة المعاصرة", body: "تتناول المدونة موضوعات الضغط، القيادة، العلاقات، الأسرة والتحولات الشخصية من منظور عملي وتأملي يناسب حياة مليئة بالمسؤوليات في الخليج وخارجه." },
+    privacy: { title: "", body: "" },
+    terms: { title: "", body: "" },
+  };
 
   return (
     <SiteShell>
@@ -321,7 +333,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
               </a>
             )}
           </div>
-          <img src={image} alt="" className="mx-auto h-[38vh] w-full max-w-[34rem] object-cover lg:h-[44vh]" />
+          <img src={image} alt={kind === "about" ? "سرور طركان، مستشارة رفاه خاصة ومدرّبة وReiki Master" : `${d.eyebrow} — GULFWELLBEING`} className="mx-auto h-[38vh] w-full max-w-[34rem] object-cover lg:h-[44vh]" />
         </div>
       </section>
 
@@ -340,6 +352,16 @@ export function ArabicPage({ kind }: { kind: Kind }) {
           </article>
         ))}
       </section>
+
+      {!isLegal && (
+        <section className="bg-secondary px-6 py-20 lg:px-12 lg:py-28">
+          <div className="mx-auto max-w-5xl">
+            <p className="eyebrow text-gold">الخليج</p>
+            <h2 className="mt-4 font-serif text-5xl leading-tight sm:text-6xl">{gulfContext[kind].title}</h2>
+            <p className="mt-6 max-w-3xl text-base leading-9 text-muted-foreground">{gulfContext[kind].body}</p>
+          </div>
+        </section>
+      )}
 
       {kind === "business" && (
         <section className="bg-secondary px-6 py-20 lg:px-12 lg:py-28">
