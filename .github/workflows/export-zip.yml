@@ -1,0 +1,27 @@
+name: Export project ZIP
+
+on:
+  push:
+    branches:
+      - export/gulfwellbeing-zip-20260926
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact production source
+        uses: actions/checkout@v4
+        with:
+          ref: 7d77882afb1174d8cbfe605a3ce0020b5f2a6839
+          fetch-depth: 1
+
+      - name: Create ZIP
+        run: |
+          zip -r gulfwellbeing-advisory-7d77882.zip .             -x ".git/*"             -x ".env"             -x "node_modules/*"             -x "gulfwellbeing-advisory-7d77882.zip"
+
+      - name: Upload ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: gulfwellbeing-advisory-7d77882
+          path: gulfwellbeing-advisory-7d77882.zip
+          retention-days: 7
