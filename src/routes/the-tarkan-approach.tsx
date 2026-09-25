@@ -19,22 +19,22 @@ export const Route = createFileRoute("/the-tarkan-approach")({
 function Page() {
   return <SiteShell>
     <section className="page-hero">
-      <div className="mx-auto max-w-[1440px] px-6 py-24 lg:px-12 lg:py-32">
+      <div className="mx-auto max-w-[1240px] px-6 py-20 lg:px-10 lg:py-24">
         <p className="eyebrow text-gold">THE TARKAN APPROACH</p>
-        <h1 className="mt-6 max-w-5xl font-serif text-6xl leading-[1.02] md:text-8xl">A different way of approaching wellbeing.</h1>
-        <p className="mt-8 max-w-2xl text-lg leading-8 text-muted-foreground">A private, whole-person approach shaped around the individual rather than a predefined formula.</p>
+        <h1 className="mt-5 max-w-4xl font-serif text-4xl leading-[1.08] sm:text-5xl md:text-6xl">A different way of approaching wellbeing.</h1>
+        <p className="mt-6 max-w-2xl text-base leading-7 text-muted-foreground">A private, whole-person approach shaped around the individual rather than a predefined formula.</p>
       </div>
     </section>
-    <section className="bg-primary px-6 py-20 text-primary-foreground lg:px-12 lg:py-28">
-      <div className="mx-auto grid max-w-[1300px] gap-16 lg:grid-cols-[.65fr_1.35fr]">
-        <div><p className="eyebrow text-gold">THE PHILOSOPHY</p><h2 className="mt-5 font-serif text-5xl leading-tight sm:text-7xl">The person comes first.</h2></div>
+    <section className="bg-primary px-6 py-16 text-primary-foreground lg:px-10 lg:py-20">
+      <div className="mx-auto grid max-w-[1180px] gap-10 lg:grid-cols-[.8fr_1.2fr]">
+        <div><p className="eyebrow text-gold">THE PHILOSOPHY</p><h2 className="mt-5 font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">The person comes first.</h2></div>
         <p className="max-w-3xl text-base leading-8 text-primary-foreground/70">The Tarkan Approach begins with listening. It makes room for complexity, personal context and the reality behind the role a person may be carrying. It is not a rigid programme, and it is not designed to turn a complex life into a checklist.</p>
       </div>
     </section>
-    <section className="mx-auto max-w-[1300px] px-6 py-20 lg:px-12 lg:py-32">
-      {principles.map(([n,title,description,closing])=><article key={n} className="grid gap-8 border-t border-border py-16 md:grid-cols-[80px_1fr] lg:grid-cols-[100px_1fr]"><span className="font-serif text-2xl text-gold/70">{n}</span><div><p className="text-[9px] uppercase tracking-[.26em] text-muted-foreground/60">{title}</p><h2 className="mt-5 max-w-5xl font-serif text-5xl leading-[1.02] sm:text-7xl lg:text-[5.8rem]">{description}</h2><p className="mt-7 max-w-3xl text-sm leading-7 text-muted-foreground">{closing}</p></div></article>)}
+    <section className="mx-auto max-w-[1180px] px-6 py-16 lg:px-10 lg:py-24">
+      {principles.map(([n,title,description,closing])=><article key={n} className="grid gap-5 border-t border-border py-10 md:grid-cols-[70px_1fr] lg:grid-cols-[80px_1fr] lg:py-12"><span className="font-serif text-2xl text-gold/70">{n}</span><div><p className="text-[10px] uppercase tracking-[.22em] text-muted-foreground/60">{title}</p><h2 className="mt-4 max-w-4xl font-serif text-3xl leading-[1.15] sm:text-4xl lg:text-5xl">{description}</h2><p className="mt-5 max-w-2xl text-sm leading-7 text-muted-foreground">{closing}</p></div></article>)}
     </section>
-    <section className="bg-secondary px-6 py-20 text-center lg:py-28">
+    <section className="bg-secondary px-6 py-16 text-center lg:py-20">
       <p className="eyebrow text-gold">A PRIVATE CONVERSATION</p>
       <h2 className="mx-auto mt-4 max-w-3xl font-serif text-5xl leading-tight sm:text-7xl">Begin with what matters to you.</h2>
       <Link to="/book" className="button-primary mt-9 inline-flex items-center gap-2">Request a Private Conversation <ArrowRight className="size-4" /></Link>
