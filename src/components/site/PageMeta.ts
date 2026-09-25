@@ -12,6 +12,9 @@ const BUSINESS_SUB = [
   "burnout-prevention", "corporate-advisory", "executive-wellbeing", "founder-wellbeing",
   "leadership-clarity", "team-wellbeing", "vip-concierge-wellbeing",
 ];
+/** French sub-pages that exist alongside their English equivalent. */
+const FR_BUSINESS_SUB = BUSINESS_SUB;
+
 /** English paths that have a real Arabic equivalent at /ar + path. */
 const BILINGUAL = new Set<string>([
   "/", "/wellbeing", "/women", "/men", "/business", "/the-tarkan-approach", "/about",
@@ -19,18 +22,30 @@ const BILINGUAL = new Set<string>([
   ...BUSINESS_SUB.map((s) => `/business/${s}`),
   ...BLOG_SLUGS.map((s) => `/blog/${s}`),
 ]);
+/** English paths that have a real French equivalent at /fr + path (built out progressively). */
+const TRILINGUAL = new Set<string>([
+  "/", "/wellbeing", "/women", "/men", "/business", "/the-tarkan-approach", "/about",
+  "/blog", "/book", "/privacy", "/terms",
+  ...FR_BUSINESS_SUB.map((s) => `/business/${s}`),
+]);
 const NOINDEX = new Set(["/auth", "/admin"]);
 
 const abs = (p: string) => (p === "/" ? `${SITE_URL}/` : `${SITE_URL}${p}`);
 const normalize = (p: string) => (p.length > 1 ? p.replace(/\/+$/, "") : p) || "/";
-
-type HeadCtx = { match: { id: string; pathname: string }; matches: Array<{ id: string }> };
+const localeOf = (p: string): "ar" | "fr" | "en" =>
+  p === "/ar" || p.startsWith("/ar/") ? "ar" : p === "/fr" || p.startsWith("/fr/") ? "fr" : "en";
+const stripLocale = (p: string) => (p === "/ar" || p === "/fr" ? "/" : p.replace(/^\/(ar|fr)/, "") || "/");
 
 /** Builds head tags. Canonical/hreflang are emitted only when `path` is given (leaf routes). */
 export function pageHead(title: string, description: string, path?: string) {
   const p = path ? normalize(path) : undefined;
-  const isArabic = p ? p === "/ar" || p.startsWith("/ar/") : false;
-  const alt = isArabic ? "سرور طركان — استشارات رفاه خاصة" : "Sourour Tarkan, private wellbeing advisor and coach";
+  const locale = p ? localeOf(p) : "en";
+  const isArabic = locale === "ar";
+  const alt = isArabic
+    ? "سرور طركان — استشارات رفاه خاصة"
+    : locale === "fr"
+      ? "Sourour Tarkan, conseillère privée en bien-être et coach"
+      : "Sourour Tarkan, private wellbeing advisor and coach";
 
   const meta: Array<Record<string, string>> = [
     { title },
@@ -40,7 +55,7 @@ export function pageHead(title: string, description: string, path?: string) {
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: p?.includes("/blog/") ? "article" : "website" },
-    { property: "og:locale", content: isArabic ? "ar_AE" : "en_US" },
+    { property: "og:locale", content: locale === "ar" ? "ar_AE" : locale === "fr" ? "fr_FR" : "en_US" },
     { property: "og:site_name", content: SITE_NAME },
     { property: "og:image", content: DEFAULT_IMAGE },
     { property: "og:image:width", content: "1200" },
@@ -56,14 +71,11 @@ export function pageHead(title: string, description: string, path?: string) {
 
   meta.push({ property: "og:url", content: abs(p) });
   const links: Array<Record<string, string>> = [{ rel: "canonical", href: abs(p) }];
-  const enPath = isArabic ? normalize(p.replace(/^\/ar/, "") || "/") : p;
-  if (BILINGUAL.has(enPath)) {
-    const arPath = enPath === "/" ? "/ar" : `/ar${enPath}`;
-    links.push(
-      { rel: "alternate", hrefLang: "en", href: abs(enPath) },
-      { rel: "alternate", hrefLang: "ar", href: abs(arPath) },
-      { rel: "alternate", hrefLang: "x-default", href: abs(enPath) },
-    );
+  const enPath = normalize(stripLocale(p));
+  if (BILINGUAL.has(enPath) || TRILINGUAL.has(enPath)) {
+    links.push({ rel: "alternate", hrefLang: "en", href: abs(enPath) }, { rel: "alternate", hrefLang: "x-default", href: abs(enPath) });
+    if (BILINGUAL.has(enPath)) links.push({ rel: "alternate", hrefLang: "ar", href: abs(enPath === "/" ? "/ar" : `/ar${enPath}`) });
+    if (TRILINGUAL.has(enPath)) links.push({ rel: "alternate", hrefLang: "fr", href: abs(enPath === "/" ? "/fr" : `/fr${enPath}`) });
   }
   return { meta, links };
 }

@@ -304,7 +304,7 @@ const data: Record<Kind, PageData> = {
 export function ArabicPage({ kind }: { kind: Kind }) {
   const d = data[kind];
   const image =
-    kind === "about" ? "/images/sourour-tarkan-about.jpg" : kind === "women" ? woman : kind === "men" || kind === "business" ? executive : stillLife;
+    kind === "about" ? "/images/sourour-tarkan-home.jpg" : kind === "women" ? woman : kind === "men" || kind === "business" ? executive : stillLife;
   const isLegal = kind === "privacy" || kind === "terms";
   const gulfContext: Record<Kind, { title: string; body: string }> = {
     wellbeing: { title: "استشارات خاصة لمن يعيش حياة الخليج بكل تعقيداتها", body: "قد تتقاطع الحياة بين دبي وأبوظبي والرياض والدوحة والكويت والمنامة ومسقط مع العمل والسفر والأسرة والالتزامات الاجتماعية. لذلك تُبنى الاستشارة حول سياق الشخص الفعلي، لا حول برنامج موحّد." },
@@ -326,7 +326,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
           <div>
             <p className="eyebrow text-gold">{d.eyebrow}</p>
             <h1 className="mt-6 font-serif text-5xl leading-[1.08] md:text-7xl">{d.title}</h1>
-            <p className="mt-7 max-w-2xl text-lg leading-9 text-muted-foreground">{d.intro}</p>
+            <p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground">{d.intro}</p>
             {!isLegal && (
               <a href="/ar/book" className="button-primary mt-9">
                 طلب استشارة خاصة <ArrowUpLeft className="size-4" />
@@ -346,7 +346,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
               </div>
               <div>
                 <h2 className="font-serif text-4xl leading-tight md:text-5xl">{section.title}</h2>
-                <p className="mt-5 max-w-3xl text-base leading-9 text-muted-foreground">{section.body}</p>
+                <p className="mt-5 max-w-3xl text-base leading-8 text-muted-foreground">{section.body}</p>
               </div>
             </div>
           </article>
@@ -358,7 +358,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
           <div className="mx-auto max-w-5xl">
             <p className="eyebrow text-gold">الخليج</p>
             <h2 className="mt-4 font-serif text-5xl leading-tight sm:text-6xl">{gulfContext[kind].title}</h2>
-            <p className="mt-6 max-w-3xl text-base leading-9 text-muted-foreground">{gulfContext[kind].body}</p>
+            <p className="mt-6 max-w-3xl text-base leading-8 text-muted-foreground">{gulfContext[kind].body}</p>
           </div>
         </section>
       )}
@@ -380,7 +380,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
                 <Link key={href} to={href as any} className="group bg-background p-7 transition-colors hover:bg-primary hover:text-primary-foreground">
                   <span className="text-xs text-gold">{String(index + 1).padStart(2, "0")}</span>
                   <h3 className="mt-8 font-serif text-3xl leading-tight">{title}</h3>
-                  <p className="mt-4 text-sm leading-8 text-muted-foreground group-hover:text-primary-foreground/70">{text}</p>
+                  <p className="mt-4 text-sm leading-7 text-muted-foreground group-hover:text-primary-foreground/70">{text}</p>
                   <ArrowUpLeft className="mt-8 size-5 text-gold" />
                 </Link>
               ))}
@@ -419,7 +419,7 @@ export function ArabicHome() {
               <br />
               <em className="font-normal">تعود فيها إلى نفسك.</em>
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-9 text-primary-foreground/75">
+            <p className="mt-8 max-w-2xl text-base leading-8 text-primary-foreground/75">
               مع سرور طركان، مساحة هادئة وسرية للتعامل مع الضغوط، العلاقات، المسؤوليات والتحولات الشخصية بوضوح واتزان أكبر.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -443,7 +443,7 @@ export function ArabicHome() {
               <br />
               لذلك يجب أن يكون الدعم شخصياً.
             </h2>
-            <p className="mt-7 max-w-2xl text-base leading-9 text-muted-foreground">
+            <p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground">
               GULFWELLBEING مساحة خاصة للتفكير، استعادة المنظور والتعامل مع مراحل الحياة المعقدة. لا برنامج واحداً يناسب الجميع، ولا حاجة إلى أن تضع نفسك داخل قالب جاهز.
             </p>
           </div>
@@ -472,7 +472,7 @@ export function ArabicHome() {
               <br />
               هناك إنسان.
             </h2>
-            <p className="mt-7 text-base leading-9 text-primary-foreground/70">
+            <p className="mt-7 text-base leading-8 text-primary-foreground/70">
               استشارات رفاه خاصة للمؤسسين والمديرين والقيادات والفرق، تركز على الضغط المستمر، وضوح القرار، مسؤولية القيادة والجانب الإنساني من الأداء.
             </p>
             <a href="/ar/business" className="button-gold mt-9">
@@ -492,7 +492,7 @@ export function ArabicHome() {
               <br />
               بمعنى الخصوصية.
             </h2>
-            <p className="mt-7 max-w-lg text-base leading-9 text-muted-foreground">
+            <p className="mt-7 max-w-lg text-base leading-8 text-muted-foreground">
               تجربة مصممة حول الجداول المكثفة، الحياة الدولية والحاجة إلى مستوى أعلى من الخصوصية والمرونة.
             </p>
             <a href="/ar/business/vip-concierge-wellbeing" className="button-primary mt-9">
@@ -503,14 +503,25 @@ export function ArabicHome() {
         <img src={stillLife} alt="مساحة خاصة وهادئة" className="order-1 h-full min-h-[30rem] w-full object-cover lg:order-2" />
       </section>
 
-      <section className="grid bg-primary text-primary-foreground lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="min-h-[34rem]"><img src="/images/sourour-tarkan-home.jpg" loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="h-full w-full object-cover object-center" /></div>
-        <div className="flex items-center px-6 py-20 lg:px-20"><div className="max-w-xl">
-          <p className="eyebrow text-gold">تعرّف على سرور طركان</p>
-          <h2 className="mt-5 font-serif text-5xl leading-[1.08] sm:text-7xl">علاقة خاصة<br/>مع إنسانة حقيقية.</h2>
-          <p className="mt-7 text-base leading-9 text-primary-foreground/70">تقود GULFWELLBEING سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master. تبدأ المقاربة بالاستماع وفهم واقع الشخص، لا بتطبيق قالب جاهز.</p>
-          <a href="/ar/the-tarkan-approach" className="button-gold mt-9">اكتشف منهج سرور طركان <ArrowUpLeft className="size-4" /></a>
-        </div></div>
+      <section className="relative overflow-hidden bg-primary text-primary-foreground">
+        <div dir="ltr" className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="relative order-2 min-h-[520px] lg:order-2 lg:min-h-0">
+            <img src="/images/sourour-tarkan-home.jpg" loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <div className="absolute inset-0 bg-linear-to-t from-primary/55 via-transparent to-transparent lg:bg-linear-to-l lg:from-transparent lg:to-primary/15" />
+          </div>
+          <div dir="rtl" className="relative order-1 flex items-center px-7 py-24 text-right lg:order-1 lg:px-20 xl:px-28">
+            <div className="max-w-xl">
+              <div className="mb-10 flex items-center justify-end gap-4">
+                <p className="eyebrow text-gold">تعرّف على سرور طركان</p>
+                <span className="h-px w-12 bg-gold" />
+              </div>
+              <h2 className="font-serif text-5xl leading-[1.08] sm:text-7xl lg:text-[5.2rem]">رفاهٌ أكثر هدوءاً،<br/><em className="font-normal">وعلاقة تبدأ بالإنسان.</em></h2>
+              <p className="mt-9 max-w-lg text-base leading-8 text-primary-foreground/70 sm:text-base">علاقة خاصة تقوم على الاستماع، وفهم السياق، ورؤية الإنسان خلف الدور والمسؤوليات التي يحملها.</p>
+              <p className="mt-5 max-w-lg text-sm leading-7 text-primary-foreground/55">سرور طركان مستشارة رفاه ومدرّبة وReiki Master. تبدأ مقاربتها من الشخص نفسه، لا من قالب جاهز.</p>
+              <a href="/ar/about" className="mt-10 inline-flex items-center gap-3 border-b border-gold/70 pb-3 text-xs font-semibold tracking-[0.16em] text-primary-foreground transition-colors hover:text-gold">تعرّف على سرور طركان <ArrowUpLeft className="size-4" /></a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="bg-secondary px-5 py-20 lg:px-10 lg:py-28">
@@ -523,7 +534,7 @@ export function ArabicHome() {
               والقالب ليس مطلوباً.
             </h2>
           </div>
-          <div className="space-y-8 text-base leading-9 text-muted-foreground">
+          <div className="space-y-8 text-base leading-8 text-muted-foreground">
             <p>
               تبدأ العلاقة بالاستماع وفهم واقع الشخص، لا بتطبيق برنامج جاهز. هناك مساحة للتعقيد، ولما لا يمكن اختزاله في عنوان واحد.
             </p>
@@ -560,7 +571,7 @@ export function ArabicHome() {
               <Link key={title} to={href as any} className="group border-t border-border pt-6">
                 <span className="text-[10px] text-gold">{String(index + 1).padStart(2, "0")}</span>
                 <h3 className="mt-4 font-serif text-3xl leading-tight group-hover:underline">{title}</h3>
-                <p className="mt-4 text-sm leading-8 text-muted-foreground">{text}</p>
+                <p className="mt-4 text-sm leading-7 text-muted-foreground">{text}</p>
                 <span className="mt-6 inline-flex items-center gap-2 text-xs tracking-[.12em]">
                   اقرأ من المدونة <ArrowUpLeft className="size-4" />
                 </span>
@@ -608,7 +619,7 @@ function Area({
       <div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 p-7">
         <h3 className="font-serif text-4xl">{title}</h3>
-        <p className="mt-3 max-w-md text-sm leading-8 text-primary-foreground/70">{text}</p>
+        <p className="mt-3 max-w-md text-sm leading-7 text-primary-foreground/70">{text}</p>
         <ArrowUpLeft className="mt-6 size-5" />
       </div>
     </a>

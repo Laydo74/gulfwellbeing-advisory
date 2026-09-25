@@ -16,8 +16,8 @@ function Page() {
     <article className="mx-auto max-w-4xl px-6 py-24 lg:px-12">
       <p className="eyebrow text-gold">BUSINESS WELLBEING</p>
       <h1 className="mt-6 font-serif text-6xl">Leadership & Team Wellbeing</h1>
-      <p className="mt-7 text-xl leading-9 text-muted-foreground">Thoughtful wellbeing support for leaders responsible for people, communication and the human environment around them.</p>
-      <div className="mt-14 space-y-8 text-lg leading-8 text-muted-foreground">
+      <p className="mt-7 text-lg leading-8 text-muted-foreground">Thoughtful wellbeing support for leaders responsible for people, communication and the human environment around them.</p>
+      <div className="mt-14 space-y-8 text-base leading-7 text-muted-foreground">
         <p>Leadership affects more than performance. Expectations, communication, pressure and the way decisions are handled all shape the experience of the people around a leader.</p>
         <h2 className="font-serif text-4xl text-foreground">For leaders</h2>
         <p>Private advisory can help leaders reflect on difficult conversations, boundaries, team dynamics and the personal pressure that comes with being responsible for others.</p>

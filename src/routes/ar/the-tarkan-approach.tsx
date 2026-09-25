@@ -25,14 +25,14 @@ function Page() {
       <div className="mx-auto max-w-[1440px] px-6 py-24 lg:px-12 lg:py-32">
         <p className="eyebrow text-gold">THE TARKAN APPROACH · منهج سرور طركان</p>
         <h1 className="mt-6 max-w-6xl font-serif text-5xl leading-[1.05] md:text-8xl">منهج يبدأ بالإنسان، لا بالمشكلة.</h1>
-        <p className="mt-8 max-w-3xl text-xl leading-9 text-muted-foreground">مقاربة خاصة وفردية للرفاه، مصممة حول الإنسان وسياقه وحياته الفعلية، لا حول برنامج جاهز أو تعريف واحد للمشكلة.</p>
+        <p className="mt-8 max-w-3xl text-lg leading-8 text-muted-foreground">مقاربة خاصة وفردية للرفاه، مصممة حول الإنسان وسياقه وحياته الفعلية، لا حول برنامج جاهز أو تعريف واحد للمشكلة.</p>
       </div>
     </section>
 
     <section className="bg-primary px-6 py-20 text-primary-foreground lg:px-12 lg:py-28">
       <div className="mx-auto grid max-w-[1300px] gap-12 lg:grid-cols-[.65fr_1.35fr] lg:items-end">
         <div><p className="eyebrow text-gold">الفلسفة</p><p className="mt-5 font-serif text-5xl leading-tight sm:text-7xl">الإنسان أولاً.</p></div>
-        <p className="max-w-3xl text-lg leading-9 text-primary-foreground/75">يبدأ منهج سرور طركان بالإنصات. يترك مساحة للتعقيد والسياق الشخصي والواقع خلف الدور الذي قد يحمله الإنسان. ليس برنامجاً جامداً، ولا يحاول اختزال حياة معقدة في قائمة جاهزة.</p>
+        <p className="max-w-3xl text-base leading-8 text-primary-foreground/75">يبدأ منهج سرور طركان بالإنصات. يترك مساحة للتعقيد والسياق الشخصي والواقع خلف الدور الذي قد يحمله الإنسان. ليس برنامجاً جامداً، ولا يحاول اختزال حياة معقدة في قائمة جاهزة.</p>
       </div>
     </section>
 
@@ -49,7 +49,7 @@ function Page() {
               <h2 className="mt-4 max-w-3xl font-serif text-5xl leading-[1.02] md:text-6xl lg:text-7xl xl:text-[5.4rem]">{title}</h2>
             </div>
             <div className="md:order-1">
-              <p className="max-w-xl text-base leading-9 text-muted-foreground md:text-lg">{body}</p>
+              <p className="max-w-xl text-base leading-8 text-muted-foreground md:text-base">{body}</p>
             </div>
           </article>
         ))}
@@ -60,14 +60,14 @@ function Page() {
       <div className="mx-auto max-w-[1100px]">
         <p className="eyebrow text-gold">الخليج ودولياً</p>
         <h2 className="mt-5 max-w-4xl font-serif text-5xl leading-tight sm:text-7xl">نهج واحد، لكن لا توجد حياة واحدة.</h2>
-        <p className="mt-7 max-w-3xl text-lg leading-9 text-muted-foreground">قد تكون الحياة بين دبي وأبوظبي والرياض وجدة والدوحة والكويت والمنامة ومسقط، أو بين الخليج والعالم، مليئة بالعمل والسفر والأسرة والمسؤوليات. The Tarkan Approach لا يفترض أن هذه التجارب متشابهة؛ بل يبدأ من سياق الشخص نفسه.</p>
+        <p className="mt-7 max-w-3xl text-base leading-8 text-muted-foreground">قد تكون الحياة بين دبي وأبوظبي والرياض وجدة والدوحة والكويت والمنامة ومسقط، أو بين الخليج والعالم، مليئة بالعمل والسفر والأسرة والمسؤوليات. The Tarkan Approach لا يفترض أن هذه التجارب متشابهة؛ بل يبدأ من سياق الشخص نفسه.</p>
       </div>
     </section>
 
     <section className="bg-background px-6 py-20 text-center lg:py-28">
       <p className="eyebrow text-gold">مساحة خاصة</p>
       <h2 className="mx-auto mt-4 max-w-3xl font-serif text-5xl leading-tight sm:text-7xl">ابدأ بما يهمك أنت.</h2>
-      <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted-foreground">إذا كنت تبحث عن استشارات رفاه خاصة وشخصية، يمكنك مشاركة ما يناسبك فقط وطلب محادثة أولية.</p>
+      <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted-foreground">إذا كنت تبحث عن استشارات رفاه خاصة وشخصية، يمكنك مشاركة ما يناسبك فقط وطلب محادثة أولية.</p>
       <Link to="/ar/book" className="button-primary mt-9 inline-flex items-center gap-2">طلب استشارة خاصة <ArrowUpLeft className="size-4" /></Link>
     </section>
   </SiteShell>;
