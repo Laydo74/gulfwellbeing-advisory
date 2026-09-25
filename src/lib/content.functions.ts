@@ -22,10 +22,36 @@ export const getPublishedContent = createServerFn({ method: "GET" }).handler(asy
 const enquirySchema = z.object({
   name: z.string().trim().min(2).max(100), email: z.string().trim().email().max(255), phone: z.string().trim().max(40).optional(), country: z.string().trim().min(2).max(80), area_of_support: z.string().trim().min(2).max(120), session_format: z.string().trim().min(2).max(60), availability: z.string().trim().min(2).max(200), contact_method: z.string().trim().min(2).max(40), message: z.string().trim().max(2000).optional(),
 });
+async function notifyEnquiry(data: z.infer<typeof enquirySchema>) {
+  const apiKey = process.env["RESEND_API_KEY"];
+  if (!apiKey) return;
+  const to = process.env["ENQUIRY_TO_EMAIL"]?.trim() || "gulfwellbeing8@gmail.com";
+  const from = process.env["ENQUIRY_FROM_EMAIL"]?.trim() || "GULFWELLBEING <onboarding@resend.dev>";
+  const subject = `New GULFWELLBEING private enquiry — ${data.name}`;
+  const html = `
+    <h2>New private wellbeing enquiry</h2>
+    <p><strong>Name:</strong> ${data.name}</p>
+    <p><strong>Email:</strong> ${data.email}</p>
+    <p><strong>Phone / WhatsApp:</strong> ${data.phone || "—"}</p>
+    <p><strong>Country:</strong> ${data.country}</p>
+    <p><strong>Area:</strong> ${data.area_of_support}</p>
+    <p><strong>Session format:</strong> ${data.session_format}</p>
+    <p><strong>Availability:</strong> ${data.availability}</p>
+    <p><strong>Preferred contact:</strong> ${data.contact_method}</p>
+    <p><strong>Message:</strong><br/>${data.message || "—"}</p>
+  `;
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ from, to: [to], reply_to: data.email, subject, html }),
+  });
+  if (!response.ok) throw new Error("Notification email could not be sent.");
+}
 export const submitEnquiry = createServerFn({ method: "POST" }).inputValidator((data) => enquirySchema.parse(data)).handler(async ({ data }) => {
   const payload = { ...data, phone: data.phone ?? null, message: data.message ?? null };
   const { error } = await publicClient().from("booking_enquiries").insert(payload);
   if (error) throw new Error("We could not send your request. Please try again.");
+  await notifyEnquiry(data);
   return { ok: true };
 });
 
