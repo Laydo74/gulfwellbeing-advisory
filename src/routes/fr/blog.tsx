@@ -5,7 +5,7 @@ import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 import stillLife from "@/assets/private-still-life.jpg";
 
 export const Route = createFileRoute("/fr/blog")({
-  head: (ctx) => pageHeadFor(ctx, "Le Journal Privé | GULFWELLBEING", "Réflexions originales sur le bien-être privé, les relations, le leadership, la pression exécutive et les transitions de vie, dans le Golfe et à l'international.", "/fr/blog"),
+  head: (ctx) => pageHeadFor(ctx, "Le Blog Privé | GULFWELLBEING", "Réflexions originales sur le bien-être privé, les relations, le leadership, la pression exécutive et les transitions de vie, dans le Golfe et à l'international.", "/fr/blog"),
   component: Page,
 });
 
@@ -35,7 +35,7 @@ function FrArticle({ eyebrow, title, description, sections, faqs }: ArticleProps
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: origin ? origin + "/fr" : "/fr" },
-      { "@type": "ListItem", position: 2, name: "Journal", item: origin ? origin + "/fr/blog" : "/fr/blog" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: origin ? origin + "/fr/blog" : "/fr/blog" },
       { "@type": "ListItem", position: 3, name: title, item: canonical },
     ],
   };
@@ -47,8 +47,8 @@ function FrArticle({ eyebrow, title, description, sections, faqs }: ArticleProps
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <header className="page-hero"><div className="mx-auto max-w-4xl px-6 py-24 lg:px-12 lg:py-32"><p className="eyebrow text-gold">{eyebrow}</p><h1 className="mt-6 font-serif text-5xl leading-tight md:text-7xl">{title}</h1><p className="mt-7 max-w-3xl text-base leading-7 text-muted-foreground">{description}</p></div></header>
         <figure className="mx-auto max-w-6xl px-6 pt-10 lg:px-12 lg:pt-16">
-          <img src={stillLife} width={1408} height={1008} alt={title + " — Journal privé GULFWELLBEING"} className="h-[38vh] w-full object-cover lg:h-[52vh]" loading="eager" />
-          <figcaption className="mt-3 text-xs uppercase tracking-[.16em] text-muted-foreground">GULFWELLBEING · Journal privé du bien-être</figcaption>
+          <img src={stillLife} width={1408} height={1008} alt={title + " — Blog privé GULFWELLBEING"} className="h-[38vh] w-full object-cover lg:h-[52vh]" loading="eager" />
+          <figcaption className="mt-3 text-xs uppercase tracking-[.16em] text-muted-foreground">GULFWELLBEING · Blog privé du bien-être</figcaption>
         </figure>
         <div className="mx-auto grid max-w-6xl gap-16 px-6 py-20 lg:grid-cols-[1fr_.32fr] lg:px-12 lg:py-28">
           <div className="space-y-14">
@@ -125,7 +125,110 @@ const articles: Record<string, ArticleProps> = {
       ["Les mères peuvent-elles disposer d'un espace privé pour elles-mêmes ?", "Oui. Une séance peut offrir un temps dédié pour considérer son identité, ses besoins et ses priorités, aux côtés des responsabilités de la maternité."],
       ["Les séances sont-elles confidentielles ?", "Le service est conçu comme une relation de conseil privée et discrète, avec des limites professionnelles appropriées."],
     ],
+  },,
+  "bien-etre-prive-dubai": {
+    eyebrow: "BIEN-ÊTRE PRIVÉ À DUBAÏ",
+    title: "Bien-être privé à Dubaï : une approche personnalisée et confidentielle",
+    description: "Comprendre le conseil privé en bien-être à Dubaï pour les personnes qui recherchent discrétion, personnalisation et accompagnement à distance.",
+    sections: [
+      ["Pourquoi une approche privée ?", "Une vie internationale peut réunir responsabilités professionnelles, famille, voyages et engagements sociaux. Un espace privé permet de prendre du recul sans ajouter un programme standard à un agenda déjà chargé."],
+      ["Une approche conçue autour de la personne", "Le conseil privé commence par le contexte individuel : objectifs, rythme, priorités et réalités personnelles. Les séances sont adaptées plutôt que déroulées selon un parcours identique pour tous."],
+      ["Dubaï et les vies internationales", "Dubaï est un environnement où les personnes peuvent travailler avec plusieurs marchés et vivre entre plusieurs pays. La continuité d'un accompagnement en ligne peut donc être particulièrement pratique."],
+      ["Confidentialité et discrétion", "Pour les dirigeants, entrepreneurs, familles et particuliers qui accordent de la valeur à leur vie privée, la discrétion fait partie de l'expérience dès la première demande."],
+    ],
+    faqs: [
+      ["Le conseil privé en bien-être est-il disponible à Dubaï ?", "Oui. Les séances peuvent être organisées à distance pour les clients à Dubaï et dans les autres villes du Golfe."],
+      ["Les séances sont-elles personnalisées ?", "Oui. Le contenu, le rythme et la fréquence sont déterminés selon les besoins et les objectifs du client."],
+      ["Le service remplace-t-il un suivi médical ?", "Non. Lorsqu'un suivi clinique est nécessaire, un professionnel de santé qualifié doit intervenir."],
+      ["Puis-je demander une consultation privée ?", "Oui, une demande peut être envoyée via la page de consultation privée."],
+    ],
   },
+  "bien-etre-dirigeants-golfe": {
+    eyebrow: "BIEN-ÊTRE EXÉCUTIF",
+    title: "Bien-être des dirigeants dans le Golfe : créer de l'espace pour décider avec clarté",
+    description: "Conseil privé en bien-être pour dirigeants, fondateurs et cadres supérieurs confrontés à la pression, aux décisions et à une responsabilité constante dans le Golfe.",
+    sections: [
+      ["Le poids de la responsabilité", "Un dirigeant peut porter simultanément des décisions stratégiques, des équipes, des résultats, des relations professionnelles et des responsabilités familiales. Cette accumulation mérite parfois un espace séparé du rôle."],
+      ["Clarté avant action", "Une conversation privée peut permettre de distinguer ce qui est réellement urgent de ce qui est devenu une habitude, avant de décider ce qui doit évoluer."],
+      ["Le contexte des marchés du Golfe", "Dubaï, Abou Dhabi, Riyad, Djeddah, Doha, Koweït, Manama et Mascate réunissent des environnements professionnels différents. L'accompagnement reste donc centré sur la situation réelle du dirigeant."],
+      ["Le dirigeant derrière le titre", "Le leadership n'épuise pas l'identité d'une personne. Les relations, la famille, la santé du quotidien, les valeurs et la vie personnelle peuvent aussi entrer dans une conversation de bien-être."],
+    ],
+    faqs: [
+      ["À qui s'adresse le bien-être exécutif privé ?", "Aux fondateurs, dirigeants, cadres supérieurs et professionnels qui souhaitent un espace confidentiel autour de la pression et de la responsabilité."],
+      ["Les séances concernent-elles uniquement le travail ?", "Non. L'approche peut également considérer les relations, la famille, les limites, l'identité et la vie en dehors du travail."],
+      ["Les séances peuvent-elles être suivies en voyage ?", "Oui, des séances à distance peuvent soutenir les personnes qui se déplacent régulièrement."],
+      ["Est-ce du traitement psychologique ?", "Non. Il s'agit de conseil privé en bien-être et non d'un traitement clinique."],
+    ],
+  },
+  "gestion-stress-vie-exigeante": {
+    eyebrow: "GESTION DU STRESS",
+    title: "Gérer le stress dans une vie exigeante : retrouver une perspective",
+    description: "Une réflexion sur le stress, les limites et la récupération pour les personnes menant une vie professionnelle et personnelle particulièrement dense.",
+    sections: [
+      ["Quand le stress devient normal", "Le stress prolongé peut devenir tellement familier qu'il cesse d'être identifié comme un signal. Les rendez-vous continuent, les décisions sont prises et la disponibilité reste constante."],
+      ["Observer les schémas", "Plutôt que de chercher une solution universelle, il peut être utile d'identifier les situations qui déclenchent la pression, les habitudes de disponibilité et les moments où les limites disparaissent."],
+      ["Le rôle des limites", "Les limites ne consistent pas à tout arrêter. Elles peuvent simplement clarifier ce qui doit recevoir une attention immédiate et ce qui peut attendre."],
+      ["Une approche personnalisée", "Le rythme de vie, les responsabilités et les ressources diffèrent d'une personne à l'autre. L'accompagnement doit donc rester adapté au contexte."],
+    ],
+    faqs: [
+      ["Le conseil en bien-être peut-il aider à réfléchir au stress ?", "Oui. Il peut offrir un espace pour comprendre les sources de pression, les habitudes et les priorités personnelles."],
+      ["Le stress est-il toujours un problème médical ?", "Pas nécessairement. Toutefois, des symptômes persistants ou préoccupants doivent être évalués par un professionnel de santé qualifié."],
+      ["Les dirigeants du Golfe peuvent-ils consulter à distance ?", "Oui, les séances en ligne permettent d'accompagner des clients dans plusieurs pays."],
+      ["Les conseils sont-ils standardisés ?", "Non. L'approche est construite autour de la situation individuelle."],
+    ],
+  },
+  "bien-etre-hommes-golfe": {
+    eyebrow: "BIEN-ÊTRE DES HOMMES",
+    title: "Bien-être des hommes dans le Golfe : au-delà de la responsabilité",
+    description: "Une approche privée du bien-être des hommes autour de la pression professionnelle, de la famille, de la paternité, du leadership et de la confiance.",
+    sections: [
+      ["L'homme derrière les responsabilités", "Être celui sur qui les autres comptent peut laisser peu de place à l'examen de ses propres besoins. Un espace privé permet de considérer la personne derrière le rôle."],
+      ["Paternité et vie de famille", "La paternité peut apporter sens et responsabilité tout en modifiant le temps, l'énergie et l'identité. Une conversation privée peut aider à remettre ces dimensions en perspective."],
+      ["Leadership et pression", "Le leadership demande des décisions et une disponibilité importantes. Le bien-être peut aussi concerner les limites, les relations et la capacité à rester présent en dehors du travail."],
+      ["Une approche sans modèle imposé", "Il n'existe pas une seule manière de vivre le rôle d'homme, de père ou de dirigeant. Le contexte individuel reste le point de départ."],
+    ],
+    faqs: [
+      ["Quels sujets peuvent être abordés ?", "La pression, la paternité, les relations, la confiance, le leadership, les limites et les transitions peuvent être explorés."],
+      ["L'approche suppose-t-elle un modèle de masculinité ?", "Non. Elle part de la situation et des priorités de chaque client."],
+      ["Les séances sont-elles confidentielles ?", "Le service est conçu comme une relation de conseil privée et discrète."],
+      ["Les séances sont-elles disponibles dans le Golfe ?", "Oui, notamment à distance pour les clients des principaux pays du Golfe."],
+    ],
+  },
+  "relations-famille-golfe": {
+    eyebrow: "RELATIONS & FAMILLE",
+    title: "Relations et vie de famille dans le Golfe : créer un espace pour réfléchir",
+    description: "Conseil privé autour des relations, de la communication, des limites et des responsabilités familiales dans le contexte du Golfe.",
+    sections: [
+      ["Les relations sont contextuelles", "Les relations proches sont influencées par l'histoire commune, les attentes, les responsabilités et les habitudes de communication. Comprendre le contexte précède souvent toute décision."],
+      ["Famille et responsabilités", "La famille peut être une source de soutien et de responsabilité en même temps. Les attentes peuvent se croiser avec le travail, le couple, les enfants et la famille élargie."],
+      ["Les limites sans rupture", "Une limite peut simplement clarifier un besoin, une disponibilité ou une responsabilité. Elle ne signifie pas nécessairement prendre de la distance avec les personnes importantes."],
+      ["Un espace individuel", "Le conseil privé ne remplace pas une thérapie familiale ou conjugale lorsque celle-ci est nécessaire. Il offre un espace individuel de réflexion."],
+    ],
+    faqs: [
+      ["Les relations familiales peuvent-elles être abordées ?", "Oui, lorsqu'elles font partie du contexte personnel que le client souhaite examiner."],
+      ["L'approche est-elle spécifique aux familles du Golfe ?", "Elle tient compte du contexte sans supposer que toutes les familles ont la même structure ou les mêmes attentes."],
+      ["Est-ce une thérapie familiale ?", "Non. Si une thérapie familiale ou conjugale est nécessaire, un professionnel qualifié doit être consulté."],
+      ["Les séances peuvent-elles être suivies à distance ?", "Oui."],
+    ],
+  },
+  "transitions-vie-golfe": {
+    eyebrow: "TRANSITIONS DE VIE",
+    title: "Transitions de vie dans le Golfe : retrouver de la clarté dans un nouveau chapitre",
+    description: "Changement de carrière, mariage, parentalité, déménagement ou nouvelle responsabilité : une approche privée pour traverser les transitions avec davantage de perspective.",
+    sections: [
+      ["Une transition n'est pas toujours une crise", "Une promotion, un mariage, un déménagement ou la création d'une entreprise peuvent être souhaités tout en soulevant de nouvelles questions."],
+      ["Quand l'identité évolue", "Lorsque les rôles changent, l'image que l'on a de soi peut évoluer elle aussi. Une période de réflexion permet de distinguer ce qui doit rester de ce qui demande à être redéfini."],
+      ["Entre le Golfe et l'international", "Les personnes qui vivent entre plusieurs villes ou pays peuvent connaître plusieurs transitions simultanées. L'accompagnement doit tenir compte de cette réalité mobile."],
+      ["Une étape à la fois", "La clarté ne nécessite pas toujours un grand plan. Identifier la prochaine étape significative peut suffire à retrouver un sentiment de direction."],
+    ],
+    faqs: [
+      ["Quelles transitions peuvent être abordées ?", "Les changements professionnels, familiaux, relationnels, géographiques et identitaires peuvent faire partie de la conversation."],
+      ["L'accompagnement donne-t-il des décisions toutes faites ?", "Non. L'objectif est de créer un espace de réflexion adapté au contexte du client."],
+      ["Est-ce disponible dans tout le Golfe ?", "Oui, les séances en ligne permettent une continuité internationale."],
+      ["Les changements de vie sont-ils traités médicalement ?", "Non. Pour toute question clinique, un professionnel de santé qualifié doit être consulté."],
+    ],
+  },
+
 };
 
 function Page() {
@@ -143,7 +246,7 @@ function Page() {
             <h1 className="mt-6 font-serif text-6xl md:text-8xl">Des perspectives pour une vie plus posée.</h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-muted-foreground">Réflexions occasionnelles sur le bien-être, les relations, le leadership, le changement personnel et les réalités d'une vie exigeante.</p>
           </div>
-          <img src={stillLife} width={1408} height={1008} alt="Un journal privé et un bureau d'écriture" className="h-[50vh] w-full object-cover" />
+          <img src={stillLife} width={1408} height={1008} alt="Un blog privé et un bureau d'écriture" className="h-[50vh] w-full object-cover" />
         </div>
       </section>
       <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12">
@@ -161,7 +264,7 @@ function Page() {
             </div>
           ))}
         </div>
-        <p className="mt-14 max-w-2xl text-sm leading-7 text-muted-foreground">D'autres perspectives en français — sur les relations, les transitions de vie, la pleine conscience et le leadership — sont ajoutées régulièrement au journal.</p>
+        <p className="mt-14 max-w-2xl text-sm leading-7 text-muted-foreground">D'autres perspectives en français — sur les relations, les transitions de vie, la pleine conscience et le leadership — sont ajoutées régulièrement au blog.</p>
       </section>
     </SiteShell>
   );
