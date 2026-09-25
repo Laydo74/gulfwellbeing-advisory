@@ -503,13 +503,13 @@ export function ArabicHome() {
         <img src={stillLife} alt="مساحة خاصة وهادئة" className="order-1 h-full min-h-[30rem] w-full object-cover lg:order-2" />
       </section>
 
-      <section dir="rtl" className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="relative order-1 min-h-[520px] lg:order-2 lg:min-h-0">
+      <section className="relative overflow-hidden bg-primary text-primary-foreground">
+        <div dir="ltr" className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="relative order-2 min-h-[520px] lg:order-2 lg:min-h-0">
             <img src="/images/sourour-tarkan-about.jpg" loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="absolute inset-0 bg-linear-to-t from-primary/55 via-transparent to-transparent lg:bg-linear-to-l lg:from-transparent lg:to-primary/15" />
           </div>
-          <div className="relative order-2 flex items-center px-7 py-24 text-right lg:order-1 lg:px-20 xl:px-28">
+          <div dir="rtl" className="relative order-1 flex items-center px-7 py-24 text-right lg:order-1 lg:px-20 xl:px-28">
             <div className="max-w-xl">
               <div className="mb-10 flex items-center justify-end gap-4">
                 <p className="eyebrow text-gold">تعرّف على سرور طركان</p>
