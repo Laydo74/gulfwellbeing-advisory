@@ -67,7 +67,7 @@ function Home() {
           {pathways.map(([n, title, text, to, image]) => <Link key={title} to={to ?? "/"} className="group relative min-h-[30rem] overflow-hidden bg-primary text-primary-foreground">
             <img src={image} width={1280} height={960} loading="lazy" alt={`${title} — GULFWELLBEING`} className="absolute inset-0 h-full w-full object-cover opacity-62 transition-transform duration-700 group-hover:scale-[1.025]" />
             <div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-7"><span className="text-[10px] text-gold">{n}</span><h3 className="mt-3 font-serif text-5xl">{title}</h3><p className="mt-3 max-w-xs text-sm leading-6 text-primary-foreground/68">{text}</p><ArrowUpRight className="mt-6 size-5" /></div>
+            <div className="absolute inset-x-0 bottom-0 p-7"><span className="text-[10px] text-gold">{n}</span><h3 className="mt-3 font-serif text-4xl">{title}</h3><p className="mt-3 max-w-xs text-sm leading-6 text-primary-foreground/68">{text}</p><ArrowUpRight className="mt-6 size-5" /></div>
           </Link>)}
         </div>
       </div>
@@ -98,9 +98,12 @@ function Home() {
 
     <section className="relative overflow-hidden bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="relative order-2 min-h-[520px] lg:order-2 lg:min-h-0">
-          <img src="/images/sourour-tarkan-home.jpg" width={800} height={1000} loading="lazy" alt="Sourour Tarkan, private wellbeing advisor and coach" className="absolute inset-0 h-full w-full object-cover object-center" />
-          <div className="absolute inset-0 bg-linear-to-t from-primary/55 via-transparent to-transparent lg:bg-linear-to-l lg:from-transparent lg:to-primary/15" />
+        <div className="relative order-2 min-h-[520px] px-5 py-8 lg:order-2 lg:min-h-0 lg:px-10 lg:py-16">
+          <div className="relative h-full overflow-hidden rounded-[2rem]">
+            <img src="/images/sourour-tarkan-home.jpg" width={800} height={1000} loading="lazy" alt="Sourour Tarkan, private wellbeing advisor and coach" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <div className="absolute inset-0 bg-linear-to-l from-transparent via-primary/5 to-primary/35" />
+            <div className="absolute inset-0 bg-linear-to-t from-primary/35 via-transparent to-transparent" />
+          </div>
         </div>
         <div className="relative order-1 flex items-center px-7 py-24 lg:order-1 lg:px-20 xl:px-28">
           <div className="max-w-xl">
@@ -109,7 +112,7 @@ function Home() {
               <p className="text-[10px] uppercase tracking-[0.28em] text-gold">MEET SOUROUR TARKAN</p>
             </div>
             <h2 className="font-serif text-5xl leading-[0.98] sm:text-7xl lg:text-[5.5rem]">A quieter kind<br/><em className="font-normal">of wellbeing.</em></h2>
-            <p className="mt-9 max-w-lg text-base leading-7 text-primary-foreground/70 sm:text-base">A private relationship built around listening, context and the realities of the person behind the role.</p>
+            <p className="mt-9 max-w-lg text-sm leading-7 text-primary-foreground/70 sm:text-base">A private relationship built around listening, context and the realities of the person behind the role.</p>
             <p className="mt-5 max-w-lg text-sm leading-7 text-primary-foreground/55">Sourour Tarkan is a private wellbeing advisor, coach and Reiki Master. Her work begins with the individual, not a formula.</p>
             <Link to="/about" className="mt-10 inline-flex items-center gap-3 border-b border-gold/70 pb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:text-gold">Meet Sourour Tarkan <ArrowRight className="size-4" /></Link>
           </div>
