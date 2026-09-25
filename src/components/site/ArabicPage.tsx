@@ -419,7 +419,7 @@ export function ArabicHome() {
               <br />
               <em className="font-normal">تعود فيها إلى نفسك.</em>
             </h1>
-            <p className="mt-8 max-w-2xl text-base leading-8 text-primary-foreground/75">
+            <p className="mt-8 max-w-2xl text-sm leading-7 text-primary-foreground/75">
               مع سرور طركان، مساحة هادئة وسرية للتعامل مع الضغوط، العلاقات، المسؤوليات والتحولات الشخصية بوضوح واتزان أكبر.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -506,8 +506,10 @@ export function ArabicHome() {
 
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
         <div dir="ltr" className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="relative order-2 min-h-[520px] lg:order-2 lg:min-h-0">
+          <div className="relative order-2 min-h-[520px] px-5 py-8 lg:order-2 lg:min-h-0 lg:px-10 lg:py-16">
+          <div className="relative h-full overflow-hidden rounded-[2rem]">
             <img src="/images/sourour-tarkan-home.jpg" loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <div className="absolute inset-0 bg-linear-to-l from-transparent via-primary/5 to-primary/35" />
             <div className="absolute inset-0 bg-linear-to-t from-primary/55 via-transparent to-transparent lg:bg-linear-to-l lg:from-transparent lg:to-primary/15" />
           </div>
           <div dir="rtl" className="relative order-1 flex items-center px-7 py-24 text-right lg:order-1 lg:px-20 xl:px-28">
