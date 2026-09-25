@@ -96,14 +96,25 @@ function Home() {
       <img src={stillLife} width={900} height={700} loading="lazy" alt="Private consultation salon with understated Gulf architecture" className="order-1 h-[24rem] w-full object-cover lg:order-1 lg:h-[34rem]" />
     </section>
 
-    <section className="grid bg-primary text-primary-foreground lg:grid-cols-[1.05fr_0.95fr]">
-      <div className="order-2 flex items-center justify-center px-6 py-14 lg:order-2 lg:px-16"><img src="/images/sourour-tarkan-home.jpg" width={700} height={875} loading="lazy" alt="Sourour Tarkan, private wellbeing advisor and coach" className="h-[20rem] w-full max-w-[20rem] object-cover object-center sm:h-[24rem]" /></div>
-      <div className="order-1 flex items-center px-6 py-20 lg:order-1 lg:px-20"><div className="max-w-xl">
-        <p className="text-[10px] uppercase tracking-[0.22em] text-gold">MEET SOUROUR TARKAN</p>
-        <h2 className="mt-5 font-serif text-5xl leading-none sm:text-7xl">A private relationship<br/>with a real person.</h2>
-        <p className="mt-7 text-sm leading-7 text-primary-foreground/70 sm:text-base">GULFWELLBEING is led by Sourour Tarkan, a private wellbeing advisor and coach and Reiki Master. Her approach begins with listening, context and the realities of the person behind the role.</p>
-        <Link to="/about" className="button-gold mt-9">Meet Sourour Tarkan <ArrowRight className="size-4" /></Link>
-      </div></div>
+    <section className="relative overflow-hidden bg-primary text-primary-foreground">
+      <div className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="relative order-2 min-h-[520px] lg:order-1 lg:min-h-0">
+          <img src="/images/sourour-tarkan-home.jpg" width={900} height={1125} loading="lazy" alt="Sourour Tarkan, private wellbeing advisor and coach" className="absolute inset-0 h-full w-full object-cover object-center" />
+          <div className="absolute inset-0 bg-linear-to-t from-primary/55 via-transparent to-transparent lg:bg-linear-to-r lg:from-transparent lg:to-primary/15" />
+        </div>
+        <div className="relative order-1 flex items-center px-7 py-24 lg:order-2 lg:px-20 xl:px-28">
+          <div className="max-w-xl">
+            <div className="mb-10 flex items-center gap-4">
+              <span className="h-px w-12 bg-gold" />
+              <p className="text-[10px] uppercase tracking-[0.28em] text-gold">MEET SOUROUR TARKAN</p>
+            </div>
+            <h2 className="font-serif text-5xl leading-[0.98] sm:text-7xl lg:text-[5.5rem]">A quieter kind<br/><em className="font-normal">of wellbeing.</em></h2>
+            <p className="mt-9 max-w-lg text-base leading-8 text-primary-foreground/70 sm:text-lg">A private relationship built around listening, context and the realities of the person behind the role.</p>
+            <p className="mt-5 max-w-lg text-sm leading-7 text-primary-foreground/55">Sourour Tarkan is a private wellbeing advisor, coach and Reiki Master. Her work begins with the individual, not a formula.</p>
+            <Link to="/about" className="mt-10 inline-flex items-center gap-3 border-b border-gold/70 pb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:text-gold">Meet Sourour Tarkan <ArrowRight className="size-4" /></Link>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section className="bg-secondary px-5 py-20 lg:px-10 lg:py-28">
