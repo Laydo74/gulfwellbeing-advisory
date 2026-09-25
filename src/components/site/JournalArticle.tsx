@@ -122,6 +122,15 @@ export function JournalArticle({eyebrow,title,description,sections,related}:Arti
   "mainEntityOfPage":{"@type":"WebPage","@id":canonical},
   "image":origin ? [origin + "/images/sourour-tarkan-home.jpg"] : ["/images/sourour-tarkan-home.jpg"]
  };
+ const faqSchema = {
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity": faqs.map(([q,a]) => ({
+    "@type":"Question",
+    "name":q,
+    "acceptedAnswer":{"@type":"Answer","text":a}
+  }))
+ };
  const breadcrumbSchema = {
   "@context":"https://schema.org",
   "@type":"BreadcrumbList",
@@ -134,14 +143,15 @@ export function JournalArticle({eyebrow,title,description,sections,related}:Arti
  return <SiteShell><article>
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(articleSchema)}} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}} />
-  <header className="page-hero"><div className="mx-auto max-w-4xl px-6 py-24 lg:px-12 lg:py-32"><p className="eyebrow text-gold">{eyebrow}</p><h1 className="mt-6 font-serif text-5xl leading-tight md:text-7xl">{title}</h1><p className="mt-7 max-w-3xl text-base leading-7 text-muted-foreground">{description}</p></div></header>
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}} />
+  <header className="page-hero"><div className="mx-auto max-w-4xl px-6 py-24 lg:px-12 lg:py-32"><p className="eyebrow text-gold">{eyebrow}</p><h1 className="mt-6 font-serif text-5xl leading-tight md:text-7xl">{title}</h1><p className="mt-7 max-w-3xl text-sm leading-7 text-muted-foreground">{description}</p></div></header>
   <figure className="mx-auto max-w-6xl px-6 pt-10 lg:px-12 lg:pt-16">
    <img src={stillLife} width={1408} height={1008} alt={title + " — GULFWELLBEING private wellbeing journal"} className="h-[38vh] w-full object-cover lg:h-[52vh]" loading="eager"/>
    <figcaption className="mt-3 text-xs uppercase tracking-[.16em] text-muted-foreground">GULFWELLBEING · Private Wellbeing Journal</figcaption>
   </figure>
   <div className="mx-auto grid max-w-6xl gap-16 px-6 py-20 lg:grid-cols-[1fr_.32fr] lg:px-12 lg:py-28">
-   <div className="space-y-14">{extended.map(s=><section key={s[0]}><h2 className="font-serif text-3xl md:text-4xl">{s[0]}</h2><p className="mt-5 text-base leading-7 text-muted-foreground">{s[1]}</p></section>)}
-   <section className="border-t border-border pt-12"><p className="eyebrow text-gold">FAQ</p><h2 className="mt-4 font-serif text-4xl">Frequently asked questions</h2><div className="mt-8 divide-y divide-border">{faqs.map(([q,a])=><details key={q} className="py-5"><summary className="cursor-pointer font-medium">{q}</summary><p className="mt-3 max-w-3xl text-base leading-7 text-muted-foreground">{a}</p></details>)}</div></section>
+   <div className="space-y-14">{extended.map(s=><section key={s[0]}><h2 className="font-serif text-3xl md:text-4xl">{s[0]}</h2><p className="mt-5 text-sm leading-7 text-muted-foreground">{s[1]}</p></section>)}
+   <section className="border-t border-border pt-12"><p className="eyebrow text-gold">FAQ</p><h2 className="mt-4 font-serif text-4xl">Frequently asked questions</h2><div className="mt-8 divide-y divide-border">{faqs.map(([q,a])=><details key={q} className="py-5"><summary className="cursor-pointer font-medium">{q}</summary><p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{a}</p></details>)}</div></section>
    <section className="border-t border-border pt-10"><p className="eyebrow text-gold">PRIVATE ENQUIRY</p><h2 className="mt-4 font-serif text-4xl">If this reflects what you are navigating, a private conversation can be the next step.</h2><Link to="/book" className="button-gold mt-7">Request a Private Session <ArrowRight className="size-4"/></Link></section></div>
    <aside className="lg:border-s lg:border-border lg:ps-10"><p className="eyebrow text-gold">EXPLORE</p><div className="mt-5 space-y-4">{related.map(r=><Link key={r.to} to={r.to} className="flex items-center justify-between border-b border-border pb-4 text-sm">{r.label}<ArrowRight className="size-4"/></Link>)}</div></aside>
   </div>
