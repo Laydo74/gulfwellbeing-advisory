@@ -125,7 +125,7 @@ const articles: Record<string, ArticleProps> = {
       ["Les mères peuvent-elles disposer d'un espace privé pour elles-mêmes ?", "Oui. Une séance peut offrir un temps dédié pour considérer son identité, ses besoins et ses priorités, aux côtés des responsabilités de la maternité."],
       ["Les séances sont-elles confidentielles ?", "Le service est conçu comme une relation de conseil privée et discrète, avec des limites professionnelles appropriées."],
     ],
-  },,
+  },
   "bien-etre-prive-dubai": {
     eyebrow: "BIEN-ÊTRE PRIVÉ À DUBAÏ",
     title: "Bien-être privé à Dubaï : une approche personnalisée et confidentielle",
@@ -242,7 +242,7 @@ function Page() {
       <section className="page-hero">
         <div className="mx-auto grid min-h-[68vh] max-w-[1440px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-12">
           <div>
-            <p className="eyebrow text-gold">LE JOURNAL PRIVÉ</p>
+            <p className="eyebrow text-gold">LE BLOG</p>
             <h1 className="mt-6 font-serif text-6xl md:text-8xl">Des perspectives pour une vie plus posée.</h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-muted-foreground">Réflexions occasionnelles sur le bien-être, les relations, le leadership, le changement personnel et les réalités d'une vie exigeante.</p>
           </div>
