@@ -516,8 +516,8 @@ export function ArabicHome() {
                 <span className="h-px w-12 bg-gold" />
               </div>
               <h2 className="font-serif text-5xl leading-[1.08] sm:text-7xl lg:text-[5.2rem]">رفاهٌ أكثر هدوءاً،<br/><em className="font-normal">وعلاقة تبدأ بالإنسان.</em></h2>
-              <p className="mt-9 max-w-lg text-base leading-9 text-primary-foreground/70 sm:text-lg">علاقة خاصة تقوم على الاستماع، وفهم السياق، ورؤية الإنسان خلف الدور والمسؤوليات التي يحملها.</p>
-              <p className="mt-5 max-w-lg text-sm leading-8 text-primary-foreground/55">سرور طركان مستشارة رفاه ومدرّبة وReiki Master. تبدأ مقاربتها من الشخص نفسه، لا من قالب جاهز.</p>
+              <p className="mt-9 max-w-lg text-base leading-8 text-primary-foreground/70 sm:text-base">علاقة خاصة تقوم على الاستماع، وفهم السياق، ورؤية الإنسان خلف الدور والمسؤوليات التي يحملها.</p>
+              <p className="mt-5 max-w-lg text-sm leading-7 text-primary-foreground/55">سرور طركان مستشارة رفاه ومدرّبة وReiki Master. تبدأ مقاربتها من الشخص نفسه، لا من قالب جاهز.</p>
               <a href="/ar/about" className="mt-10 inline-flex items-center gap-3 border-b border-gold/70 pb-3 text-xs font-semibold tracking-[0.16em] text-primary-foreground transition-colors hover:text-gold">تعرّف على سرور طركان <ArrowUpLeft className="size-4" /></a>
             </div>
           </div>
