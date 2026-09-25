@@ -183,7 +183,7 @@ export function FrenchPage({ kind }: { kind: Kind }) {
           <div>
             <p className="eyebrow text-gold">{d.eyebrow}</p>
             <h1 className="mt-6 font-serif text-5xl leading-[1.08] md:text-7xl">{d.title}</h1>
-            <p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground">{d.intro}</p>
+            <p className="mt-7 max-w-2xl text-sm leading-7 text-muted-foreground">{d.intro}</p>
             {!isLegal && (
               <a href="/fr/book" className="button-primary mt-9">
                 Demander une consultation privée <ArrowUpRight className="size-4" />
@@ -203,7 +203,7 @@ export function FrenchPage({ kind }: { kind: Kind }) {
               </div>
               <div>
                 <h2 className="font-serif text-4xl leading-tight md:text-5xl">{section.title}</h2>
-                <p className="mt-5 max-w-3xl text-base leading-8 text-muted-foreground">{section.body}</p>
+                <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">{section.body}</p>
               </div>
             </div>
           </article>
@@ -215,7 +215,7 @@ export function FrenchPage({ kind }: { kind: Kind }) {
           <div className="mx-auto max-w-5xl">
             <p className="eyebrow text-gold">LE GOLFE</p>
             <h2 className="mt-4 font-serif text-5xl leading-tight sm:text-6xl">{gulfContext[kind].title}</h2>
-            <p className="mt-6 max-w-3xl text-base leading-8 text-muted-foreground">{gulfContext[kind].body}</p>
+            <p className="mt-6 max-w-3xl text-sm leading-7 text-muted-foreground">{gulfContext[kind].body}</p>
           </div>
         </section>
       )}
@@ -276,7 +276,7 @@ export function FrenchHome() {
               <br />
               <em className="font-normal">pour revenir à vous-même.</em>
             </h1>
-            <p className="mt-8 max-w-2xl text-base leading-8 text-primary-foreground/75">
+            <p className="mt-8 max-w-2xl text-sm leading-7 text-primary-foreground/75">
               Avec Sourour Tarkan, un espace calme et confidentiel pour aborder la pression, les relations, les responsabilités et les transitions personnelles avec plus de clarté et d'équilibre.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -291,6 +291,7 @@ export function FrenchHome() {
         </div>
       </section>
 
+      {kind === "wellbeing" && <section className="border-y border-border bg-background"><div className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12"><p className="eyebrow text-gold">PRIVATE & BESPOKE WELLBEING</p><h2 className="mt-4 max-w-5xl font-serif text-5xl leading-tight md:text-6xl">Chaque client est différent. Chaque parcours est personnel.</h2><p className="mt-6 max-w-3xl text-sm leading-7 text-muted-foreground">Votre programme privé de bien-être est conçu selon vos besoins, vos objectifs et votre rythme.</p><div className="mt-10 grid gap-px border border-border bg-border md:grid-cols-3"><div className="bg-background p-7"><h3 className="font-serif text-3xl">Séance privée</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">Une séance individuelle pour comprendre votre besoin et définir l'approche la plus adaptée.</p></div><div className="bg-background p-7"><h3 className="font-serif text-3xl">Programme de bien-être personnalisé</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">Le nombre et la durée des séances sont déterminés après l'évaluation initiale.</p></div><div className="bg-background p-7"><h3 className="font-serif text-3xl">Conseil privé VIP</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">Un accompagnement privé et continu, défini selon les besoins et le rythme convenus.</p></div></div><div className="mt-12 max-w-4xl"><p className="eyebrow text-gold">PRIVATE WELLBEING, DESIGNED AROUND YOU</p><p className="mt-4 font-serif text-3xl leading-tight md:text-4xl">Aucun parcours de bien-être ne se ressemble.</p><p className="mt-5 text-sm leading-7 text-muted-foreground">Chez GULFWELLBEING, chaque séance privée est personnalisée selon vos besoins, vos objectifs et votre rythme. Plutôt que des programmes prédéfinis, Sourour Tarkan construit une approche sur mesure pour chaque client, avec une fréquence et une durée de séances adaptées au parcours individuel.</p><p className="mt-5 text-xs font-semibold uppercase tracking-[.16em] text-gold">Privé · Personnalisé · Discret</p><Link to="/fr/book" className="button-primary mt-8 inline-flex items-center gap-2">Demander une consultation privée <ArrowUpRight className="size-4"/></Link></div></div></section>}
       <section className="px-6 py-20 lg:px-12 lg:py-32">
         <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[.7fr_1.3fr]">
           <p className="eyebrow">UNE RELATION DE CONSEIL PRIVÉE</p>
@@ -300,7 +301,7 @@ export function FrenchHome() {
               <br />
               L'accompagnement doit l'être aussi.
             </h2>
-            <p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground">
+            <p className="mt-7 max-w-2xl text-sm leading-7 text-muted-foreground">
               GULFWELLBEING est un espace privé pour réfléchir, retrouver une perspective et traverser des étapes de vie complexes. Aucun programme unique ne convient à tous, et il n'est pas nécessaire de vous couler dans un modèle préétabli.
             </p>
           </div>
@@ -329,7 +330,7 @@ export function FrenchHome() {
               <br />
               il y a un être humain.
             </h2>
-            <p className="mt-7 text-base leading-8 text-primary-foreground/70">
+            <p className="mt-7 text-sm leading-7 text-primary-foreground/70">
               Conseil privé en bien-être pour fondateurs, dirigeants, cadres et équipes, centré sur la pression continue, la clarté décisionnelle, la responsabilité du leadership et l'aspect humain de la performance.
             </p>
             <a href="/fr/business" className="button-gold mt-9">
@@ -349,7 +350,7 @@ export function FrenchHome() {
               <br />
               au sens de la confidentialité.
             </h2>
-            <p className="mt-7 max-w-lg text-base leading-8 text-muted-foreground">
+            <p className="mt-7 max-w-lg text-sm leading-7 text-muted-foreground">
               Une expérience conçue autour d'emplois du temps chargés, d'une vie internationale et du besoin d'un niveau supérieur de confidentialité et de flexibilité.
             </p>
             <a href="/fr/business/vip-concierge-wellbeing" className="button-primary mt-9">
@@ -373,7 +374,7 @@ export function FrenchHome() {
                 <p className="eyebrow text-gold">À LA RENCONTRE DE SOUROUR TARKAN</p>
               </div>
               <h2 className="font-serif text-5xl leading-[1.08] sm:text-7xl lg:text-[5.2rem]">Un bien-être plus apaisé,<br/><em className="font-normal">une relation qui commence par l'humain.</em></h2>
-              <p className="mt-9 max-w-lg text-base leading-8 text-primary-foreground/70 sm:text-lg">Une relation privée fondée sur l'écoute, la compréhension du contexte et la vision de la personne derrière le rôle et les responsabilités qu'elle porte.</p>
+              <p className="mt-9 max-w-lg text-sm leading-7 text-primary-foreground/70 sm:text-lg">Une relation privée fondée sur l'écoute, la compréhension du contexte et la vision de la personne derrière le rôle et les responsabilités qu'elle porte.</p>
               <p className="mt-5 max-w-lg text-sm leading-7 text-primary-foreground/55">Sourour Tarkan est conseillère privée en bien-être, coach et Reiki Master. Son approche commence par la personne, non par un modèle préétabli.</p>
               <a href="/fr/about" className="mt-10 inline-flex items-center gap-3 border-b border-gold/70 pb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:text-gold">À la rencontre de Sourour Tarkan <ArrowUpRight className="size-4" /></a>
             </div>
@@ -391,7 +392,7 @@ export function FrenchHome() {
               Aucun modèle imposé.
             </h2>
           </div>
-          <div className="space-y-8 text-base leading-8 text-muted-foreground">
+          <div className="space-y-8 text-sm leading-7 text-muted-foreground">
             <p>
               La relation commence par l'écoute et la compréhension de la réalité de la personne, non par l'application d'un programme préétabli. Il y a de la place pour la complexité, et pour ce qui ne peut être réduit à un seul intitulé.
             </p>
