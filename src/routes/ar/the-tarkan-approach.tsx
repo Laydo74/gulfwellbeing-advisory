@@ -49,8 +49,8 @@ function Page() {
               <p className="mt-4 text-[9px] uppercase tracking-[.24em] text-muted-foreground/60">{title}</p>
             </div>
             <div className="md:order-2">
-              <h2 className="max-w-5xl font-serif text-5xl leading-[1.04] md:text-7xl lg:text-[5.8rem]">{title}</h2>
-              <p className="mt-7 max-w-3xl text-sm leading-7 text-muted-foreground">{body}</p>
+              <h2 className="max-w-5xl font-serif text-5xl leading-[1.04] md:text-7xl lg:text-[5.8rem]">{body}</h2>
+              <p className="mt-7 max-w-3xl text-sm leading-7 text-muted-foreground">{title}</p>
             </div>
           </article>
         ))}
