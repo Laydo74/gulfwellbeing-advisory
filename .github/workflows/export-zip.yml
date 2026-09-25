@@ -17,11 +17,12 @@ jobs:
 
       - name: Create ZIP
         run: |
-          zip -r gulfwellbeing-advisory-7d77882.zip .             -x ".git/*"             -x ".env"             -x "node_modules/*"             -x "gulfwellbeing-advisory-7d77882.zip"
+          rm -f /tmp/gulfwellbeing-advisory-7d77882.zip
+          zip -r /tmp/gulfwellbeing-advisory-7d77882.zip .             -x ".git/*"             -x ".env"             -x "node_modules/*"
 
       - name: Upload ZIP
         uses: actions/upload-artifact@v4
         with:
-          name: gulfwellbeing-advisory-7d77882
-          path: gulfwellbeing-advisory-7d77882.zip
+          name: gulfwellbeing-advisory-7d77882-clean
+          path: /tmp/gulfwellbeing-advisory-7d77882.zip
           retention-days: 7
