@@ -363,10 +363,13 @@ export function FrenchHome() {
 
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
         <div className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="relative order-2 min-h-[520px] lg:order-2 lg:min-h-0">
+          <div className="relative order-2 min-h-[520px] px-5 py-8 lg:order-2 lg:min-h-0 lg:px-10 lg:py-16">
+          <div className="relative h-full overflow-hidden rounded-[2rem]">
             <img src="/images/sourour-tarkan-home.jpg" loading="lazy" alt="Sourour Tarkan, conseillère privée en bien-être et coach, Reiki Master" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <div className="absolute inset-0 bg-linear-to-l from-transparent via-primary/5 to-primary/35" />
             <div className="absolute inset-0 bg-linear-to-t from-primary/55 via-transparent to-transparent lg:bg-linear-to-l lg:from-transparent lg:to-primary/15" />
           </div>
+        </div>
           <div className="relative order-1 flex items-center px-7 py-24 lg:order-1 lg:px-20 xl:px-28">
             <div className="max-w-xl">
               <div className="mb-10 flex items-center gap-4">
