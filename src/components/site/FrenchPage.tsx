@@ -123,7 +123,7 @@ const data: Record<Kind, PageData> = {
     ],
   },
   blog: {
-    eyebrow: "LE JOURNAL",
+    eyebrow: "LE BLOG",
     title: "Un espace pour des idées qui méritent qu'on s'y arrête.",
     intro:
       "Articles et réflexions sur le bien-être, les relations, la vie privée, les femmes, les hommes, le leadership et les transitions que nous traversons.",
@@ -171,7 +171,7 @@ export function FrenchPage({ kind }: { kind: Kind }) {
     about: { title: "Une approche qui comprend la réalité de la vie dans le Golfe", body: "Sourour Tarkan travaille avec des personnes qui vivent entre des responsabilités personnelles, professionnelles et familiales entremêlées, dans le Golfe ou dans le cadre d'une vie internationale. La relation commence par l'écoute et la compréhension du contexte avant toute orientation." },
     approach: { title: "L'approche et le contexte du Golfe", body: "L'Approche Tarkan ne suppose pas que l'expérience d'une personne à Dubaï soit identique à celle d'une personne à Riyad ou à Doha. Le lieu, la famille, le travail, les déplacements et les responsabilités font partie du contexte à travers lequel la vie de chaque personne est comprise." },
     vip: { title: "Une confidentialité adaptée à une vie internationale", body: "Pour ceux dont la vie se répartit entre le Golfe et les déplacements internationaux, l'expérience privée peut être organisée autour d'emplois du temps chargés, de la flexibilité et du besoin d'un niveau élevé de confidentialité." },
-    blog: { title: "Des lectures sur le bien-être dans le Golfe et la vie contemporaine", body: "Le journal aborde la pression, le leadership, les relations, la famille et les transitions personnelles avec un regard pratique et réfléchi, adapté à une vie chargée de responsabilités dans le Golfe et au-delà." },
+    blog: { title: "Des lectures sur le bien-être dans le Golfe et la vie contemporaine", body: "Le blog aborde la pression, le leadership, les relations, la famille et les transitions personnelles avec un regard pratique et réfléchi, adapté à une vie chargée de responsabilités dans le Golfe et au-delà." },
     privacy: { title: "", body: "" },
     terms: { title: "", body: "" },
   };
@@ -416,11 +416,11 @@ export function FrenchHome() {
         <div className="mx-auto max-w-[1350px]">
           <div className="mb-12 flex items-end justify-between">
             <div>
-              <p className="eyebrow">LE JOURNAL</p>
+              <p className="eyebrow">LE BLOG</p>
               <h2 className="mt-3 font-serif text-5xl sm:text-7xl">Des idées qui méritent qu'on s'y arrête.</h2>
             </div>
             <a href="/fr/blog" className="hidden items-center gap-2 text-xs font-semibold tracking-[.12em] sm:inline-flex">
-              Voir le journal <ArrowUpRight className="size-4" />
+              Voir le blog <ArrowUpRight className="size-4" />
             </a>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
