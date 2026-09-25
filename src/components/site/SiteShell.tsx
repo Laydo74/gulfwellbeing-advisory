@@ -10,8 +10,8 @@ const nav = [
   { label: "Women", ar: "المرأة", to: "/women" },
   { label: "Men", ar: "الرجل", to: "/men" },
   { label: "Business", ar: "الأعمال والقيادات", to: "/business" },
-  { label: "About", ar: "عن سرور طركان", to: "/about" },
   { label: "The Tarkan Approach", ar: "منهج سرور طركان", to: "/the-tarkan-approach" },
+  { label: "About", ar: "عن سرور طركان", to: "/about" },
   { label: "Book", ar: "طلب جلسة", to: "/book" },
 ] as const;
 
