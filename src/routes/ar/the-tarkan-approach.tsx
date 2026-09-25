@@ -43,13 +43,14 @@ function Page() {
       </div>
       <div>
         {principles.map(([n,title,body]) => (
-          <article key={n} className="grid gap-8 border-t border-border py-14 md:grid-cols-[.72fr_1.28fr] md:items-center lg:gap-16 lg:py-20">
-            <div className="md:order-2">
-              <span className="text-xs font-semibold tracking-[.16em] text-gold">{n}</span>
-              <h2 className="mt-4 max-w-3xl font-serif text-5xl leading-[1.02] md:text-6xl lg:text-7xl xl:text-[5.4rem]">{title}</h2>
-            </div>
+          <article key={n} className="grid gap-8 border-t border-border py-16 md:grid-cols-[.45fr_1.55fr] md:items-center lg:gap-16 lg:py-20">
             <div className="md:order-1">
-              <p className="max-w-xl text-base leading-8 text-muted-foreground md:text-base">{body}</p>
+              <span className="font-serif text-2xl text-gold/70">{n}</span>
+              <p className="mt-4 text-[9px] uppercase tracking-[.24em] text-muted-foreground/60">{title}</p>
+            </div>
+            <div className="md:order-2">
+              <h2 className="max-w-5xl font-serif text-5xl leading-[1.04] md:text-7xl lg:text-[5.8rem]">{title}</h2>
+              <p className="mt-7 max-w-3xl text-sm leading-7 text-muted-foreground">{body}</p>
             </div>
           </article>
         ))}
