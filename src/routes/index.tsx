@@ -109,7 +109,7 @@ function Home() {
               <p className="text-[10px] uppercase tracking-[0.28em] text-gold">MEET SOUROUR TARKAN</p>
             </div>
             <h2 className="font-serif text-5xl leading-[0.98] sm:text-7xl lg:text-[5.5rem]">A quieter kind<br/><em className="font-normal">of wellbeing.</em></h2>
-            <p className="mt-9 max-w-lg text-base leading-7 text-primary-foreground/70 sm:text-base">A private relationship built around listening, context and the realities of the person behind the role.</p>
+            <p className="mt-9 max-w-lg text-base leading-8 text-primary-foreground/70 sm:text-lg">A private relationship built around listening, context and the realities of the person behind the role.</p>
             <p className="mt-5 max-w-lg text-sm leading-7 text-primary-foreground/55">Sourour Tarkan is a private wellbeing advisor, coach and Reiki Master. Her work begins with the individual, not a formula.</p>
             <Link to="/about" className="mt-10 inline-flex items-center gap-3 border-b border-gold/70 pb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:text-gold">Meet Sourour Tarkan <ArrowRight className="size-4" /></Link>
           </div>
