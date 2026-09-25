@@ -13,6 +13,7 @@ const nav = [
   { label: "Men", ar: "الرجل", fr: "Hommes", to: "/men" },
   { label: "Business", ar: "الأعمال والقيادات", fr: "Entreprises", to: "/business" },
   { label: "The Tarkan Approach", ar: "منهج سرور طركان", fr: "L'Approche Tarkan", to: "/the-tarkan-approach" },
+  { label: "Blog", ar: "المدونة", fr: "Blog", to: "/blog" },
   { label: "About", ar: "عن سرور طركان", fr: "À propos", to: "/about" },
   { label: "Book", ar: "طلب جلسة", fr: "Réserver", to: "/book" },
 ] as const;
@@ -74,7 +75,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <nav className="flex items-center gap-3" dir={isArabic ? "rtl" : "ltr"} aria-label={t("Main navigation", "التنقل الرئيسي", "Navigation principale")}>
               {nav.map((item, i) => (
                 <a key={item.label} href={toLocale(item.to, locale)}
-                  className={i === 7 ? "nav-book" : "nav-link"}>
+                  className={item.label === "Book" ? "nav-book" : "nav-link"}>
                   {t(item.label, item.ar, item.fr)}
                 </a>
               ))}
@@ -136,8 +137,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div>
             <p className="eyebrow text-gold">{t("Navigate", "التنقل", "Navigation")}</p>
             <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
-              {nav.slice(0, 8).map((n) => <a key={n.label} href={toLocale(n.to, locale)}>{t(n.label, n.ar, n.fr)}</a>)}
-              <a href={toLocale("/blog", locale)}>{t("Blog", "المدونة", "Journal")}</a>
+              {nav.map((n) => <a key={n.label} href={toLocale(n.to, locale)}>{t(n.label, n.ar, n.fr)}</a>)}
             </div>
           </div>
           <div>
