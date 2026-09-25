@@ -304,7 +304,7 @@ const data: Record<Kind, PageData> = {
 export function ArabicPage({ kind }: { kind: Kind }) {
   const d = data[kind];
   const image =
-    kind === "about" ? "/images/sourour-tarkan-about.jpg" : kind === "women" ? woman : kind === "men" || kind === "business" ? executive : stillLife;
+    kind === "about" ? "/images/sourour-tarkan-home.jpg" : kind === "women" ? woman : kind === "men" || kind === "business" ? executive : stillLife;
   const isLegal = kind === "privacy" || kind === "terms";
   const gulfContext: Record<Kind, { title: string; body: string }> = {
     wellbeing: { title: "استشارات خاصة لمن يعيش حياة الخليج بكل تعقيداتها", body: "قد تتقاطع الحياة بين دبي وأبوظبي والرياض والدوحة والكويت والمنامة ومسقط مع العمل والسفر والأسرة والالتزامات الاجتماعية. لذلك تُبنى الاستشارة حول سياق الشخص الفعلي، لا حول برنامج موحّد." },
@@ -504,12 +504,12 @@ export function ArabicHome() {
       </section>
 
       <section dir="rtl" className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="relative order-2 min-h-[520px] lg:order-1 lg:min-h-0">
-            <img src="/images/sourour-tarkan-home.jpg" loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="absolute inset-0 h-full w-full object-cover object-center" />
+        <div className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="relative order-1 min-h-[520px] lg:order-2 lg:min-h-0">
+            <img src="/images/sourour-tarkan-about.jpg" loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="absolute inset-0 bg-linear-to-t from-primary/55 via-transparent to-transparent lg:bg-linear-to-l lg:from-transparent lg:to-primary/15" />
           </div>
-          <div className="relative order-1 flex items-center px-7 py-24 text-right lg:order-2 lg:px-20 xl:px-28">
+          <div className="relative order-2 flex items-center px-7 py-24 text-right lg:order-1 lg:px-20 xl:px-28">
             <div className="max-w-xl">
               <div className="mb-10 flex items-center justify-end gap-4">
                 <p className="eyebrow text-gold">تعرّف على سرور طركان</p>
