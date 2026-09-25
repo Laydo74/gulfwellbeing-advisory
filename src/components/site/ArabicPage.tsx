@@ -326,7 +326,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
           <div>
             <p className="eyebrow text-gold">{d.eyebrow}</p>
             <h1 className="mt-6 font-serif text-5xl leading-[1.08] md:text-7xl">{d.title}</h1>
-            <p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground">{d.intro}</p>
+            <p className="mt-7 max-w-2xl text-sm leading-7 text-muted-foreground">{d.intro}</p>
             {!isLegal && (
               <a href="/ar/book" className="button-primary mt-9">
                 طلب استشارة خاصة <ArrowUpLeft className="size-4" />
@@ -346,7 +346,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
               </div>
               <div>
                 <h2 className="font-serif text-4xl leading-tight md:text-5xl">{section.title}</h2>
-                <p className="mt-5 max-w-3xl text-base leading-8 text-muted-foreground">{section.body}</p>
+                <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">{section.body}</p>
               </div>
             </div>
           </article>
@@ -358,7 +358,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
           <div className="mx-auto max-w-5xl">
             <p className="eyebrow text-gold">الخليج</p>
             <h2 className="mt-4 font-serif text-5xl leading-tight sm:text-6xl">{gulfContext[kind].title}</h2>
-            <p className="mt-6 max-w-3xl text-base leading-8 text-muted-foreground">{gulfContext[kind].body}</p>
+            <p className="mt-6 max-w-3xl text-sm leading-7 text-muted-foreground">{gulfContext[kind].body}</p>
           </div>
         </section>
       )}
@@ -434,6 +434,7 @@ export function ArabicHome() {
         </div>
       </section>
 
+      {kind === "wellbeing" && <section className="border-y border-border bg-background"><div className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12"><p className="eyebrow text-gold">رفاه خاص ومصمم لك</p><h2 className="mt-4 max-w-5xl font-serif text-5xl leading-tight md:text-6xl">كل عميل مختلف. وكل رحلة شخصية.</h2><p className="mt-6 max-w-3xl text-sm leading-7 text-muted-foreground">يتم تصميم برنامج الرفاه الخاص وفق احتياجات العميل وأهدافه وإيقاعه الشخصي.</p><div className="mt-10 grid gap-px border border-border bg-border md:grid-cols-3"><div className="bg-background p-7"><h3 className="font-serif text-3xl">جلسة فردية</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">جلسة خاصة يتم خلالها فهم احتياج العميل وتحديد المقاربة المناسبة.</p></div><div className="bg-background p-7"><h3 className="font-serif text-3xl">برنامج رفاه شخصي</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">يتم تحديد عدد الجلسات ومدتها بعد التقييم الأولي وبحسب رحلة العميل.</p></div><div className="bg-background p-7"><h3 className="font-serif text-3xl">استشارات VIP خاصة</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">مرافقة خاصة ومستمرة وفق الاحتياجات والوتيرة التي يتم الاتفاق عليها.</p></div></div><div className="mt-12 max-w-4xl"><p className="eyebrow text-gold">رفاه خاص، مصمم حولك</p><p className="mt-4 font-serif text-3xl leading-tight md:text-4xl">لا توجد رحلتان متطابقتان في الرفاه.</p><p className="mt-5 text-sm leading-7 text-muted-foreground">في GULFWELLBEING، يتم تخصيص كل جلسة خاصة وفق احتياجاتك وأهدافك وإيقاعك. وبدلاً من البرامج المحددة مسبقاً، تصمم سرور طركان مقاربة خاصة لكل عميل، مع تحديد وتيرة الجلسات ومدتها وفق الرحلة الفردية.</p><p className="mt-5 text-xs font-semibold uppercase tracking-[.16em] text-gold">خاص · شخصي · سري</p><Link to="/ar/book" className="button-primary mt-8 inline-flex items-center gap-2">طلب استشارة خاصة <ArrowUpLeft className="size-4"/></Link></div></div></section>}
       <section className="px-6 py-20 lg:px-12 lg:py-32">
         <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[.7fr_1.3fr]">
           <p className="eyebrow">علاقة استشارية خاصة</p>
@@ -443,7 +444,7 @@ export function ArabicHome() {
               <br />
               لذلك يجب أن يكون الدعم شخصياً.
             </h2>
-            <p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground">
+            <p className="mt-7 max-w-2xl text-sm leading-7 text-muted-foreground">
               GULFWELLBEING مساحة خاصة للتفكير، استعادة المنظور والتعامل مع مراحل الحياة المعقدة. لا برنامج واحداً يناسب الجميع، ولا حاجة إلى أن تضع نفسك داخل قالب جاهز.
             </p>
           </div>
@@ -492,7 +493,7 @@ export function ArabicHome() {
               <br />
               بمعنى الخصوصية.
             </h2>
-            <p className="mt-7 max-w-lg text-base leading-8 text-muted-foreground">
+            <p className="mt-7 max-w-lg text-sm leading-7 text-muted-foreground">
               تجربة مصممة حول الجداول المكثفة، الحياة الدولية والحاجة إلى مستوى أعلى من الخصوصية والمرونة.
             </p>
             <a href="/ar/business/vip-concierge-wellbeing" className="button-primary mt-9">
@@ -534,7 +535,7 @@ export function ArabicHome() {
               والقالب ليس مطلوباً.
             </h2>
           </div>
-          <div className="space-y-8 text-base leading-8 text-muted-foreground">
+          <div className="space-y-8 text-sm leading-7 text-muted-foreground">
             <p>
               تبدأ العلاقة بالاستماع وفهم واقع الشخص، لا بتطبيق برنامج جاهز. هناك مساحة للتعقيد، ولما لا يمكن اختزاله في عنوان واحد.
             </p>
