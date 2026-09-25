@@ -503,14 +503,25 @@ export function ArabicHome() {
         <img src={stillLife} alt="مساحة خاصة وهادئة" className="order-1 h-full min-h-[30rem] w-full object-cover lg:order-2" />
       </section>
 
-      <section className="grid bg-primary text-primary-foreground lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="min-h-[34rem]"><img src="/images/sourour-tarkan-home.jpg" loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="h-full w-full object-cover object-center" /></div>
-        <div className="flex items-center px-6 py-20 lg:px-20"><div className="max-w-xl">
-          <p className="eyebrow text-gold">تعرّف على سرور طركان</p>
-          <h2 className="mt-5 font-serif text-5xl leading-[1.08] sm:text-7xl">علاقة خاصة<br/>مع إنسانة حقيقية.</h2>
-          <p className="mt-7 text-base leading-9 text-primary-foreground/70">تقود GULFWELLBEING سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master. تبدأ المقاربة بالاستماع وفهم واقع الشخص، لا بتطبيق قالب جاهز.</p>
-          <a href="/ar/the-tarkan-approach" className="button-gold mt-9">اكتشف منهج سرور طركان <ArrowUpLeft className="size-4" /></a>
-        </div></div>
+      <section dir="rtl" className="relative overflow-hidden bg-primary text-primary-foreground">
+        <div className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="relative order-2 min-h-[520px] lg:order-1 lg:min-h-0">
+            <img src="/images/sourour-tarkan-home.jpg" loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <div className="absolute inset-0 bg-linear-to-t from-primary/55 via-transparent to-transparent lg:bg-linear-to-l lg:from-transparent lg:to-primary/15" />
+          </div>
+          <div className="relative order-1 flex items-center px-7 py-24 text-right lg:order-2 lg:px-20 xl:px-28">
+            <div className="max-w-xl">
+              <div className="mb-10 flex items-center justify-end gap-4">
+                <p className="eyebrow text-gold">تعرّف على سرور طركان</p>
+                <span className="h-px w-12 bg-gold" />
+              </div>
+              <h2 className="font-serif text-5xl leading-[1.08] sm:text-7xl lg:text-[5.2rem]">رفاهٌ أكثر هدوءاً،<br/><em className="font-normal">وعلاقة تبدأ بالإنسان.</em></h2>
+              <p className="mt-9 max-w-lg text-base leading-9 text-primary-foreground/70 sm:text-lg">علاقة خاصة تقوم على الاستماع، وفهم السياق، ورؤية الإنسان خلف الدور والمسؤوليات التي يحملها.</p>
+              <p className="mt-5 max-w-lg text-sm leading-8 text-primary-foreground/55">سرور طركان مستشارة رفاه ومدرّبة وReiki Master. تبدأ مقاربتها من الشخص نفسه، لا من قالب جاهز.</p>
+              <a href="/ar/about" className="mt-10 inline-flex items-center gap-3 border-b border-gold/70 pb-3 text-xs font-semibold tracking-[0.16em] text-primary-foreground transition-colors hover:text-gold">تعرّف على سرور طركان <ArrowUpLeft className="size-4" /></a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="bg-secondary px-5 py-20 lg:px-10 lg:py-28">
