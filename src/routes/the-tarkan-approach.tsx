@@ -32,7 +32,7 @@ function Page() {
       </div>
     </section>
     <section className="mx-auto max-w-[1300px] px-6 py-20 lg:px-12 lg:py-32">
-      {principles.map(([n,title,description,closing])=><article key={n} className="grid gap-8 border-t border-border py-14 md:grid-cols-[100px_1fr] lg:grid-cols-[100px_1fr]"><span className="font-serif text-3xl text-gold">{n}</span><div><p className="eyebrow text-gold">{title}</p><h2 className="mt-4 max-w-4xl font-serif text-4xl leading-[1.08] sm:text-6xl lg:text-7xl">{description}</h2><p className="mt-6 max-w-3xl text-sm font-medium leading-7 text-foreground/70 sm:text-base">{closing}</p></div></article>)}
+      {principles.map(([n,title,description,closing])=><article key={n} className="grid gap-8 border-t border-border py-16 md:grid-cols-[80px_1fr] lg:grid-cols-[100px_1fr]"><span className="font-serif text-2xl text-gold/70">{n}</span><div><p className="text-[9px] uppercase tracking-[.26em] text-muted-foreground/60">{title}</p><h2 className="mt-5 max-w-5xl font-serif text-5xl leading-[1.02] sm:text-7xl lg:text-[5.8rem]">{description}</h2><p className="mt-7 max-w-3xl text-sm leading-7 text-muted-foreground">{closing}</p></div></article>)}
     </section>
     <section className="bg-secondary px-6 py-20 text-center lg:py-28">
       <p className="eyebrow text-gold">A PRIVATE CONVERSATION</p>
