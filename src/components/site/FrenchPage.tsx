@@ -179,10 +179,10 @@ export function FrenchPage({ kind }: { kind: Kind }) {
   return (
     <SiteShell>
       <section className="page-hero">
-        <div className="mx-auto grid min-h-[72vh] max-w-[1440px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-12">
+        <div className="mx-auto grid min-h-[60vh] max-w-[1280px] items-center gap-10 px-6 py-16 lg:grid-cols-2 lg:px-12">
           <div>
             <p className="eyebrow text-gold">{d.eyebrow}</p>
-            <h1 className="mt-6 font-serif text-5xl leading-[1.08] md:text-7xl">{d.title}</h1>
+            <h1 className="mt-6 max-w-3xl font-serif text-4xl leading-[1.08] md:text-6xl">{d.title}</h1>
             <p className="mt-7 max-w-2xl text-sm leading-7 text-muted-foreground">{d.intro}</p>
             {!isLegal && (
               <a href="/fr/book" className="button-primary mt-9">
@@ -190,11 +190,11 @@ export function FrenchPage({ kind }: { kind: Kind }) {
               </a>
             )}
           </div>
-          <img src={image} alt={kind === "about" ? "Sourour Tarkan, conseillère privée en bien-être et coach, Reiki Master" : `${d.eyebrow} — GULFWELLBEING`} className="mx-auto h-[38vh] w-full max-w-[34rem] object-cover lg:h-[44vh]" />
+          <img src={image} alt={kind === "about" ? "Sourour Tarkan, conseillère privée en bien-être et coach, Reiki Master" : `${d.eyebrow} — GULFWELLBEING`} className="mx-auto h-[34vh] w-full max-w-[30rem] object-cover lg:h-[48vh]" />
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16 lg:py-24">
+      <section className="mx-auto max-w-6xl px-6 py-12 lg:py-20">
         {d.sections.map((section, index) => (
           <article key={section.title} className="border-t border-border py-12">
             <div className="grid gap-7 md:grid-cols-[150px_1fr]">
@@ -202,7 +202,7 @@ export function FrenchPage({ kind }: { kind: Kind }) {
                 <span className="font-serif text-3xl text-gold">{String(index + 1).padStart(2, "0")}</span>
               </div>
               <div>
-                <h2 className="font-serif text-4xl leading-tight md:text-5xl">{section.title}</h2>
+                <h2 className="font-serif text-2xl leading-tight md:text-3xl">{section.title}</h2>
                 <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">{section.body}</p>
               </div>
             </div>
