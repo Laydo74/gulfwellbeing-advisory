@@ -35,9 +35,8 @@ function Page() {
       {principles.map(([n,label,description]) => <article key={n} className="grid gap-5 border-t border-border py-10 md:grid-cols-[70px_1fr] lg:gap-10 lg:py-12">
         <span className="font-serif text-2xl text-gold/70">{n}</span>
         <div>
-          <p className="text-[10px] uppercase tracking-[.22em] text-muted-foreground/60">{label}</p>
-          <h2 className="mt-4 max-w-4xl font-serif text-3xl leading-[1.15] sm:text-4xl lg:text-5xl">{description}</h2>
-          <p className="mt-5 max-w-2xl text-sm leading-7 text-muted-foreground">{label.charAt(0) + label.slice(1).toLowerCase()} — une formulation qui reste au service de la réalité de la personne, et non l'inverse.</p>
+          <h2 className="mt-2 max-w-4xl font-serif text-3xl leading-[1.08] sm:text-4xl lg:text-5xl">{label}</h2>
+          <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground">{description}</p>
         </div>
       </article>)}
     </section>
