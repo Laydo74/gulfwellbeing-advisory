@@ -46,11 +46,10 @@ function Page() {
           <article key={n} className="grid gap-5 border-t border-border py-10 md:grid-cols-[.45fr_1.55fr] md:items-center lg:gap-10 lg:py-12">
             <div className="md:order-1">
               <span className="font-serif text-2xl text-gold/70">{n}</span>
-              <p className="mt-4 text-[10px] uppercase tracking-[.2em] text-muted-foreground/60">{title}</p>
+              <h2 className="mt-2 max-w-5xl font-serif text-3xl leading-[1.15] sm:text-4xl lg:text-5xl">{title}</h2>
             </div>
             <div className="md:order-2">
-              <h2 className="max-w-5xl font-serif text-3xl leading-[1.18] sm:text-4xl lg:text-5xl">{body}</h2>
-              <p className="mt-7 max-w-3xl text-sm leading-7 text-muted-foreground">{title}</p>
+              <p className="mt-5 max-w-4xl text-base leading-8 text-muted-foreground">{body}</p>
             </div>
           </article>
         ))}
