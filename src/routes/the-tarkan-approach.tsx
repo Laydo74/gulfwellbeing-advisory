@@ -32,7 +32,7 @@ function Page() {
       </div>
     </section>
     <section className="mx-auto max-w-[1180px] px-6 py-16 lg:px-10 lg:py-24">
-      {principles.map(([n,title,description,closing])=><article key={n} className="grid gap-5 border-t border-border py-10 md:grid-cols-[70px_1fr] lg:grid-cols-[80px_1fr] lg:py-12"><span className="font-serif text-2xl text-gold/70">{n}</span><div><p className="text-[10px] uppercase tracking-[.22em] text-muted-foreground/60">{title}</p><h2 className="mt-4 max-w-4xl font-serif text-3xl leading-[1.15] sm:text-4xl lg:text-5xl">{description}</h2><p className="mt-5 max-w-2xl text-sm leading-7 text-muted-foreground">{closing}</p></div></article>)}
+      {principles.map(([n,title,description,closing])=><article key={n} className="grid gap-5 border-t border-border py-10 md:grid-cols-[70px_1fr] lg:grid-cols-[80px_1fr] lg:py-12"><span className="font-serif text-2xl text-gold/70">{n}</span><div><h2 className="mt-2 max-w-4xl font-serif text-3xl leading-[1.08] sm:text-4xl lg:text-5xl">{title}</h2><p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground">{description}</p><p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground/75">{closing}</p></div></article>)}
     </section>
     <section className="bg-secondary px-6 py-16 text-center lg:py-20">
       <p className="eyebrow text-gold">A PRIVATE CONVERSATION</p>
