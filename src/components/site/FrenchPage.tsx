@@ -474,11 +474,11 @@ function Area({
   href: string;
 }) {
   return (
-    <a href={href as any} className="group relative min-h-[30rem] overflow-hidden bg-primary text-primary-foreground">
+    <a href={href as any} className="group relative min-h-[22rem] overflow-hidden bg-primary text-primary-foreground sm:min-h-[24rem]">
       <img src={image} alt="" className="absolute inset-0 size-full object-cover opacity-65 transition-transform duration-700 group-hover:scale-[1.025]" />
       <div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 p-7">
-        <h3 className="font-serif text-4xl">{title}</h3>
+        <h3 className="font-serif text-2xl leading-tight sm:text-3xl">{title}</h3>
         <p className="mt-3 max-w-md text-sm leading-8 text-primary-foreground/70">{text}</p>
         <ArrowUpRight className="mt-6 size-5" />
       </div>
