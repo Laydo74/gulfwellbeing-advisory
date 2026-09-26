@@ -136,7 +136,9 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
-@layer base {\n  [dir="rtl"] { font-family: "Noto Sans Arabic", "IBM Plex Sans Arabic", var(--font-sans); }\n  [dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3 { font-family: "Noto Naskh Arabic", "Noto Sans Arabic", var(--font-sans); }
+@layer base {
+  [dir="rtl"] { font-family: "Cairo", "Noto Sans Arabic", var(--font-sans); }
+  [dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3,[dir="rtl"] .font-serif { font-family: "Cairo", "Noto Sans Arabic", var(--font-sans); font-weight: 600; }
   * {
     border-color: var(--color-border);
   }

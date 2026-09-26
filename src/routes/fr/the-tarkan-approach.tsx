@@ -19,29 +19,28 @@ export const Route = createFileRoute("/fr/the-tarkan-approach")({
 function Page() {
   return <SiteShell>
     <section className="page-hero">
-      <div className="mx-auto max-w-[1440px] px-6 py-24 lg:px-12 lg:py-32">
+      <div className="mx-auto max-w-[1240px] px-6 py-20 lg:px-10 lg:py-24">
         <p className="eyebrow text-gold">L'APPROCHE TARKAN</p>
-        <h1 className="mt-6 max-w-5xl font-serif text-6xl leading-[1.02] md:text-8xl">Une autre manière d'aborder le bien-être.</h1>
-        <p className="mt-8 max-w-3xl text-sm leading-7 text-muted-foreground">Une approche privée, globale et personnelle, construite autour de l'individu plutôt que d'une formule prédéfinie.</p>
+        <h1 className="mt-5 max-w-4xl font-serif text-4xl leading-[1.08] sm:text-5xl md:text-6xl">Une autre manière d'aborder le bien-être.</h1>
+        <p className="mt-6 max-w-2xl text-base leading-7 text-muted-foreground">Une approche privée, globale et personnelle, construite autour de l'individu plutôt que d'une formule prédéfinie.</p>
       </div>
     </section>
-    <section className="bg-primary px-6 py-20 text-primary-foreground lg:px-12 lg:py-28">
-      <div className="mx-auto grid max-w-[1300px] gap-12 lg:grid-cols-[.65fr_1.35fr] lg:items-end">
-        <div><p className="eyebrow text-gold">LA PHILOSOPHIE</p><h2 className="mt-5 font-serif text-5xl leading-tight sm:text-7xl">La personne vient en premier.</h2></div>
+    <section className="bg-primary px-6 py-16 text-primary-foreground lg:px-10 lg:py-20">
+      <div className="mx-auto grid max-w-[1180px] gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+        <div><p className="eyebrow text-gold">LA PHILOSOPHIE</p><h2 className="mt-5 font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">La personne vient en premier.</h2></div>
         <p className="max-w-3xl text-sm leading-7 text-primary-foreground/70">L'Approche Tarkan commence par l'écoute. Elle laisse une place à la complexité, au contexte personnel et à la réalité derrière le rôle que l'on porte. Ce n'est pas un programme rigide et ce n'est pas une tentative de transformer une vie complexe en liste de tâches.</p>
       </div>
     </section>
-    <section className="mx-auto max-w-[1300px] px-6 py-20 lg:px-12 lg:py-32">
-      {principles.map(([n,label,description]) => <article key={n} className="grid gap-8 border-t border-border py-16 md:grid-cols-[90px_1fr] lg:gap-16 lg:py-20">
+    <section className="mx-auto max-w-[1180px] px-6 py-16 lg:px-10 lg:py-24">
+      {principles.map(([n,label,description]) => <article key={n} className="grid gap-5 border-t border-border py-10 md:grid-cols-[70px_1fr] lg:gap-10 lg:py-12">
         <span className="font-serif text-2xl text-gold/70">{n}</span>
         <div>
-          <p className="text-[9px] uppercase tracking-[.26em] text-muted-foreground/60">{label}</p>
-          <h2 className="mt-5 max-w-5xl font-serif text-5xl leading-[1.03] sm:text-7xl lg:text-[5.8rem]">{description}</h2>
-          <p className="mt-7 max-w-3xl text-sm leading-7 text-muted-foreground">{label.charAt(0) + label.slice(1).toLowerCase()} — une formulation qui reste au service de la réalité de la personne, et non l'inverse.</p>
+          <h2 className="mt-2 max-w-4xl font-serif text-3xl leading-[1.08] sm:text-4xl lg:text-5xl">{label}</h2>
+          <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground">{description}</p>
         </div>
       </article>)}
     </section>
-    <section className="bg-secondary px-6 py-20 lg:py-28">
+    <section className="bg-secondary px-6 py-16 lg:py-20">
       <div className="mx-auto max-w-[1100px]">
         <p className="eyebrow text-gold">LE GOLFE & L'INTERNATIONAL</p>
         <h2 className="mt-5 max-w-4xl font-serif text-5xl leading-tight sm:text-7xl">Une approche, mais aucune vie identique.</h2>

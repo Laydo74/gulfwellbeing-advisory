@@ -164,98 +164,113 @@ export function FrenchPage({ kind }: { kind: Kind }) {
     kind === "about" ? "/images/sourour-tarkan-home.jpg" : kind === "women" ? woman : kind === "men" || kind === "business" ? executive : stillLife;
   const isLegal = kind === "privacy" || kind === "terms";
   const gulfContext: Record<Kind, { title: string; body: string }> = {
-    wellbeing: { title: "Un conseil privé pour vivre la vie du Golfe avec toute sa complexité", body: "La vie peut se répartir entre Dubaï, Abou Dhabi, Riyad, Doha, Koweït, Manama et Mascate, entre le travail, les déplacements, la famille et les engagements sociaux. C'est pourquoi l'accompagnement se construit autour du contexte réel de la personne, et non autour d'un programme uniforme." },
-    women: { title: "Le bien-être des femmes dans le Golfe, loin des modèles imposés", body: "Dans des villes comme Dubaï, Abou Dhabi, Riyad ou Doha, la vie professionnelle, familiale, la maternité et les relations peuvent s'entrecroiser d'une manière particulière. Cet espace est dédié à la femme elle-même, et à ce qu'elle a besoin de comprendre ou de changer à ce stade de sa vie." },
-    men: { title: "Un espace privé pour l'homme sous la pression de la responsabilité", body: "De Dubaï et Abou Dhabi à Riyad, Doha et le Koweït, la vie d'un homme peut être étroitement liée au travail, au leadership, à la famille et à la prise de décision. L'accompagnement lui offre un espace pour considérer ce qu'il porte, loin du besoin de paraître d'une certaine façon." },
-    business: { title: "Le bien-être des dirigeants et des entreprises dans l'environnement du Golfe", body: "Les dirigeants et fondateurs aux Émirats, en Arabie saoudite, au Qatar, au Koweït, à Bahreïn et à Oman évoluent dans des environnements rapides et changeants. Le conseil privé se concentre sur la personne derrière le rôle : la pression, la clarté décisionnelle, les limites, les relations et la capacité à durer." },
-    about: { title: "Une approche qui comprend la réalité de la vie dans le Golfe", body: "Sourour Tarkan travaille avec des personnes qui vivent entre des responsabilités personnelles, professionnelles et familiales entremêlées, dans le Golfe ou dans le cadre d'une vie internationale. La relation commence par l'écoute et la compréhension du contexte avant toute orientation." },
-    approach: { title: "L'approche et le contexte du Golfe", body: "L'Approche Tarkan ne suppose pas que l'expérience d'une personne à Dubaï soit identique à celle d'une personne à Riyad ou à Doha. Le lieu, la famille, le travail, les déplacements et les responsabilités font partie du contexte à travers lequel la vie de chaque personne est comprise." },
-    vip: { title: "Une confidentialité adaptée à une vie internationale", body: "Pour ceux dont la vie se répartit entre le Golfe et les déplacements internationaux, l'expérience privée peut être organisée autour d'emplois du temps chargés, de la flexibilité et du besoin d'un niveau élevé de confidentialité." },
-    blog: { title: "Des lectures sur le bien-être dans le Golfe et la vie contemporaine", body: "Le blog aborde la pression, le leadership, les relations, la famille et les transitions personnelles avec un regard pratique et réfléchi, adapté à une vie chargée de responsabilités dans le Golfe et au-delà." },
-    privacy: { title: "", body: "" },
-    terms: { title: "", body: "" },
+    wellbeing: { title: "Un conseil privé pour vivre la vie du Golfe avec toute sa complexité", body: "La vie entre Dubaï, Abu Dhabi, Riyad, Doha, Koweït, Manama et Mascate peut mêler travail, voyages, famille et responsabilités sociales. Chaque expérience est donc comprise dans son contexte réel, et non dans un modèle unique." },
+    women: { title: "Le bien-être des femmes dans le contexte du Golfe et d'une vie internationale", body: "Famille, travail, maternité, relations et déplacements peuvent se croiser de manière différente pour chaque femme. L'approche prend ce contexte au sérieux sans supposer que toutes vivent la même réalité." },
+    men: { title: "Le bien-être des hommes entre responsabilité et vie privée", body: "Responsabilités professionnelles, famille et leadership peuvent se superposer. Les séances privées offrent un espace calme pour regarder l'ensemble de la situation." },
+    business: { title: "Le bien-être des dirigeants dans les principaux pôles du Golfe", body: "Conseil à distance pour fondateurs, dirigeants et professionnels à Dubaï, Abu Dhabi, Riyad, Djeddah, Doha, Koweït, Manama et Mascate, en tenant compte de la pression professionnelle et de la vie personnelle." },
+    vip: { title: "Une confidentialité adaptée à une vie internationale", body: "Pour les personnes, familles et dirigeants dont la vie se partage entre le Golfe et les déplacements internationaux, la relation privée peut être organisée autour d'emplois du temps chargés, de flexibilité et d'un niveau élevé de confidentialité." },
+    about: { title: "", body: "" }, approach: { title: "", body: "" }, blog: { title: "", body: "" }, privacy: { title: "", body: "" }, terms: { title: "", body: "" },
   };
-
+  const faqs: Record<string,[string,string][]> = {
+    wellbeing: [["Qu'est-ce que le conseil privé en bien-être ?","Un espace confidentiel et personnalisé pour explorer le bien-être, la clarté, les relations, les changements personnels et les réalités d'une vie exigeante."],["À qui s'adresse-t-il ?","Il peut convenir aux personnes et aux familles qui recherchent discrétion et accompagnement adapté à leur situation."],["Les séances sont-elles disponibles dans le Golfe ?","Oui. Des séances à distance sont possibles à Dubaï, Abu Dhabi, Riyad, Doha, Koweït, Manama, Mascate et à l'international."],["S'agit-il d'un traitement médical ou psychologique ?","Non. Il s'agit de conseil privé en bien-être et de coaching. Lorsque des soins médicaux ou psychologiques sont nécessaires, un professionnel qualifié doit être consulté."]],
+    women: [["Que peut explorer le conseil en bien-être des femmes ?","Maternité, relations, confiance, limites, vie familiale, transitions et priorités personnelles."],["L'approche est-elle spécifique aux femmes du Golfe ?","Elle tient compte du contexte du Golfe sans supposer que toutes les femmes ont la même expérience familiale ou professionnelle."],["Les séances peuvent-elles être à distance ?","Oui, pour les clientes vivant ou voyageant dans le Golfe et à l'international."],["La relation est-elle confidentielle ?","Le service est conçu comme une relation de conseil privée et discrète."]],
+    men: [["Que peut explorer le conseil en bien-être des hommes ?","Pression, paternité, leadership, relations, équilibre émotionnel, confiance, limites et transitions personnelles."],["Pourquoi un conseil privé ?","Il crée un espace pour réfléchir et s'exprimer sans devoir jouer un rôle ou répondre à une attente particulière de force."],["Les hommes du Golfe peuvent-ils travailler à distance ?","Oui, avec des clients dans le Golfe et à l'international."],["Est-ce une thérapie ?","Non. Le conseil privé en bien-être ne remplace pas des soins cliniques ou psychologiques qualifiés lorsque ceux-ci sont nécessaires."]],
+    business: [["À qui s'adresse le conseil en bien-être exécutif ?","Aux fondateurs, dirigeants, cadres supérieurs, professionnels et leaders portant une responsabilité durable."],["Est-ce uniquement centré sur la productivité ?","Non. Le travail peut aussi prendre en compte les relations, l'identité, l'équilibre, les limites et la vie en dehors du rôle de direction."],["Le service est-il disponible dans les pôles d'affaires du Golfe ?","Oui, à distance à Dubaï, Abu Dhabi, Riyad, Djeddah, Doha, Koweït, Manama et Mascate."],["Les organisations peuvent-elles prendre contact ?","Oui. Un conseil privé en bien-être d'entreprise peut être discuté selon les besoins de l'organisation."]],
+  };
   return (
     <SiteShell>
       <section className="page-hero">
-        <div className="mx-auto grid min-h-[72vh] max-w-[1440px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-12">
-          <div>
+        <div className="mx-auto grid min-h-[60vh] max-w-[1280px] items-center gap-10 px-6 py-16 lg:grid-cols-[1fr_.75fr] lg:px-12">
+          <div className="reveal">
             <p className="eyebrow text-gold">{d.eyebrow}</p>
-            <h1 className="mt-6 font-serif text-5xl leading-[1.08] md:text-7xl">{d.title}</h1>
+            <h1 className="mt-6 max-w-4xl font-serif text-4xl leading-[1.08] md:text-6xl">{d.title}</h1>
             <p className="mt-7 max-w-2xl text-sm leading-7 text-muted-foreground">{d.intro}</p>
-            {!isLegal && (
-              <a href="/fr/book" className="button-primary mt-9">
-                Demander une consultation privée <ArrowUpRight className="size-4" />
-              </a>
-            )}
+            {!isLegal && <p className="mt-5 max-w-2xl text-sm leading-7 text-muted-foreground">{gulfContext[kind].body}</p>}
+            {!isLegal && <a href="/fr/book" className="button-primary mt-9">Demander une consultation privée <ArrowUpRight className="size-4" /></a>}
           </div>
-          <img src={image} alt={kind === "about" ? "Sourour Tarkan, conseillère privée en bien-être et coach, Reiki Master" : `${d.eyebrow} — GULFWELLBEING`} className="mx-auto h-[38vh] w-full max-w-[34rem] object-cover lg:h-[44vh]" />
+          <img src={image} alt={kind === "about" ? "Sourour Tarkan, conseillère privée en bien-être et coach, Reiki Master" : d.eyebrow} className="h-[38vh] w-full object-cover object-center lg:h-[52vh]" />
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16 lg:py-24">
-        {d.sections.map((section, index) => (
-          <article key={section.title} className="border-t border-border py-12">
-            <div className="grid gap-7 md:grid-cols-[150px_1fr]">
-              <div>
-                <span className="font-serif text-3xl text-gold">{String(index + 1).padStart(2, "0")}</span>
+      {kind === "wellbeing" && (
+        <>
+          <section className="border-y border-border bg-background">
+            <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-12">
+              <p className="eyebrow text-gold">BIEN-ÊTRE PRIVÉ & SUR MESURE</p>
+              <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight md:text-5xl">Chaque client est différent. Chaque parcours est personnel.</h2>
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">Votre accompagnement privé est conçu selon vos besoins, vos objectifs et votre rythme.</p>
+              <div className="mt-9 grid gap-px border border-border bg-border md:grid-cols-3">
+                {[["Consultation privée","Une première séance pour comprendre vos besoins et déterminer l'approche la plus adaptée."],["Programme de bien-être personnalisé","Le nombre et la durée des séances sont déterminés après l'évaluation initiale."],["Conseil privé VIP","Un accompagnement privé et continu construit autour de vos besoins, de vos disponibilités et de votre rythme."]].map(([title,body])=><div key={title} className="bg-background p-7"><h3 className="font-serif text-2xl leading-tight">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{body}</p></div>)}
               </div>
-              <div>
-                <h2 className="font-serif text-4xl leading-tight md:text-5xl">{section.title}</h2>
-                <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">{section.body}</p>
+              <div className="mt-11 max-w-4xl">
+                <p className="eyebrow text-gold">BIEN-ÊTRE PRIVÉ, PENSÉ AUTOUR DE VOUS</p>
+                <p className="mt-4 font-serif text-2xl leading-tight md:text-3xl">Aucun parcours de bien-être ne se ressemble.</p>
+                <p className="mt-5 text-sm leading-7 text-muted-foreground">Chez GULFWELLBEING, chaque séance privée est personnalisée selon les besoins, les objectifs et le rythme du client. Il n'y a pas de programme prédéfini imposé à tous : la fréquence et la durée des séances sont définies selon le parcours individuel.</p>
+                <p className="mt-5 text-xs font-semibold uppercase tracking-[.16em] text-gold">Privé · Personnalisé · Discret</p>
+                <a href="/fr/book" className="button-primary mt-8">Demander une consultation privée <ArrowUpRight className="size-4" /></a>
               </div>
             </div>
-          </article>
-        ))}
+          </section>
+          <section className="border-y border-border bg-secondary">
+            <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-12">
+              <p className="eyebrow text-gold">DANS TOUT LE GOLFE</p>
+              <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight md:text-5xl">Conseil privé en bien-être en ligne à travers le Golfe.</h2>
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">Une relation de conseil discrète à distance pour les clients de la région, sans nécessité de bureau physique ni de rendez-vous local.</p>
+              <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+                {[["Émirats arabes unis","Dubaï · Abu Dhabi","Accompagnement privé pour les vies internationales, le leadership, les responsabilités familiales et les transitions personnelles."],["Arabie saoudite","Riyad · Djeddah","Conseil discret autour de la pression professionnelle et personnelle, du leadership et des périodes de transition."],["Qatar","Doha","Espace privé pour les personnes, dirigeants et familles recherchant bien-être et clarté."],["Koweït","Koweït City","Conseil en ligne adapté aux circonstances personnelles, aux relations, aux responsabilités et au changement."],["Bahreïn","Manama","Accompagnement privé autour du bien-être, des relations, de la confiance et des transitions de vie."],["Oman","Mascate","Conseil discret autour du bien-être personnel, de la clarté, de l'énergie et d'un changement porteur de sens."]].map(([country,cities,body])=><div key={country} className="bg-background p-6"><h3 className="font-serif text-2xl leading-tight">{country}</h3><p className="mt-2 text-sm text-gold">{cities}</p><p className="mt-5 text-sm leading-7 text-muted-foreground">{body}</p></div>)}
+              </div>
+            </div>
+          </section>
+        </>
+      )}
+
+      <section className="mx-auto max-w-[1280px] px-6 py-12 lg:px-12">
+        {d.sections.map((section,index)=><article key={section.title} className="scroll-mt-28 grid gap-5 border-t border-border py-9 md:grid-cols-[70px_1fr_1.15fr] md:gap-8"><span className="font-serif text-3xl text-gold">{String(index+1).padStart(2,"0")}</span><h2 className="font-serif text-2xl leading-tight md:text-3xl">{section.title}</h2><div><p className="max-w-xl text-sm leading-7 text-muted-foreground">{section.body}</p>{!isLegal&&<a href="/fr/book" className="mt-6 inline-flex items-center gap-2 text-sm font-medium">Commencer une conversation privée <ArrowUpRight className="size-4" /></a>}</div></article>)}
       </section>
 
-      {!isLegal && (
-        <section className="bg-secondary px-6 py-20 lg:px-12 lg:py-28">
-          <div className="mx-auto max-w-5xl">
-            <p className="eyebrow text-gold">LE GOLFE</p>
-            <h2 className="mt-4 font-serif text-5xl leading-tight sm:text-6xl">{gulfContext[kind].title}</h2>
-            <p className="mt-6 max-w-3xl text-sm leading-7 text-muted-foreground">{gulfContext[kind].body}</p>
-          </div>
+      {!isLegal && kind === "wellbeing" && (
+        <section className="mx-auto max-w-[1100px] px-6 py-16 lg:px-12">
+          <p className="eyebrow text-gold">QUESTIONS FRÉQUENTES</p>
+          <h2 className="mt-4 font-serif text-4xl md:text-5xl">Quelques réponses utiles.</h2>
+          <div className="mt-8 border-t border-border">{(faqs["wellbeing"]||[]).map(([q,a])=><details key={q} className="border-b border-border py-5"><summary className="cursor-pointer list-none pe-8 text-base font-medium">{q}</summary><p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{a}</p></details>)}</div>
+        </section>
+      )}
+
+      {!isLegal && kind !== "wellbeing" && (
+        <section className="bg-secondary px-6 py-16 lg:px-12">
+          <div className="mx-auto max-w-5xl"><p className="eyebrow text-gold">LE GOLFE</p><h2 className="mt-4 font-serif text-4xl leading-tight md:text-5xl">{gulfContext[kind].title}</h2><p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">{gulfContext[kind].body}</p></div>
         </section>
       )}
 
       {kind === "business" && (
-        <section className="bg-secondary px-6 py-20 lg:px-12 lg:py-28">
-          <div className="mx-auto max-w-5xl">
-            <p className="eyebrow text-gold">BIEN-ÊTRE EN ENTREPRISE</p>
-            <h2 className="mt-4 font-serif text-5xl leading-tight sm:text-7xl">Choisissez l'espace le plus proche de votre situation.</h2>
-            <div className="mt-12 grid gap-px bg-border md:grid-cols-2">
-              {[
-                ["Bien-être des cadres dirigeants", "Un espace privé pour les dirigeants sous pression continue de responsabilité.", "/fr/business/executive-wellbeing"],
-                ["Bien-être des fondateurs", "Un accompagnement privé pour ceux qui portent l'entreprise, les décisions et l'incertitude.", "/fr/business/founder-wellbeing"],
-                ["Clarté de leadership", "Un espace pour réfléchir aux décisions difficiles, aux limites et aux conversations de direction.", "/fr/business/leadership-clarity"],
-                ["Pression & prévention de l'épuisement", "Un accompagnement autour de la pression continue, de la récupération, du travail et des limites.", "/fr/business/burnout-prevention"],
-                ["Leadership & bien-être des équipes", "Un accompagnement pour les dirigeants responsables des personnes, de la communication et de l'environnement humain.", "/fr/business/team-wellbeing"],
-                ["Conseil en bien-être des entreprises", "Un regard extérieur privé pour les dirigeants et organisations en période de changement.", "/fr/business/corporate-advisory"],
-              ].map(([title, text, href], index) => (
-                <Link key={href} to={href as any} className="group bg-background p-7 transition-colors hover:bg-primary hover:text-primary-foreground">
-                  <span className="text-xs text-gold">{String(index + 1).padStart(2, "0")}</span>
-                  <h3 className="mt-8 font-serif text-3xl leading-tight">{title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-muted-foreground group-hover:text-primary-foreground/70">{text}</p>
-                  <ArrowUpRight className="mt-8 size-5 text-gold" />
-                </Link>
-              ))}
-            </div>
-          </div>
+        <section className="bg-secondary px-6 py-16 lg:px-12">
+          <div className="mx-auto max-w-5xl"><p className="eyebrow text-gold">BIEN-ÊTRE EN ENTREPRISE</p><h2 className="mt-4 font-serif text-4xl leading-tight md:text-5xl">Choisissez l'espace le plus proche de votre situation.</h2></div>
         </section>
       )}
 
-      {!isLegal && (
-        <section className="bg-secondary px-6 py-20 text-center">
-          <LockKeyhole className="mx-auto size-5 text-gold" />
-          <h2 className="mt-5 font-serif text-5xl">Commencez par un espace privé.</h2>
-          <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-            Dites-nous ce que vous recherchez ; nous reviendrons vers vous en toute discrétion pour discuter de la suite.
-          </p>
-          <a href="/fr/book" className="button-primary mt-8">
-            Envoyer une demande privée
-          </a>
+      {!isLegal && kind === "wellbeing" && (
+        <>
+          <section className="bg-secondary">
+            <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-12">
+              <p className="eyebrow text-gold">EXPLORER GULFWELLBEING</p>
+              <div className="mt-7 grid md:grid-cols-3">
+                {[["Bien-être des femmes","Un accompagnement privé autour de la maternité, des relations, de la confiance et des transitions de vie.","/fr/women"],["Bien-être des hommes","Un accompagnement discret autour de la pression, de la paternité, du leadership et de la direction personnelle.","/fr/men"],["Bien-être exécutif","Un conseil privé pour les fondateurs, dirigeants et professionnels expérimentés.","/fr/business"]].map(([title,body,to])=><a key={to} href={to} className="group border-t border-border p-7 transition-colors hover:bg-background"><h3 className="font-serif text-2xl leading-tight">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{body}</p><span className="mt-5 inline-flex items-center gap-2 text-sm">Explorer <ArrowUpRight className="size-4" /></span></a>)}
+              </div>
+            </div>
+          </section>
+          <section className="bg-secondary">
+            <div className="mx-auto grid max-w-[1440px] gap-8 px-6 py-16 md:grid-cols-[auto_1fr_auto] md:items-center lg:px-12">
+              <LockKeyhole className="size-9 text-gold" />
+              <div><p className="eyebrow">PRIVÉ & DISCRET</p><h2 className="mt-3 font-serif text-3xl md:text-4xl">Un accompagnement pensé autour de votre situation.</h2></div>
+              <a href="/fr/book" className="button-primary">Demander une consultation privée</a>
+            </div>
+          </section>
+        </>
+      )}
+
+      {!isLegal && kind !== "wellbeing" && (
+        <section className="bg-secondary px-6 py-16 text-center">
+          <div className="mx-auto max-w-5xl"><LockKeyhole className="mx-auto size-5 text-gold"/><h2 className="mt-4 font-serif text-4xl">Commencez par un espace privé.</h2><p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-muted-foreground">Dites-nous ce que vous recherchez ; nous reviendrons vers vous en toute discrétion pour discuter de la suite.</p><a href="/fr/book" className="button-primary mt-7">Envoyer une demande privée</a></div>
         </section>
       )}
     </SiteShell>
@@ -291,7 +306,6 @@ export function FrenchHome() {
         </div>
       </section>
 
-      {kind === "wellbeing" && <section className="border-y border-border bg-background"><div className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12"><p className="eyebrow text-gold">PRIVATE & BESPOKE WELLBEING</p><h2 className="mt-4 max-w-5xl font-serif text-5xl leading-tight md:text-6xl">Chaque client est différent. Chaque parcours est personnel.</h2><p className="mt-6 max-w-3xl text-sm leading-7 text-muted-foreground">Votre programme privé de bien-être est conçu selon vos besoins, vos objectifs et votre rythme.</p><div className="mt-10 grid gap-px border border-border bg-border md:grid-cols-3"><div className="bg-background p-7"><h3 className="font-serif text-3xl">Séance privée</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">Une séance individuelle pour comprendre votre besoin et définir l'approche la plus adaptée.</p></div><div className="bg-background p-7"><h3 className="font-serif text-3xl">Programme de bien-être personnalisé</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">Le nombre et la durée des séances sont déterminés après l'évaluation initiale.</p></div><div className="bg-background p-7"><h3 className="font-serif text-3xl">Conseil privé VIP</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">Un accompagnement privé et continu, défini selon les besoins et le rythme convenus.</p></div></div><div className="mt-12 max-w-4xl"><p className="eyebrow text-gold">PRIVATE WELLBEING, DESIGNED AROUND YOU</p><p className="mt-4 font-serif text-3xl leading-tight md:text-4xl">Aucun parcours de bien-être ne se ressemble.</p><p className="mt-5 text-sm leading-7 text-muted-foreground">Chez GULFWELLBEING, chaque séance privée est personnalisée selon vos besoins, vos objectifs et votre rythme. Plutôt que des programmes prédéfinis, Sourour Tarkan construit une approche sur mesure pour chaque client, avec une fréquence et une durée de séances adaptées au parcours individuel.</p><p className="mt-5 text-xs font-semibold uppercase tracking-[.16em] text-gold">Privé · Personnalisé · Discret</p><Link to="/fr/book" className="button-primary mt-8 inline-flex items-center gap-2">Demander une consultation privée <ArrowUpRight className="size-4"/></Link></div></div></section>}
       <section className="px-6 py-20 lg:px-12 lg:py-32">
         <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[.7fr_1.3fr]">
           <p className="eyebrow">UNE RELATION DE CONSEIL PRIVÉE</p>
@@ -475,11 +489,11 @@ function Area({
   href: string;
 }) {
   return (
-    <a href={href as any} className="group relative min-h-[30rem] overflow-hidden bg-primary text-primary-foreground">
+    <a href={href as any} className="group relative min-h-[22rem] overflow-hidden bg-primary text-primary-foreground sm:min-h-[24rem]">
       <img src={image} alt="" className="absolute inset-0 size-full object-cover opacity-65 transition-transform duration-700 group-hover:scale-[1.025]" />
       <div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 p-7">
-        <h3 className="font-serif text-4xl">{title}</h3>
+        <h3 className="font-serif text-2xl leading-tight sm:text-3xl">{title}</h3>
         <p className="mt-3 max-w-md text-sm leading-8 text-primary-foreground/70">{text}</p>
         <ArrowUpRight className="mt-6 size-5" />
       </div>

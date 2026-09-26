@@ -3,10 +3,10 @@ import { ArrowDown, ArrowRight, ArrowUpRight, LockKeyhole } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { pageHead, pageHeadFor } from "@/components/site/PageMeta";
 import { FaqSection } from "@/components/site/FaqSection";
-import hero from "@/assets/gulfwellbeing-hero.jpg";
 import woman from "@/assets/woman-editorial.jpg";
 import executive from "@/assets/executive-editorial.jpg";
 import stillLife from "@/assets/private-still-life.jpg";
+import sourourPortrait from "@/assets/sourour-tarkan-official.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: (ctx) => pageHeadFor(ctx, 
@@ -31,7 +31,7 @@ const posts = [
 function Home() {
   return <SiteShell>
     <section className="grain relative min-h-[92svh] bg-primary text-primary-foreground">
-      <img src={hero} width={1536} height={1024} fetchPriority="high" alt="A poised woman in a quiet contemporary Gulf residence" className="absolute inset-0 h-full w-full object-cover object-[62%_center]" />
+      <img src={sourourPortrait.url} width={768} height={1024} fetchPriority="high" alt="Sourour Tarkan, private wellbeing advisor" className="absolute inset-0 h-full w-full object-cover object-center" />
       <div className="absolute inset-0 bg-linear-to-r from-primary via-primary/65 to-transparent" />
       <div className="relative mx-auto flex min-h-[92svh] max-w-[1600px] items-end px-5 pb-16 pt-36 lg:px-10 lg:pb-20">
         <div className="max-w-4xl">
@@ -100,7 +100,7 @@ function Home() {
       <div className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[0.95fr_1.05fr]">
         <div className="relative order-2 min-h-[520px] px-5 py-8 lg:order-2 lg:min-h-0 lg:px-10 lg:py-16">
           <div className="relative h-full overflow-hidden rounded-[2rem]">
-            <img src="/images/sourour-tarkan-home.jpg" width={800} height={1000} loading="lazy" alt="Sourour Tarkan, private wellbeing advisor and coach" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <img src={sourourPortrait.url} width={800} height={1000} loading="lazy" alt="Sourour Tarkan, private wellbeing advisor and coach" className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="absolute inset-0 bg-linear-to-l from-transparent via-primary/5 to-primary/35" />
             <div className="absolute inset-0 bg-linear-to-t from-primary/35 via-transparent to-transparent" />
           </div>

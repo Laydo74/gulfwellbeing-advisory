@@ -22,46 +22,45 @@ export const Route = createFileRoute("/ar/the-tarkan-approach")({
 function Page() {
   return <SiteShell>
     <section className="page-hero">
-      <div className="mx-auto max-w-[1440px] px-6 py-24 lg:px-12 lg:py-32">
+      <div className="mx-auto max-w-[1240px] px-6 py-20 lg:px-10 lg:py-24">
         <p className="eyebrow text-gold">THE TARKAN APPROACH · منهج سرور طركان</p>
-        <h1 className="mt-6 max-w-6xl font-serif text-5xl leading-[1.05] md:text-8xl">منهج يبدأ بالإنسان، لا بالمشكلة.</h1>
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-muted-foreground">مقاربة خاصة وفردية للرفاه، مصممة حول الإنسان وسياقه وحياته الفعلية، لا حول برنامج جاهز أو تعريف واحد للمشكلة.</p>
+        <h1 className="mt-5 max-w-4xl font-serif text-4xl leading-[1.15] sm:text-5xl md:text-6xl">منهج يبدأ بالإنسان، لا بالمشكلة.</h1>
+        <p className="mt-6 max-w-2xl text-base leading-7 text-muted-foreground">مقاربة خاصة وفردية للرفاه، مصممة حول الإنسان وسياقه وحياته الفعلية، لا حول برنامج جاهز أو تعريف واحد للمشكلة.</p>
       </div>
     </section>
 
-    <section className="bg-primary px-6 py-20 text-primary-foreground lg:px-12 lg:py-28">
-      <div className="mx-auto grid max-w-[1300px] gap-12 lg:grid-cols-[.65fr_1.35fr] lg:items-end">
-        <div><p className="eyebrow text-gold">الفلسفة</p><p className="mt-5 font-serif text-5xl leading-tight sm:text-7xl">الإنسان أولاً.</p></div>
+    <section className="bg-primary px-6 py-16 text-primary-foreground lg:px-10 lg:py-20">
+      <div className="mx-auto grid max-w-[1180px] gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+        <div><p className="eyebrow text-gold">الفلسفة</p><p className="mt-5 font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">الإنسان أولاً.</p></div>
         <p className="max-w-3xl text-base leading-8 text-primary-foreground/75">يبدأ منهج سرور طركان بالإنصات. يترك مساحة للتعقيد والسياق الشخصي والواقع خلف الدور الذي قد يحمله الإنسان. ليس برنامجاً جامداً، ولا يحاول اختزال حياة معقدة في قائمة جاهزة.</p>
       </div>
     </section>
 
-    <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12 lg:py-32">
+    <section className="mx-auto max-w-[1180px] px-6 py-16 lg:px-10 lg:py-24">
       <div className="mb-16 max-w-3xl">
         <p className="eyebrow text-gold">المبادئ الخمسة</p>
         <h2 className="mt-5 font-serif text-5xl leading-tight md:text-7xl">الطريقة قبل الوصفة.</h2>
       </div>
       <div>
         {principles.map(([n,title,body]) => (
-          <article key={n} className="grid gap-8 border-t border-border py-16 md:grid-cols-[.45fr_1.55fr] md:items-center lg:gap-16 lg:py-20">
+          <article key={n} className="grid gap-5 border-t border-border py-10 md:grid-cols-[.45fr_1.55fr] md:items-center lg:gap-10 lg:py-12">
             <div className="md:order-1">
               <span className="font-serif text-2xl text-gold/70">{n}</span>
-              <p className="mt-4 text-[9px] uppercase tracking-[.24em] text-muted-foreground/60">{title}</p>
+              <h2 className="mt-2 max-w-5xl font-serif text-3xl leading-[1.15] sm:text-4xl lg:text-5xl">{title}</h2>
             </div>
             <div className="md:order-2">
-              <h2 className="max-w-5xl font-serif text-5xl leading-[1.04] md:text-7xl lg:text-[5.8rem]">{body}</h2>
-              <p className="mt-7 max-w-3xl text-sm leading-7 text-muted-foreground">{title}</p>
+              <p className="mt-5 max-w-4xl text-base leading-8 text-muted-foreground">{body}</p>
             </div>
           </article>
         ))}
       </div>
     </section>
 
-    <section className="bg-secondary px-6 py-20 lg:py-28">
+    <section className="bg-secondary px-6 py-16 lg:py-20">
       <div className="mx-auto max-w-[1100px]">
         <p className="eyebrow text-gold">الخليج ودولياً</p>
         <h2 className="mt-5 max-w-4xl font-serif text-5xl leading-tight sm:text-7xl">نهج واحد، لكن لا توجد حياة واحدة.</h2>
-        <p className="mt-7 max-w-3xl text-base leading-8 text-muted-foreground">قد تكون الحياة بين دبي وأبوظبي والرياض وجدة والدوحة والكويت والمنامة ومسقط، أو بين الخليج والعالم، مليئة بالعمل والسفر والأسرة والمسؤوليات. The Tarkan Approach لا يفترض أن هذه التجارب متشابهة؛ بل يبدأ من سياق الشخص نفسه.</p>
+        <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">قد تكون الحياة بين دبي وأبوظبي والرياض وجدة والدوحة والكويت والمنامة ومسقط، أو بين الخليج والعالم، مليئة بالعمل والسفر والأسرة والمسؤوليات. The Tarkan Approach لا يفترض أن هذه التجارب متشابهة؛ بل يبدأ من سياق الشخص نفسه.</p>
       </div>
     </section>
 
