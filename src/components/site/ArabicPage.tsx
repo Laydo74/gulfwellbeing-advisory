@@ -307,99 +307,129 @@ export function ArabicPage({ kind }: { kind: Kind }) {
     kind === "about" ? "/images/sourour-tarkan-home.jpg" : kind === "women" ? woman : kind === "men" || kind === "business" ? executive : stillLife;
   const isLegal = kind === "privacy" || kind === "terms";
   const gulfContext: Record<Kind, { title: string; body: string }> = {
-    wellbeing: { title: "استشارات خاصة لمن يعيش حياة الخليج بكل تعقيداتها", body: "قد تتقاطع الحياة بين دبي وأبوظبي والرياض والدوحة والكويت والمنامة ومسقط مع العمل والسفر والأسرة والالتزامات الاجتماعية. لذلك تُبنى الاستشارة حول سياق الشخص الفعلي، لا حول برنامج موحّد." },
-    women: { title: "رفاه المرأة في الخليج، بعيداً عن القوالب الجاهزة", body: "في مدن مثل دبي وأبوظبي والرياض والدوحة، قد تتداخل الحياة المهنية والعائلية والأمومة والعلاقات بصورة خاصة. المساحة هنا مخصصة للمرأة نفسها، وما تحتاج إلى فهمه أو تغييره في هذه المرحلة." },
-    men: { title: "مساحة خاصة للرجل تحت ضغط المسؤولية", body: "من دبي وأبوظبي إلى الرياض والدوحة والكويت، قد ترتبط حياة الرجل بالعمل والقيادة والأسرة واتخاذ القرار. الاستشارة تمنحه مساحة للنظر في ما يحمله بعيداً عن الحاجة إلى الظهور بصورة معينة." },
-    business: { title: "رفاه القيادات والأعمال في بيئة الخليج", body: "القيادات والمؤسسون في الإمارات والسعودية وقطر والكويت والبحرين وعُمان يعملون داخل بيئات سريعة ومتغيرة. الاستشارة الخاصة تركز على الإنسان خلف الدور: الضغط، وضوح القرار، الحدود، العلاقات والقدرة على الاستمرار." },
-    about: { title: "مقاربة تفهم واقع الحياة في الخليج", body: "تعمل سرور طركان مع أشخاص يعيشون بين مسؤوليات شخصية ومهنية وعائلية متداخلة، في الخليج أو ضمن حياة دولية. تبدأ العلاقة من الاستماع وفهم السياق قبل تقديم أي اتجاه." },
-    approach: { title: "المنهج والسياق الخليجي", body: "لا يفترض The Tarkan Approach أن تجربة شخص في دبي هي نفسها تجربة شخص في الرياض أو الدوحة. المكان، الأسرة، العمل، السفر والمسؤوليات جزء من السياق الذي تُفهم من خلاله حياة كل شخص." },
-    vip: { title: "خصوصية تناسب الحياة الدولية", body: "لمن تتوزع حياتهم بين الخليج والسفر الدولي، يمكن أن تُرتب التجربة الخاصة حول الجداول المكثفة، المرونة والحاجة إلى مستوى عالٍ من الخصوصية." },
-    blog: { title: "قراءة حول الرفاه في الخليج والحياة المعاصرة", body: "تتناول المدونة موضوعات الضغط، القيادة، العلاقات، الأسرة والتحولات الشخصية من منظور عملي وتأملي يناسب حياة مليئة بالمسؤوليات في الخليج وخارجه." },
-    privacy: { title: "", body: "" },
-    terms: { title: "", body: "" },
+    wellbeing: { title: "استشارات خاصة لمن يعيش حياة الخليج بكل تعقيداتها", body: "قد تتقاطع الحياة بين دبي وأبوظبي والرياض والدوحة والكويت والمنامة ومسقط مع العمل، السفر، الأسرة والمسؤوليات الاجتماعية. لذلك تُفهم تجربة كل عميل ضمن سياقه الحقيقي، لا ضمن نموذج واحد." },
+    women: { title: "رفاه المرأة في سياق الخليج والحياة الدولية", body: "الأسرة، العمل، الأمومة، العلاقات والسفر قد تتداخل بطرق مختلفة. المقاربة الخاصة تأخذ هذا السياق بجدية من دون افتراض أن تجربة كل امرأة متشابهة." },
+    men: { title: "رفاه الرجل بين المسؤولية والحياة الخاصة", body: "من المسؤوليات المهنية إلى الأسرة والقيادة، يمكن أن تتداخل أدوار كثيرة في حياة الرجل. توفر الجلسات الخاصة مساحة هادئة للنظر إلى الصورة كاملة." },
+    business: { title: "رفاه القيادات في مراكز الأعمال الخليجية", body: "استشارات عن بُعد للقيادات والمؤسسين والمهنيين في دبي وأبوظبي والرياض وجدة والدوحة والكويت والمنامة ومسقط، مع مراعاة ضغط العمل والحياة الخاصة." },
+    vip: { title: "خصوصية تتناسب مع حياة دولية", body: "للأفراد والعائلات والقيادات الذين تتوزع حياتهم بين الخليج والسفر الدولي، يمكن تنظيم العلاقة الاستشارية حول جدول مزدحم واحتياج أعلى إلى المرونة والخصوصية." },
+    about: { title: "", body: "" }, approach: { title: "", body: "" }, blog: { title: "", body: "" }, privacy: { title: "", body: "" }, terms: { title: "", body: "" },
   };
-
+  const faqs: Record<string, [string,string][]> = {
+    wellbeing: [
+      ["ما هي استشارات الرفاه الخاصة؟","مساحة سرية وشخصية لفهم الرفاه، الوضوح، العلاقات، التغيير الشخصي ومتطلبات الحياة اليومية وفق ظروف العميل."],
+      ["لمن تناسب؟","قد تناسب الأفراد والعائلات ومن يقدّرون الخصوصية ويريدون مقاربة تُبنى حول ظروفهم الفعلية."],
+      ["هل الجلسات متاحة في الخليج؟","نعم. يمكن عقد الجلسات عن بُعد مع عملاء في دبي وأبوظبي والرياض والدوحة والكويت والمنامة ومسقط ودولياً."],
+      ["هل هي علاج طبي أو نفسي؟","لا. هي استشارات رفاه وCoaching، وعند الحاجة إلى رعاية طبية أو نفسية متخصصة ينبغي الرجوع إلى مختص مؤهل."]
+    ],
+    women: [["ما الذي يمكن أن تتناوله استشارات رفاه المرأة؟","الأمومة، العلاقات، الثقة، الحدود، الأسرة، التحولات والأولويات الشخصية."],["هل المقاربة خاصة بنساء الخليج؟","تأخذ سياق الخليج بجدية من دون افتراض أن لكل امرأة التجربة الأسرية أو المهنية نفسها."],["هل الجلسات عن بُعد؟","نعم، ويمكن دعم العميلات المقيمات أو المتنقلات في الخليج ودولياً."],["هل الخدمة خاصة وسرية؟","العلاقة مصممة كمساحة استشارية خاصة تحترم الخصوصية."]],
+    men: [["ما الذي يمكن أن تتناوله استشارات رفاه الرجل؟","الضغط، الأبوة، القيادة، العلاقات، التوازن، الثقة، الحدود والتحولات الشخصية."],["لماذا الاستشارة الخاصة؟","لأنها تتيح مساحة للتفكير والتعبير بعيداً عن توقعات الدور أو ضرورة الظهور دائماً بصورة قوية."],["هل يمكن العمل عن بُعد؟","نعم، مع عملاء في دول الخليج ودولياً."],["هل هي علاج نفسي؟","لا، وهي لا تحل محل الرعاية السريرية أو النفسية المتخصصة عند الحاجة."]],
+    business: [["لمن تناسب استشارات رفاه القيادات؟","للمؤسسين والمديرين والمهنيين والقيادات الذين يحملون مسؤولية مستمرة."],["هل تركز فقط على الإنتاجية؟","لا. يمكن أن تشمل العلاقات، الهوية، التوازن، الحدود والحياة خارج الدور القيادي."],["هل الخدمة متاحة في مراكز الأعمال الخليجية؟","نعم، عن بُعد في دبي وأبوظبي والرياض وجدة والدوحة والكويت والمنامة ومسقط."],["هل يمكن للشركات الاستفسار؟","نعم، يمكن مناقشة استشارات رفاه الشركات بصورة خاصة وفق احتياج المؤسسة."]],
+  };
   return (
     <SiteShell>
-      <section className="page-hero">
-        <div className="mx-auto grid min-h-[72vh] max-w-[1440px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-12">
-          <div>
+      <section className="page-hero" dir="rtl">
+        <div className="mx-auto grid min-h-[60vh] max-w-[1280px] items-center gap-10 px-6 py-16 lg:grid-cols-[1fr_.75fr] lg:px-12">
+          <div className="reveal">
             <p className="eyebrow text-gold">{d.eyebrow}</p>
-            <h1 className="mt-6 font-serif text-5xl leading-[1.08] md:text-7xl">{d.title}</h1>
+            <h1 className="mt-6 max-w-4xl font-serif text-4xl leading-[1.08] md:text-6xl">{d.title}</h1>
             <p className="mt-7 max-w-2xl text-sm leading-7 text-muted-foreground">{d.intro}</p>
-            {!isLegal && (
-              <a href="/ar/book" className="button-primary mt-9">
-                طلب استشارة خاصة <ArrowUpLeft className="size-4" />
-              </a>
-            )}
+            {!isLegal && <p className="mt-5 max-w-2xl text-sm leading-7 text-muted-foreground">{gulfContext[kind].body}</p>}
+            {!isLegal && <a href="/ar/book" className="button-primary mt-9">طلب جلسة خاصة <ArrowUpLeft className="size-4" /></a>}
           </div>
-          <img src={image} alt={kind === "about" ? "سرور طركان، مستشارة رفاه خاصة ومدرّبة وReiki Master" : `${d.eyebrow} — GULFWELLBEING`} className="mx-auto h-[38vh] w-full max-w-[34rem] object-cover lg:h-[44vh]" />
+          <img src={image} alt={kind === "about" ? "سرور طركان، مستشارة رفاه ومدرّبة وReiki Master" : d.eyebrow} className="h-[38vh] w-full object-cover object-center lg:h-[52vh]" />
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-12 lg:py-20">
-        {d.sections.map((section, index) => (
-          <article key={section.title} className="border-t border-border py-12">
-            <div className="grid gap-7 md:grid-cols-[150px_1fr]">
-              <div>
-                <span className="font-serif text-3xl text-gold">{String(index + 1).padStart(2, "0")}</span>
+      {kind === "wellbeing" && (
+        <>
+          <section className="border-y border-border bg-background" dir="rtl">
+            <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-12">
+              <p className="eyebrow text-gold">رفاه خاص ومصمم لك</p>
+              <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight md:text-5xl">كل عميل مختلف. وكل رحلة شخصية.</h2>
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">يتم تصميم تجربة الرفاه الخاصة وفق احتياجاتك وأهدافك وإيقاعك الشخصي.</p>
+              <div className="mt-9 grid gap-px border border-border bg-border md:grid-cols-3">
+                {[
+                  ["جلسة خاصة","جلسة أولى لفهم احتياجاتك وتحديد المقاربة الأكثر ملاءمة."],
+                  ["برنامج رفاه شخصي","يُحدد عدد الجلسات ومدتها بعد فهم الاحتياج والمسار المناسب."],
+                  ["استشارة VIP خاصة","دعم خاص ومستمر يُبنى حول احتياجاتك وتوفرك وإيقاع حياتك."]
+                ].map(([title,body])=><div key={title} className="bg-background p-7"><h3 className="font-serif text-2xl leading-tight">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{body}</p></div>)}
               </div>
-              <div>
-                <h2 className="font-serif text-2xl leading-tight md:text-3xl">{section.title}</h2>
-                <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">{section.body}</p>
+              <div className="mt-11 max-w-4xl">
+                <p className="eyebrow text-gold">رفاه خاص، مصمم حولك</p>
+                <p className="mt-4 font-serif text-2xl leading-tight md:text-3xl">لا توجد رحلتان متطابقتان في الرفاه.</p>
+                <p className="mt-5 text-sm leading-7 text-muted-foreground">في GULFWELLBEING، تُصمم كل جلسة خاصة وفق احتياجات العميل وأهدافه وإيقاعه. لا يوجد برنامج ثابت مفروض على الجميع؛ يتم تحديد وتيرة الجلسات ومدتها وفق الرحلة الفردية.</p>
+                <p className="mt-5 text-xs font-semibold uppercase tracking-[.16em] text-gold">خاص · شخصي · سري</p>
+                <a href="/ar/book" className="button-primary mt-8">طلب استشارة خاصة <ArrowUpLeft className="size-4" /></a>
               </div>
             </div>
-          </article>
-        ))}
+          </section>
+          <section className="border-y border-border bg-secondary" dir="rtl">
+            <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-12">
+              <p className="eyebrow text-gold">في أنحاء الخليج</p>
+              <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight md:text-5xl">استشارات رفاه خاصة عبر الإنترنت في الخليج.</h2>
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">علاقة استشارية خاصة عن بُعد للعملاء في المنطقة، من دون الحاجة إلى مكتب فعلي أو موعد محلي.</p>
+              <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  ["الإمارات العربية المتحدة","دبي · أبوظبي","دعم خاص لحياة دولية، والقيادة، والأسرة، والتحولات الشخصية."],
+                  ["المملكة العربية السعودية","الرياض · جدة","استشارات خاصة حول ضغط العمل والحياة الشخصية والقيادة ومراحل الانتقال."],
+                  ["قطر","الدوحة","مساحة خاصة للأفراد والقيادات والعائلات الباحثين عن الرفاه والوضوح."],
+                  ["الكويت","مدينة الكويت","استشارات حول الظروف الشخصية والعلاقات والمسؤولية والتغيير."],
+                  ["البحرين","المنامة","دعم خاص للرفاه والعلاقات والثقة والتحولات الحياتية."],
+                  ["عُمان","مسقط","استشارات خاصة حول الرفاه الشخصي والوضوح والطاقة والتغيير الهادف."]
+                ].map(([country,cities,body])=><div key={country} className="bg-background p-6"><h3 className="font-serif text-2xl leading-tight">{country}</h3><p className="mt-2 text-sm text-gold">{cities}</p><p className="mt-5 text-sm leading-7 text-muted-foreground">{body}</p></div>)}
+              </div>
+            </div>
+          </section>
+        </>
+      )}
+
+      <section className="mx-auto max-w-[1280px] px-6 py-12 lg:px-12" dir="rtl">
+        {d.sections.map((section,index)=><article key={section.title} className="scroll-mt-28 grid gap-5 border-t border-border py-9 md:grid-cols-[70px_1fr_1.15fr] md:gap-8"><span className="font-serif text-3xl text-gold">{String(index+1).padStart(2,"0")}</span><h2 className="font-serif text-2xl leading-tight md:text-3xl">{section.title}</h2><div><p className="max-w-xl text-sm leading-7 text-muted-foreground">{section.body}</p>{!isLegal&&<a href="/ar/book" className="mt-6 inline-flex items-center gap-2 text-sm font-medium">بدء محادثة خاصة <ArrowUpLeft className="size-4" /></a>}</div></article>)}
       </section>
 
-      {!isLegal && (
-        <section className="bg-secondary px-6 py-20 lg:px-12 lg:py-28">
+      {!isLegal && kind === "wellbeing" && (
+        <section className="mx-auto max-w-[1100px] px-6 py-16 lg:px-12" dir="rtl">
+          <p className="eyebrow text-gold">أسئلة متكررة</p>
+          <h2 className="mt-4 font-serif text-4xl md:text-5xl">إجابات على بعض الأسئلة.</h2>
+          <div className="mt-8 border-t border-border">{(faqs.wellbeing||[]).map(([q,a])=><details key={q} className="border-b border-border py-5"><summary className="cursor-pointer list-none pe-8 text-base font-medium">{q}</summary><p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{a}</p></details>)}</div>
+        </section>
+      )}
+
+      {!isLegal && kind !== "wellbeing" && (
+        <section className="bg-secondary px-6 py-16 lg:px-12" dir="rtl">
           <div className="mx-auto max-w-5xl">
-            <p className="eyebrow text-gold">الخليج</p>
-            <h2 className="mt-4 font-serif text-3xl leading-tight sm:text-5xl">{gulfContext[kind].title}</h2>
-            <p className="mt-6 max-w-3xl text-sm leading-7 text-muted-foreground">{gulfContext[kind].body}</p>
+            <p className="eyebrow text-gold">سياق الخليج</p><h2 className="mt-4 font-serif text-4xl leading-tight md:text-5xl">{gulfContext[kind].title}</h2><p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">{gulfContext[kind].body}</p>
           </div>
         </section>
       )}
 
-      {kind === "business" && (
-        <section className="bg-secondary px-6 py-20 lg:px-12 lg:py-28">
-          <div className="mx-auto max-w-5xl">
-            <p className="eyebrow text-gold">رفاه الشركات والقيادات</p>
-            <h2 className="mt-4 font-serif text-3xl leading-tight sm:text-5xl">اختر المساحة الأقرب إلى وضعك.</h2>
-            <div className="mt-12 grid gap-px bg-border md:grid-cols-2">
-              {[
-                ["رفاه القيادات التنفيذية", "مساحة خاصة للمديرين والقيادات تحت ضغط المسؤولية المستمرة.", "/ar/business/executive-wellbeing"],
-                ["رفاه المؤسسين", "دعم خاص لمن يحملون الشركة والقرارات وعدم اليقين.", "/ar/business/founder-wellbeing"],
-                ["وضوح القيادة", "مساحة للتفكير في القرارات الصعبة والحدود والمحادثات القيادية.", "/ar/business/leadership-clarity"],
-                ["الضغط والوقاية من الاحتراق", "دعم حول الضغط المستمر والتعافي والعمل والحدود.", "/ar/business/burnout-prevention"],
-                ["رفاه القيادة والفريق", "دعم للقيادات التي تتحمل مسؤولية الأشخاص والتواصل والبيئة الإنسانية.", "/ar/business/team-wellbeing"],
-                ["استشارات رفاه الشركات", "منظور خارجي خاص للقيادات والمؤسسات خلال التغيير والضغط.", "/ar/business/corporate-advisory"],
-              ].map(([title, text, href], index) => (
-                <Link key={href} to={href as any} className="group bg-background p-6 transition-colors hover:bg-primary hover:text-primary-foreground">
-                  <span className="text-xs text-gold">{String(index + 1).padStart(2, "0")}</span>
-                  <h3 className="mt-6 font-serif text-2xl leading-tight">{title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-muted-foreground group-hover:text-primary-foreground/70">{text}</p>
-                  <ArrowUpLeft className="mt-8 size-5 text-gold" />
-                </Link>
-              ))}
+      {!isLegal && kind === "wellbeing" && (
+        <>
+          <section className="mx-auto max-w-[1100px] px-6 py-16 lg:px-12" dir="rtl">
+            <p className="eyebrow text-gold">الأسئلة الشائعة</p>
+            <h2 className="mt-4 font-serif text-4xl md:text-5xl">أجوبة مفيدة قبل أن تبدأ.</h2>
+            <div className="mt-8 border-t border-border">{(faqs.wellbeing||[]).map(([q,a])=><details key={q} className="border-b border-border py-5"><summary className="cursor-pointer list-none pe-8 text-base font-medium">{q}</summary><p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{a}</p></details>)}</div>
+          </section>
+          <section className="bg-secondary" dir="rtl">
+            <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-12">
+              <p className="eyebrow text-gold">استكشف GULFWELLBEING</p>
+              <div className="mt-7 grid md:grid-cols-3">
+                {[
+                  ["رفاه المرأة","استشارات خاصة حول الأمومة والعلاقات والثقة وتحولات الحياة.","/ar/women"],
+                  ["رفاه الرجل","دعم خاص حول الضغط والأبوة والقيادة والاتجاه الشخصي.","/ar/men"],
+                  ["رفاه القيادات","استشارات خاصة للمؤسسين والمديرين والمهنيين.","/ar/business"]
+                ].map(([title,body,to])=><a key={to} href={to} className="group border-t border-border p-7 transition-colors hover:bg-background"><h3 className="font-serif text-2xl leading-tight">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{body}</p><span className="mt-5 inline-flex items-center gap-2 text-sm">استكشف <ArrowUpLeft className="size-4" /></span></a>)}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
-
-      {!isLegal && (
-        <section className="bg-secondary px-6 py-20 text-center">
-          <LockKeyhole className="mx-auto size-5 text-gold" />
-          <h2 className="mt-5 font-serif text-5xl">ابدأ من مساحة خاصة.</h2>
-          <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-            أخبرنا بما تبحث عنه، وسنتواصل معك بهدوء لمناقشة الخطوة المناسبة.
-          </p>
-          <a href="/ar/book" className="button-primary mt-8">
-            إرسال طلب خاص
-          </a>
-        </section>
+          </section>
+          <section className="bg-secondary" dir="rtl">
+            <div className="mx-auto grid max-w-[1440px] gap-8 px-6 py-16 md:grid-cols-[auto_1fr_auto] md:items-center lg:px-12">
+              <LockKeyhole className="size-9 text-gold" />
+              <div><p className="eyebrow">خاص وسري</p><h2 className="mt-3 font-serif text-3xl md:text-4xl">دعم يُصمم حول ظروفك.</h2></div>
+              <a href="/ar/book" className="button-primary">طلب جلسة خاصة</a>
+            </div>
+          </section>
+        </>
       )}
     </SiteShell>
   );
