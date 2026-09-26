@@ -503,27 +503,36 @@ export function ArabicHome() {
         <img src={stillLife} alt="مساحة خاصة وهادئة" className="order-1 h-full min-h-[30rem] w-full object-cover lg:order-2" />
       </section>
 
-      <section className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div dir="ltr" className="mx-auto grid max-w-[1600px] lg:min-h-[760px] lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="relative order-2 min-h-[520px] px-5 py-8 lg:order-2 lg:min-h-0 lg:px-10 lg:py-16">
-          <div className="relative h-full overflow-hidden rounded-[2rem]">
-            <img src="/images/sourour-tarkan-home.jpg" loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="absolute inset-0 h-full w-full object-cover object-center" />
-            <div className="absolute inset-0 bg-linear-to-l from-transparent via-primary/5 to-primary/35" />
-            <div className="absolute inset-0 bg-linear-to-t from-primary/55 via-transparent to-transparent lg:bg-linear-to-l lg:from-transparent lg:to-primary/15" />
-          </div>
-          <div dir="rtl" className="relative order-1 flex items-center px-7 py-24 text-right lg:order-1 lg:px-20 xl:px-28">
-            <div className="max-w-xl">
-              <div className="mb-10 flex items-center justify-end gap-4">
-                <p className="eyebrow text-gold">تعرّف على سرور طركان</p>
-                <span className="h-px w-12 bg-gold" />
-              </div>
-              <h2 className="font-serif text-5xl leading-[1.08] sm:text-7xl lg:text-[5.2rem]">رفاهٌ أكثر هدوءاً،<br/><em className="font-normal">وعلاقة تبدأ بالإنسان.</em></h2>
-              <p className="mt-9 max-w-lg text-sm leading-7 text-primary-foreground/70 sm:text-base">علاقة خاصة تقوم على الاستماع، وفهم السياق، ورؤية الإنسان خلف الدور والمسؤوليات التي يحملها.</p>
-              <p className="mt-5 max-w-lg text-sm leading-7 text-primary-foreground/55">سرور طركان مستشارة رفاه ومدرّبة وReiki Master. تبدأ مقاربتها من الشخص نفسه، لا من قالب جاهز.</p>
-              <a href="/ar/about" className="mt-10 inline-flex items-center gap-3 border-b border-gold/70 pb-3 text-xs font-semibold tracking-[0.16em] text-primary-foreground transition-colors hover:text-gold">تعرّف على سرور طركان <ArrowUpLeft className="size-4" /></a>
+      <section className="bg-primary text-primary-foreground">
+        <div className="mx-auto grid max-w-[1400px] lg:grid-cols-[1fr_1fr]">
+          <div className="relative min-h-[420px] p-5 lg:min-h-[600px] lg:p-10">
+            <div className="relative h-full min-h-[390px] overflow-hidden rounded-[1.5rem] lg:min-h-[540px]">
+              <img src="/images/sourour-tarkan-home.jpg" loading="lazy" alt="سرور طركان، مستشارة الرفاه ومدرّبة وReiki Master" className="absolute inset-0 h-full w-full object-cover object-center" />
+              <div className="absolute inset-0 bg-linear-to-t from-primary/45 via-transparent to-transparent" />
             </div>
           </div>
-        </div>
+          <div dir="rtl" className="flex items-center px-7 py-16 text-right lg:px-16 lg:py-20 xl:px-20">
+            <div className="max-w-xl">
+              <div className="mb-7 flex items-center justify-end gap-4">
+                <p className="eyebrow text-gold">تعرّف على سرور طركان</p>
+                <span className="h-px w-10 bg-gold" />
+              </div>
+              <h2 className="font-serif text-4xl leading-[1.08] sm:text-5xl lg:text-[3.7rem]">
+                رفاهٌ أكثر هدوءاً،
+                <br />
+                <em className="font-normal">وعلاقة تبدأ بالإنسان.</em>
+              </h2>
+              <p className="mt-7 max-w-lg text-sm leading-7 text-primary-foreground/75">
+                علاقة خاصة تقوم على الاستماع، وفهم السياق، ورؤية الإنسان خلف الدور والمسؤوليات التي يحملها.
+              </p>
+              <p className="mt-4 max-w-lg text-sm leading-7 text-primary-foreground/60">
+                سرور طركان مستشارة رفاه ومدرّبة وReiki Master. تبدأ مقاربتها من الشخص نفسه، لا من قالب جاهز.
+              </p>
+              <a href="/ar/about" className="mt-8 inline-flex items-center gap-3 border-b border-gold/70 pb-3 text-xs font-semibold text-primary-foreground transition-colors hover:text-gold">
+                تعرّف على سرور طركان <ArrowUpLeft className="size-4" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -617,11 +626,11 @@ function Area({
   href: string;
 }) {
   return (
-    <a href={href as any} className="group relative min-h-[30rem] overflow-hidden bg-primary text-primary-foreground">
+    <a href={href as any} className="group relative min-h-[22rem] overflow-hidden bg-primary text-primary-foreground sm:min-h-[24rem]">
       <img src={image} alt="" className="absolute inset-0 size-full object-cover opacity-65 transition-transform duration-700 group-hover:scale-[1.025]" />
       <div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 p-7">
-        <h3 className="font-serif text-4xl">{title}</h3>
+        <h3 className="font-serif text-2xl leading-tight sm:text-3xl">{title}</h3>
         <p className="mt-3 max-w-md text-sm leading-7 text-primary-foreground/70">{text}</p>
         <ArrowUpLeft className="mt-6 size-5" />
       </div>
