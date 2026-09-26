@@ -12,10 +12,10 @@ const nav = [
   { label: "Women", ar: "المرأة", fr: "Femmes", to: "/women" },
   { label: "Men", ar: "الرجل", fr: "Hommes", to: "/men" },
   { label: "Business", ar: "الأعمال والقيادات", fr: "Entreprises", to: "/business" },
+  { label: "Book", ar: "طلب جلسة", fr: "Réserver", to: "/book" },
   { label: "The Tarkan Approach", ar: "منهج سرور طركان", fr: "L'Approche Tarkan", to: "/the-tarkan-approach" },
   { label: "About", ar: "عن سرور طركان", fr: "À propos", to: "/about" },
   { label: "Blog", ar: "المدونة", fr: "Blog", to: "/blog" },
-  { label: "Book", ar: "طلب جلسة", fr: "Réserver", to: "/book" },
 ] as const;
 
 const localeLabel: Record<Locale, string> = { en: "English", ar: "العربية", fr: "Français" };
