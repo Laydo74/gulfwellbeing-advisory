@@ -337,7 +337,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16 lg:py-24">
+      <section className="mx-auto max-w-6xl px-6 py-12 lg:py-20">
         {d.sections.map((section, index) => (
           <article key={section.title} className="border-t border-border py-12">
             <div className="grid gap-7 md:grid-cols-[150px_1fr]">
@@ -345,7 +345,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
                 <span className="font-serif text-3xl text-gold">{String(index + 1).padStart(2, "0")}</span>
               </div>
               <div>
-                <h2 className="font-serif text-4xl leading-tight md:text-5xl">{section.title}</h2>
+                <h2 className="font-serif text-2xl leading-tight md:text-3xl">{section.title}</h2>
                 <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">{section.body}</p>
               </div>
             </div>
@@ -357,7 +357,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
         <section className="bg-secondary px-6 py-20 lg:px-12 lg:py-28">
           <div className="mx-auto max-w-5xl">
             <p className="eyebrow text-gold">الخليج</p>
-            <h2 className="mt-4 font-serif text-5xl leading-tight sm:text-6xl">{gulfContext[kind].title}</h2>
+            <h2 className="mt-4 font-serif text-3xl leading-tight sm:text-5xl">{gulfContext[kind].title}</h2>
             <p className="mt-6 max-w-3xl text-sm leading-7 text-muted-foreground">{gulfContext[kind].body}</p>
           </div>
         </section>
@@ -367,7 +367,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
         <section className="bg-secondary px-6 py-20 lg:px-12 lg:py-28">
           <div className="mx-auto max-w-5xl">
             <p className="eyebrow text-gold">رفاه الشركات والقيادات</p>
-            <h2 className="mt-4 font-serif text-5xl leading-tight sm:text-7xl">اختر المساحة الأقرب إلى وضعك.</h2>
+            <h2 className="mt-4 font-serif text-3xl leading-tight sm:text-5xl">اختر المساحة الأقرب إلى وضعك.</h2>
             <div className="mt-12 grid gap-px bg-border md:grid-cols-2">
               {[
                 ["رفاه القيادات التنفيذية", "مساحة خاصة للمديرين والقيادات تحت ضغط المسؤولية المستمرة.", "/ar/business/executive-wellbeing"],
@@ -377,9 +377,9 @@ export function ArabicPage({ kind }: { kind: Kind }) {
                 ["رفاه القيادة والفريق", "دعم للقيادات التي تتحمل مسؤولية الأشخاص والتواصل والبيئة الإنسانية.", "/ar/business/team-wellbeing"],
                 ["استشارات رفاه الشركات", "منظور خارجي خاص للقيادات والمؤسسات خلال التغيير والضغط.", "/ar/business/corporate-advisory"],
               ].map(([title, text, href], index) => (
-                <Link key={href} to={href as any} className="group bg-background p-7 transition-colors hover:bg-primary hover:text-primary-foreground">
+                <Link key={href} to={href as any} className="group bg-background p-6 transition-colors hover:bg-primary hover:text-primary-foreground">
                   <span className="text-xs text-gold">{String(index + 1).padStart(2, "0")}</span>
-                  <h3 className="mt-8 font-serif text-3xl leading-tight">{title}</h3>
+                  <h3 className="mt-6 font-serif text-2xl leading-tight">{title}</h3>
                   <p className="mt-4 text-sm leading-7 text-muted-foreground group-hover:text-primary-foreground/70">{text}</p>
                   <ArrowUpLeft className="mt-8 size-5 text-gold" />
                 </Link>
