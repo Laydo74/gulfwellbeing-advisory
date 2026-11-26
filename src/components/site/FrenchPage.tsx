@@ -186,7 +186,7 @@ export function FrenchPage({ kind }: { kind: Kind }) {
             <h1 className="mt-6 max-w-4xl font-serif text-4xl leading-[1.08] md:text-6xl">{d.title}</h1>
             <p className="mt-7 max-w-2xl text-sm leading-7 text-muted-foreground">{d.intro}</p>
             {!isLegal && <p className="mt-5 max-w-2xl text-sm leading-7 text-muted-foreground">{gulfContext[kind].body}</p>}
-            {!isLegal && <a href="/fr/book" className="button-primary mt-9">Demander une consultation privée <ArrowUpRight className="size-4" /></a>}
+            {!isLegal && <a href="/fr/book" className="button-primary mt-9">Demander un premier échange privé <ArrowUpRight className="size-4" /></a>}
           </div>
           <img src={image} alt={kind === "about" ? "Sourour Tarkan, conseillère privée en bien-être et coach, Reiki Master" : d.eyebrow} className="h-[38vh] w-full object-cover object-center lg:h-[52vh]" />
         </div>
@@ -207,7 +207,7 @@ export function FrenchPage({ kind }: { kind: Kind }) {
                 <p className="mt-4 font-serif text-2xl leading-tight md:text-3xl">Aucun parcours de bien-être ne se ressemble.</p>
                 <p className="mt-5 text-sm leading-7 text-muted-foreground">Chez GULFWELLBEING, chaque séance privée est personnalisée selon les besoins, les objectifs et le rythme du client. Il n'y a pas de programme prédéfini imposé à tous : la fréquence et la durée des séances sont définies selon le parcours individuel.</p>
                 <p className="mt-5 text-xs font-semibold uppercase tracking-[.16em] text-gold">Privé · Personnalisé · Discret</p>
-                <a href="/fr/book" className="button-primary mt-8">Demander une consultation privée <ArrowUpRight className="size-4" /></a>
+                <a href="/fr/book" className="button-primary mt-8">Demander un premier échange privé <ArrowUpRight className="size-4" /></a>
               </div>
             </div>
           </section>
@@ -286,23 +286,32 @@ export function FrenchHome() {
         <div className="relative mx-auto flex min-h-[calc(100svh-5rem)] max-w-[1500px] items-end px-6 pb-16 lg:px-12 lg:pb-24">
           <div className="max-w-4xl">
             <p className="eyebrow text-gold">CONSEIL PRIVÉ EN BIEN-ÊTRE · GOLFE & INTERNATIONAL</p>
-            <h1 className="mt-6 font-serif text-6xl leading-[1.02] sm:text-8xl">
+            <h1 className="mt-6 font-serif text-5xl leading-[1.04] sm:text-7xl">
               Un espace privé
               <br />
               <em className="font-normal">pour revenir à vous-même.</em>
             </h1>
             <p className="mt-8 max-w-2xl text-sm leading-7 text-primary-foreground/75">
-              Avec Sourour Tarkan, un espace calme et confidentiel pour aborder la pression, les relations, les responsabilités et les transitions personnelles avec plus de clarté et d'équilibre.
+              Avec Sourour Tarkan, un accompagnement individuel et discret pour le bien-être personnel, les relations, la vie familiale et les responsabilités professionnelles. En arabe, en anglais ou en français, en ligne dans tout le Golfe.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a href="/fr/book" className="button-gold">
                 Demander une consultation privée <ArrowUpRight className="size-4" />
               </a>
-              <a href="/fr/wellbeing" className="button-on-dark">
-                Découvrir le bien-être
+              <a href="/fr/the-tarkan-approach" className="button-on-dark">
+                Découvrir l'approche
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-background px-6 py-5">
+        <div className="mx-auto grid max-w-[1350px] gap-4 text-center sm:grid-cols-2 lg:grid-cols-4">
+          <p className="eyebrow">Accompagnement individuel</p>
+          <p className="eyebrow">Arabe · anglais · français</p>
+          <p className="eyebrow">En ligne dans le Golfe</p>
+          <p className="eyebrow">Aucun programme imposé</p>
         </div>
       </section>
 
