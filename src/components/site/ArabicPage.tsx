@@ -359,7 +359,7 @@ export function ArabicPage({ kind }: { kind: Kind }) {
                 <p className="mt-4 font-serif text-2xl leading-tight md:text-3xl">لا توجد رحلتان متطابقتان في الرفاه.</p>
                 <p className="mt-5 text-sm leading-7 text-muted-foreground">في GULFWELLBEING، تُصمم كل جلسة خاصة وفق احتياجات العميل وأهدافه وإيقاعه. لا يوجد برنامج ثابت مفروض على الجميع؛ يتم تحديد وتيرة الجلسات ومدتها وفق الرحلة الفردية.</p>
                 <p className="mt-5 text-xs font-semibold uppercase tracking-[.16em] text-gold">خاص · شخصي · سري</p>
-                <a href="/ar/book" className="button-primary mt-8">طلب استشارة خاصة <ArrowUpLeft className="size-4" /></a>
+                <a href="/ar/book" className="button-primary mt-8">طلب محادثة خاصة <ArrowUpLeft className="size-4" /></a>
               </div>
             </div>
           </section>
@@ -444,23 +444,32 @@ export function ArabicHome() {
         <div className="relative mx-auto flex min-h-[calc(100svh-5rem)] max-w-[1500px] items-end px-6 pb-16 lg:px-12 lg:pb-24">
           <div className="max-w-4xl">
             <p className="eyebrow text-gold">استشارات خاصة في الرفاه · الخليج ودولياً</p>
-            <h1 className="mt-6 font-serif text-6xl leading-[1.02] sm:text-8xl">
+            <h1 className="mt-6 font-serif text-5xl leading-[1.08] sm:text-7xl">
               مساحة خاصة
               <br />
               <em className="font-normal">تعود فيها إلى نفسك.</em>
             </h1>
             <p className="mt-8 max-w-2xl text-sm leading-7 text-primary-foreground/75">
-              مع سرور طركان، مساحة هادئة وسرية للتعامل مع الضغوط، العلاقات، المسؤوليات والتحولات الشخصية بوضوح واتزان أكبر.
+              مع سرور طركان، دعم فردي وخاص للرفاه الشخصي والعلاقات والحياة الأسرية والمسؤوليات المهنية. باللغات العربية والإنجليزية والفرنسية، عبر الإنترنت في دول الخليج.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a href="/ar/book" className="button-gold">
                 طلب استشارة خاصة <ArrowUpLeft className="size-4" />
               </a>
-              <a href="/ar/wellbeing" className="button-on-dark">
-                اكتشف الرفاه
+              <a href="/ar/the-tarkan-approach" className="button-on-dark">
+                اكتشف المقاربة
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-background px-6 py-5">
+        <div className="mx-auto grid max-w-[1350px] gap-4 text-center sm:grid-cols-2 lg:grid-cols-4">
+          <p className="eyebrow">دعم فردي خاص</p>
+          <p className="eyebrow">العربية · الإنجليزية · الفرنسية</p>
+          <p className="eyebrow">جلسات عبر الإنترنت في الخليج</p>
+          <p className="eyebrow">دون برنامج موحد للجميع</p>
         </div>
       </section>
 
@@ -636,7 +645,7 @@ export function ArabicHome() {
             </h2>
           </div>
           <a href="/ar/book" className="button-gold">
-            إرسال طلب خاص <ArrowUpLeft className="size-4" />
+            طلب محادثة خاصة <ArrowUpLeft className="size-4" />
           </a>
         </div>
       </section>
