@@ -36,14 +36,23 @@ function Home() {
       <div className="relative mx-auto flex min-h-[92svh] max-w-[1600px] items-end px-5 pb-16 pt-36 lg:px-10 lg:pb-20">
         <div className="max-w-4xl">
           <p className="mb-6 text-[10px] uppercase tracking-[0.25em] text-gold">PRIVATE WELLBEING ADVISORY · GCC & INTERNATIONAL</p>
-          <h1 className="font-serif text-[clamp(3.2rem,7vw,7.2rem)] leading-[0.9]">Private Wellbeing Advisor<br/><em className="font-normal">for the Gulf.</em></h1>
-          <p className="mt-8 max-w-xl text-sm leading-7 text-primary-foreground/72 sm:text-base">Online, with private sessions by invitation.<br/>Personal, discreet guidance for the inner life behind responsibility, family, leadership and change.</p>
+          <h1 className="font-serif text-[clamp(3rem,5.8vw,5.8rem)] leading-[0.9]">Private Wellbeing Advisor<br/><em className="font-normal">for the Gulf.</em></h1>
+          <p className="mt-8 max-w-xl text-sm leading-7 text-primary-foreground/72 sm:text-base">Discreet, one-to-one guidance for personal wellbeing, relationships, family life and leadership — in Arabic, English or French, online across the Gulf.</p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Link to="/book" className="button-gold">Book a Private Session <ArrowRight className="size-4" /></Link>
-            <Link to="/wellbeing" className="button-on-dark">Explore Wellbeing</Link>
+            <Link to="/book" className="button-gold">Request a Private Conversation <ArrowRight className="size-4" /></Link>
+            <Link to="/the-tarkan-approach" className="button-on-dark">Explore the Approach</Link>
           </div>
         </div>
         <ArrowDown className="absolute bottom-8 end-6 size-5 text-gold lg:end-10" />
+      </div>
+    </section>
+
+    <section className="border-b border-border bg-background px-5 py-5">
+      <div className="mx-auto grid max-w-[1350px] gap-4 text-center sm:grid-cols-2 lg:grid-cols-4">
+        <p className="text-[10px] uppercase tracking-[.14em] text-muted-foreground">Private, individual support</p>
+        <p className="text-[10px] uppercase tracking-[.14em] text-muted-foreground">Arabic · English · French</p>
+        <p className="text-[10px] uppercase tracking-[.14em] text-muted-foreground">Online across the Gulf</p>
+        <p className="text-[10px] uppercase tracking-[.14em] text-muted-foreground">No fixed programme</p>
       </div>
     </section>
 
@@ -148,7 +157,7 @@ function Home() {
     <section className="bg-primary px-5 py-20 text-primary-foreground lg:px-10 lg:py-28">
       <div className="mx-auto flex max-w-[1200px] flex-col items-start justify-between gap-8 md:flex-row md:items-end">
         <div><p className="text-[10px] uppercase tracking-[0.22em] text-gold">PRIVATE ENQUIRY</p><h2 className="mt-4 font-serif text-5xl leading-none sm:text-7xl">A confidential setting<br/>for what matters most.</h2></div>
-        <Link to="/book" className="button-gold">Request a Private Session <ArrowRight className="size-4"/></Link>
+        <Link to="/book" className="button-gold">Request a Private Conversation <ArrowRight className="size-4"/></Link>
       </div>
     </section>
   </SiteShell>;
